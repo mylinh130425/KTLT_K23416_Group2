@@ -1,8 +1,12 @@
 {
   "QPushButton": [
     {
-      "name": "pushButton",
-      "icon": "Qss/icons/Icons/feather/airplay.png"
+      "name": "close_window_button",
+      "icon": "Qss/icons/icons/feather/x-circle.png"
+    },
+    {
+      "name": "profile_button",
+      "icon": "Qss/icons/icons/feather/smile.png"
     }
   ]
 }
