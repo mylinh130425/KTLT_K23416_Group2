@@ -29,42 +29,47 @@ For more, visit https://github.com/KhamisiKibet/QT-PyQt-PySide-Custom-Widgets
 
 # Developer Guide
 
-
 ## Windows
+### Getting Started
 
-### Hướng dẫn cài đặt:
+1. Tải xuống và cài đặt [GTK+2 for Windows Runtime Environment](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases/download/2022-01-04/gtk3-runtime-3.24.31-2022-01-04-ts-win64.exe)
 
-1. **Tải xuống và cài đặt** [GTK+2 for Windows Runtime Environment - fix for cairo-2](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases).
-2. **Tạo môi trường ảo (.venv) với Python 3.9** (trong hình hiển thị 3.8 vì Python 3.9 đã được cài đặt sẵn).
-   
-   ![setup .venv](doc_photo/Pasted image 20250217193556.png)
+2. Tạo môi trường ảo (.venv) với Python 3.9
 
-3. **Cập nhật pip** bằng lệnh sau:
-   ```cmd
-   python.exe -m pip install --upgrade pip
-   ```
-4. **Tải xuống và cài đặt PySide, PyQt6**:
-   ```cmd
-   pip install PyQt6
-   pip install PySide6
-   ```
-5. **Tải xuống và cài đặt pyQt6-tools**:
-   ```cmd
-   pip install PyQt6-tools
-   ```
-6. **Tải xuống và cài đặt Custom Widgets**:
-   ```cmd
-   pip install QT-PyQt-PySide-Custom-Widgets
-   ```
-7. **Tải dự án từ GitHub** và truy cập vào thư mục của dự án.
-8. **Mở dòng lệnh (command line/terminal) bên trong thư mục `project/` và chạy**:
+Trong môi trường  (.venv)
+    
+    Cập nhật pip bằng lệnh sau:
+    python.exe -m pip install --upgrade pip
+
+    Tải xuống và cài đặt PySide, PyQt6, pyQt6-tools, Custom Widgets::
+    pip install PyQt6
+    pip install PySide6
+    pip install PyQt6-tools
+
+3. Fork dự án từ GitHub của Mỹ Linh nếu chưa Fork
+https://github.com/mylinh130425/KTLT_K23416_Group2
+
+```git clone``` fork repo của mình về máy nếu chưa clone về (chưa có thư mục KTL_K23416_group2 trong máy)
+
+4. Mở dự án trong PyCharm và chạy ```main.py``` để kiểm tra xem mọi thứ có hoạt động không. Nhớ cài đặt Python Interpreter chỉa vào Python.exe trong môi trường .venv có Python 3.9 và các thư viện cần thiết trước khi chạy nếu chạy bằng PyCharm/VS Code. Còn chạy lệnh  ```python main.py``` thì nhớ activate (.venv) trước khi chạy
+
+5. Mỗi lần trước khi code đều nhớ gõ ```git status```, nếu phát hiện code của Mỹ Linh có thay đổi mới so với code của mình thì  thì dùng ```git pull``` để đồng bộ với repo chính (Mỹ Linh), giải quyết các conflict trong máy, sau đó ngay lập tức ```git push``` lên fork repo cuẩ bản thân. 
+> !!! Nếu chỉ làm bước này khi chuẩn bị tạo pull request bên repo chính (Mỹ Linh) thì sẽ phải giải quyết rất nhiều conflict cùng 1 lúc.
+
+Thường xuyên ```git add .```, ```git commit -a -m ``` (ghi commit message rõ ràng cụ thể, nếu được thì 1 commit 1 chức năng/ update mới), ```git push``` để cập nhật fork của mình khi thay đổi file trong máy cá nhân
+
+
+### Hướng dẫn lập trình:
+
+1. Nhớ kiểm tra ```git status``` và đồng bộ với repo gốc, giải quyết conflict trước khi thay đổi code (bước 5 Getting Started)
+2. Truy cập vào thư mục của dự án và đảm bảo là đang chạy Python interpreter trong đúng môi trường ảo ```.venv``` (Python 3.9, PyQt6, PySide6, PyQt6-tools, CustomWidgets). **Chạy `main.py`** để kiểm tra xem mọi thứ có hoạt động không.
+3. **Mở dòng lệnh (command line/terminal) bên trong thư mục `project/` và chạy**:
    ```cmd
    Custom_Widgets --monitor-ui ui --qt-library PyQt6
    ```
-   **Giữ cửa sổ dòng lệnh này mở** trong khi chỉnh sửa giao diện UI bên trong Qt Designer để nó tự động cập nhật tệp `ui_interface.py`.
-9. **Mở Qt Designer**, sau đó mở tệp `ui_interface` trong Qt Designer. **Tránh sử dụng "External tool" trong PyCharm** để mở tệp `.ui` vì nó có thể tiêu tốn quá nhiều RAM và làm PyCharm crash.
-10. **Mở dự án trong PyCharm và chạy `main.py`** để kiểm tra xem mọi thứ có hoạt động không.
-11. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại
+   **Giữ cửa sổ command line/terminal này mở** trong khi chỉnh sửa giao diện UI bên trong Qt Designer để nó tự động cập nhật tệp `ui_interface.py`.
+4. **Mở Qt Designer**, sau đó mở tệp `interface.ui` trong Qt Designer. **Tránh sử dụng "External tool" trong PyCharm** để mở tệp `.ui` vì nó có thể tiêu tốn quá nhiều RAM và làm PyCharm crash.
+5. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại và git commit với thông điệp có ý nghĩa.
 
 ### Sử dụng các Widget hiện đại trong thư viện Custom Widget
 > Hiện project đã được setup để hoàn toàn tương thích với thư viện [Custom Widget](https://khamisikibet.github.io/Docs-QT-PyQt-PySide-Custom-Widgets/docs/widgets), nên hãy tự do khám phá các widget trong đây và lựa chọn cái phù hợp để áp dụng vào thiết kế.
