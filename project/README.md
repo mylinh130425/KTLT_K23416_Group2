@@ -6,8 +6,11 @@
 1. Tải xuống và cài đặt [GTK+2 for Windows Runtime Environment](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases/download/2022-01-04/gtk3-runtime-3.24.31-2022-01-04-ts-win64.exe)
 
 2. Tạo môi trường ảo (.venv) với Python 3.9. File-> Settings -> Add Interpreter-> Add Local Interpreter
+   
 ![Add_interpreter](/project/doc_photo/img.jpg)
+
 ![setup .venv](/project/doc_photo/setup_venv.jpg)
+
 
 Tick chọn inherit packages from base interpreters
 
