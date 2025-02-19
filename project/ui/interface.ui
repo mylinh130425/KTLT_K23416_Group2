@@ -127,7 +127,10 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QCustomQStackedWidget" name="wellcome_stackedWidget">
+            <widget class="QCustomQStackedWidget" name="welcome_stackedWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
              <widget class="QWidget" name="left_login_page">
               <property name="styleSheet">
                <string notr="true"/>
@@ -142,7 +145,7 @@
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
