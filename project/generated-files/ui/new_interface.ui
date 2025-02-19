@@ -145,7 +145,7 @@
               <cursorShape>ArrowCursor</cursorShape>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -329,8 +329,11 @@
                           <height>30</height>
                          </size>
                         </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color:#333;color:white</string>
+                         <string notr="true" />
                         </property>
                         <property name="text">
                          <string>LOG IN</string>
@@ -355,7 +358,7 @@
                          <cursorShape>PointingHandCursor</cursorShape>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color:#545454;color:white</string>
+                         <string notr="true" />
                         </property>
                         <property name="text">
                          <string>CREATE NEW ACCOUNT</string>
@@ -386,7 +389,7 @@
                    <number>0</number>
                   </property>
                   <property name="topMargin">
-                   <number>9</number>
+                   <number>0</number>
                   </property>
                   <property name="bottomMargin">
                    <number>0</number>
@@ -452,7 +455,7 @@
                      <number>50</number>
                     </property>
                     <property name="topMargin">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <property name="rightMargin">
                      <number>50</number>
@@ -463,19 +466,19 @@
                     <item>
                      <layout class="QVBoxLayout" name="verticalLayout_11">
                       <property name="spacing">
-                       <number>15</number>
+                       <number>6</number>
                       </property>
                       <property name="sizeConstraint">
                        <enum>QLayout::SetMinimumSize</enum>
                       </property>
                       <property name="topMargin">
-                       <number>15</number>
+                       <number>0</number>
                       </property>
                       <property name="rightMargin">
                        <number>0</number>
                       </property>
                       <property name="bottomMargin">
-                       <number>0</number>
+                       <number>15</number>
                       </property>
                       <item>
                        <widget class="QLineEdit" name="full_name_lineEdit">
@@ -536,30 +539,33 @@
                        <number>6</number>
                       </property>
                       <property name="sizeConstraint">
-                       <enum>QLayout::SetMinimumSize</enum>
+                       <enum>QLayout::SetMaximumSize</enum>
                       </property>
                       <property name="topMargin">
-                       <number>25</number>
+                       <number>15</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
                       </property>
                       <item alignment="Qt::AlignHCenter">
                        <widget class="QPushButton" name="signup_button">
                         <property name="minimumSize">
                          <size>
                           <width>230</width>
-                          <height>25</height>
+                          <height>30</height>
                          </size>
                         </property>
                         <property name="maximumSize">
                          <size>
                           <width>230</width>
-                          <height>25</height>
+                          <height>30</height>
                          </size>
                         </property>
                         <property name="cursor">
                          <cursorShape>PointingHandCursor</cursorShape>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color:#545454;color:white</string>
+                         <string notr="true" />
                         </property>
                         <property name="text">
                          <string>CREATE NEW ACCOUNT</string>
@@ -571,20 +577,20 @@
                         <property name="minimumSize">
                          <size>
                           <width>230</width>
-                          <height>25</height>
+                          <height>30</height>
                          </size>
                         </property>
                         <property name="maximumSize">
                          <size>
                           <width>230</width>
-                          <height>25</height>
+                          <height>30</height>
                          </size>
                         </property>
                         <property name="cursor">
                          <cursorShape>PointingHandCursor</cursorShape>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color:#bdbdbd;color:#333</string>
+                         <string notr="true" />
                         </property>
                         <property name="text">
                          <string>Already have an account? LOG IN</string>

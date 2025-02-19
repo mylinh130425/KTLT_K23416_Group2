@@ -1676,3 +1676,28 @@ PlotWidget {
   #QLineEdit:selected {
     background-color: #339999;
     color: #D0D0D0; }
+
+#login_button, #signup_button {
+  padding: 8px 10px;
+  border: 2px solid #C4C4C4;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #DCDCDC; }
+  #login_button:hover, #signup_button:hover {
+    background-color: #008080;
+    color: #f5f5f5; }
+  #login_button:selected, #signup_button:selected {
+    background-color: #66B2B2;
+    color: #DCDCDC; }
+
+#to_signup_button, #to_login_button {
+  padding: 8px 10px;
+  border: 2px solid #C4C4C4;
+  border-radius: 8px;
+  background-color: transparent; }
+  #to_signup_button:hover, #to_login_button:hover {
+    background-color: #008080;
+    color: #f5f5f5; }
+  #to_signup_button:selected, #to_login_button:selected {
+    background-color: #66B2B2;
+    color: #DCDCDC; }
