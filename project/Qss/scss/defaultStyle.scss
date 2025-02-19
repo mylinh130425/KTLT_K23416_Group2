@@ -5,6 +5,7 @@
 #centralwidget {
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
+  border:none
 }
 
 #header_welcome, #body_welcome, #header_frame {
@@ -178,14 +179,6 @@
 #profile_photo {
   border-radius: 45px;
   border: 1.5px solid #333;
-}
-
-#left_login_page {
-  background-color: #339999;
-}
-
-#left_signup_page {
-  background-color: #99CCCC;
 }
 
 #QLineEdit {
