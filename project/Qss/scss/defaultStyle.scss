@@ -1,21 +1,23 @@
-
 //===================================================//
 // FILE AUTO-GENERATED. PUT YOUR DEFAULT STYLES HERE.
 // THESE STYLES WILL OVERIDE THE THEME STYLES
 //====================================================//
-#centralwidget{
+#centralwidget {
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
 }
-#header_welcome, #body_welcome, #header_frame{
+
+#header_welcome, #body_welcome, #header_frame {
   background-color: transparent;
   background: transparent;
   border: none;
 }
-#close_window_button{
+
+#close_window_button {
   border-radius: 12px; //50% of button size
 }
-#profile_button{
+
+#profile_button {
   border-radius: 18px; //50% of button size
   background-color: $COLOR_ACCENT_1;
 }
@@ -172,33 +174,71 @@
 #add_restaurant_page QLineEdit {
    border: 1px solid black;
 }
-#profile_photo{
+
+#profile_photo {
   border-radius: 45px;
   border: 1.5px solid #333;
 }
-#left_login_page{
+
+#left_login_page {
   background-color: #339999;
 }
-#left_signup_page{
+
+#left_signup_page {
   background-color: #99CCCC;
 }
-#QLineEdit{
-  border:1.5px solid $COLOR_BACKGROUND_5;
-  border-radius:8px;
-  padding-left:30px;
+
+#QLineEdit {
+  border: 1.5px solid $COLOR_BACKGROUND_5;
+  border-radius: 8px;
+  padding-left: 30px;
+
   &:hover {
-        border: $BORDER_SELECTION_2;
-        color: $COLOR_TEXT_1;
-    }
+    border: $BORDER_SELECTION_2;
+    color: $COLOR_TEXT_1;
+  }
 
-    &:focus {
-        border: $BORDER_SELECTION_3;
-    }
+  &:focus {
+    border: $BORDER_SELECTION_3;
+  }
 
-    &:selected {
-        background-color: $COLOR_ACCENT_2;
-        color: $COLOR_BACKGROUND_4;
-    }
+  &:selected {
+    background-color: $COLOR_ACCENT_2;
+    color: $COLOR_BACKGROUND_4;
+  }
+}
+
+#login_button, #signup_button {
+  padding:8px 10px;
+  border: 2px solid $COLOR_BACKGROUND_5;
+  border-radius: 8px;
+  background-color: $COLOR_TEXT_1;
+  color: $COLOR_BACKGROUND_3;
+
+  &:hover {
+    background-color: $COLOR_ACCENT_1;
+    color: $COLOR_BACKGROUND_1;
+  }
+
+  &:selected {
+    background-color: $COLOR_ACCENT_3;
+    color: $COLOR_BACKGROUND_3;
+  }
+}
+#to_signup_button, #to_login_button{
+  padding:8px 10px;
+  border: 2px solid $COLOR_BACKGROUND_5;
+  border-radius: 8px;
+  background-color: transparent;
+  &:hover {
+    background-color: $COLOR_ACCENT_1;
+    color: $COLOR_BACKGROUND_1;
+  }
+
+  &:selected {
+    background-color: $COLOR_ACCENT_3;
+    color: $COLOR_BACKGROUND_3;
+  }
 }
 
 
