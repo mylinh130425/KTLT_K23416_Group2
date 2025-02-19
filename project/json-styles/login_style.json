@@ -2,34 +2,24 @@
   "QMainWindow": [
     {
       "tittle": "MealMatch",
-      			"icon":":/icons/icons/github.svg",
-			"frameless": true,
-			"transluscentBg": true,
-			"sizeGrip": "size_grip",
-			"shadow":[
-				{
-					"color": "#fff",
-					"blurRadius": 20,
-					"xOffset": 0,
-					"yOffset": 0,
-					"centralWidget": "centralwidget"
-				}
-			],
-			"navigation":[
-				{
-					"minimize":"minimize_window_button",
-					"close": "close_window_button",
-					"restore":[
-						{
-							"buttonName": "restore_window_button",
-							"normalIcon": ":/icons/icons/maximize-2.svg",
-							"maximizedIcon": ":/icons/icons/minimize-2.svg"
-						}
-					],
-					"moveWindow": "header_frame",
-					"tittleBar": "header_frame"
-				}
-			]
+      "icon": ":/font_awesome_brands/icons/font_awesome/brands/windows.png",
+      "frameless": true,
+      "transluscentBg": true,
+      "navigation": [
+        {
+          "minimize": "minimize_window_button",
+          "close": "close_window_button",
+          "restore": [
+            {
+              "buttonName": "restore_window_button",
+              "normalIcon": ":/icons/icons/maximize-2.svg",
+              "maximizedIcon": ":/icons/icons/minimize-2.svg"
+            }
+          ],
+          "moveWindow": "header_frame",
+          "tittleBar": "header_frame"
+        }
+      ]
     }
   ],
   "LiveCompileQss": true,
@@ -56,6 +46,58 @@
         "ApplicationName": "MealMatch Company",
         "OrginizationDormain": "MealMatch.org"
       }
+    }
+  ],
+  "QCustomQStackedWidget": [
+    {
+      "name": "login_signup_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "to_signup_button": "right_signup_page",
+              "to_login_button": "right_login_page"
+            }
+          ]
+        }
+      ],
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "vertical",
+              "easingCurve": "OutBack"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "welcome_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "to_signup_button": "left_signup_page",
+              "to_login_button": "left_login_page"
+            }
+          ]
+        }
+      ],
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "horizontal",
+              "easingCurve": "OutBack"
+            }
+          ]
+        }
+      ]
     }
   ],
   "QtBinding": "PyQt6"

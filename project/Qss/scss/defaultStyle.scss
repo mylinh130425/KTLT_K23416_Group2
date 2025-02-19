@@ -7,7 +7,7 @@
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
 }
-#header_welcome, #body_welcome, header_main{
+#header_welcome, #body_welcome, #header_frame{
   background-color: transparent;
   background: transparent;
   border: none;
@@ -17,6 +17,16 @@
 }
 #profile_button{
   border-radius: 18px; //50% of button size
+}
+#profile_photo{
+  border-radius: 45px;
+  border: 1.5px solid #333;
+}
+#left_login_page{
+  background-color: #339999;
+}
+#left_signup_page{
+  background-color: #99CCCC;
 }
 //===================================================//
 // END //
