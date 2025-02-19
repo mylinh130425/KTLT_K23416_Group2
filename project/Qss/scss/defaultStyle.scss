@@ -28,6 +28,24 @@
 #left_signup_page{
   background-color: #99CCCC;
 }
+#QLineEdit{
+  border:1.5px solid $COLOR_BACKGROUND_5;
+  border-radius:8px;
+  padding-left:30px;
+  &:hover {
+        border: $BORDER_SELECTION_2;
+        color: $COLOR_TEXT_1;
+    }
+
+    &:focus {
+        border: $BORDER_SELECTION_3;
+    }
+
+    &:selected {
+        background-color: $COLOR_ACCENT_2;
+        color: $COLOR_BACKGROUND_4;
+    }
+}
 //===================================================//
 // END //
 //====================================================//

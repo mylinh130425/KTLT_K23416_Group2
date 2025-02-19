@@ -1663,3 +1663,16 @@ PlotWidget {
 
 #left_signup_page {
   background-color: #99CCCC; }
+
+#QLineEdit {
+  border: 1.5px solid #C4C4C4;
+  border-radius: 8px;
+  padding-left: 30px; }
+  #QLineEdit:hover {
+    border: 1px solid #339999;
+    color: #333333; }
+  #QLineEdit:focus {
+    border: 1px solid #66B2B2; }
+  #QLineEdit:selected {
+    background-color: #339999;
+    color: #D0D0D0; }
