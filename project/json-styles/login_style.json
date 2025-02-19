@@ -66,8 +66,8 @@
           "slide": [
             {
               "active": true,
-              "duration": 500,
-              "direction": "horizontal",
+              "duration": 1000,
+              "direction": "vertical",
               "easingCurve": "OutBack"
             }
           ]
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "name": "wellcome_stackedWidget",
+      "name": "welcome_stackedWidget",
       "navigation": [
         {
           "navigationButtons": [
@@ -86,18 +86,44 @@
           ]
         }
       ],
-      "transitionAnimation":[
-				{
-					"slide":[
-						{
-							"active":true,
-							"duration": 500,
-							"direction": "horizontal",
-							"easingCurve": "OutBack"
-						}
-					]
-				}
-			]
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "horizontal",
+              "easingCurve": "OutBack"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "Main",
+              "signup_button": "Main"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "Profile",
+              "signup_button": "Profile"
+            }
+          ]
+        }
+      ]
     }
   ],
   "QtBinding": "PyQt6"
