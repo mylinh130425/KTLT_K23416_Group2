@@ -1641,7 +1641,8 @@ PlotWidget {
   padding: 0px; }
 
 #centralwidget {
-  border-radius: 20px; }
+  border-radius: 20px;
+  border: none; }
 
 #header_welcome, #body_welcome, #header_frame {
   background-color: transparent;
@@ -1657,12 +1658,6 @@ PlotWidget {
 #profile_photo {
   border-radius: 45px;
   border: 1.5px solid #333; }
-
-#left_login_page {
-  background-color: #339999; }
-
-#left_signup_page {
-  background-color: #99CCCC; }
 
 #QLineEdit {
   border: 1.5px solid #C4C4C4;

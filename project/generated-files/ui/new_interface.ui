@@ -111,7 +111,13 @@
         <property name="spacing">
          <number>0</number>
         </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
         <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
          <number>0</number>
         </property>
         <property name="bottomMargin">
@@ -123,20 +129,157 @@
            <property name="spacing">
             <number>0</number>
            </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
            <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
             <widget class="QCustomQStackedWidget" name="welcome_stackedWidget">
+             <property name="styleSheet">
+              <string notr="true">#welcome_stackedWidget {
+ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 177, 43, 255), stop:0.971591 rgba(255, 255, 255, 0), stop:1 rgba(255, 255, 255, 0));
+  border-top-right-radius:200px;
+  border-bottom-right-radius:200px;
+}
+#welcome_stackedWidget *{
+	background-color:transparent;
+}</string>
+             </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="left_login_page">
               <property name="styleSheet">
                <string notr="true" />
               </property>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true" />
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="label_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>150</x>
+                    <y>200</y>
+                    <width>131</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>RESTAURANT</string>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
              </widget>
-             <widget class="QWidget" name="left_signup_page" />
+             <widget class="QWidget" name="left_signup_page">
+              <property name="styleSheet">
+               <string notr="true" />
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_15">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame_4">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true" />
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="label_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>150</x>
+                    <y>190</y>
+                    <width>61</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Food</string>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
            <item>
@@ -149,6 +292,15 @@
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
                <item alignment="Qt::AlignHCenter">
                 <widget class="QFrame" name="frame">
                  <property name="frameShape">
@@ -158,6 +310,18 @@
                   <enum>QFrame::Raised</enum>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
                   <item alignment="Qt::AlignHCenter">
                    <widget class="QLabel" name="login_photo_label">
                     <property name="minimumSize">
@@ -376,7 +540,19 @@
              </widget>
              <widget class="QWidget" name="right_signup_page">
               <layout class="QVBoxLayout" name="verticalLayout_13">
-               <item>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
                 <widget class="QFrame" name="frame_2">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
@@ -388,7 +564,13 @@
                   <property name="spacing">
                    <number>0</number>
                   </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
                   <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
                    <number>0</number>
                   </property>
                   <property name="bottomMargin">
@@ -482,9 +664,21 @@
                       </property>
                       <item>
                        <widget class="QLineEdit" name="full_name_lineEdit">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
                         <property name="minimumSize">
                          <size>
-                          <width>0</width>
+                          <width>250</width>
+                          <height>25</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>250</width>
                           <height>25</height>
                          </size>
                         </property>
