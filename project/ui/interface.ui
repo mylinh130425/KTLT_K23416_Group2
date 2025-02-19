@@ -136,7 +136,7 @@
                   </size>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">border-radius: 60px;  border: 1px solid #333;</string>
+                  <string notr="true">border-radius: 60px;  border: 1.5px solid #333;</string>
                  </property>
                  <property name="text">
                   <string>LOGO</string>
@@ -202,47 +202,47 @@
                  </item>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <property name="sizeConstraint">
+                    <enum>QLayout::SetMinimumSize</enum>
+                   </property>
                    <property name="topMargin">
                     <number>10</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
                    </property>
                    <property name="bottomMargin">
                     <number>15</number>
                    </property>
                    <item>
-                    <widget class="QTextEdit" name="username_textEdit">
+                    <widget class="QLineEdit" name="username_lineEdit">
                      <property name="minimumSize">
                       <size>
-                       <width>200</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>35</height>
+                       <width>0</width>
+                       <height>25</height>
                       </size>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">border-radius:15px; border: 1px solid #333;</string>
+                      <string notr="true">border:1.5px solid #333; border-radius:8px;padding-left:30px</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Email or username</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QTextEdit" name="username_textEdit_2">
+                    <widget class="QLineEdit" name="password_lineEdit">
                      <property name="minimumSize">
                       <size>
-                       <width>200</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>35</height>
+                       <width>0</width>
+                       <height>25</height>
                       </size>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">border-radius:15px; border: 1px solid #333;</string>
+                      <string notr="true">border:1.5px solid #333; border-radius:8px;padding-left:30px</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Password</string>
                      </property>
                     </widget>
                    </item>
@@ -301,7 +301,7 @@
                     </widget>
                    </item>
                    <item alignment="Qt::AlignHCenter">
-                    <widget class="QPushButton" name="register_button">
+                    <widget class="QPushButton" name="register_screen_button">
                      <property name="minimumSize">
                       <size>
                        <width>280</width>
