@@ -424,7 +424,7 @@
                          </size>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true"/>
+                         <string notr="true">border:1.5px solid #333; border-radius:8px;padding-left:30px</string>
                         </property>
                         <property name="placeholderText">
                          <string>Email or username</string>
@@ -440,7 +440,7 @@
                          </size>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true"/>
+                         <string notr="true">border:1.5px solid #333; border-radius:8px;padding-left:30px</string>
                         </property>
                         <property name="placeholderText">
                          <string>Password</string>
@@ -497,7 +497,7 @@
                          <cursorShape>PointingHandCursor</cursorShape>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true"/>
+                         <string notr="true">background-color:#333;color:white</string>
                         </property>
                         <property name="text">
                          <string>LOG IN</string>
@@ -522,7 +522,7 @@
                          <cursorShape>PointingHandCursor</cursorShape>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true"/>
+                         <string notr="true">background-color:#545454;color:white</string>
                         </property>
                         <property name="text">
                          <string>CREATE NEW ACCOUNT</string>
@@ -540,19 +540,7 @@
              </widget>
              <widget class="QWidget" name="right_signup_page">
               <layout class="QVBoxLayout" name="verticalLayout_13">
-               <property name="leftMargin">
-                <number>9</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item alignment="Qt::AlignHCenter">
+               <item>
                 <widget class="QFrame" name="frame_2">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
