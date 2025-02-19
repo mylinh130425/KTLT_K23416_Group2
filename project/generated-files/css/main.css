@@ -1643,7 +1643,7 @@ PlotWidget {
 #centralwidget {
   border-radius: 20px; }
 
-#header_welcome, #body_welcome, header_main {
+#header_welcome, #body_welcome, #header_frame {
   background-color: transparent;
   background: transparent;
   border: none; }
@@ -1653,3 +1653,7 @@ PlotWidget {
 
 #profile_button {
   border-radius: 18px; }
+
+#profile_photo {
+  border-radius: 45px;
+  border: 1px solid #333; }
