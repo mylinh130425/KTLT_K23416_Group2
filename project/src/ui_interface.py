@@ -400,7 +400,7 @@ class Ui_MainWindow(object):
         self.login_button.setText(_translate("MainWindow", "LOG IN"))
         self.to_signup_button.setText(_translate("MainWindow", "CREATE NEW ACCOUNT"))
         self.signup_photo_label.setText(_translate("MainWindow", "LOGO"))
-        self.label_31.setText(_translate("MainWindow", "Welcome back..."))
+        self.label_31.setText(_translate("MainWindow", "Create your account"))
         self.full_name_lineEdit.setPlaceholderText(_translate("MainWindow", "Full name"))
         self.signup_username_lineEdit.setPlaceholderText(_translate("MainWindow", "Email or username"))
         self.signup_password_lineEdit.setPlaceholderText(_translate("MainWindow", "Password"))
