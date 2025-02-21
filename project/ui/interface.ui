@@ -154,7 +154,7 @@
 }</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="left_login_page">
               <property name="styleSheet">
@@ -288,7 +288,7 @@
               <cursorShape>ArrowCursor</cursorShape>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
