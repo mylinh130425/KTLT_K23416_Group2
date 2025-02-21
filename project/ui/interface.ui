@@ -3314,17 +3314,20 @@ Outdoor seating</string>
                  </layout>
                 </item>
                 <item>
-                   <widget class="QStackedWidget" name="stackedWidget_4">
-                    <property name="sizePolicy">
+                 <widget class="QStackedWidget" name="stackedWidget_7">
+                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
-                    <property name="currentIndex">
-                     <number>8</number>
-                    </property>
-                    <widget class="QWidget" name="add_restaurant_page">
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(41, 110, 126);</string>
+                  </property>
+                  <property name="currentIndex">
+                   <number>2</number>
+                  </property>
+                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
                       <property name="spacing">
                        <number>0</number>
@@ -3406,7 +3409,7 @@ Outdoor seating</string>
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QWidget" name="avatar_widget" native="true">
+                                <widget class="QWidget" name="widget_3" native="true">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3469,7 +3472,7 @@ Outdoor seating</string>
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QLabel" name="address_label">
+                                <widget class="QLabel" name="label_6">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3828,9 +3831,9 @@ Outdoor seating</string>
                             <property name="geometry">
                              <rect>
                               <x>0</x>
-                              <y>0</y>
-                              <width>403</width>
-                              <height>682</height>
+                              <y>-255</y>
+                              <width>526</width>
+                              <height>699</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -4144,7 +4147,7 @@ Outdoor seating</string>
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_14">
                                       <item>
-                                       <widget class="QLabel" name="open_label_2">
+                                       <widget class="QLabel" name="label_16">
                                         <property name="text">
                                          <string>Opening Hours</string>
                                         </property>
@@ -4315,7 +4318,7 @@ Outdoor seating</string>
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/facebook.png</pixmap>
+                                            <pixmap>../Qss/icons/Icons/restaurant_logo/facebook.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -4334,7 +4337,7 @@ Outdoor seating</string>
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/insta.png</pixmap>
+                                            <pixmap>../Qss/icons/Icons/restaurant_logo/insta.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -4353,7 +4356,7 @@ Outdoor seating</string>
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/tiktok.png</pixmap>
+                                            <pixmap>../Qss/icons/Icons/restaurant_logo/tiktok.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -4549,67 +4552,187 @@ Outdoor seating</string>
                       </item>
                      </layout>
                     </widget>
-                    <widget class="QWidget" name="add_review_restaurant_page">
-                     <widget class="QLabel" name="label_9">
+                    <widget class="QWidget" name="menu_page">
+                     <widget class="QLabel" name="label_5">
                       <property name="geometry">
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>351</width>
-                        <height>71</height>
+                        <width>311</width>
+                        <height>111</height>
                        </rect>
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>16</pointsize>
+                        <pointsize>30</pointsize>
                        </font>
                       </property>
                       <property name="text">
-                       <string>Add new review for restaurant</string>
+                       <string>Menu</string>
                       </property>
                      </widget>
                     </widget>
-                    <widget class="QWidget" name="edit_review_restaurant_page">
-                     <widget class="QLabel" name="label_12">
+                    <widget class="QWidget" name="add_food_page">
+                     <widget class="QLabel" name="label_4">
+                      <property name="geometry">
+                       <rect>
+                        <x>30</x>
+                        <y>50</y>
+                        <width>311</width>
+                        <height>111</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>30</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>New Food</string>
+                      </property>
+                     </widget>
+                    </widget>
+                    <widget class="QWidget" name="modify_food_page">
+                     <widget class="QLabel" name="label_10">
                       <property name="geometry">
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>341</width>
-                        <height>71</height>
+                        <width>311</width>
+                        <height>111</height>
                        </rect>
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>16</pointsize>
+                        <pointsize>30</pointsize>
                        </font>
                       </property>
                       <property name="text">
-                       <string>Edit 1 review of a  restaurant</string>
+                       <string>Food Name</string>
                       </property>
                      </widget>
                     </widget>
-                    <widget class="QWidget" name="review_restaurant_page">
-                     <widget class="QLabel" name="label_13">
-                      <property name="geometry">
-                       <rect>
-                        <x>0</x>
-                        <y>0</y>
-                        <width>341</width>
-                        <height>71</height>
-                       </rect>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>16</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>List of restaurant reviews</string>
-                      </property>
-                     </widget>
-                    </widget>
-     <widget class="QWidget" name="menu_page_4">
+                  <widget class="QWidget" name="add_review_restaurant_page">
+                   <widget class="QLabel" name="label_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>351</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Add new review for restaurant</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="edit_review_restaurant_page">
+                   <widget class="QLabel" name="label_12">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>341</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Edit 1 review of a  restaurant</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="add_review_restaurant_page">
+                   <widget class="QLabel" name="label_9">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>351</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Add new review for restaurant</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="edit_review_restaurant_page">
+                   <widget class="QLabel" name="label_12">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>341</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Edit 1 review of a  restaurant</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="review_restaurant_page">
+                   <widget class="QLabel" name="label_13">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>341</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>List of restaurant reviews</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="menu_page">
+                   <widget class="QLabel" name="label_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>341</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>List of restaurant reviews</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="menu_page_4">
                    <widget class="QLabel" name="label_262">
                     <property name="geometry">
                      <rect>

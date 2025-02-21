@@ -426,5 +426,19 @@
       "name": "label_348",
       "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
     }
+  ],
+  "QLabel": [
+    {
+      "name": "label_19",
+      "pixmap": "D:\\K\u1ef9 thu\u1eadt l\u1eadp tr\u00ecnh\\Do_an_cuoi_ky\\KTLT_K23416_Group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
+    },
+    {
+      "name": "label_18",
+      "pixmap": "D:\\K\u1ef9 thu\u1eadt l\u1eadp tr\u00ecnh\\Do_an_cuoi_ky\\KTLT_K23416_Group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
+    },
+    {
+      "name": "label_20",
+      "pixmap": "D:\\K\u1ef9 thu\u1eadt l\u1eadp tr\u00ecnh\\Do_an_cuoi_ky\\KTLT_K23416_Group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
+    }
   ]
 }
