@@ -83,6 +83,7 @@ c) Merge PR
 3. Hard to implement automatic merge and delete branches locally as compared to Gitflow
 4. Minor changes like documentation, assets mays still require a separate PR
 5. Members have to frequently update their local main branch and update their wip feature branches
+6. If the project has a lot of automatically generated files, almost every rebase causes conflict => must always remember to update generated files automatically and not by manually resolving conflicts
 
 <hr/>
 
