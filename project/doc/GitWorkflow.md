@@ -2,6 +2,18 @@
 
 ## Summary
 
+<hr/>
+
+    git checkout main
+    git pull upstream main
+    git checkout <myfeature branch>
+    git rebase main
+    git push origin
+
+<hr/>
+
+## Detail
+
 1. fork the source-of-truth repo
 
 2. clone down your personal fork that repo to local computer
