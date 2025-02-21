@@ -2,4 +2,4 @@
 
 [Developer Guide](project/doc/README.md)
 
-[Latest Changes - Thay đổi mới nhất]()
+[Latest Changes - Thay đổi mới nhất](project/doc/LatestChanges.md)
