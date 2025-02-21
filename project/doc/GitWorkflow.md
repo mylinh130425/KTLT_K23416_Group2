@@ -2,6 +2,23 @@
 
 ## Summary
 
+<hr/>
+
+    git checkout main
+    git pull upstream main
+    git checkout <myfeature branch>
+    git rebase main
+    git push origin
+
+<hr/>
+
+## Missing steps
+1. Git set upstream central to My Linh's repo
+2. Common conflict scenarios: interface.ui, new_interface.ui, ui_interface.ui => only need to resolve the conflict in interface.ui (often keep right - changes in your local code) => run CustomWidgets monitor script => open interface.ui in qt designer, make a tiny change and undo => save => all the conflicted files are correctly resolved => ```git add .``` and ```git rebase --continue```
+3. Push upstream
+
+## Detail
+
 1. fork the source-of-truth repo
 
 2. clone down your personal fork that repo to local computer
@@ -66,6 +83,7 @@ c) Merge PR
 3. Hard to implement automatic merge and delete branches locally as compared to Gitflow
 4. Minor changes like documentation, assets mays still require a separate PR
 5. Members have to frequently update their local main branch and update their wip feature branches
+6. If the project has a lot of automatically generated files, almost every rebase causes conflict => must always remember to update generated files automatically and not by manually resolving conflicts
 
 <hr/>
 
@@ -161,21 +179,7 @@ This diverges from the other workflows in that the origin remote points to the d
 Second, they need to notify the project maintainer that they want to merge their feature into the official codebase. Bitbucket provides a “pull request” button that leads to a form asking you to specify which branch you want to merge into the official repository. Typically, you’ll want to integrate your feature branch into the upstream remote’s main branch.
 
 Summary
-To recap, the Forking Workflow is commonly used in public open-source projects. Forking is a git clone operation executed on a server copy of a projects repo. A Forking Workflow is often used in conjunction with a Git hosting service like Bitbucket. A high-level example of a Forking Workflow is:
-
-1. You want to contribute to an open source library hosted at bitbucket.org/userA/open-project
-
-2. Using Bitbucket you create a fork of the repo to bitbucket.org/YourName/open-project
-
-3. On your local system you execute git clone on https://bitbucket.org/YourName/open-project to get a local copy of the repo
-
-4. You create a new feature branch in your local repo
-
-5. Work is done to complete the new feature and git commit is executed to save the changes
-
-6. You then push the new feature branch to your remote forked repo
-
-7. Using Bitbucket you open up a pull request for the new branch against the original repo at bitbucket.org/userA/open-project
+To recap, the Forking Workflow is commonly used in public open-source projects. Forking is a git clone operation executed on a server copy of a projects repo. A Forking Workflow is often used in conjunction with a Git hosting service like Bitbucket.
 
 The Forking Workflow helps a maintainer of a project open up the repository to contributions from any developer without having to manually manage authorization settings for each individual contributor. This gives the maintainer more of a "pull" style workflow. Most commonly used in open-source projects, the Forking Workflow can also be applied to private business workflows to give more authoritative control over what is merged into a release. This can be useful in teams that have Deploy Managers or strict release cycles.
 
