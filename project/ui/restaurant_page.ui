@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget_3">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <widget class="QWidget" name="Login_SignUp">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QWidget" name="header_welcome" native="true">
+          <property name="cursor">
+           <cursorShape>BusyCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 134, 47);
+
+</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="close_window_button">
+             <property name="minimumSize">
+              <size>
+               <width>95</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../Qss/icons/_icons.qrc">
+               <normaloff>:/feather/icons/feather/x-circle.png</normaloff>:/feather/icons/feather/x-circle.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="body_welcome" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_2">
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="right_login_page"/>
+             <widget class="QWidget" name="right_signup_page">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QTableWidget" name="tableWidget">
+                 <column>
+                  <property name="text">
+                   <string>RESTAURANT</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>RATE</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>OPEN-CLOSE</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>CATEGORY</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>ADDRESS</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>HOTLINE</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>ACCESSIBILITY</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Main">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="header_main" native="true">
+          <property name="cursor">
+           <cursorShape>BusyCursor</cursorShape>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="home_button">
+             <property name="text">
+              <string>Home</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="restaurant_button">
+             <property name="text">
+              <string>Restaurant</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignmentFlag::AlignRight">
+            <widget class="QPushButton" name="profile_button">
+             <property name="minimumSize">
+              <size>
+               <width>48</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>48</width>
+               <height>48</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../Qss/icons/_icons.qrc">
+               <normaloff>:/feather/icons/feather/smile.png</normaloff>:/feather/icons/feather/smile.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="body_main" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget_5">
+             <property name="currentIndex">
+              <number>3</number>
+             </property>
+             <widget class="QWidget" name="home_page">
+              <widget class="QLabel" name="label_2">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>80</y>
+                 <width>311</width>
+                 <height>111</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>30</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>HOME</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="restaurant_page">
+              <widget class="QLabel" name="label_3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>311</width>
+                 <height>111</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>30</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>RESTAURANT</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="review_restaurant_page">
+              <widget class="QLabel" name="label_8">
+               <property name="geometry">
+                <rect>
+                 <x>250</x>
+                 <y>60</y>
+                 <width>361</width>
+                 <height>111</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>30</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Review Restaurant</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="inside_restaurant_page">
+              <widget class="QWidget" name="body_modify_restaurant" native="true">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>875</width>
+                 <height>439</height>
+                </rect>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <layout class="QVBoxLayout" name="left_panel_restaurant">
+                  <item>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string>Info</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QStackedWidget" name="stackedWidget_4">
+                  <widget class="QWidget" name="menu_page">
+                   <widget class="QLabel" name="label_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>311</width>
+                      <height>111</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Menu</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="add_food_page">
+                   <widget class="QLabel" name="label_4">
+                    <property name="geometry">
+                     <rect>
+                      <x>30</x>
+                      <y>50</y>
+                      <width>311</width>
+                      <height>111</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>New Food</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="modify_food_page">
+                   <widget class="QLabel" name="label_10">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>311</width>
+                      <height>111</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Food Name</string>
+                    </property>
+                   </widget>
+                  </widget>
+                  <widget class="QWidget" name="review_food_page">
+                   <widget class="QLabel" name="label_11">
+                    <property name="geometry">
+                     <rect>
+                      <x>200</x>
+                      <y>120</y>
+                      <width>311</width>
+                      <height>111</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>30</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Review food</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../Qss/icons/_icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
