@@ -8,7 +8,7 @@
 
 3. add the source-of-truth repo as ```central``` (your own fork repo is ```origin```)
 
-4. before making changes:
+4. before making changes (every time you code something new):
 
 a) make sure you're on local main branch
 
@@ -64,7 +64,8 @@ c) Merge PR
 1. Take a lot of time, not suitable for quick development teams who roll out main new features in a day
 2. Multiple redundant branches => take time to clean up the branches once in a while
 3. Hard to implement automatic merge and delete branches locally as compared to Gitflow
-
+4. Minor changes like documentation, assets mays still require a separate PR
+5. Members have to frequently update their local main branch and update their wip feature branches
 
 <hr/>
 
