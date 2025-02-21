@@ -10,923 +10,233 @@
     },
     {
       "name": "pushButton",
-      "icon": "Qss/icons/icons/feather/info.png"
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
     },
     {
-      "name": "pushButton_2",
-      "icon": "Qss/icons/icons/feather/menu.png"
+      "name": "pushButton_4",
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\4848456_choose_coffee_menu_menus_print_icon.png"
     },
     {
       "name": "pushButton_3",
-      "icon": "Qss/icons/icons/material_design/reviews.png"
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_review.png"
+    },
+    {
+      "name": "pushButton_16",
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+    },
+    {
+      "name": "pushButton_17",
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+    },
+    {
+      "name": "pushButton_18",
+      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
     }
   ],
   "QLabel": [
     {
-      "name": "label_8",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food.png"
+      "name": "label_12",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
     },
     {
-      "name": "label_18",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food(2).png"
+      "name": "label_267",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\images\\ic_adjust.png"
     },
     {
-      "name": "label_29",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_291",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\images\\ic_seclectick.png"
     },
     {
-      "name": "label_30",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_31",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_32",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_33",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_24",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_25",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_26",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_27",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_28",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_34",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_35",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_36",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_37",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_38",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_39",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_40",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_41",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_42",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_43",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_175",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_adjust.png"
-    },
-    {
-      "name": "label_127",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_128",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_129",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_130",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_131",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_124",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_123",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_113",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_114",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_117",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_118",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_119",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_120",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_121",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_105",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_102",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_107",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_108",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_109",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_110",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_111",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_209",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_adjust.png"
-    },
-    {
-      "name": "label_211",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_212",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_213",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_214",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_215",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_216",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_218",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_220",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_221",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_224",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_225",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_226",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_227",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_228",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_230",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_231",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_234",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_235",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_236",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_237",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_238",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_240",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food(2).png"
-    },
-    {
-      "name": "label_246",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_247",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_248",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_249",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_250",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_251",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_252",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_253",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_254",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_255",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_256",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_257",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_258",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_259",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_260",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_261",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_262",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_263",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_264",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_265",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_408",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_adjust.png"
-    },
-    {
-      "name": "label_410",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_411",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_412",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_413",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_414",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_415",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_417",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_419",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_420",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_423",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_424",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_425",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_426",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_427",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_428",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_429",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_430",
-      "pixmap": "Qss/icons/icons/feather/user.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_433",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_431",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+    },
+    {
+      "name": "label_432",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_434",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_435",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_436",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_437",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_439",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food(2).png"
+      "name": "label_438",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
-      "name": "label_445",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_440",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+    },
+    {
+      "name": "label_441",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+    },
+    {
+      "name": "label_442",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+    },
+    {
+      "name": "label_443",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+    },
+    {
+      "name": "label_444",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_446",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_447",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_448",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_449",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_450",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_451",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_452",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_453",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_454",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_455",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_456",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_457",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_458",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_459",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_460",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_461",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_462",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_463",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_464",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_825",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food(2).png"
+      "name": "label_465",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_831",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_466",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_832",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_467",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
     },
     {
-      "name": "label_833",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_468",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
     },
     {
-      "name": "label_834",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_319",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_835",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_321",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_836",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_322",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_837",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_324",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_838",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_325",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_839",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_326",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_840",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_338",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
     },
     {
-      "name": "label_841",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "lb_anh_7",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food.png"
     },
     {
-      "name": "label_842",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_341",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\134224_add_plus_new_icon.png"
     },
     {
-      "name": "label_843",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_343",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
     },
     {
-      "name": "label_844",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "lb_anh_8",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food.png"
     },
     {
-      "name": "label_845",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
+      "name": "label_346",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\134224_add_plus_new_icon.png"
     },
     {
-      "name": "label_846",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_847",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_848",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_849",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_850",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_662",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_adjust.png"
-    },
-    {
-      "name": "label_664",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_665",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_666",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_667",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_668",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_669",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_671",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_673",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_674",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_677",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_678",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_679",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_680",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_681",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_683",
-      "pixmap": "Qss/icons/icons/feather/more-horizontal.png"
-    },
-    {
-      "name": "label_684",
-      "pixmap": "Qss/icons/icons/feather/user.png"
-    },
-    {
-      "name": "label_687",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_688",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_689",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_690",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_691",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_star.png"
-    },
-    {
-      "name": "label_23",
-      "pixmap": "Qss/icons/icons/font_awesome/regular/star.png"
-    }
-  ],
-  "QLabel": [
-    {
-      "name": "facebook",
-      "pixmap": "C:\\Users\\M\u1ef8 LINH\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
-    },
-    {
-      "name": "insta",
-      "pixmap": "C:\\Users\\M\u1ef8 LINH\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
-    },
-    {
-      "name": "tiktok",
-      "pixmap": "C:\\Users\\M\u1ef8 LINH\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
-    },
-    {
-      "name": "food_image",
-      "pixmap": "Qss/icons/icons/material_design/fastfood.png"
-    },
-    {
-      "name": "big_star_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "big_star_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "big_star_3",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "big_star_4",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "big_star_5",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "label_24",
-      "pixmap": "Qss/icons/icons/feather/filter.png"
-    },
-    {
-      "name": "review_avatar_1",
-      "pixmap": "Qss/icons/icons/material_design/person.png"
-    },
-    {
-      "name": "rate_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "review_avatar_2",
-      "pixmap": "Qss/icons/icons/material_design/person.png"
-    },
-    {
-      "name": "rate_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+      "name": "label_348",
+      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
     }
   ]
 }
