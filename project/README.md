@@ -49,7 +49,7 @@ Thường xuyên ```git add .```, ```git commit -a -m ``` (ghi commit message r�
    ```
    **Giữ cửa sổ command line/terminal này mở** trong khi chỉnh sửa giao diện UI bên trong Qt Designer để nó tự động cập nhật tệp `ui_interface.py`.
 4. **Mở Qt Designer**, sau đó mở tệp `interface.ui` trong Qt Designer. **Tránh sử dụng "External tool" trong PyCharm** để mở tệp `.ui` vì nó có thể tiêu tốn quá nhiều RAM và làm PyCharm crash.
-5. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại và git commit với thông điệp có ý nghĩa.
+5. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại và ```git commit``` với thông điệp có ý nghĩa.
 
 
 ### Hướng dẫn dùng Widget 
