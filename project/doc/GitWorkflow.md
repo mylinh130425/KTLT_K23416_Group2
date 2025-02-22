@@ -12,9 +12,9 @@
 
 <hr/>
 
-## Missing steps
+## Missing steps for GUI feature development
 1. Git set upstream central to My Linh's repo
-2. Common conflict scenarios: interface.ui, new_interface.ui, ui_interface.ui => only need to resolve the conflict in interface.ui (often keep right - changes in your local code) => run CustomWidgets monitor script => open interface.ui in qt designer, make a tiny change and undo => save => all the conflicted files are correctly resolved => ```git add .``` and ```git rebase --continue```
+2. Common conflict scenarios: interface.ui, new_interface.ui, ui_interface.ui => git nly need to resolve the conflict in interface.ui (often keep right - changes in your local code) => run CustomWidgets monitor script => open interface.ui in qt designer, make a tiny change and undo => save => all the conflicted files are correctly resolved => ```git add .``` and ```git rebase --continue```
 3. Push upstream
 
 ## Detail
