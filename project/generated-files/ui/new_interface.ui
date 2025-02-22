@@ -384,7 +384,7 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QWidget" name="widget_3" native="true">
+                                <widget class="QWidget" name="avatar_widget" native="true">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -447,7 +447,7 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QLabel" name="label_6">
+                                <widget class="QLabel" name="address_label">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -515,7 +515,7 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QLabel" name="label_9">
+                                <widget class="QLabel" name="contact_label">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -616,16 +616,16 @@
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_7">
                                <item>
-                                <widget class="QLabel" name="label_12">
+                                <widget class="QLabel" name="open_label">
                                  <property name="text">
                                   <string>Opening Hours</string>
                                  </property>
                                 </widget>
                                </item>
                                <item>
-                                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                                <layout class="QHBoxLayout" name="same_horizontalLayout">
                                  <item>
-                                  <widget class="QLabel" name="label_13">
+                                  <widget class="QLabel" name="save_label">
                                    <property name="text">
                                     <string>Same All Days</string>
                                    </property>
@@ -641,7 +641,7 @@
                                 </layout>
                                </item>
                                <item>
-                                <layout class="QGridLayout" name="gridLayout">
+                                <layout class="QGridLayout" name="week_gridLayout">
                                  <item row="8" column="0">
                                   <widget class="QCheckBox" name="friday_checkBox">
                                    <property name="text">
@@ -792,7 +792,7 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QScrollArea" name="scrollArea">
+                          <widget class="QScrollArea" name="modify_scrollArea">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                              <horstretch>0</horstretch>
@@ -802,11 +802,11 @@
                            <property name="widgetResizable">
                             <bool>true</bool>
                            </property>
-                           <widget class="QWidget" name="scrollAreaWidgetContents">
+                           <widget class="QWidget" name="modify_scrollAreaWidgetContents">
                             <property name="geometry">
                              <rect>
                               <x>0</x>
-                              <y>-255</y>
+                              <y>0</y>
                               <width>526</width>
                               <height>699</height>
                              </rect>
@@ -906,7 +906,7 @@
                                        <number>0</number>
                                       </property>
                                       <item>
-                                       <widget class="QWidget" name="widget_4" native="true">
+                                       <widget class="QWidget" name="avatar_widget_2" native="true">
                                         <property name="sizePolicy">
                                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                           <horstretch>0</horstretch>
@@ -969,7 +969,7 @@
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QLabel" name="label_14">
+                                       <widget class="QLabel" name="address_label_2">
                                         <property name="sizePolicy">
                                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                           <horstretch>0</horstretch>
@@ -1037,7 +1037,7 @@
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QLabel" name="label_15">
+                                       <widget class="QLabel" name="contact_label_2">
                                         <property name="sizePolicy">
                                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                           <horstretch>0</horstretch>
@@ -1122,16 +1122,16 @@
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_14">
                                       <item>
-                                       <widget class="QLabel" name="label_16">
+                                       <widget class="QLabel" name="open_label_2">
                                         <property name="text">
                                          <string>Opening Hours</string>
                                         </property>
                                        </widget>
                                       </item>
                                       <item>
-                                       <layout class="QHBoxLayout" name="horizontalLayout_15">
+                                       <layout class="QHBoxLayout" name="same_horizontalLayout_2">
                                         <item>
-                                         <widget class="QLabel" name="label_17">
+                                         <widget class="QLabel" name="same_label_2">
                                           <property name="text">
                                            <string>Same All Days</string>
                                           </property>
@@ -1147,7 +1147,7 @@
                                        </layout>
                                       </item>
                                       <item>
-                                       <layout class="QGridLayout" name="gridLayout_5">
+                                       <layout class="QGridLayout" name="week_gridLayout_2">
                                         <item row="8" column="0">
                                          <widget class="QCheckBox" name="friday_checkBox_2">
                                           <property name="text">
@@ -1266,14 +1266,14 @@
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_15">
                                       <item>
-                                       <widget class="QLabel" name="label_7">
+                                       <widget class="QLabel" name="social_label">
                                         <property name="text">
                                          <string>Social Media</string>
                                         </property>
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QWidget" name="widget" native="true">
+                                       <widget class="QWidget" name="button_widget" native="true">
                                         <property name="sizePolicy">
                                          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                                           <horstretch>0</horstretch>
@@ -1282,7 +1282,7 @@
                                         </property>
                                         <layout class="QHBoxLayout" name="horizontalLayout_16">
                                          <item>
-                                          <widget class="QLabel" name="label_19">
+                                          <widget class="QLabel" name="facebook">
                                            <property name="maximumSize">
                                             <size>
                                              <width>30</width>
@@ -1301,7 +1301,7 @@
                                           </widget>
                                          </item>
                                          <item>
-                                          <widget class="QLabel" name="label_18">
+                                          <widget class="QLabel" name="insta">
                                            <property name="maximumSize">
                                             <size>
                                              <width>30</width>
@@ -1320,7 +1320,7 @@
                                           </widget>
                                          </item>
                                          <item>
-                                          <widget class="QLabel" name="label_20">
+                                          <widget class="QLabel" name="tiktok">
                                            <property name="maximumSize">
                                             <size>
                                              <width>30</width>
@@ -1377,14 +1377,14 @@
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QLineEdit" name="lineEdit_3">
+                                       <widget class="QLineEdit" name="delivery_lineEdit">
                                         <property name="placeholderText">
                                          <string>Notes for deliveries</string>
                                         </property>
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QWidget" name="widget_5" native="true">
+                                       <widget class="QWidget" name="del_save_widget" native="true">
                                         <layout class="QHBoxLayout" name="horizontalLayout_17">
                                          <property name="spacing">
                                           <number>70</number>
@@ -1440,7 +1440,7 @@
                                        <number>0</number>
                                       </property>
                                       <item>
-                                       <widget class="QWidget" name="widget_2" native="true">
+                                       <widget class="QWidget" name="service_widget" native="true">
                                         <property name="sizePolicy">
                                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                           <horstretch>0</horstretch>
@@ -1449,7 +1449,7 @@
                                         </property>
                                         <layout class="QVBoxLayout" name="verticalLayout_17">
                                          <item>
-                                          <widget class="QLabel" name="label_21">
+                                          <widget class="QLabel" name="service_label">
                                            <property name="sizePolicy">
                                             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                              <horstretch>0</horstretch>
@@ -1500,7 +1500,7 @@
                                        </widget>
                                       </item>
                                       <item>
-                                       <widget class="QFrame" name="frame">
+                                       <widget class="QFrame" name="dummy_frame">
                                         <property name="frameShape">
                                          <enum>QFrame::StyledPanel</enum>
                                         </property>
