@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>632</height>
+    <width>943</width>
+    <height>581</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,6 +35,9 @@
     </property>
     <item>
      <widget class="QStackedWidget" name="stackedWidget_3">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
       <widget class="QWidget" name="Login_SignUp">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
@@ -204,7 +207,7 @@
            <item>
             <widget class="QStackedWidget" name="stackedWidget_5">
              <property name="currentIndex">
-              <number>3</number>
+              <number>2</number>
              </property>
              <widget class="QWidget" name="home_page">
               <widget class="QLabel" name="label_2">
@@ -246,26 +249,6 @@
                </property>
               </widget>
              </widget>
-             <widget class="QWidget" name="review_restaurant_page">
-              <widget class="QLabel" name="label_8">
-               <property name="geometry">
-                <rect>
-                 <x>250</x>
-                 <y>60</y>
-                 <width>361</width>
-                 <height>111</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>30</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Review Restaurant</string>
-               </property>
-              </widget>
-             </widget>
              <widget class="QWidget" name="inside_restaurant_page">
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
@@ -300,7 +283,7 @@
                      </sizepolicy>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>8</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -807,8 +790,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>526</width>
-                              <height>699</height>
+                              <width>403</width>
+                              <height>682</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1293,7 +1276,7 @@
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>../Qss/icons/Icons/restaurant_logo/facebook.png</pixmap>
+                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/facebook.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -1312,7 +1295,7 @@
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>../Qss/icons/Icons/restaurant_logo/insta.png</pixmap>
+                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/insta.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -1331,7 +1314,7 @@
                                             <string/>
                                            </property>
                                            <property name="pixmap">
-                                            <pixmap>../Qss/icons/Icons/restaurant_logo/tiktok.png</pixmap>
+                                            <pixmap>C:/Users/MỸ LINH/.designer/Qss/icons/Icons/restaurant_logo/tiktok.png</pixmap>
                                            </property>
                                            <property name="scaledContents">
                                             <bool>true</bool>
@@ -1527,6 +1510,66 @@
                       </item>
                      </layout>
                     </widget>
+                    <widget class="QWidget" name="add_review_restaurant_page">
+                     <widget class="QLabel" name="label_9">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>351</width>
+                        <height>71</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Add new review for restaurant</string>
+                      </property>
+                     </widget>
+                    </widget>
+                    <widget class="QWidget" name="edit_review_restaurant_page">
+                     <widget class="QLabel" name="label_12">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>341</width>
+                        <height>71</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Edit 1 review of a  restaurant</string>
+                      </property>
+                     </widget>
+                    </widget>
+                    <widget class="QWidget" name="review_restaurant_page">
+                     <widget class="QLabel" name="label_13">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>341</width>
+                        <height>71</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>List of restaurant reviews</string>
+                      </property>
+                     </widget>
+                    </widget>
                     <widget class="QWidget" name="menu_page">
                      <widget class="QLabel" name="label_5">
                       <property name="geometry">
@@ -1588,12 +1631,2929 @@
                      </widget>
                     </widget>
                     <widget class="QWidget" name="review_food_page">
-                     <widget class="QLabel" name="label_11">
+                     <layout class="QVBoxLayout" name="verticalLayout_16">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QWidget" name="top_bar_3" native="true">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>1</verstretch>
+                         </sizepolicy>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QWidget" name="main_content_3" native="true">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>9</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_18">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QWidget" name="food_review_top" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_11">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QWidget" name="food_review_left" native="true">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                <horstretch>4</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_19">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QWidget" name="food_name_area" native="true">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_15">
+                                  <property name="leftMargin">
+                                   <number>20</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="food_image">
+                                    <property name="sizePolicy">
+                                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                      <horstretch>0</horstretch>
+                                      <verstretch>0</verstretch>
+                                     </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>50</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>50</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                    <property name="pixmap">
+                                     <pixmap resource="../Qss/icons/_icons.qrc">:/material_design/icons/material_design/fastfood.png</pixmap>
+                                    </property>
+                                    <property name="scaledContents">
+                                     <bool>true</bool>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="food_name">
+                                    <property name="sizePolicy">
+                                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                      <horstretch>0</horstretch>
+                                      <verstretch>0</verstretch>
+                                     </sizepolicy>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>10</pointsize>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>Food name</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QWidget" name="rate_widget" native="true">
+                                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                                  <property name="spacing">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QWidget" name="avg_rate" native="true">
+                                    <property name="sizePolicy">
+                                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                      <horstretch>0</horstretch>
+                                      <verstretch>0</verstretch>
+                                     </sizepolicy>
+                                    </property>
+                                    <layout class="QHBoxLayout" name="horizontalLayout_18">
+                                     <property name="spacing">
+                                      <number>0</number>
+                                     </property>
+                                     <item>
+                                      <widget class="QLabel" name="avg_value">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>20</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>4.0</string>
+                                       </property>
+                                       <property name="alignment">
+                                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="avg_5">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>20</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>/5</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QWidget" name="stars_widget" native="true">
+                                    <layout class="QHBoxLayout" name="horizontalLayout_19">
+                                     <item>
+                                      <widget class="QLabel" name="big_star_1">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="text">
+                                        <string/>
+                                       </property>
+                                       <property name="pixmap">
+                                        <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                       </property>
+                                       <property name="scaledContents">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="big_star_2">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="text">
+                                        <string/>
+                                       </property>
+                                       <property name="pixmap">
+                                        <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                       </property>
+                                       <property name="scaledContents">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="big_star_3">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="text">
+                                        <string/>
+                                       </property>
+                                       <property name="pixmap">
+                                        <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                       </property>
+                                       <property name="scaledContents">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="big_star_4">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="text">
+                                        <string/>
+                                       </property>
+                                       <property name="pixmap">
+                                        <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                       </property>
+                                       <property name="scaledContents">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="big_star_5">
+                                       <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                         <horstretch>0</horstretch>
+                                         <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                       </property>
+                                       <property name="minimumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="maximumSize">
+                                        <size>
+                                         <width>23</width>
+                                         <height>20</height>
+                                        </size>
+                                       </property>
+                                       <property name="text">
+                                        <string/>
+                                       </property>
+                                       <property name="pixmap">
+                                        <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                       </property>
+                                       <property name="scaledContents">
+                                        <bool>true</bool>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="nums_reviews">
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>12</pointsize>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>20 Reviews</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QWidget" name="food_review_right" native="true">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                <horstretch>6</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <layout class="QGridLayout" name="gridLayout">
+                               <item row="1" column="1">
+                                <widget class="QLabel" name="good_label">
+                                 <property name="text">
+                                  <string>Good</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="4" column="1">
+                                <widget class="QLabel" name="poor_label">
+                                 <property name="text">
+                                  <string>Poor</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="0" column="2">
+                                <widget class="QProgressBar" name="excelent_progressBar">
+                                 <property name="value">
+                                  <number>24</number>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="2" column="1">
+                                <widget class="QLabel" name="avg_label">
+                                 <property name="text">
+                                  <string>Average</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="3" column="1">
+                                <widget class="QLabel" name="below_label">
+                                 <property name="text">
+                                  <string>Below average</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="0" column="1">
+                                <widget class="QLabel" name="excelent_label">
+                                 <property name="text">
+                                  <string>Excelent</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="1" column="2">
+                                <widget class="QProgressBar" name="good_progressBar">
+                                 <property name="value">
+                                  <number>24</number>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="2" column="2">
+                                <widget class="QProgressBar" name="avg_progressBar">
+                                 <property name="value">
+                                  <number>24</number>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="3" column="2">
+                                <widget class="QProgressBar" name="below_progressBar">
+                                 <property name="value">
+                                  <number>24</number>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item row="4" column="2">
+                                <widget class="QProgressBar" name="poor_progressBar">
+                                 <property name="value">
+                                  <number>24</number>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="food_review_bot" native="true">
+                           <layout class="QVBoxLayout" name="verticalLayout_21">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QWidget" name="column_name" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_20">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_17">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>3</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>User Name</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_18">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>2</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Rate</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_19">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>4</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Details</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_20">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>2</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Date</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_21">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>2</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Hygiene</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_22">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>2</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Taste</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_23">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                   <horstretch>2</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Portion</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_24">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>20</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                 <property name="text">
+                                  <string/>
+                                 </property>
+                                 <property name="pixmap">
+                                  <pixmap resource="../Qss/icons/_icons.qrc">:/feather/icons/feather/filter.png</pixmap>
+                                 </property>
+                                 <property name="scaledContents">
+                                  <bool>true</bool>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QScrollArea" name="reviews_scrollArea">
+                              <property name="verticalScrollBarPolicy">
+                               <enum>Qt::ScrollBarAlwaysOn</enum>
+                              </property>
+                              <property name="horizontalScrollBarPolicy">
+                               <enum>Qt::ScrollBarAlwaysOff</enum>
+                              </property>
+                              <property name="widgetResizable">
+                               <bool>true</bool>
+                              </property>
+                              <widget class="QWidget" name="reviews_scrollAreaWidgetContents">
+                               <property name="geometry">
+                                <rect>
+                                 <x>0</x>
+                                 <y>0</y>
+                                 <width>769</width>
+                                 <height>153</height>
+                                </rect>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_22">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QFrame" name="reviews_frame">
+                                  <property name="sizePolicy">
+                                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                   </sizepolicy>
+                                  </property>
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QVBoxLayout" name="verticalLayout_23">
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QWidget" name="review_item_1" native="true">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <layout class="QHBoxLayout" name="horizontalLayout_27">
+                                      <property name="spacing">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="leftMargin">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="rightMargin">
+                                       <number>3</number>
+                                      </property>
+                                      <item>
+                                       <widget class="QWidget" name="review_info_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>3</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QGridLayout" name="gridLayout_2">
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item row="0" column="0">
+                                          <widget class="QLabel" name="review_avatar_1">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                             <horstretch>0</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>20</width>
+                                             <height>20</height>
+                                            </size>
+                                           </property>
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>20</width>
+                                             <height>20</height>
+                                            </size>
+                                           </property>
+                                           <property name="text">
+                                            <string/>
+                                           </property>
+                                           <property name="pixmap">
+                                            <pixmap resource="../Qss/icons/_icons.qrc">:/material_design/icons/material_design/person.png</pixmap>
+                                           </property>
+                                           <property name="scaledContents">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item row="0" column="1">
+                                          <widget class="QLabel" name="review_username_1">
+                                           <property name="text">
+                                            <string>Username</string>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item row="1" column="0" colspan="2">
+                                          <widget class="QFrame" name="review_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="rate_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_30">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="rate_stars_1" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_29">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_1_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_2_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_3_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_4_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_5_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="rate_nums_reviews_1">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="rate_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="details_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>4</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_31">
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QLabel" name="details_content_1">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                             <horstretch>4</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>5</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>I ordered the small beef and oyster sauce set for 179k (Thai sauce) which was...More</string>
+                                           </property>
+                                           <property name="wordWrap">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="details_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="date_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_32">
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QLabel" name="date_content_1">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                             <horstretch>3</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>5</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>2025-04-24 08:11</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                           <property name="wordWrap">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="date_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="hygiene_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_33">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="hygiene_stars_1" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_30">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_1_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_2_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_3_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_4_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_5_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="hygiene_nums_reviews_1">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="hygiene_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="taste_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_34">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="taste_stars_1" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_31">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_1_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_2_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_3_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_4_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_5_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="taste_nums_reviews_1">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="taste_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="portion_widget_1" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_35">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="portion_stars_1" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_32">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_1_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_2_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_3_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_4_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_5_1">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="portion_nums_reviews_1">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="portion_frame_1">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                     </layout>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QWidget" name="review_item_2" native="true">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <layout class="QHBoxLayout" name="horizontalLayout_33">
+                                      <property name="spacing">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="leftMargin">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="rightMargin">
+                                       <number>3</number>
+                                      </property>
+                                      <item>
+                                       <widget class="QWidget" name="review_info_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>3</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QGridLayout" name="gridLayout_5">
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item row="0" column="0">
+                                          <widget class="QLabel" name="review_avatar_2">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                             <horstretch>0</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>20</width>
+                                             <height>20</height>
+                                            </size>
+                                           </property>
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>20</width>
+                                             <height>20</height>
+                                            </size>
+                                           </property>
+                                           <property name="text">
+                                            <string/>
+                                           </property>
+                                           <property name="pixmap">
+                                            <pixmap resource="../Qss/icons/_icons.qrc">:/material_design/icons/material_design/person.png</pixmap>
+                                           </property>
+                                           <property name="scaledContents">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item row="0" column="1">
+                                          <widget class="QLabel" name="review_username_2">
+                                           <property name="text">
+                                            <string>Username</string>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item row="1" column="0" colspan="2">
+                                          <widget class="QFrame" name="review_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="rate_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_36">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="rate_stars_2" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_35">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_1_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_2_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_3_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_4_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="rate_star_5_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="rate_nums_reviews_2">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="rate_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="details_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>4</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_37">
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QLabel" name="details_content_2">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                             <horstretch>4</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>5</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>I ordered the small beef and oyster sauce set for 179k (Thai sauce) which was...More</string>
+                                           </property>
+                                           <property name="wordWrap">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="details_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="date_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_38">
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QLabel" name="date_content_2">
+                                           <property name="sizePolicy">
+                                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                             <horstretch>3</horstretch>
+                                             <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                           </property>
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>5</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>2025-04-24 08:11</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                           <property name="wordWrap">
+                                            <bool>true</bool>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="date_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="hygiene_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_39">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="hygiene_stars_2" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_36">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_1_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_2_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_3_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_4_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="hygiene_star_5_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="hygiene_nums_reviews_2">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="hygiene_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="taste_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_40">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="taste_stars_2" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_37">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_1_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_2_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_3_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_4_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="taste_star_5_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="taste_nums_reviews_2">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="taste_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                      <item>
+                                       <widget class="QWidget" name="portion_widget_2" native="true">
+                                        <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                          <horstretch>2</horstretch>
+                                          <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                        </property>
+                                        <layout class="QVBoxLayout" name="verticalLayout_41">
+                                         <property name="spacing">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="leftMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="topMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <property name="rightMargin">
+                                          <number>9</number>
+                                         </property>
+                                         <property name="bottomMargin">
+                                          <number>0</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QWidget" name="portion_stars_2" native="true">
+                                           <layout class="QHBoxLayout" name="horizontalLayout_38">
+                                            <property name="spacing">
+                                             <number>3</number>
+                                            </property>
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_1_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_2_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_3_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_4_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                            <item>
+                                             <widget class="QLabel" name="portion_star_5_2">
+                                              <property name="sizePolicy">
+                                               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                               </sizepolicy>
+                                              </property>
+                                              <property name="minimumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="maximumSize">
+                                               <size>
+                                                <width>12</width>
+                                                <height>10</height>
+                                               </size>
+                                              </property>
+                                              <property name="text">
+                                               <string/>
+                                              </property>
+                                              <property name="pixmap">
+                                               <pixmap resource="../Qss/icons/_icons.qrc">:/font_awesome_solid/icons/font_awesome/solid/star.png</pixmap>
+                                              </property>
+                                              <property name="scaledContents">
+                                               <bool>true</bool>
+                                              </property>
+                                             </widget>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QLabel" name="portion_nums_reviews_2">
+                                           <property name="font">
+                                            <font>
+                                             <pointsize>8</pointsize>
+                                            </font>
+                                           </property>
+                                           <property name="text">
+                                            <string>4.0</string>
+                                           </property>
+                                           <property name="alignment">
+                                            <set>Qt::AlignCenter</set>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QFrame" name="portion_frame_2">
+                                           <property name="frameShape">
+                                            <enum>QFrame::StyledPanel</enum>
+                                           </property>
+                                           <property name="frameShadow">
+                                            <enum>QFrame::Raised</enum>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </widget>
+                                      </item>
+                                     </layout>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="add_review_food_page">
+                     <widget class="QLabel" name="label_14">
                       <property name="geometry">
                        <rect>
-                        <x>200</x>
-                        <y>120</y>
-                        <width>311</width>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>451</width>
                         <height>111</height>
                        </rect>
                       </property>
@@ -1603,7 +4563,27 @@
                        </font>
                       </property>
                       <property name="text">
-                       <string>Review food</string>
+                       <string>Add new food review</string>
+                      </property>
+                     </widget>
+                    </widget>
+                    <widget class="QWidget" name="edit_review_food_page">
+                     <widget class="QLabel" name="label_15">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>451</width>
+                        <height>111</height>
+                       </rect>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>30</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Edit 1 review of 1 food</string>
                       </property>
                      </widget>
                     </widget>

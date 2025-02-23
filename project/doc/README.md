@@ -49,7 +49,7 @@ Thường xuyên ```git add .```, ```git commit -a -m ``` (ghi commit message r�
    ```
    **Giữ cửa sổ command line/terminal này mở** trong khi chỉnh sửa giao diện UI bên trong Qt Designer để nó tự động cập nhật tệp `ui_interface.py`.
 4. **Mở Qt Designer**, sau đó mở tệp `interface.ui` trong Qt Designer. **Tránh sử dụng "External tool" trong PyCharm** để mở tệp `.ui` vì nó có thể tiêu tốn quá nhiều RAM và làm PyCharm crash.
-5. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại và git commit với thông điệp có ý nghĩa.
+5. **Bắt đầu thiết kế/lập trình giao diện trong Qt Designer.** Nhớ thường xuyên lưu lại và ```git commit``` với thông điệp có ý nghĩa.
 
 
 ### Hướng dẫn dùng Widget 
@@ -68,7 +68,7 @@ Thường xuyên ```git add .```, ```git commit -a -m ``` (ghi commit message r�
 1. Copy tên của thành phần trong Qt Designer 
 2. Mở ```Qss/scss/defaultStyle.css```. Dán ```#<tên thành phần>{}``` vào như mẫu có sẵn trong file này
 3. Thêm các thuộc tính mới dựa trên [Style Sheet reference](https://doc.qt.io/qt-6/stylesheet-reference.html), chú ý danh sách thuộc tính bên tay phải
-![Style Sheet reference](doc_photo/Pasted image 20250218010439.png)
+![Style Sheet reference](../doc_photo/Pasted%20image%2020250218010439.png)
 4. Riêng giá trị cho màu sắc bao gồm tên tiếng Anh và chuỗi rgb vd: white, #fff, #ffffff, rgb(255,255,255) đều là màu trắng
 5. Cần thử nghiệm xem các đơn vị nào của CSS áp dụng được trong QSS/scss. Hiện tại ```px``` là đơn vị chắc chắn áp dụng được
 
@@ -106,7 +106,7 @@ For more, visit https://github.com/KhamisiKibet/QT-PyQt-PySide-Custom-Widgets
 
 1. Download and install [GTK+2 for Windows Runtime Environement - fix for cairo-2](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases)
 2. Create a .venv with Python 3.9 (in the picture it shows 3.8 because I have already installed Python 3.9)
-![setup .venv](doc_photo/Pasted image 20250217193556.png)
+![setup .venv](../doc_photo/Pasted%20image%2020250217193556.png)
 3. update pip
 ```
 python.exe -m pip install --upgrade pip

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* MAIN QSS STYLESHEET------------------------------------------ */
 /*
 
@@ -1680,7 +1681,7 @@ PlotWidget {
 #left_form {
   background-color: transparent; }
 
-#widget_3 {
+#avatar_widget {
   background-color: transparent; }
 
 #add_restaurant_page #content QLineEdit {
@@ -1740,11 +1741,11 @@ PlotWidget {
 #modify_restaurant_page #right_additional_info QWidget {
   background-color: transparent; }
 
-#modify_restaurant_page #scrollAreaWidgetContents {
+#modify_restaurant_page #modify_scrollAreaWidgetContents {
   background-color: transparent;
   border: 0; }
 
-#modify_restaurant_page #scrollArea {
+#modify_restaurant_page #modify_scrollArea {
   margin-bottom: 20px;
   margin-right: 5px;
   margin-top: 5px;
@@ -1752,13 +1753,13 @@ PlotWidget {
   border: 0;
   border-radius: 20px; }
 
-#modify_restaurant_page #scrollArea QScrollBar:vertical {
+#modify_restaurant_page #modify_scrollArea QScrollBar:vertical {
   border: 0;
   background: white;
   width: 10px;
   margin: 0px 0px 0px 0px; }
 
-#modify_restaurant_page #scrollArea QScrollBar::handle:vertical {
+#modify_restaurant_page #modify_scrollArea QScrollBar::handle:vertical {
   border: 0;
   background: gray;
   width: 10px;
@@ -1784,7 +1785,7 @@ PlotWidget {
 #left_form_2 {
   background-color: transparent; }
 
-#widget_4 {
+#avatar_widget_2 {
   background-color: transparent; }
 
 #modify_restaurant_page #content_2 QLineEdit {
@@ -1812,3 +1813,66 @@ PlotWidget {
 
 #modify_restaurant_page QFrame {
   background-color: white; }
+
+#review_food_page {
+  margin: 0;
+  border-radius: 20px;
+  background-color: white; }
+
+#review_food_page #main_content_3 {
+  margin-bottom: 20px;
+  background: transparent; }
+
+#review_food_page QWidget {
+  background-color: transparent; }
+
+#review_food_page #top_bar_3 {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
+
+#review_food_page #avg_value {
+  color: #FFA55A;
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 0; }
+
+#review_food_page #avg_5 {
+  color: gray;
+  font-size: 35px;
+  font-weight: 600;
+  margin-right: 0; }
+
+#review_food_page QProgressBar::chunk {
+  background-color: #FFA55A;
+  /* Màu của phần tiến trình */ }
+
+#review_food_page QProgressBar {
+  height: 10px;
+  background-color: #e9e9e9; }
+
+#review_food_page #column_name {
+  background-color: #e9e9e9; }
+
+#review_food_page #reviews_scrollAreaWidgetContents {
+  background-color: transparent;
+  border: 0; }
+
+#review_food_page #reviews_scrollArea {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 20px; }
+
+#review_food_page #reviews_scrollArea QScrollBar:vertical {
+  border: 0;
+  background: white;
+  width: 10px;
+  margin: 0px 0px 0px 0px; }
+
+#review_food_page #reviews_scrollArea QScrollBar::handle:vertical {
+  border: 0;
+  background: gray;
+  width: 10px;
+  margin: 0px 0px 0px 0px; }
