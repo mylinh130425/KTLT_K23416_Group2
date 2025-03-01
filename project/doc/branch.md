@@ -5,6 +5,7 @@
 
 ## food review
 > already rebased main
+> already merged
 
 # Tú An
 ## header
@@ -62,8 +63,13 @@
 ## add edit menu review
 > Many UI Changes - need to track =((
 
+
 ## menu-food-rebase
 > already rebase
+> include menu screen, add/edit food screens 
+> Nhat Ban pulled this branch and worked on it => possibly this branch was already part of jp-restaurant-page branch
+> No layout set for add_food and modify_food screens =((
+> after merging NB and My Linh branches, no Create/ Save/Delete buttons
 
 # Nhat Ban
 ## restaurant page

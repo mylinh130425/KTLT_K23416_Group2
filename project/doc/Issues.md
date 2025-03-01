@@ -7,3 +7,5 @@
 > **Giải pháp**
 >
 > Mở Qt Designer trước rồi mới dùng chức năng Open để mở file ui
+
+2. Chỉ mới thiết kế 3/4 số giao diện cần thiết mà đã cần tới gần 2gb ram để chạy file main trong dev mode, khả năng tràn bộ nhớ là rất cao. Hiện chạy file ```main.py``` rất lâu nhưng không thấy cửa sổ ứng dụng xuất hiện. Cần debug thử xem chỉ là tràn ram hay có lỗi trong file ui

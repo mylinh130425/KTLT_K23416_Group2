@@ -22,27 +22,27 @@
     },
     {
       "name": "pushButton",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_4",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\4848456_choose_coffee_menu_menus_print_icon.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\4848456_choose_coffee_menu_menus_print_icon.png"
     },
     {
       "name": "pushButton_3",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_review.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_review.png"
     },
     {
       "name": "pushButton_16",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_17",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_18",
-      "icon": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\5349751_information_info_icon.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
     }
   ],
   "QLabel": [
@@ -224,219 +224,415 @@
     },
     {
       "name": "label_12",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
     },
     {
-      "name": "label_19",
+      "name": "facebook",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
     },
     {
-      "name": "label_18",
+      "name": "insta",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
     },
     {
-      "name": "label_20",
+      "name": "tiktok",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
     },
     {
       "name": "label_267",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\images\\ic_adjust.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\images\\ic_adjust.png"
     },
     {
       "name": "label_291",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\images\\ic_seclectick.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\images\\ic_seclectick.png"
     },
     {
       "name": "label_428",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_429",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_430",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_431",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_432",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_434",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_435",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_436",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_437",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_438",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_440",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_441",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_442",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_443",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_444",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_446",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_447",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_448",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_449",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_450",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_452",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_453",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_454",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_455",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_456",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_458",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_459",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_460",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_461",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_462",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_464",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_465",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_466",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_467",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_starfull.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
     },
     {
       "name": "label_468",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_star.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
     },
     {
       "name": "label_319",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_321",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_322",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_324",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_325",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_326",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "label_338",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
     },
     {
       "name": "lb_anh_7",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_food.png"
     },
     {
       "name": "label_341",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\134224_add_plus_new_icon.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\134224_add_plus_new_icon.png"
     },
     {
       "name": "label_343",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
     },
     {
       "name": "lb_anh_8",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\ic_food.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_food.png"
     },
     {
       "name": "label_346",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\134224_add_plus_new_icon.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\134224_add_plus_new_icon.png"
     },
     {
       "name": "label_348",
-      "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
+    },
+    {
+      "name": "food_image",
+      "pixmap": "Qss/icons/icons/material_design/fastfood.png"
+    },
+    {
+      "name": "big_star_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_3",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_4",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_5",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "label_24",
+      "pixmap": "Qss/icons/icons/feather/filter.png"
+    },
+    {
+      "name": "review_avatar_1",
+      "pixmap": "Qss/icons/icons/material_design/person.png"
+    },
+    {
+      "name": "rate_star_1_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_2_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_3_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_4_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_5_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_1_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_2_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_3_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_4_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_5_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_1_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_2_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_3_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_4_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_5_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_1_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_2_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_3_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_4_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_5_1",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "review_avatar_2",
+      "pixmap": "Qss/icons/icons/material_design/person.png"
+    },
+    {
+      "name": "rate_star_1_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_2_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_3_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_4_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "rate_star_5_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_1_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_2_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_3_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_4_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "hygiene_star_5_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_1_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_2_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_3_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_4_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "taste_star_5_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_1_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_2_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_3_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_4_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "portion_star_5_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
     }
   ]
 }
