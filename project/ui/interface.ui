@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1190</width>
-    <height>1234</height>
+    <width>893</width>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,7 +61,7 @@
            <property name="bottomMargin">
             <number>0</number>
            </property>
-           <item>
+           <item alignment="Qt::AlignRight">
             <widget class="QPushButton" name="close_window_button">
              <property name="minimumSize">
               <size>
@@ -166,7 +166,7 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item alignment="Qt::AlignRight">
             <widget class="QPushButton" name="profile_button">
              <property name="minimumSize">
               <size>
@@ -444,8 +444,8 @@ alternate-background-color: rgb(255, 255, 255);</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -814,8 +814,8 @@ Sun: Off</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -868,8 +868,8 @@ Outdoor seating</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -1438,8 +1438,8 @@ Sun: Off</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -1532,8 +1532,8 @@ Sun: Off</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -1647,8 +1647,8 @@ Outdoor seating</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -2253,8 +2253,8 @@ Outdoor seating</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>189 Đ. Cống Quỳnh, 
-Phường Nguyễn Cư Trinh, 
+                   <string>189 Đ. Cống Quỳnh,
+Phường Nguyễn Cư Trinh,
 Quận 1, Hồ Chí Minh</string>
                   </property>
                  </widget>
@@ -3275,9 +3275,6 @@ Outdoor seating</string>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
                     </property>
                    </widget>
                   </item>
