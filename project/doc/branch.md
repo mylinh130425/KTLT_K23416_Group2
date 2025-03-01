@@ -1,6 +1,7 @@
 # Mỹ Linh
 ## add edit restaurant
-> already rebase
+> already rebased
+> already merged
 
 ## food review
 > already rebased main
@@ -18,7 +19,8 @@
 
 ## welcome
 > Rebased main with updates on markdown files
- 
+> already merged
+> regressed: button effects are missing
 
 ### login
 ### signup
