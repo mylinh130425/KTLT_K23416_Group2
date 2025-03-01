@@ -3831,9 +3831,9 @@ Outdoor seating</string>
                             <property name="geometry">
                              <rect>
                               <x>0</x>
-                              <y>-255</y>
-                              <width>526</width>
-                              <height>699</height>
+                              <y>0</y>
+                              <width>719</width>
+                              <height>696</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
