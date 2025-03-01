@@ -227,6 +227,18 @@
       "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
     },
     {
+      "name": "label_19",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
+    },
+    {
+      "name": "label_18",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
+    },
+    {
+      "name": "label_20",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
+    },
+    {
       "name": "label_267",
       "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\images\\ic_adjust.png"
     },
@@ -425,20 +437,6 @@
     {
       "name": "label_348",
       "pixmap": "D:\\Kythuatlaptrinh\\Project\\KTLT_K23416_Group2\\project\\image\\ic_food64.png"
-    }
-  ],
-  "QLabel": [
-    {
-      "name": "label_19",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
-    },
-    {
-      "name": "label_18",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
-    },
-    {
-      "name": "label_20",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
     }
   ]
 }
