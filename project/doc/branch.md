@@ -68,4 +68,9 @@
 # Nhat Ban
 ## restaurant page
 > already rebased 
+> 
 > rebased back to main
+> 
+> must refactor due to page in the middle of other screens
+> 
+> very messy ui file, not sure why?
