@@ -1644,7 +1644,7 @@ PlotWidget {
 #centralwidget {
   border-radius: 20px; }
 
-#header_welcome, #body_welcome, header_main {
+#header_welcome, #body_welcome, #header_frame {
   background-color: transparent;
   background: transparent;
   border: none; }
@@ -1654,6 +1654,58 @@ PlotWidget {
 
 #profile_button {
   border-radius: 18px;
+  background-color: #008080; }
+
+#add_restaurant_page #main_content {
+  margin: 0;
+  border-radius: 20px;
+  background-color: white; }
+
+#add_restaurant_page #top_bar {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
+
+#add_restaurant_page #content {
+  background-color: transparent; }
+
+#left_area_widget {
+  background-color: 0; }
+
+#right_area_widget {
+  background-color: blue; }
+
+#right_form {
+  background-color: transparent; }
+
+#left_form {
+  background-color: transparent; }
+
+#widget_3 {
+  background-color: transparent; }
+
+#add_restaurant_page #content QLineEdit {
+  background-color: transparent; }
+
+#add_restaurant_page #content QLabel {
+  background-color: transparent; }
+
+#add_restaurant_page #content QCheckBox {
+  background-color: transparent; }
+
+#address_widget {
+  background-color: transparent; }
+
+#contact_widget {
+  background-color: transparent; }
+
+#add_restaurant_page #create_pushButton {
+  background-color: black;
+  color: white;
+  border-radius: 5px; }
+
+#add_restaurant_page QLineEdit {
+  border: 1px solid black;
   background-color: #008080; }
 
 #add_restaurant_page #main_content {
@@ -1706,6 +1758,16 @@ PlotWidget {
 
 #add_restaurant_page QLineEdit {
   border: 1px solid black; }
+
+#profile_photo {
+  border-radius: 45px;
+  border: 1px solid #333; }
+
+#left_login_page {
+  background-color: #339999; }
+
+#left_signup_page {
+  background-color: #66B2B2; }
 
 #modify_restaurant_page {
   margin: 0;
@@ -1783,6 +1845,9 @@ PlotWidget {
   background-color: transparent; }
 
 #left_form_2 {
+  background-color: transparent; }
+
+#widget_4 {
   background-color: transparent; }
 
 #avatar_widget_2 {
@@ -1872,6 +1937,18 @@ PlotWidget {
   margin: 0px 0px 0px 0px; }
 
 #review_food_page #reviews_scrollArea QScrollBar::handle:vertical {
+  border: 0;
+  background: gray;
+  width: 10px;
+  margin: 0px 0px 0px 0px; }
+
+#modify_restaurant_page #scrollArea QScrollBar:vertical {
+  border: 0;
+  background: white;
+  width: 10px;
+  margin: 0px 0px 0px 0px; }
+
+#modify_restaurant_page #scrollArea QScrollBar::handle:vertical {
   border: 0;
   background: gray;
   width: 10px;

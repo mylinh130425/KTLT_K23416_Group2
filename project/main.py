@@ -9,7 +9,7 @@ import os
 import sys
 ########################################################################
 # IMPORT GUI FILE
-from src.ui_interface import *
+from src.ext_interface import *
 ########################################################################
 
 ########################################################################
@@ -25,7 +25,7 @@ from Custom_Widgets.QAppSettings import QAppSettings
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        self.ui = Extend_MainWindow()
         self.ui.setupUi(self)
 
         ########################################################################
@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         # Use this to specify your json file(s) path/name
         loadJsonStyle(self, self.ui, jsonFiles = {
             "json-styles/login_style.json"
-            }) 
+            })
 
         ########################################################################
 
