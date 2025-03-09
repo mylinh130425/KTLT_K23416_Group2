@@ -2,7 +2,7 @@ from pymongo import MongoClient, errors
 
 # Kết nối tới MongoDB server
 try:
-    client = MongoClient('mongodb://localhost:27017/', serverSelectionTimeoutMS=5000)
+    client = MongoClient('mongodb://localhost:27017/MealMatch', serverSelectionTimeoutMS=5000)
     client.server_info()  # Kích hoạt lỗi nếu không kết nối được
     print("Kết nối thành công tới MongoDB server")
 except errors.ServerSelectionTimeoutError as e:
