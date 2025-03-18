@@ -1,7 +1,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class ProfileForm(QtWidgets.QWidget):
+class ProfileDelegate(QtWidgets.QWidget):
     def setupUi(self, ParentWidget):
         self.horizontalLayout = QtWidgets.QHBoxLayout(ParentWidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
