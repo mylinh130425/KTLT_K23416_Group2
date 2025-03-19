@@ -1,6 +1,6 @@
 # from project.src.BurgerMenu import BurgerMenu
 from project.src.ProfileScreen import ProfileScreen
-from project.src.model.RestaurantModel import RestaurantModel
+from project.src.view.RestaurantScreen import RestaurantDelegate, RestaurantScreen
 from project.src.ui_interface_stacked import *
 
 
@@ -81,7 +81,7 @@ class Extend_MainWindow(Ui_MainWindow):
         # self.removeAllWidgetsExcept(self.body_stackedWidget, self.restaurant_page)
 
     def setup_restaurant(self):
-        self.restaurant_page=RestaurantModel(self.body_stackedWidget)
+        self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_profile(self):
@@ -128,23 +128,23 @@ class Extend_MainWindow(Ui_MainWindow):
 
 
 
-    # def removeAllWidgetsExcept(self, stack: QtWidgets.QStackedWidget, w: QtWidgets.QWidget):
-    #     """
-    #     Removes all widgets from the given stack except the one specified.
-    #
-    #     This method goes through all the widgets in the stack and removes each one
-    #     that is not the widget specified by the `w` argument. This is done by
-    #     iterating over the widgets in reverse order, calling `removeWidget` and
-    #     `deleteLater` on each one.
-    #
-    #     Args:
-    #         stack (QtWidgets.QStackedWidget): The stack to remove widgets from.
-    #         w (QtWidgets.QWidget): The only widget to keep in the stack.
-    #     """
-    #     for i in reversed(range(stack.count())):
-    #         widget = stack.widget(i)
-    #         if widget is not w:  # Chỉ xóa nếu KHÔNG phải w
-    #             print('removed', widget.objectName())
-    #             stack.removeWidget(widget)
-    #             widget.deleteLater()
+    def removeAllWidgetsExcept(self, stack: QtWidgets.QStackedWidget, w: QtWidgets.QWidget):
+        """
+        Removes all widgets from the given stack except the one specified.
+
+        This method goes through all the widgets in the stack and removes each one
+        that is not the widget specified by the `w` argument. This is done by
+        iterating over the widgets in reverse order, calling `removeWidget` and
+        `deleteLater` on each one.
+
+        Args:
+            stack (QtWidgets.QStackedWidget): The stack to remove widgets from.
+            w (QtWidgets.QWidget): The only widget to keep in the stack.
+        """
+        for i in reversed(range(stack.count())):
+            widget = stack.widget(i)
+            if widget is not w:  # Chỉ xóa nếu KHÔNG phải w
+                print('removed', widget.objectName())
+                stack.removeWidget(widget)
+                widget.deleteLater()
 
