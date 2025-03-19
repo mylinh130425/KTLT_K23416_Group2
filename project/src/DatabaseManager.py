@@ -26,16 +26,18 @@ class DatabaseManager:
             # Extract open hours safely
             hours_data = data.get("hours", [])
             open_hours = self.format_hours(hours_data)
-
+            about_data = data.get("about",[])
+            accessibility_texts = self.format_accessibility(about_data)
             restaurant = {
                 "_id":data.get("_id",""),
+                "featured_image": data.get("featured_image"),
                 "name": data.get("name", ""),
                 "rating": data.get("rating", 0),
                 "open_hours": open_hours,
                 "category": "\n".join(data.get("categories", "")),
                 "address": data.get("address", ""),
                 "hotline": data.get("phone", ""),
-                "accessibility": data.get("can_claim", ""),
+                "accessibility": "\n".join(accessibility_texts),
             }
             restaurants.append(restaurant)
 
@@ -66,6 +68,22 @@ class DatabaseManager:
         return " | ".join(formatted_hours)
 
         # Database connection
+    def format_accessibility(self, about_list):
+        """
+        TODO: Bản - Cần check lại dữ liệu xem hiển thị
+          thông tin gì ở cột Accessibility thì ok
+        :param about_list:
+        :return:
+        """
+        accessibility_texts = []
+        # if "about" in restaurant:
+        for about_item in about_list:
+            # if "options" in about_item:
+            if about_item["id"] == "payments" or about_item["id"]=="parking":
+                for option in about_item["options"]:
+                    accessibility_texts.append(option["name"])
+        # Cập nhật giá trị mới cho accessibility
+        return accessibility_texts
 
 
 if __name__ == "__main__":

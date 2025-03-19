@@ -837,7 +837,7 @@
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>C:/Users/USER/.designer/image/Logo.png</normaloff>C:/Users/USER/.designer/image/Logo.png</iconset>
+               <normaloff>../image/Logo.png</normaloff>../image/Logo.png</iconset>
              </property>
              <property name="iconSize">
               <size>

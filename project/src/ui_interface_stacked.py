@@ -315,7 +315,7 @@ class Ui_MainWindow(object):
         self.home_button.setStyleSheet("background:transparent;")
         self.home_button.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("C:/Users/USER/.designer/image/Logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\generated-files/ui\\../image/Logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.home_button.setIcon(icon1)
         self.home_button.setIconSize(QtCore.QSize(48, 30))
         self.home_button.setObjectName("home_button")
