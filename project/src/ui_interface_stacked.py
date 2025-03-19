@@ -63,14 +63,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setSpacing(0)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
         self.welcome_stackedWidget = QCustomQStackedWidget(parent=self.body_welcome)
-        self.welcome_stackedWidget.setStyleSheet("#welcome_stackedWidget {\n"
-"  border-top-right-radius:200px;\n"
-"  border-bottom-right-radius:200px;\n"
-"  background-color:transparent;\n"
-"  background: url(\"D:/Document/Bachelor/UEL/ProgrammingTechniquesKTLT/KTLT-group2/project/image/CreateAcc_Image.png\") no-repeat center center;\n"
-"  background-size: contain;\n"
-"  image-rendering: crisp-edges;\n"
-"}")
+        self.welcome_stackedWidget.setStyleSheet("")
         self.welcome_stackedWidget.setObjectName("welcome_stackedWidget")
         self.left_login_page = QtWidgets.QWidget()
         self.left_login_page.setStyleSheet("")
@@ -345,6 +338,7 @@ class Ui_MainWindow(object):
         font.setPointSize(18)
         self.burger_menu_button.setFont(font)
         self.burger_menu_button.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.burger_menu_button.setStyleSheet("background-color:white")
         self.burger_menu_button.setIconSize(QtCore.QSize(32, 32))
         self.burger_menu_button.setObjectName("burger_menu_button")
         self.horizontalLayout_13.addWidget(self.burger_menu_button)
@@ -3821,9 +3815,9 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.welcome_stackedWidget.setCurrentIndex(0)
+        self.welcome_stackedWidget.setCurrentIndex(1)
         self.login_signup_stackedWidget.setCurrentIndex(0)
-        self.body_stackedWidget.setCurrentIndex(1)
+        self.body_stackedWidget.setCurrentIndex(2)
         self.stackedWidget_7.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

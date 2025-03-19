@@ -1,12 +1,6 @@
-from PyQt6.QtWidgets import QVBoxLayout
-from PyQt6.QtCore import Qt
-
-from project.model.HeaderMainDelegate import HeaderBar
 # from project.src.BurgerMenu import BurgerMenu
-from project.src.Login import LoginHandler
 from project.src.ProfileScreen import ProfileScreen
-from project.src.RestaurantScreen import RestaurantScreen
-from project.src.Signup import SignupHandler
+from project.src.model.RestaurantModel import RestaurantModel
 from project.src.ui_interface_stacked import *
 
 
@@ -87,7 +81,7 @@ class Extend_MainWindow(Ui_MainWindow):
         # self.removeAllWidgetsExcept(self.body_stackedWidget, self.restaurant_page)
 
     def setup_restaurant(self):
-        self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
+        self.restaurant_page=RestaurantModel(self.body_stackedWidget)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_profile(self):

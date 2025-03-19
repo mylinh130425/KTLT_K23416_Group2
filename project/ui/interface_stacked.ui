@@ -153,17 +153,10 @@
            <item>
             <widget class="QCustomQStackedWidget" name="welcome_stackedWidget">
              <property name="styleSheet">
-              <string notr="true">#welcome_stackedWidget {
-  border-top-right-radius:200px;
-  border-bottom-right-radius:200px;
-  background-color:transparent;
-  background: url(&quot;D:/Document/Bachelor/UEL/ProgrammingTechniquesKTLT/KTLT-group2/project/image/CreateAcc_Image.png&quot;) no-repeat center center;
-  background-size: contain;
-  image-rendering: crisp-edges;
-}</string>
+              <string notr="true"/>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="left_login_page">
               <property name="styleSheet">
@@ -917,6 +910,9 @@
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:white</string>
+             </property>
              <property name="text">
               <string>☰</string>
              </property>
@@ -946,7 +942,7 @@
               <enum>Qt::LeftToRight</enum>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>2</number>
              </property>
              <widget class="QWidget" name="profile_page"/>
              <widget class="QWidget" name="home_page"/>
@@ -8544,7 +8540,6 @@ background-color: rgb(41, 110, 126);</string>
  </customwidgets>
  <resources>
   <include location="../Qss/icons/_icons.qrc"/>
-  <include location="C:/Users/USER/.designer/Qss/icons/_icons.qrc"/>
  </resources>
  <connections/>
 </ui>
