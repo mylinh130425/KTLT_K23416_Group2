@@ -19,10 +19,10 @@ jobs:
           python-version: "3.9"
 
       - name: Install dependencies
-        run: pip install pdoc
+        run: pip install pdoc3
 
       - name: Generate documentation
-        run: pdoc --html your_package_name --output-dir docs --force
+        run: pdoc3 --html  -o project/doc project/src --force
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
