@@ -1,0 +1,29 @@
+{
+   "navigation": [
+    {
+      "name": "stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "Main",
+              "signup_button": "Main"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "profile_page",
+              "signup_button": "profile_page"
+            }
+          ]
+        }
+      ]
+    }]
+}
