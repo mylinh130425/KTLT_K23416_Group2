@@ -1,6 +1,9 @@
+from PyQt6.QtWidgets import QVBoxLayout
+from PyQt6.QtCore import Qt
+
+from project.model.HeaderMainDelegate import HeaderBar
 from project.src.ProfileScreen import ProfileScreen
 from project.src.RestaurantScreen import RestaurantScreen
-# from project.src.RestaurantScreen import RestaurantScreen
 from project.src.ui_interface_stacked import *
 
 
@@ -14,6 +17,17 @@ class Extend_MainWindow(Ui_MainWindow):
             MainWindow (QMainWindow): The main window to set up the UI for.
         """
         super().setupUi(MainWindow)
+        # Header Bar
+        # self.header_bar= HeaderBar()
+        # self.header_main = None
+        # Set layout for header_main and add HeaderBar inside it
+        # layout = QVBoxLayout(self.header_main)
+        # layout.setContentsMargins(0, 0, 0, 0)  # Remove margins
+        # layout.setSpacing(0)  # Remove spacing
+        # self.horizontalLayout_13.addWidget(self.header_bar, alignment=Qt.AlignmentFlag.AlignTop)
+
+        # self.header_bar.logoClicked.connect(self.goHome)  # Connect signal to function
+
         self.processSignalAndSlot()
 
 
@@ -30,12 +44,7 @@ class Extend_MainWindow(Ui_MainWindow):
         self.to_login_button.clicked.connect(self.goLogin)
         self.to_signup_button.clicked.connect(self.goSignUp)
         self.home_button.clicked.connect(self.goHome)
-        self.restaurant_button.clicked.connect(self.goRestaurant)
-        self.login_button.clicked.connect(self.loginClicked)
-        self.to_login_button.clicked.connect(self.goLogin)
-        self.to_signup_button.clicked.connect(self.goSignUp)
-        self.home_button.clicked.connect(self.goHome)
-        self.restaurant_button.clicked.connect(self.goRestaurant)
+        # self.restaurant_button.clicked.connect(self.goRestaurant)
 
     def goLogin(self):
         """
@@ -71,6 +80,7 @@ class Extend_MainWindow(Ui_MainWindow):
     def setup_restaurant(self):
         self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
         self.body_stackedWidget.addWidget(self.restaurant_page)
+
     def setup_profile(self):
         """
         Initializes the profile page and adds it to the body stacked widget.
