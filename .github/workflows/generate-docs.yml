@@ -1,0 +1,38 @@
+name: Generate Docs
+
+on:
+  push:
+    branches:
+      - main  # Chạy khi push lên nhánh main
+      - widget-refactor
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: pip install pdoc
+
+      - name: Generate documentation
+        run: pdoc --html your_package_name --output-dir docs --force
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+
+      - name: Notify Slack
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,commit,author
+          text: Generate Docs

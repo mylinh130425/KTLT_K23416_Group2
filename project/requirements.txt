@@ -1,2 +1,3 @@
 PyQt6
 QT-PyQt-PySide-Custom-Widgets
+PyMongo
