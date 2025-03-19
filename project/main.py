@@ -63,6 +63,7 @@ if __name__ == "__main__":
     ########################################################################
     window = MainWindow()
     window.show()
+    sys.excepthook = lambda exctype, value, traceback: print(exctype, value)
     sys.exit(app.exec_())
 ########################################################################
 ## END===>

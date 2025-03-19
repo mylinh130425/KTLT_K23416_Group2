@@ -894,9 +894,9 @@
               <enum>Qt::LeftToRight</enum>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
-             <widget class="QWidget" name="Profile" />
+             <widget class="QWidget" name="profile_page" />
              <widget class="QWidget" name="home_page">
               <widget class="QLabel" name="label_22">
                <property name="geometry">
@@ -4004,7 +4004,7 @@ Outdoor seating</string>
                      <string notr="true">color: rgb(41, 110, 126);</string>
                     </property>
                     <property name="currentIndex">
-                     <number>7</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -4511,7 +4511,7 @@ Outdoor seating</string>
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>404</width>
+                              <width>710</width>
                               <height>696</height>
                              </rect>
                             </property>
