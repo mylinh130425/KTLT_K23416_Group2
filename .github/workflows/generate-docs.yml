@@ -21,7 +21,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y libegl1-mesa libegl1-mesa-dev libopengl0
+          sudo apt install -y mesa-utils libgl1-mesa-glx libegl1 libxkbcommon-x11-0
 
       - name: Install dependencies
         run: |
