@@ -24,11 +24,11 @@ class RestaurantScreen(QtWidgets.QWidget):  # Kế thừa từ QWidget
 
         # Adjust Column Widths
         self.view.setColumnWidth(0, 150)
-        self.view.setColumnWidth(1, 80)
-        self.view.setColumnWidth(2, 200)
-        self.view.setColumnWidth(3, 100)
-        self.view.setColumnWidth(4, 250)
-        self.view.setColumnWidth(5, 120)
+        self.view.setColumnWidth(1, 150)
+        self.view.setColumnWidth(2, 150)
+        self.view.setColumnWidth(3, 150)
+        self.view.setColumnWidth(4, 150)
+        self.view.setColumnWidth(5, 150)
 
         layout.addWidget(self.view)
         self.setLayout(layout)

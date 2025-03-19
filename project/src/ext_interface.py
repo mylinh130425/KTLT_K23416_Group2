@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QVBoxLayout
 from PyQt6.QtCore import Qt
 
 from project.model.HeaderMainDelegate import HeaderBar
+# from project.src.BurgerMenu import BurgerMenu
 from project.src.Login import LoginHandler
 from project.src.ProfileScreen import ProfileScreen
 from project.src.RestaurantScreen import RestaurantScreen
@@ -43,10 +44,15 @@ class Extend_MainWindow(Ui_MainWindow):
         or perform specific actions.
         """
         self.login_button.clicked.connect(self.login)
-        self.signup_button.clicked.connect(self.signupClicked)
+        self.signup_button.clicked.connect(self.signup)
         self.to_login_button.clicked.connect(self.goLogin)
         self.to_signup_button.clicked.connect(self.goSignUp)
         self.home_button.clicked.connect(self.goHome)
+        self.burger_menu_button.clicked.connect(self.goRestaurant)
+
+
+        # self.burger_menu_button = BurgerMenu()
+        # self.burger_menu_button.clicked.connect(self)
         # self.restaurant_button.clicked.connect(self.goRestaurant)
 
     def goLogin(self):
