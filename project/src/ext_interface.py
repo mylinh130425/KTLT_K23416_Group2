@@ -2,8 +2,10 @@ from PyQt6.QtWidgets import QVBoxLayout
 from PyQt6.QtCore import Qt
 
 from project.model.HeaderMainDelegate import HeaderBar
+from project.src.Login import LoginHandler
 from project.src.ProfileScreen import ProfileScreen
 from project.src.RestaurantScreen import RestaurantScreen
+from project.src.Signup import SignupHandler
 from project.src.ui_interface_stacked import *
 
 
@@ -40,7 +42,8 @@ class Extend_MainWindow(Ui_MainWindow):
         clicked, triggers its associated function to navigate within the application
         or perform specific actions.
         """
-        self.login_button.clicked.connect(self.loginClicked)
+        self.login_button.clicked.connect(self.login)
+        self.signup_button.clicked.connect(self.signupClicked)
         self.to_login_button.clicked.connect(self.goLogin)
         self.to_signup_button.clicked.connect(self.goSignUp)
         self.home_button.clicked.connect(self.goHome)
@@ -93,7 +96,7 @@ class Extend_MainWindow(Ui_MainWindow):
         self.body_stackedWidget.addWidget(self.profile_page)  # Thêm trực tiếp
 
 
-    def loginClicked(self):
+    def login(self):
         """
         Handles the login button click event.
 
@@ -102,12 +105,26 @@ class Extend_MainWindow(Ui_MainWindow):
         current widget of the stacked widget and body stacked widget to display
         the main and profile page, respectively.
         """
+        # self.login_handler = LoginHandler(self)
+        # isLoggedIn = self.login_handler.login()
+        # if isLoggedIn:
         print("setting up profile page")
+        self.header_frame.setStyleSheet("{background-color: #33372C}")
         self.setup_profile()
         self.stackedWidget.setCurrentWidget(self.Main)
         self.body_stackedWidget.setCurrentWidget(self.profile_page)
         # self.removeAllWidgetsExcept(self.body_stackedWidget,self.profile_page)
 
+    def signup(self):
+        # self.signup_handler = SignupHandler(self)
+        # isSignedup= self.signup_handler.signup()
+        # if isSignedup:
+        print("setting up profile page")
+
+        self.header_frame.setStyleSheet("{background-color: #33372C}")
+        self.setup_profile()
+        self.stackedWidget.setCurrentWidget(self.Main)
+        self.body_stackedWidget.setCurrentWidget(self.profile_page)
 
 
 

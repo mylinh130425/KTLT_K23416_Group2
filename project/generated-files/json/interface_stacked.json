@@ -6,249 +6,257 @@
     },
     {
       "name": "home_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo.png"
+      "icon": "C:\\Users\\USER\\.designer\\image\\Logo.png"
     },
     {
       "name": "pushButton",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
+      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_4",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\4848456_choose_coffee_menu_menus_print_icon.png"
+      "icon": "C:\\Users\\USER\\.designer\\4848456_choose_coffee_menu_menus_print_icon.png"
     },
     {
       "name": "pushButton_3",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_review.png"
+      "icon": "C:\\Users\\USER\\.designer\\ic_review.png"
     },
     {
       "name": "pushButton_16",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
+      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_17",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
+      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     },
     {
       "name": "pushButton_18",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
+      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     }
   ],
   "QLabel": [
     {
+      "name": "login_photo_label",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+    },
+    {
+      "name": "signup_photo_label",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+    },
+    {
       "name": "label_12",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
       "name": "facebook",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
     },
     {
       "name": "insta",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
     },
     {
       "name": "tiktok",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
     },
     {
       "name": "label_267",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\images\\ic_adjust.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\images\\ic_adjust.png"
     },
     {
       "name": "label_291",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\images\\ic_seclectick.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\images\\ic_seclectick.png"
     },
     {
       "name": "label_428",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_429",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_430",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_431",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_432",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_434",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_435",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_436",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_437",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_438",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_440",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_441",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_442",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_443",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_444",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_446",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_447",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_448",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_449",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_450",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_452",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_453",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_454",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_455",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_456",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_458",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_459",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_460",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_461",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_462",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_464",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_465",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_466",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_467",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_starfull.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
     },
     {
       "name": "label_468",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_star.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
     },
     {
       "name": "label_319",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_321",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_322",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_324",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_325",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_326",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "label_338",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "lb_anh_7",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
     },
     {
       "name": "label_341",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\134224_add_plus_new_icon.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
     },
     {
       "name": "label_343",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
       "name": "lb_anh_8",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_food.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
     },
     {
       "name": "label_346",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\134224_add_plus_new_icon.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
     },
     {
       "name": "label_348",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
       "name": "food_image",

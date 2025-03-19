@@ -1763,11 +1763,12 @@ PlotWidget {
   border-radius: 45px;
   border: 1px solid #333; }
 
-#left_login_page {
-  background-color: #339999; }
-
-#left_signup_page {
-  background-color: #66B2B2; }
+#welcome_stackedWidget {
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  background-color: transparent;
+  background: url("../../image/CreateAcc_Image.png") no-repeat center center;
+  background-size: cover; }
 
 #modify_restaurant_page {
   margin: 0;
