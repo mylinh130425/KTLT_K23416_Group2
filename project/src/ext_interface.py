@@ -1,4 +1,5 @@
 from project.src.ProfileScreen import ProfileScreen
+from project.src.RestaurantScreen import RestaurantScreen
 # from project.src.RestaurantScreen import RestaurantScreen
 from project.src.ui_interface_stacked import *
 
@@ -56,7 +57,7 @@ class Extend_MainWindow(Ui_MainWindow):
         `body_stackedWidget` and removes all other widgets except the home page.
         """
         self.body_stackedWidget.setCurrentWidget(self.home_page)
-        self.removeAllWidgetsExcept(self.body_stackedWidget,self.home_page)
+        # self.removeAllWidgetsExcept(self.body_stackedWidget,self.home_page)
 
     def goRestaurant(self):
         """
