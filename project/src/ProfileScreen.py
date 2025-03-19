@@ -2,9 +2,14 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 class ProfileScreen(QtWidgets.QWidget):  # Kế thừa từ QWidget
     def __init__(self, parent=None):
+        """
+        Initialize the ProfileScreen widget.
+
+        This method will be called when an object of this class is instantiated.
+        It sets up the UI of the ProfileScreen widget.
+        """
         super().__init__(parent)
 
-        print("Setting up profile page")
 
         self.setObjectName("profile_page")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self)

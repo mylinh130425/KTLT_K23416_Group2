@@ -1,4 +1,5 @@
 from project.src.ProfileScreen import ProfileScreen
+# from project.src.RestaurantScreen import RestaurantScreen
 from project.src.ui_interface_stacked import *
 
 
@@ -62,31 +63,13 @@ class Extend_MainWindow(Ui_MainWindow):
         Sets the restaurant page as the current widget of the
         `body_stackedWidget` and removes all other widgets except the restaurant page.
         """
+        self.setup_restaurant()
         self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
-        self.removeAllWidgetsExcept(self.body_stackedWidget, self.restaurant_page)
-        self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
-        self.removeAllWidgetsExcept(self.body_stackedWidget,self.restaurant_page)
+        # self.removeAllWidgetsExcept(self.body_stackedWidget, self.restaurant_page)
 
-    def removeAllWidgetsExcept(self, stack: QtWidgets.QStackedWidget, w: QtWidgets.QWidget):
-        """
-        Removes all widgets from the given stack except the one specified.
-
-        This method goes through all the widgets in the stack and removes each one
-        that is not the widget specified by the `w` argument. This is done by
-        iterating over the widgets in reverse order, calling `removeWidget` and
-        `deleteLater` on each one.
-
-        Args:
-            stack (QtWidgets.QStackedWidget): The stack to remove widgets from.
-            w (QtWidgets.QWidget): The only widget to keep in the stack.
-        """
-        for i in reversed(range(stack.count())):
-            widget = stack.widget(i)
-            if widget is not w:  # Chỉ xóa nếu KHÔNG phải w
-                print('removed', widget.objectName())
-                stack.removeWidget(widget)
-                widget.deleteLater()
-
+    def setup_restaurant(self):
+        self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
+        self.body_stackedWidget.addWidget(self.restaurant_page)
     def setup_profile(self):
         """
         Initializes the profile page and adds it to the body stacked widget.
@@ -112,6 +95,28 @@ class Extend_MainWindow(Ui_MainWindow):
         self.setup_profile()
         self.stackedWidget.setCurrentWidget(self.Main)
         self.body_stackedWidget.setCurrentWidget(self.profile_page)
+        # self.removeAllWidgetsExcept(self.body_stackedWidget,self.profile_page)
 
 
+
+
+    # def removeAllWidgetsExcept(self, stack: QtWidgets.QStackedWidget, w: QtWidgets.QWidget):
+    #     """
+    #     Removes all widgets from the given stack except the one specified.
+    #
+    #     This method goes through all the widgets in the stack and removes each one
+    #     that is not the widget specified by the `w` argument. This is done by
+    #     iterating over the widgets in reverse order, calling `removeWidget` and
+    #     `deleteLater` on each one.
+    #
+    #     Args:
+    #         stack (QtWidgets.QStackedWidget): The stack to remove widgets from.
+    #         w (QtWidgets.QWidget): The only widget to keep in the stack.
+    #     """
+    #     for i in reversed(range(stack.count())):
+    #         widget = stack.widget(i)
+    #         if widget is not w:  # Chỉ xóa nếu KHÔNG phải w
+    #             print('removed', widget.objectName())
+    #             stack.removeWidget(widget)
+    #             widget.deleteLater()
 
