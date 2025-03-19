@@ -21,7 +21,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y mesa-utils libgl1-mesa-glx libegl1 libxkbcommon-x11-0
+          sudo apt-get install freeglut3-dev
 
       - name: Install dependencies
         run: |
