@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true" />
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -76,7 +76,7 @@
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="text">
-              <string />
+              <string/>
              </property>
              <property name="icon">
               <iconset resource="../Qss/icons/_icons.qrc">
@@ -92,8 +92,8 @@
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QStackedWidget" name="stackedWidget">
-             <widget class="QWidget" name="left_login_page" />
-             <widget class="QWidget" name="left_signup_page" />
+             <widget class="QWidget" name="left_login_page"/>
+             <widget class="QWidget" name="left_signup_page"/>
             </widget>
            </item>
            <item>
@@ -118,7 +118,7 @@
                </property>
               </widget>
              </widget>
-             <widget class="QWidget" name="right_signup_page" />
+             <widget class="QWidget" name="right_signup_page"/>
             </widget>
            </item>
           </layout>
@@ -181,7 +181,7 @@
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="text">
-              <string />
+              <string/>
              </property>
              <property name="icon">
               <iconset resource="../Qss/icons/_icons.qrc">
@@ -507,5 +507,8 @@
    </layout>
   </widget>
  </widget>
- <connections />
-<customwidgets><customwidget><class>QPushButton</class><extends>QPushButton</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget><customwidget><class>QLabel</class><extends>QLabel</extends><header location="global">Custom_Widgets.Theme.h</header><container>1</container></customwidget></customwidgets></ui>
+ <resources>
+  <include location="../Qss/icons/_icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

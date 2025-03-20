@@ -7,24 +7,6 @@
     {
       "name": "profile_button",
       "icon": "Qss/icons/icons/feather/smile.png"
-    },
-    {
-      "name": "pushButton",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\5349751_information_info_icon.png"
-    },
-    {
-      "name": "pushButton_4",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\4848456_choose_coffee_menu_menus_print_icon.png"
-    },
-    {
-      "name": "pushButton_3",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\ic_review.png"
-    }
-  ],
-  "QLabel": [
-    {
-      "name": "label_12",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_food64.png"
     }
   ]
 }
