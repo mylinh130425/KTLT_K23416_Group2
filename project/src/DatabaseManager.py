@@ -43,6 +43,28 @@ class DatabaseManager:
 
         return restaurants
 
+    def get_menu_by_place_id(self, place_id, offset=0,limit=15):
+        """Trả về danh sách món ăn của nhà hàng dựa trên place_id với các trường cụ thể."""
+        menu_collection = self.db["Menu"]
+        menu_data = menu_collection.find_one({"place_id": place_id}).skip(offset).limit(limit)
+
+        menu_list = []
+        for item in menu_data["menu"]:
+            menu_entry = {
+                "_id": item.get("product_id"),
+                "Item": item.get("name"),
+                "featured_image":item.get("feature_image"),
+                "Rate": item.get("rating"),
+                "Price": [price_info["price"] for price_info in item.get("pricing", [])],
+                "Description": item.get("description"),
+                "Review": [review["review_text"] for review in item.get("item_review", [])]
+            }
+            menu_list.append(menu_entry)
+
+        return menu_list
+
+
+
     def format_hours(self, hours_list):
         """Convert list of opening hours into a readable string.
          TODO: Bản - Cần chỉnh lại format của giờ hiển thị

@@ -11,6 +11,7 @@ class RestaurantDelegate(QTableWidget):
         ])
         self.load_more_restaurants()
 
+
     def load_more_restaurants(self):
         """Nạp thêm dữ liệu vào bảng."""
         restaurants = self.model.get_restaurants()
@@ -34,5 +35,5 @@ class RestaurantDelegate(QTableWidget):
             self.setItem(row, 6, QTableWidgetItem(restaurant["address"]))
             self.setItem(row, 7, QTableWidgetItem(restaurant["hotline"]))
             self.setItem(row, 8, QTableWidgetItem(str(restaurant["accessibility"])))
-
+        self.setColumnHidden(0,True)
         self.model.offset += len(restaurants)  # Cập nhật offset
