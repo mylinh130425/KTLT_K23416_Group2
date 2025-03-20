@@ -1,7 +1,11 @@
 # Mỹ Linh
 ## add edit restaurant
-> already rebase
+> already rebased
+> already merged
 
+## food review
+> already rebased main
+> already merged
 
 # Tú An
 ## header
@@ -15,6 +19,10 @@
 
 
 ## welcome
+> Rebased main with updates on markdown files
+> already merged
+> regressed: button effects are missing
+
 ### login
 ### signup
 
@@ -26,6 +34,7 @@
 > 2. Different size of top restaurant => add a new property into Restaurant collections: **thumbnail**
 
 ## profile
+> rebased main
 
 ## widget refactor
 > to load only the required widget not all widgets at the same time
@@ -48,11 +57,26 @@
 
 > Helped with too many screens but not separating them into different branches =((
 
+## add-edit-restaurant-review
+> already rebased
+
 ## add edit menu review
 > Many UI Changes - need to track =((
 
+
 ## menu-food-rebase
 > already rebase
+> include menu screen, add/edit food screens 
+> Nhat Ban pulled this branch and worked on it => possibly this branch was already part of jp-restaurant-page branch
+> No layout set for add_food and modify_food screens =((
+> after merging NB and My Linh branches, no Create/ Save/Delete buttons
 
 # Nhat Ban
 ## restaurant page
+> already rebased 
+> 
+> rebased back to main
+> 
+> must refactor due to page in the middle of other screens
+> 
+> very messy ui file, not sure why?
