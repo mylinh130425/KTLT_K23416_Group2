@@ -1,0 +1,6144 @@
+[{
+  "_id": {
+    "$oid": "67daf58b9d2fb34330a15b0b"
+  },
+  "place_id": {
+    "$oid": "67acf97c194023cfe5152311"
+  },
+  "restaurant_name": "Highlands Coffee Hoàng Diệu 2 Thủ Đức",
+  "menu": [
+    {
+      "product_id": "HC0001",
+      "name": "Phin Sữa Đá",
+      "pricing": [
+        {
+          "price": 29000,
+          "note": "Cỡ nhỏ",
+          "required": true,
+          "includesVAT": true
+        },
+        {
+          "price": 35000,
+          "note": "Cỡ lớn",
+          "required": false,
+          "includesVAT": true
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "description": "Phin Sữa Đá Highlands với hương vị đậm đà, cà phê rang xay nguyên chất kết hợp với sữa đặc tạo nên sự cân bằng hoàn hảo.",
+      "rating": 2.22,
+      "item_review": [
+        {
+          "item_review_id": "513739",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 1.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "711958",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "560152",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "HC0002",
+      "name": "Trà Sen Vàng",
+      "pricing": [
+        {
+          "price": 39000,
+          "note": "Cỡ nhỏ",
+          "required": true,
+          "includesVAT": true
+        },
+        {
+          "price": 45000,
+          "note": "Cỡ lớn",
+          "required": false,
+          "includesVAT": true
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "description": "Trà Sen Vàng thanh mát với sự hòa quyện của trà xanh thơm ngon và hạt sen bùi béo, mang đến trải nghiệm độc đáo.",
+      "rating": 3,
+      "item_review": [
+        {
+          "item_review_id": "417264",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 4
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "688033",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "HC0003",
+      "name": "Freeze Trà Xanh",
+      "pricing": [
+        {
+          "price": 49000,
+          "note": "Cỡ nhỏ",
+          "required": true,
+          "includesVAT": true
+        },
+        {
+          "price": 55000,
+          "note": "Cỡ lớn",
+          "required": false,
+          "includesVAT": true
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "description": "Freeze Trà Xanh mát lạnh, đậm vị matcha, kết hợp cùng sữa tạo nên sự béo ngậy và sảng khoái.",
+      "rating": 1.33,
+      "item_review": [
+        {
+          "item_review_id": "813505",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 2
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        },
+        {
+          "item_review_id": "326827",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 0,
+            "mean": 0.67
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67acf919194023cfe51522b0"
+  },
+  "place_id": {
+    "$oid": "67bfa87f43e340c7d9ceb4bc"
+  },
+  "restaurant_name": "GoGi House Vincom Thủ Đức",
+  "menu": [
+    {
+      "product_id": "ChIJK8PieVAndTERzmjLbxDjoPE0001",
+      "name": "buffet",
+      "pricing": [
+        {
+          "price": 199000,
+          "note": "Buffet Tròn trịa",
+          "required": true,
+          "includesVAT": false
+        },
+        {
+          "price": 19000,
+          "note": "Tráng miệng",
+          "required": false,
+          "includesVAT": false
+        },
+        {
+          "price": 29000,
+          "note": "Đồ uống",
+          "required": false,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "GoGi House Vincom Thủ Đức không chỉ phục vụ buffet, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "309548",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJK8PieVAndTERzmjLbxDjoPE0003",
+      "name": "buffet",
+      "pricing": [
+        {
+          "price": 249000,
+          "note": "Buffet Quốc dân",
+          "required": true,
+          "includesVAT": false
+        },
+        {
+          "price": 59000,
+          "note": "Món truyền thống",
+          "required": false,
+          "includesVAT": false
+        },
+        {
+          "price": 15000,
+          "note": "Tráng miệng",
+          "required": false,
+          "includesVAT": false
+        },
+        {
+          "price": 29000,
+          "note": "Đồ uống",
+          "required": false,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.83,
+      "description": "GoGi House Vincom Thủ Đức không chỉ phục vụ buffet, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "457081",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "813184",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJK8PieVAndTERzmjLbxDjoPE0003",
+      "name": "buffet",
+      "pricing": [
+        {
+          "price": 319000,
+          "note": "Buffet Không giới hạn",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.17,
+      "description": "buffet tại GoGi House Vincom Thủ Đức được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "832452",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 1
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        },
+        {
+          "item_review_id": "409951",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJK8PieVAndTERzmjLbxDjoPE0003",
+      "name": "buffet",
+      "pricing": [
+        {
+          "price": 429000,
+          "note": "Buffet Xèo Xèo",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, buffet tại GoGi House Vincom Thủ Đức thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "711802",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "745858",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJK8PieVAndTERzmjLbxDjoPE0003",
+      "name": "buffet",
+      "pricing": [
+        {
+          "price": 469000,
+          "note": "Buffet Xèo Xèo Classic",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.5,
+      "description": "Nếu bạn yêu thích buffet, hãy thử ngay tại GoGi House Vincom Thủ Đức, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "933370",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "664825",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 3.67
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd3731b"
+  },
+  "place_id": {
+    "$oid": "67acf919194023cfe51522b2"
+  },
+  "restaurant_name": "Út Nguyên Quán",
+  "menu": [
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs001",
+      "name": "Sữa Gạo Lức Mêkong Xanh",
+      "pricing": [
+        {
+          "price": 17000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Sữa Gạo Lức Mêkong Xanh tại Út Nguyên Quán, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "219870",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "439748",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 3
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs002",
+      "name": "Bánh canh chả cá chiên sứa",
+      "pricing": [
+        {
+          "price": 38000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.22,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Bánh canh chả cá chiên sứa tại Út Nguyên Quán là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "736444",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 0.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "773217",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 0.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "855385",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs003",
+      "name": "Bánh canh chả cá đặc biệt",
+      "pricing": [
+        {
+          "price": 62000,
+          "note": "chả cá chiên, hấp, sứa, trứng cút, xương hoặc giò, móng",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.45,
+      "description": "Út Nguyên Quán nổi tiếng với món Bánh canh chả cá đặc biệt, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "295845",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "271636",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "127791",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 1.67
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs006",
+      "name": "Bánh canh chả cá giò/xương/móng",
+      "pricing": [
+        {
+          "price": 50000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Bánh canh chả cá giò/xương/móng tại Út Nguyên Quán thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "393403",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "793857",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 1.33
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs007",
+      "name": "Bánh canh thập cẩm",
+      "pricing": [
+        {
+          "price": 75000,
+          "note": "Chả cá chiên, hấp, sứa, chả cua, mọc, xương hoặc giò",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.11,
+      "description": "Món Bánh canh thập cẩm tại Út Nguyên Quán có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "529971",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "239344",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        },
+        {
+          "item_review_id": "249246",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs012",
+      "name": "Bún chả cá chiên sứa",
+      "pricing": [
+        {
+          "price": 38000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Hãy đến với Út Nguyên Quán để thưởng thức Bún chả cá chiên sứa, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "583961",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "696640",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs013",
+      "name": "Bún mắm nêm thịt luộc tai heo chả lụa nem",
+      "pricing": [
+        {
+          "price": 45000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Út Nguyên Quán không chỉ phục vụ Bún mắm nêm thịt luộc tai heo chả lụa nem, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "228293",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs014",
+      "name": "Bún mọc",
+      "pricing": [
+        {
+          "price": 32000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.5,
+      "description": "Út Nguyên Quán không chỉ phục vụ Bún mọc, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "887989",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 1.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "461880",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 1.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs015",
+      "name": "Bún chả cá giò (xương, móng)",
+      "pricing": [
+        {
+          "price": 50000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.45,
+      "description": "Út Nguyên Quán nổi tiếng với món Bún chả cá giò (xương, móng), một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "958769",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "679612",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "662920",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs016",
+      "name": "Bún cá ngừ chả cá",
+      "pricing": [
+        {
+          "price": 50000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4.33,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Bún cá ngừ chả cá tại Út Nguyên Quán là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "275940",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 4.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs017",
+      "name": "Bún chả cá đặc biệt",
+      "pricing": [
+        {
+          "price": 62000,
+          "note": "chả cá chiên, hấp, sứa, trứng cút, xương hoặc giò, móng",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Bún chả cá đặc biệt tại Út Nguyên Quán, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "296095",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 3.33
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        },
+        {
+          "item_review_id": "399727",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 1,
+            "mean": 2.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs018",
+      "name": "Bún cá ngừ",
+      "pricing": [
+        {
+          "price": 38000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.22,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Bún cá ngừ tại Út Nguyên Quán thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "852955",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "869964",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "883466",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs019",
+      "name": "Bún chả cá hấp chiên sứa",
+      "pricing": [
+        {
+          "price": 45000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.5,
+      "description": "Thưởng thức Bún chả cá hấp chiên sứa với nguyên liệu tươi ngon, chế biến cầu kỳ tại Út Nguyên Quán.",
+      "item_review": [
+        {
+          "item_review_id": "559276",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 3.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "413224",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs020",
+      "name": "Bún chả cua",
+      "pricing": [
+        {
+          "price": 38000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Hãy đến với Út Nguyên Quán để thưởng thức Bún chả cua, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "228507",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs004",
+      "name": "Mực sữa hấp thuyền (1 hộp/0,5kg)",
+      "pricing": [
+        {
+          "price": 95000,
+          "note": "Chưa chế biến, 40 con/hộp 0,5kg",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.56,
+      "description": "Út Nguyên Quán nổi tiếng với món Mực sữa hấp thuyền (1 hộp/0,5kg), một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "374637",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "502757",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 3.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "507792",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs005",
+      "name": "Mắm trộn",
+      "pricing": [
+        {
+          "price": 60000,
+          "note": "Cào pháo + Dưa leo + Đu đủ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Mắm trộn tại Út Nguyên Quán mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "444235",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 3
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        },
+        {
+          "item_review_id": "830879",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 1.67
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "517908",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 0,
+            "mean": 0.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs008",
+      "name": "Chân gà sả tắc (có xương)",
+      "pricing": [
+        {
+          "price": 65000,
+          "note": "Có xương",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.11,
+      "description": "Chân gà sả tắc (có xương) tại Út Nguyên Quán mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "478203",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 4
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "968998",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "446127",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs009",
+      "name": "Chân gà sốt Thái (có xương)",
+      "pricing": [
+        {
+          "price": 80000,
+          "note": "Có xương",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.89,
+      "description": "Út Nguyên Quán nổi tiếng với món Chân gà sốt Thái (có xương), một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "897461",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "691015",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "328877",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 3.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs010",
+      "name": "Gỏi sứa tai heo",
+      "pricing": [
+        {
+          "price": 75000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Món Gỏi sứa tai heo tại Út Nguyên Quán có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "346853",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJu0mjbQcndTERxPUqedCTaBs011",
+      "name": "Tai heo ngâm chua ngọt",
+      "pricing": [
+        {
+          "price": 105000,
+          "note": "Tai heo, dưa leo, cà rốt, củ cải, xoài, sả, tắc. Hũ 1kg",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Thưởng thức Tai heo ngâm chua ngọt với nguyên liệu tươi ngon, chế biến cầu kỳ tại Út Nguyên Quán.",
+      "item_review": [
+        {
+          "item_review_id": "212076",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd3731c"
+  },
+  "place_id": {
+    "$oid": "67bfa72143e340c7d9ceb46b"
+  },
+  "restaurant_name": "Cơm niêu Phương Bắc",
+  "menu": [
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg001",
+      "name": "Combo 3: Combo cơm tép riu rang khế",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Nếu bạn yêu thích Combo 3: Combo cơm tép riu rang khế, hãy thử ngay tại Cơm niêu Phương Bắc, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "605756",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg002",
+      "name": "Combo 4: Combo cơm đậu hũ sốt cà",
+      "pricing": [
+        {
+          "price": 58500,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1,
+      "description": "Combo 4: Combo cơm đậu hũ sốt cà tại Cơm niêu Phương Bắc mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "352796",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 0,
+            "mean": 1
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg003",
+      "name": "Combo 20: Combo cơm heo rừng thui xào cải chua",
+      "pricing": [
+        {
+          "price": 74000,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, heo rừng xào cải chua, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Combo 20: Combo cơm heo rừng thui xào cải chua tại Cơm niêu Phương Bắc là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "274949",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg004",
+      "name": "Combo 19: Combo cơm heo rừng thui xào sả ớt",
+      "pricing": [
+        {
+          "price": 74000,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, heo rừng xào sả ớt, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây/rau ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Cơm niêu Phương Bắc không chỉ phục vụ Combo 19: Combo cơm heo rừng thui xào sả ớt, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "758970",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "793823",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg005",
+      "name": "Combo 21: Combo cơm heo rừng thui xào hành cần",
+      "pricing": [
+        {
+          "price": 74000,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, heo rừng xào hành cần, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Combo 21: Combo cơm heo rừng thui xào hành cần là món ăn nổi bật tại Cơm niêu Phương Bắc, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "930995",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "601282",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg006",
+      "name": "Combo 3 : Combo cơm tép riu rang khế",
+      "pricing": [
+        {
+          "price": 65000,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Hãy đến với Cơm niêu Phương Bắc để thưởng thức Combo 3 : Combo cơm tép riu rang khế, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "941657",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        },
+        {
+          "item_review_id": "332365",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg007",
+      "name": "Combo 3: Combo cơm tép riu rang khế",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Thưởng thức Combo 3: Combo cơm tép riu rang khế với nguyên liệu tươi ngon, chế biến cầu kỳ tại Cơm niêu Phương Bắc.",
+      "item_review": [
+        {
+          "item_review_id": "596381",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg008",
+      "name": "Combo 17 : Combo gà kho lá chanh",
+      "pricing": [
+        {
+          "price": 66000,
+          "note": "(kèm canh, rau, trái cây tráng miệng)",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.11,
+      "description": "Cơm niêu Phương Bắc không chỉ phục vụ Combo 17 : Combo gà kho lá chanh, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "599971",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "411106",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 0,
+            "mean": 1
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "958746",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg009",
+      "name": "Combo 2 : Combo cơm trứng chiên thịt bằm",
+      "pricing": [
+        {
+          "price": 58500,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.11,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Combo 2 : Combo cơm trứng chiên thịt bằm tại Cơm niêu Phương Bắc là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "328407",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "246675",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        },
+        {
+          "item_review_id": "196220",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg010",
+      "name": "Combo 16 : Combo gà kho sả ớt",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Thưởng thức Combo 16 : Combo gà kho sả ớt với nguyên liệu tươi ngon, chế biến cầu kỳ tại Cơm niêu Phương Bắc.",
+      "item_review": [
+        {
+          "item_review_id": "700799",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "185251",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg011",
+      "name": "Combo 7 : Combo cơm cá bông lau kho tộ",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, heo rừng xào hành cần, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Combo 7 : Combo cơm cá bông lau kho tộ tại Cơm niêu Phương Bắc mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "904049",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg012",
+      "name": "Combo 15 : Combo cơm sườn non ram mặn",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, bò xào hành cần, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.45,
+      "description": "Combo 15 : Combo cơm sườn non ram mặn tại Cơm niêu Phương Bắc mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "887332",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 3
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "765847",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 1.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "120205",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg013",
+      "name": "Combo 12 : Combo cơm thịt luộc + trứng cuộn",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "(kèm canh, rau, trái cây tráng miệng)",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 0.67,
+      "description": "Combo 12 : Combo cơm thịt luộc + trứng cuộn là món ăn nổi bật tại Cơm niêu Phương Bắc, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "251596",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 0.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg014",
+      "name": "Combo 6 : Combo thịt kho tiêu",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.5,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Combo 6 : Combo thịt kho tiêu tại Cơm niêu Phương Bắc thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "380484",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        },
+        {
+          "item_review_id": "358486",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 0,
+            "mean": 0.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg015",
+      "name": "Combo 14 : Combo cơm ba chỉ cháy cạnh",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.5,
+      "description": "Nếu bạn yêu thích Combo 14 : Combo cơm ba chỉ cháy cạnh, hãy thử ngay tại Cơm niêu Phương Bắc, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "692394",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 4
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "467987",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg016",
+      "name": "Combo 11 : Combo cơm đậu hũ sốt cà + trứng cuộn",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, heo rừng xào hành cần, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.33,
+      "description": "Combo 11 : Combo cơm đậu hũ sốt cà + trứng cuộn tại Cơm niêu Phương Bắc mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "457988",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 1,
+            "mean": 1.33
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg017",
+      "name": "Combo 1 : Combo cơm cá cơm sữa rim mặn",
+      "pricing": [
+        {
+          "price": 58500,
+          "note": "Chỉ còn hơn 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, bò xào hành cần, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Nếu bạn yêu thích Combo 1 : Combo cơm cá cơm sữa rim mặn, hãy thử ngay tại Cơm niêu Phương Bắc, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "187880",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "474998",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "597098",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg018",
+      "name": "Combo 10 : Combo cơm thịt luộc cà pháo mắm tôm",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Cơm niêu Phương Bắc không chỉ phục vụ Combo 10 : Combo cơm thịt luộc cà pháo mắm tôm, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "809119",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "416486",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 4.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "127689",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg019",
+      "name": "Combo 8 : Combo cơm cánh gà chiên nước mắm",
+      "pricing": [
+        {
+          "price": 65500,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Món Combo 8 : Combo cơm cánh gà chiên nước mắm tại Cơm niêu Phương Bắc có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "468824",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJBfYyip4ndTERwPfZcEsyjg020",
+      "name": "Combo 13 : Combo cơm thịt luộc + đậu hũ sốt cà",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Chỉ còn khoảng 40k 1 combo xịn xò sau khi dùng mã giảm giá. Gồm: cơm trắng, món mặn, canh, rau, trái cây tráng miệng. Khách vui lòng không yêu cầu đổi canh/trái cây ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.22,
+      "description": "Thưởng thức Combo 13 : Combo cơm thịt luộc + đậu hũ sốt cà với nguyên liệu tươi ngon, chế biến cầu kỳ tại Cơm niêu Phương Bắc.",
+      "item_review": [
+        {
+          "item_review_id": "921608",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "391455",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 1.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "224203",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd3731d"
+  },
+  "place_id": {
+    "$oid": "67acf919194023cfe51522b1"
+  },
+  "restaurant_name": "Hệ thống lẩu dê Đồng Hương 2",
+  "menu": [
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk001",
+      "name": "Thăn Bắp Hấp Tía Tô",
+      "pricing": [
+        {
+          "price": 130000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Thưởng thức Thăn Bắp Hấp Tía Tô với nguyên liệu tươi ngon, chế biến cầu kỳ tại Hệ thống lẩu dê Đồng Hương 2.",
+      "item_review": [
+        {
+          "item_review_id": "273247",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        },
+        {
+          "item_review_id": "100549",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 5,
+            "mean": 5
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk002",
+      "name": "Thịt Dê Hấp Gừng",
+      "pricing": [
+        {
+          "price": 120000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Thịt Dê Hấp Gừng tại Hệ thống lẩu dê Đồng Hương 2 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "490354",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk003",
+      "name": "Ba Rọi Hấp Gừng",
+      "pricing": [
+        {
+          "price": 120000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Tại Hệ thống lẩu dê Đồng Hương 2, Ba Rọi Hấp Gừng luôn làm hài lòng thực khách bởi hương vị đặc trưng và sự chăm chút trong từng chi tiết.",
+      "item_review": [
+        {
+          "item_review_id": "311947",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "320637",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 3.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk004",
+      "name": "Thăn Bắp Hấp Gừng",
+      "pricing": [
+        {
+          "price": 130000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.83,
+      "description": "Thăn Bắp Hấp Gừng tại Hệ thống lẩu dê Đồng Hương 2 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "174896",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "751542",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 3.33
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk005",
+      "name": "Thịt Dê Hấp Tía Tô",
+      "pricing": [
+        {
+          "price": 120000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Thịt Dê Hấp Tía Tô tại Hệ thống lẩu dê Đồng Hương 2 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "751594",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 4
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "401590",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 1.33
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "961411",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk006",
+      "name": "Ba Rọi Hấp Tía Tô",
+      "pricing": [
+        {
+          "price": 120000,
+          "note": "2 lặng/phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Ba Rọi Hấp Tía Tô tại Hệ thống lẩu dê Đồng Hương 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "521945",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 2.33
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "353138",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "562160",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk007",
+      "name": "Lẩu xương thịt Lớn",
+      "pricing": [
+        {
+          "price": 290000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Lẩu xương thịt Lớn tại Hệ thống lẩu dê Đồng Hương 2 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "455498",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 1,
+            "mean": 1
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk008",
+      "name": "Lẩu Sườn Dê Vừa",
+      "pricing": [
+        {
+          "price": 230000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Hệ thống lẩu dê Đồng Hương 2 không chỉ phục vụ Lẩu Sườn Dê Vừa, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "404958",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 2
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "254492",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "385817",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 1.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk009",
+      "name": "Lẩu Dê Xương Thịt Vừa",
+      "pricing": [
+        {
+          "price": 230000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Hãy đến với Hệ thống lẩu dê Đồng Hương 2 để thưởng thức Lẩu Dê Xương Thịt Vừa, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "929382",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk010",
+      "name": "Lẩu Dê Thịt Nhúng Lớn",
+      "pricing": [
+        {
+          "price": 290000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Hệ thống lẩu dê Đồng Hương 2 không chỉ phục vụ Lẩu Dê Thịt Nhúng Lớn, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "934217",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "134090",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk011",
+      "name": "Lẩu thịt dê nhúng Vừa",
+      "pricing": [
+        {
+          "price": 23000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Thưởng thức Lẩu thịt dê nhúng Vừa với nguyên liệu tươi ngon, chế biến cầu kỳ tại Hệ thống lẩu dê Đồng Hương 2.",
+      "item_review": [
+        {
+          "item_review_id": "216105",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 4.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "536191",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk012",
+      "name": "Lẩu Dê Nấu Nấm Vừa",
+      "pricing": [
+        {
+          "price": 250000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Nếu bạn yêu thích Lẩu Dê Nấu Nấm Vừa, hãy thử ngay tại Hệ thống lẩu dê Đồng Hương 2, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "112032",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk012",
+      "name": "Lẩu Chân Dê",
+      "pricing": [
+        {
+          "price": 290000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Lẩu Chân Dê tại Hệ thống lẩu dê Đồng Hương 2 được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "619405",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk013",
+      "name": "Lẩu Dê Nấu Nấm Lớn",
+      "pricing": [
+        {
+          "price": 300000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.89,
+      "description": "Lẩu Dê Nấu Nấm Lớn tại Hệ thống lẩu dê Đồng Hương 2 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "164423",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "350708",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "566456",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 1
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk014",
+      "name": "Lẩu Dê Nấu Bầu Vừa",
+      "pricing": [
+        {
+          "price": 250000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Lẩu Dê Nấu Bầu Vừa tại Hệ thống lẩu dê Đồng Hương 2 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "559737",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk015",
+      "name": "Lẩu Dê Nấu Bầu Lớn",
+      "pricing": [
+        {
+          "price": 300000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Món Lẩu Dê Nấu Bầu Lớn tại Hệ thống lẩu dê Đồng Hương 2 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "923488",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "787158",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "280472",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk015",
+      "name": "Lẩu Sườn Dê Lớn",
+      "pricing": [
+        {
+          "price": 290000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.83,
+      "description": "Hãy đến với Hệ thống lẩu dê Đồng Hương 2 để thưởng thức Lẩu Sườn Dê Lớn, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "736376",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 3
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "899040",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 0.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk016",
+      "name": "Lẩu Ngọc Dương",
+      "pricing": [
+        {
+          "price": 290000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Lẩu Ngọc Dương tại Hệ thống lẩu dê Đồng Hương 2 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "300117",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 3.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "357264",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk017",
+      "name": "Xương Ống Thêm",
+      "pricing": [
+        {
+          "price": 250000,
+          "note": "Phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Hãy đến với Hệ thống lẩu dê Đồng Hương 2 để thưởng thức Xương Ống Thêm, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "293915",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 4.33
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "726850",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk018",
+      "name": "Tàu Hũ Ky Thêm",
+      "pricing": [
+        {
+          "price": 25000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.45,
+      "description": "Hệ thống lẩu dê Đồng Hương 2 không chỉ phục vụ Tàu Hũ Ky Thêm, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "665193",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 4
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        },
+        {
+          "item_review_id": "542530",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "814109",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 3.67
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk019",
+      "name": "Mì Gói",
+      "pricing": [
+        {
+          "price": 6000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.33,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Mì Gói tại Hệ thống lẩu dê Đồng Hương 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "128376",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 0,
+            "mean": 0
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "732118",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk019",
+      "name": "Trứng vịt lộn",
+      "pricing": [
+        {
+          "price": 9000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4.33,
+      "description": "Hệ thống lẩu dê Đồng Hương 2 nổi tiếng với món Trứng vịt lộn, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "351546",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 4.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd3731e"
+  },
+  "place_id": {
+    "$oid": "67acf919194023cfe51522b5"
+  },
+  "restaurant_name": "Bún Đậu Mẹt Tre - Hoàng Diệu 2",
+  "menu": [
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI001",
+      "name": "Combo bún đậu tá lả 2 người + 2 Trà tắc",
+      "pricing": [
+        {
+          "price": 139500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Nếu bạn yêu thích Combo bún đậu tá lả 2 người + 2 Trà tắc, hãy thử ngay tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "268965",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "467122",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 1.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI002",
+      "name": "Bún đậu thịt",
+      "pricing": [
+        {
+          "price": 44000,
+          "note": "Bún + Đậu + Thịt + Rau",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Bún Đậu Mẹt Tre - Hoàng Diệu 2 nổi tiếng với món Bún đậu thịt, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "794094",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI003",
+      "name": "Bún đậu nem",
+      "pricing": [
+        {
+          "price": 53000,
+          "note": "Bún + Đậu + Nem chua + Rau",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Bún đậu nem tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "731312",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI004",
+      "name": "Bún đậu chả",
+      "pricing": [
+        {
+          "price": 53000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.89,
+      "description": "Bún đậu chả tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "819013",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "734362",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 3
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "948616",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI005",
+      "name": "Bún Đậu Tá Lả + Trà Tắc",
+      "pricing": [
+        {
+          "price": 121500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.89,
+      "description": "Hãy đến với Bún Đậu Mẹt Tre - Hoàng Diệu 2 để thưởng thức Bún Đậu Tá Lả + Trà Tắc, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "333256",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 3.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "891282",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "932514",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI006",
+      "name": "Combo bún đậu Mẹt Tre 2 người",
+      "pricing": [
+        {
+          "price": 148500,
+          "note": "Gồm phần 2 người ăn gồm: bún, đậu hủ, thịt chân giò, nem chua rán, chả cốm, dồi sụn",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.83,
+      "description": "Combo bún đậu Mẹt Tre 2 người là món ăn nổi bật tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "471623",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "548507",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI007",
+      "name": "Combo bún đậu tá lả 2 người",
+      "pricing": [
+        {
+          "price": 121500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.45,
+      "description": "Combo bún đậu tá lả 2 người tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "704123",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        },
+        {
+          "item_review_id": "551964",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        },
+        {
+          "item_review_id": "122943",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 2.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI008",
+      "name": "Combo bún đậu Tá lả 4 người",
+      "pricing": [
+        {
+          "price": 229500,
+          "note": "Gồm phần 4 người ăn: bún, đậu, thịt bắp giò, nem chua rán, chả cốm",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.83,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Combo bún đậu Tá lả 4 người tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "450794",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "575498",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 1.67
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI009",
+      "name": "Bún đậu mẹt tre - 4 người",
+      "pricing": [
+        {
+          "price": 265500,
+          "note": "Gồm phần 4 người ăn gồm: bún, đậu hủ, thịt chân giò, nem chua rán, chả cốm, dồi sụn",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.17,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Bún đậu mẹt tre - 4 người tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "289714",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "668514",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 1.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI013",
+      "name": "Cà Pháo",
+      "pricing": [
+        {
+          "price": 9000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Cà Pháo tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "956278",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 1.67
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI017",
+      "name": "Dồi sụn",
+      "pricing": [
+        {
+          "price": 35100,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.83,
+      "description": "Tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, Dồi sụn luôn làm hài lòng thực khách bởi hương vị đặc trưng và sự chăm chút trong từng chi tiết.",
+      "item_review": [
+        {
+          "item_review_id": "385929",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 3.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "562000",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI018",
+      "name": "Thịt chân giò thêm",
+      "pricing": [
+        {
+          "price": 31500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.44,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Thịt chân giò thêm tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "537200",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 0.67
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        },
+        {
+          "item_review_id": "899447",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        },
+        {
+          "item_review_id": "145847",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 0.33
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI019",
+      "name": "Nem chua rán thêm",
+      "pricing": [
+        {
+          "price": 31500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.89,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Nem chua rán thêm tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "348964",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "159116",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "485802",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI020",
+      "name": "Chả cốm thêm",
+      "pricing": [
+        {
+          "price": 31500,
+          "note": "Phần",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.17,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Chả cốm thêm tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "297006",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "712705",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 4.33
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI014",
+      "name": "Trà tắc",
+      "pricing": [
+        {
+          "price": 15300,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4.67,
+      "description": "Món Trà tắc tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "139315",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 4.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI015",
+      "name": "Nước sấu",
+      "pricing": [
+        {
+          "price": 22500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Bún Đậu Mẹt Tre - Hoàng Diệu 2 nổi tiếng với món Nước sấu, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "112834",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "446279",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 1
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI016",
+      "name": "Nước mơ",
+      "pricing": [
+        {
+          "price": 22500,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.33,
+      "description": "Bún Đậu Mẹt Tre - Hoàng Diệu 2 nổi tiếng với món Nước mơ, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "110450",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 1.33
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI010",
+      "name": "Bún đậu tá lả",
+      "pricing": [
+        {
+          "price": 65700,
+          "note": "Gồm: Bún + đậu hủ + thịt + chả cốm + nem chua rán",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.56,
+      "description": "Bún đậu tá lả tại Bún Đậu Mẹt Tre - Hoàng Diệu 2 được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "642545",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 2
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "628283",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "212970",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI011",
+      "name": "Bún đậu Mẹt Tre",
+      "pricing": [
+        {
+          "price": 76500,
+          "note": "Bún, đậu hủ, thịt chân giò, nem chua rán, chả cốm, dồi sụn",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.67,
+      "description": "Bún Đậu Mẹt Tre - Hoàng Diệu 2 nổi tiếng với món Bún đậu Mẹt Tre, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "345052",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJQ5deOp4ndTER2zrf12CCkNI012",
+      "name": "Bún đậu",
+      "pricing": [
+        {
+          "price": 31500,
+          "note": "Phần bún đậu không thịt",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.22,
+      "description": "Bún đậu là món ăn nổi bật tại Bún Đậu Mẹt Tre - Hoàng Diệu 2, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "886260",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 0.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "307652",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 1.33
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        },
+        {
+          "item_review_id": "971475",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 1.67
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd3731f"
+  },
+  "place_id": {
+    "$oid": "67acf919194023cfe51522b4"
+  },
+  "restaurant_name": "Lẩu Chay Hoàng Đạt 3",
+  "menu": [
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs001",
+      "name": "Chanh dây",
+      "pricing": [
+        {
+          "price": 5000,
+          "note": "5.000đ/ly",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.78,
+      "description": "Món Chanh dây tại Lẩu Chay Hoàng Đạt 3 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "426579",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 3
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "728253",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "848303",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 3
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs002",
+      "name": "Nước dừa",
+      "pricing": [
+        {
+          "price": 5000,
+          "note": "5.000đ/ly",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Nước dừa tại Lẩu Chay Hoàng Đạt 3 được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "268348",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "129271",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 0,
+            "mean": 0.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        },
+        {
+          "item_review_id": "265102",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs003",
+      "name": "Nước sâm mát gan",
+      "pricing": [
+        {
+          "price": 10000,
+          "note": "10.000đ/chai",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.78,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Nước sâm mát gan tại Lẩu Chay Hoàng Đạt 3 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "482024",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 1
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "478912",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "854774",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs004",
+      "name": "Nước suối",
+      "pricing": [
+        {
+          "price": 10000,
+          "note": "10.000đ/chai",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Lẩu Chay Hoàng Đạt 3 không chỉ phục vụ Nước suối, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "853740",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs005",
+      "name": "Pepsi",
+      "pricing": [
+        {
+          "price": 15000,
+          "note": "15.000đ/lon",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Pepsi tại Lẩu Chay Hoàng Đạt 3 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "616406",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        },
+        {
+          "item_review_id": "321298",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs006",
+      "name": "Coca",
+      "pricing": [
+        {
+          "price": 15000,
+          "note": "15.000đ/lon",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Món Coca tại Lẩu Chay Hoàng Đạt 3 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "173417",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 2.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs007",
+      "name": "Sting",
+      "pricing": [
+        {
+          "price": 15000,
+          "note": "15.000đ/lon",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4.67,
+      "description": "Sting tại Lẩu Chay Hoàng Đạt 3 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "838073",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 5,
+            "hygiene": 5,
+            "mean": 4.67
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs008",
+      "name": "7up",
+      "pricing": [
+        {
+          "price": 15000,
+          "note": "15.000đ/lon",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "drink",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.78,
+      "description": "7up là món ăn nổi bật tại Lẩu Chay Hoàng Đạt 3, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "582877",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "247986",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "873519",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs009",
+      "name": "Bánh lọc Huế",
+      "pricing": [
+        {
+          "price": 4000,
+          "note": "4.000đ/cái",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Bánh lọc Huế tại Lẩu Chay Hoàng Đạt 3 được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "985240",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 2
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "555293",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 3
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        },
+        {
+          "item_review_id": "771135",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 1
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJHfjlCkAndTERf7YvhiMbQIs010",
+      "name": "Sữa chua nếp cẩm",
+      "pricing": [
+        {
+          "price": 15000,
+          "note": "15.000đ/ly",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Sữa chua nếp cẩm tại Lẩu Chay Hoàng Đạt 3, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "161941",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk011",
+      "name": "Chả giò chay",
+      "pricing": [
+        {
+          "price": 30000,
+          "note": "30.000đ/dĩa",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Chả giò chay tại Lẩu Chay Hoàng Đạt 3 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "646709",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 4
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk012",
+      "name": "Chả giò sầu riêng",
+      "pricing": [
+        {
+          "price": 35000,
+          "note": "35.000đ/dĩa",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Chả giò sầu riêng tại Lẩu Chay Hoàng Đạt 3 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "673314",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 1
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk013",
+      "name": "Khoai tây chiên",
+      "pricing": [
+        {
+          "price": 30000,
+          "note": "30.000đ/dĩa",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Khoai tây chiên tại Lẩu Chay Hoàng Đạt 3 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "988683",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk014",
+      "name": "Nậm chay",
+      "pricing": [
+        {
+          "price": 30000,
+          "note": "30.000đ/dĩa",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Nếu bạn yêu thích Nậm chay, hãy thử ngay tại Lẩu Chay Hoàng Đạt 3, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "554150",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "868643",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk015",
+      "name": "Lẩu chay",
+      "pricing": [
+        {
+          "price": 35000,
+          "note": "35.000đ/người",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Lẩu chay là món ăn nổi bật tại Lẩu Chay Hoàng Đạt 3, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "895092",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJ37obH5wndTER685FEQb21kk016",
+      "name": "Topping thêm",
+      "pricing": [
+        {
+          "price": 20000,
+          "note": "20.000đ (đậu hũ rán, bò, gà, tàu hũ ky, nấm,...)",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.11,
+      "description": "Nếu bạn yêu thích Topping thêm, hãy thử ngay tại Lẩu Chay Hoàng Đạt 3, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "157369",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "299574",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "544627",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 5,
+            "mean": 4.33
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd37320"
+  },
+  "place_id": {
+    "$oid": "67acf919194023cfe51522b6"
+  },
+  "restaurant_name": "Bia tươi 3000",
+  "menu": [
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA001",
+      "name": "Cơm chiên hải sản",
+      "pricing": [
+        {
+          "price": 55000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Được làm từ những nguyên liệu tươi ngon nhất, Cơm chiên hải sản tại Bia tươi 3000 là sự lựa chọn tuyệt vời để thưởng thức.",
+      "item_review": [
+        {
+          "item_review_id": "280375",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "168239",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA002",
+      "name": "Cơm chiên Dương Châu",
+      "pricing": [
+        {
+          "price": 55000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Cơm chiên Dương Châu tại Bia tươi 3000 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "239131",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 1.33
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "360087",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA003",
+      "name": "Mì xào giòn",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.67,
+      "description": "Mì xào giòn tại Bia tươi 3000 được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "876689",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 3
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "576335",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 5,
+            "mean": 4.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA004",
+      "name": "Ốc bươu hấp sả",
+      "pricing": [
+        {
+          "price": 59000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.22,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Ốc bươu hấp sả tại Bia tươi 3000 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "421441",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "955785",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 2
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "601403",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 1.33
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA005",
+      "name": "Ốc bươu xào sả ớt",
+      "pricing": [
+        {
+          "price": 55000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Ốc bươu xào sả ớt tại Bia tươi 3000, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "480054",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA006",
+      "name": "Cà na rang muối",
+      "pricing": [
+        {
+          "price": 59000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Thưởng thức Cà na rang muối với nguyên liệu tươi ngon, chế biến cầu kỳ tại Bia tươi 3000.",
+      "item_review": [
+        {
+          "item_review_id": "539730",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 1,
+            "mean": 1
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "201955",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "167116",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 2.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA007",
+      "name": "Cà na xào me",
+      "pricing": [
+        {
+          "price": 59000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.89,
+      "description": "Hãy đến với Bia tươi 3000 để thưởng thức Cà na xào me, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "928949",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 4,
+            "mean": 4
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "149671",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "238239",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 4,
+            "mean": 2
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA008",
+      "name": "Sò lông nướng mỡ hành",
+      "pricing": [
+        {
+          "price": 59000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.22,
+      "description": "Món Sò lông nướng mỡ hành tại Bia tươi 3000 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "687921",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 1.33
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        },
+        {
+          "item_review_id": "275479",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 4,
+            "mean": 2
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        },
+        {
+          "item_review_id": "906034",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA009",
+      "name": "Sò lông hấp sả",
+      "pricing": [
+        {
+          "price": 49000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Sò lông hấp sả tại Bia tươi 3000 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "626205",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 2
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "235208",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA010",
+      "name": "Ốc mỡ xào me",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.83,
+      "description": "Tại Bia tươi 3000, Ốc mỡ xào me luôn làm hài lòng thực khách bởi hương vị đặc trưng và sự chăm chút trong từng chi tiết.",
+      "item_review": [
+        {
+          "item_review_id": "593640",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 5,
+            "hygiene": 1,
+            "mean": 3.67
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        },
+        {
+          "item_review_id": "570181",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA011",
+      "name": "Ốc mỡ xào tỏi",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Ốc mỡ xào tỏi tại Bia tươi 3000, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "263732",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 2,
+            "hygiene": 1,
+            "mean": 1
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA012",
+      "name": "Ốc mỡ rang muối",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Nếu bạn yêu thích Ốc mỡ rang muối, hãy thử ngay tại Bia tươi 3000, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "713745",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 1.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA013",
+      "name": "Ốc mỡ nướng mọi",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "69.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Món Ốc mỡ nướng mọi tại Bia tươi 3000 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "718161",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 0.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "403039",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 3.33
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA014",
+      "name": "Ốc mỡ hấp sả",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "69.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.17,
+      "description": "Món Ốc mỡ hấp sả tại Bia tươi 3000 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "383923",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "935313",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 1.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA015",
+      "name": "Lẩu cá bóp",
+      "pricing": [
+        {
+          "price": 149000,
+          "note": "149.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Lẩu cá bóp tại Bia tươi 3000 thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "389874",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 2.33
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA016",
+      "name": "Lẩu đầu cá hồi măng chua",
+      "pricing": [
+        {
+          "price": 149000,
+          "note": "149.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Lẩu đầu cá hồi măng chua là món ăn nổi bật tại Bia tươi 3000, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "247585",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 3,
+            "hygiene": 1,
+            "mean": 1.67
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA017",
+      "name": "Ếch xào lăn",
+      "pricing": [
+        {
+          "price": 89000,
+          "note": "89.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Bia tươi 3000 nổi tiếng với món Ếch xào lăn, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "528709",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 5,
+            "mean": 4
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        },
+        {
+          "item_review_id": "465300",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 2.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA018",
+      "name": "Ếch sapo",
+      "pricing": [
+        {
+          "price": 79000,
+          "note": "79.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 4,
+      "description": "Nếu bạn yêu thích Ếch sapo, hãy thử ngay tại Bia tươi 3000, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "928650",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 3.33
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "902308",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 4.67
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA019",
+      "name": "Dồi trường xào cải chua",
+      "pricing": [
+        {
+          "price": 90000,
+          "note": "90.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.17,
+      "description": "Dồi trường xào cải chua tại Bia tươi 3000 mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "830627",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 3,
+            "hygiene": 3,
+            "mean": 3.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "356980",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 0.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJaVMONEEndTERwIQdKZskcQA020",
+      "name": "Ngũ nấm thần tiên",
+      "pricing": [
+        {
+          "price": 89000,
+          "note": "89.000đ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "Món Ngũ nấm thần tiên tại Bia tươi 3000 có sự kết hợp hài hòa giữa hương vị và cách trình bày đẹp mắt.",
+      "item_review": [
+        {
+          "item_review_id": "221392",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 5,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        },
+        {
+          "item_review_id": "281734",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 2.67
+          },
+          "review_text": "Rất ấn tượng với cách bày trí món ăn!"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c6dcf538642d0b6dd37321"
+  },
+  "place_id": {
+    "$oid": "67bfa72143e340c7d9ceb46a"
+  },
+  "restaurant_name": "K-FOOD KITCHEN -106 TÔ VĨNH DIỆN",
+  "menu": [
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k001",
+      "name": "Bánh Gạo Cay Đặc Biệt",
+      "pricing": [
+        {
+          "price": 69000,
+          "note": "Tokbokki, chả cá Hàn Quốc, trứng luộc, hành Boaro, bạch tuộc, xúc xích, sốt bánh gạo cay vừa.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Bánh Gạo Cay Đặc Biệt là món ăn nổi bật tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "241718",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k002",
+      "name": "Bánh gạo Cay + mì",
+      "pricing": [
+        {
+          "price": 58000,
+          "note": "Bánh gạo, chả cá Hàn Quốc, mì ramen, trứng luộc, hành Boaro, sốt bánh gạo cay vừa.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Bánh gạo Cay + mì tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "482819",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k003",
+      "name": "Cơm Trộn Sốt Gojuchang Bò Bulgogi",
+      "pricing": [
+        {
+          "price": 79000,
+          "note": "Cơm gạo dẻo Hàn Quốc hoa đậu biếc, thịt bò xay xào bulgogi, trứng rán, rau củ, sốt Gojuchang cay vừa.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.78,
+      "description": "Nếu bạn yêu thích Cơm Trộn Sốt Gojuchang Bò Bulgogi, hãy thử ngay tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "192864",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "821786",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "398426",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 3,
+            "mean": 3.67
+          },
+          "review_text": "Chất lượng món ăn tuyệt hảo, xứng đáng với giá tiền."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k004",
+      "name": "Cơm Bạch Tuột Xào Sốt Gojuchang",
+      "pricing": [
+        {
+          "price": 75000,
+          "note": "Bạch tuộc, rau củ xào gia vị, hạt mè, tỏi phi, cơm trắng.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.33,
+      "description": "Hãy đến với K-FOOD KITCHEN -106 TÔ VĨNH DIỆN để thưởng thức Cơm Bạch Tuột Xào Sốt Gojuchang, nơi mang lại cảm giác gần gũi và ấm áp.",
+      "item_review": [
+        {
+          "item_review_id": "698297",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 3.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k005",
+      "name": "Cơm chiên cuộn trứng nhồi cheese",
+      "pricing": [
+        {
+          "price": 79000,
+          "note": "Cơm chiên, thịt heo xay, trứng rán, sốt phô mai, tương cà.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.55,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Cơm chiên cuộn trứng nhồi cheese tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "712909",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 5,
+            "mean": 2.33
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "723179",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 1
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "336307",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 2,
+            "mean": 1.33
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k006",
+      "name": "Cơm chiên kimchi nhồi cheese",
+      "pricing": [
+        {
+          "price": 79000,
+          "note": "Cơm chiên, kimchi, thịt heo xay, trứng ốp la, sốt phô mai.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Thưởng thức Cơm chiên kimchi nhồi cheese với nguyên liệu tươi ngon, chế biến cầu kỳ tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN.",
+      "item_review": [
+        {
+          "item_review_id": "492455",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 3.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "750284",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 0.67
+          },
+          "review_text": "Giá cả hợp lý, đáng để thử."
+        },
+        {
+          "item_review_id": "724167",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 2,
+            "mean": 2
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k007",
+      "name": "Miến Trộn Đặc Biệt",
+      "pricing": [
+        {
+          "price": 89000,
+          "note": "Miến khoai lang Hàn Quốc, thịt heo bơ tỏi, mực, chả cá, trứng rán, rau củ, dầu vừng.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3,
+      "description": "Một sự kết hợp tinh tế giữa nguyên liệu tươi và công thức độc đáo, Miến Trộn Đặc Biệt tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN thực sự là sự lựa chọn hoàn hảo.",
+      "item_review": [
+        {
+          "item_review_id": "909651",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Không gian quán rất đẹp, cực thích hợp để sống ảo!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k008",
+      "name": "Miến Trộn Super Nướng + Canh Rong Biển",
+      "pricing": [
+        {
+          "price": 119000,
+          "note": "Miến khoai Hàn Quốc, đùi gà nướng bơ cay, bẹ sườn nướng, rau củ, trứng rán, canh rong biển.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.83,
+      "description": "Miến Trộn Super Nướng + Canh Rong Biển là món ăn nổi bật tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "390952",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Đồ uống tuyệt vời, rất đáng quay lại!"
+        },
+        {
+          "item_review_id": "100620",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 2.33
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k009",
+      "name": "Mì Bibim Bò Bulgogi",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Sợi mì dai Ramen Hàn Quốc, sốt Gojuchang, thịt bò bulgogi.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.78,
+      "description": "K-FOOD KITCHEN -106 TÔ VĨNH DIỆN nổi tiếng với món Mì Bibim Bò Bulgogi, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "689799",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 3,
+            "mean": 3
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "177396",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 1.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        },
+        {
+          "item_review_id": "798028",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Món ăn tuyệt vời, rất đáng giá!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k010",
+      "name": "Mì Bibim Heo Giòn",
+      "pricing": [
+        {
+          "price": 72000,
+          "note": "Sợi mì dai Ramen Hàn Quốc, sốt Gojuchang, thịt heo chiên giòn.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.44,
+      "description": "Mì Bibim Heo Giòn tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN mang đến hương vị đậm đà, phù hợp với khẩu vị truyền thống.",
+      "item_review": [
+        {
+          "item_review_id": "482549",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 3
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "718007",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 2,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Hơi ồn một chút nhưng đồ ăn rất ngon."
+        },
+        {
+          "item_review_id": "195249",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 3,
+            "portion": 2,
+            "hygiene": 2,
+            "mean": 2.33
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k011",
+      "name": "Mì Soup Kimchi Đặc Biệt",
+      "pricing": [
+        {
+          "price": 85000,
+          "note": "Mì vắt Hàn Quốc, nước dùng Busan bò hầm ngũ cốc, topping đặc biệt.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.22,
+      "description": "Mì Soup Kimchi Đặc Biệt là món ăn nổi bật tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "985387",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Rất ngon, sẽ quay lại!"
+        },
+        {
+          "item_review_id": "594524",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 4,
+            "mean": 3.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        },
+        {
+          "item_review_id": "703391",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 4,
+            "mean": 1.33
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k012",
+      "name": "Kimbap Bò Bulgogi",
+      "pricing": [
+        {
+          "price": 68000,
+          "note": "Thăn bò xào sốt bulgogi, trứng rán, củ cải muối, dưa leo, cà rốt.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.83,
+      "description": "Nếu bạn yêu thích Kimbap Bò Bulgogi, hãy thử ngay tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, đảm bảo không làm bạn thất vọng!",
+      "item_review": [
+        {
+          "item_review_id": "800958",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 2.33
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        },
+        {
+          "item_review_id": "720681",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 0,
+            "hygiene": 3,
+            "mean": 1.33
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k013",
+      "name": "Kimbap 4 vị + sốt phô mai",
+      "pricing": [
+        {
+          "price": 161000,
+          "note": "Truyền thống, bulgogi, heo giòn, chiên xù, sốt phô mai.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.33,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Kimbap 4 vị + sốt phô mai tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "535614",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 0,
+            "mean": 2.33
+          },
+          "review_text": "Đồ ăn rất đa dạng, không gian thoải mái!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k014",
+      "name": "Kimbap sườn bò LA",
+      "pricing": [
+        {
+          "price": 167000,
+          "note": "Sườn bò rút xương nướng vị LA, gấp đôi kích thước bình thường.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.56,
+      "description": "Kimbap sườn bò LA tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN được chế biến với sự tỉ mỉ, đem lại trải nghiệm ẩm thực khó quên.",
+      "item_review": [
+        {
+          "item_review_id": "652653",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "169128",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Món ăn ngon nhưng phải chờ hơi lâu."
+        },
+        {
+          "item_review_id": "363984",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 5,
+            "hygiene": 0,
+            "mean": 3
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k015",
+      "name": "Gà Đảo Tok Cay Ngọt",
+      "pricing": [
+        {
+          "price": 75000,
+          "note": "Gà chiên giòn, sốt cay ngọt.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.11,
+      "description": "K-FOOD KITCHEN -106 TÔ VĨNH DIỆN không chỉ phục vụ Gà Đảo Tok Cay Ngọt, mà còn mang đến không gian lý tưởng để thư giãn.",
+      "item_review": [
+        {
+          "item_review_id": "897858",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 1
+          },
+          "review_text": "Không hợp khẩu vị của tôi lắm."
+        },
+        {
+          "item_review_id": "940377",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 4,
+            "hygiene": 5,
+            "mean": 3.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "710737",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 1.67
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k016",
+      "name": "Gà Rán Sốt Full 3 vị",
+      "pricing": [
+        {
+          "price": 136000,
+          "note": "Gà rán đùi/má đùi (9 miếng), sốt cay, bơ caramel, tương tỏi.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.67,
+      "description": "Thưởng thức Gà Rán Sốt Full 3 vị với nguyên liệu tươi ngon, chế biến cầu kỳ tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN.",
+      "item_review": [
+        {
+          "item_review_id": "806664",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 1,
+            "hygiene": 3,
+            "mean": 1.67
+          },
+          "review_text": "Một trải nghiệm ẩm thực thú vị."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k017",
+      "name": "Gà Full 3 Vị + Phủ Sốt Phomai",
+      "pricing": [
+        {
+          "price": 156000,
+          "note": "Gà rán giòn, sốt cay, bơ caramel, tương tỏi, phủ phô mai.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2,
+      "description": "Gà Full 3 Vị + Phủ Sốt Phomai là món ăn nổi bật tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "717269",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 2
+          },
+          "review_text": "Khá ổn, nhưng có thể cải thiện hơn."
+        },
+        {
+          "item_review_id": "566207",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 4,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Hơi nhạt, nhưng ăn kèm nước chấm thì ngon."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k018",
+      "name": "Gà 2 Vị Cay + Tương Tỏi Phủ Sốt Phomai",
+      "pricing": [
+        {
+          "price": 112000,
+          "note": "Gà rán giòn, sốt cay, bơ caramel, tương tỏi, phủ phô mai.",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 1.33,
+      "description": "Một trải nghiệm không thể bỏ qua cho người yêu ẩm thực là Gà 2 Vị Cay + Tương Tỏi Phủ Sốt Phomai tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, với hương vị tuyệt vời.",
+      "item_review": [
+        {
+          "item_review_id": "123603",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 2,
+            "portion": 1,
+            "hygiene": 0,
+            "mean": 1
+          },
+          "review_text": "Giá hơi cao so với chất lượng."
+        },
+        {
+          "item_review_id": "387806",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 0,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 1.67
+          },
+          "review_text": "Phục vụ nhanh, món ăn trình bày đẹp!"
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k019",
+      "name": "Gà Double Cheese",
+      "pricing": [
+        {
+          "price": 115000,
+          "note": "Gà rán giòn rụm phủ đều bột phomai kèm theo sốt phomai béo ngậy. Sự lựa chon hoàn hảo cho tín đồ thích Cheese và phù hợp với trẻ em vì không cay ạ",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 3.67,
+      "description": "Gà Double Cheese là món ăn nổi bật tại K-FOOD KITCHEN -106 TÔ VĨNH DIỆN, nơi bạn sẽ tìm thấy sự cân bằng giữa hương vị và nghệ thuật ẩm thực.",
+      "item_review": [
+        {
+          "item_review_id": "608748",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 3,
+            "hygiene": 4,
+            "mean": 3.67
+          },
+          "review_text": "Nhân viên thân thiện, phục vụ tận tình."
+        }
+      ]
+    },
+    {
+      "product_id": "ChIJje6_XAAndTERwChWHuOLq9k020",
+      "name": "Gà Sốt Cay + Tỏi Tương Đậu",
+      "pricing": [
+        {
+          "price": 99000,
+          "note": "Gà rán 100% đùi má đùi (6 miếng gà)",
+          "required": true,
+          "includesVAT": false
+        }
+      ],
+      "category": "food",
+      "currency": "VND",
+      "feature_img": "https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/6/10/z55255096787694d1b552439a7284c8563ea2bb6d956ae-17180135399011053813607.jpg",
+      "rating": 2.67,
+      "description": "K-FOOD KITCHEN -106 TÔ VĨNH DIỆN nổi tiếng với món Gà Sốt Cay + Tỏi Tương Đậu, một lựa chọn tuyệt vời cho bữa ăn ngon miệng.",
+      "item_review": [
+        {
+          "item_review_id": "385063",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 4,
+            "portion": 1,
+            "hygiene": 1,
+            "mean": 2
+          },
+          "review_text": "Hương vị đặc trưng, rất đáng thử!"
+        },
+        {
+          "item_review_id": "673922",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 1,
+            "portion": 5,
+            "hygiene": 2,
+            "mean": 2.67
+          },
+          "review_text": "Cũng được, không quá đặc biệt."
+        },
+        {
+          "item_review_id": "231496",
+          "reviewer_id": "",
+          "rating": {
+            "taste": 5,
+            "portion": 0,
+            "hygiene": 5,
+            "mean": 3.33
+          },
+          "review_text": "Tuyệt vời! Hương vị đậm đà, rất ngon!"
+        }
+      ]
+    }
+  ]
+}]

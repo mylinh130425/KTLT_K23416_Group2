@@ -7,7 +7,7 @@
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
 }
-#header_welcome, #body_welcome, header_main{
+#header_welcome, #body_welcome, #header_frame{
   background-color: transparent;
   background: transparent;
   border: none;
@@ -17,7 +17,404 @@
 }
 #profile_button{
   border-radius: 18px; //50% of button size
+  background-color: $COLOR_ACCENT_1;
 }
+
+//#add_restaurant_page {
+//  background-color: $COLOR_ACCENT_1;
+//
+//  QFrame {
+//      background-color: $COLOR_ACCENT_1;
+//  }
+//}
+
+#add_restaurant_page #main_content {
+  // background-color: white;
+  // border-radius: 20px;
+  margin: 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#add_restaurant_page #top_bar {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#add_restaurant_page #content {
+  background-color: transparent;
+}
+
+#left_area_widget {
+  background-color: green($color: #000000);
+}
+
+#right_area_widget {
+  background-color: blue;
+}
+
+#right_form {
+  background-color: transparent;
+}
+
+#left_form {
+  background-color: transparent;
+}
+
+#widget_3 {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QLineEdit {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QLabel {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QCheckBox {
+  background-color: transparent;
+}
+
+#address_widget {
+  background-color: transparent;
+}
+
+#contact_widget {
+  background-color: transparent;
+}
+
+#add_restaurant_page #create_pushButton {
+  background-color:black;
+  color: white;
+  border-radius: 5px;
+}
+
+#add_restaurant_page QLineEdit {
+   border: 1px solid black;
+  background-color: $COLOR_ACCENT_1;
+}
+
+//#add_restaurant_page {
+//  background-color: $COLOR_ACCENT_1;
+//
+//  QFrame {
+//      background-color: $COLOR_ACCENT_1;
+//  }
+//}
+
+#add_restaurant_page #main_content {
+  // background-color: white;
+  // border-radius: 20px;
+  margin: 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#add_restaurant_page #top_bar {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#add_restaurant_page #content {
+  background-color: transparent;
+}
+
+#left_area_widget {
+  background-color: green($color: #000000);
+}
+
+#right_area_widget {
+  background-color: blue;
+}
+
+#right_form {
+  background-color: transparent;
+}
+
+#left_form {
+  background-color: transparent;
+}
+
+#avatar_widget {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QLineEdit {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QLabel {
+  background-color: transparent;
+}
+
+#add_restaurant_page #content QCheckBox {
+  background-color: transparent;
+}
+
+#address_widget {
+  background-color: transparent;
+}
+
+#contact_widget {
+  background-color: transparent;
+}
+
+#add_restaurant_page #create_pushButton {
+  background-color:black;
+  color: white;
+  border-radius: 5px;
+}
+
+#add_restaurant_page QLineEdit {
+   border: 1px solid black;
+}
+#profile_photo{
+  border-radius: 45px;
+  border: 1px solid #333;
+}
+
+
+
+
+
+
+#modify_restaurant_page {
+  margin: 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#modify_restaurant_page #main_content_2 {
+  margin-bottom: 20px;
+  background: transparent;}
+
+#modify_restaurant_page #modify_restaurant_frame  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #additional_info  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #left_additional_info  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #right_additional_info  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #left_additional_info QWidget  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #left_additional_info #delete_res_pushButton {
+  background-color: #8E9299;
+}
+
+#modify_restaurant_page #left_additional_info #save_pushButton {
+  background-color: black;
+  color: white;
+}
+
+#modify_restaurant_page #right_additional_info QWidget  {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #modify_scrollAreaWidgetContents {
+  background-color: transparent;
+  border: 0;
+}
+
+#modify_restaurant_page #modify_scrollArea {
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 20px;
+}
+
+#modify_restaurant_page #modify_scrollArea QScrollBar:vertical {
+  border: 0;
+  background: white;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+#modify_restaurant_page #modify_scrollArea QScrollBar::handle:vertical {
+  border: 0;
+  background: gray;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+#modify_restaurant_page #top_bar_2 {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#modify_restaurant_page #content_2 {
+  background-color: transparent;
+}
+
+#left_area_widget_2 {
+  background-color: green($color: #000000);
+}
+
+#right_area_widget_2 {
+  background-color: blue;
+}
+
+#right_form_2 {
+  background-color: transparent;
+}
+
+#left_form_2 {
+  background-color: transparent;
+}
+#widget_4 {
+  background-color: transparent;
+}
+#avatar_widget_2 {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #content_2 QLineEdit {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #content_2 QLabel {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #content_2 QCheckBox {
+  background-color: transparent;
+}
+
+#address_widget_2 {
+  background-color: transparent;
+}
+
+#contact_widget_2 {
+  background-color: transparent;
+}
+
+#modify_restaurant_page #create_pushButton_2 {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+#modify_restaurant_page QLineEdit {
+  border: 1px solid black;
+}
+
+#modify_restaurant_page QFrame {
+  background-color: white;
+}
+
+
+
+#review_food_page {
+  margin: 0;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#review_food_page #main_content_3 {
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+#review_food_page QWidget {
+  background-color: transparent;
+}
+
+
+#review_food_page #top_bar_3 {
+  background-color: #FFA55A;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+#review_food_page #avg_value {
+  color: #FFA55A;
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 0;
+}
+
+#review_food_page #avg_5 {
+  color: gray;
+  font-size: 35px;
+  font-weight: 600;
+  margin-right: 0;
+}
+
+#review_food_page QProgressBar::chunk {
+  background-color: #FFA55A; /* Màu của phần tiến trình */
+}
+
+#review_food_page QProgressBar {
+  height: 10px;
+  background-color: rgb(233, 233, 233);
+}
+
+#review_food_page #column_name {
+  background-color: rgb(233, 233, 233);
+}
+
+
+#review_food_page #reviews_scrollAreaWidgetContents {
+  background-color: transparent;
+  border: 0;
+}
+
+#review_food_page #reviews_scrollArea {
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 20px;
+}
+
+#review_food_page #reviews_scrollArea QScrollBar:vertical {
+  border: 0;
+  background: white;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+#review_food_page #reviews_scrollArea QScrollBar::handle:vertical {
+  border: 0;
+  background: gray;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+#modify_restaurant_page #scrollArea QScrollBar:vertical {
+  border: 0;
+  background: white;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+#modify_restaurant_page #scrollArea QScrollBar::handle:vertical {
+  border: 0;
+  background: gray;
+  width: 10px;
+  margin: 0px 0px 0px 0px;
+}
+
+
+
 //===================================================//
 // END //
 //====================================================//
