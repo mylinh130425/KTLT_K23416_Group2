@@ -43,34 +43,82 @@ class DatabaseManager:
 
         return restaurants
 
+    """version 0"""
+    # def format_hours(self, hours_list):
+    #     """Convert list of opening hours into a readable string.
+    #      TODO: Bản - Cần chỉnh lại format của giờ hiển thị
+    #       nên gom lại giờ giống nhau vào 1 nơi"""
+    #     if not isinstance(hours_list, list) or not hours_list:
+    #         return "No Data"
+    #
+    #     formatted_hours = []
+    #
+    #     for day in hours_list:
+    #         if "day" in day and "times" in day:
+    #             # Extract first time range if it's a list
+    #             times = day["times"]
+    #             if isinstance(times, list) and times:
+    #                 times = times[0]  # Get the first element if it's a list
+    #
+    #             # Fix Unicode escape sequences like "\u202f" (narrow no-break space)
+    #             times = times.replace("\u202f", " ").strip()
+    #
+    #             # Format: "Mon: 10 AM - 9 PM"
+    #             formatted_hours.append(f"{day['day'][:3]}: {times}")
+    #
+    #     return " | ".join(formatted_hours)
+
+    """version 2"""
     def format_hours(self, hours_list):
-        """Convert list of opening hours into a readable string.
-         TODO: Bản - Cần chỉnh lại format của giờ hiển thị
-          nên gom lại giờ giống nhau vào 1 nơi"""
+        """Convert list of opening hours into a readable string,
+           grouping consecutive days with the same hours together."""
         if not isinstance(hours_list, list) or not hours_list:
             return "No Data"
 
-        formatted_hours = []
-
+        # Step 1: Extract (day, hours) tuples
+        day_hours = []
         for day in hours_list:
             if "day" in day and "times" in day:
-                # Extract first time range if it's a list
                 times = day["times"]
                 if isinstance(times, list) and times:
-                    times = times[0]  # Get the first element if it's a list
+                    times = times[0]  # Take the first element if it's a list
 
-                # Fix Unicode escape sequences like "\u202f" (narrow no-break space)
-                times = times.replace("\u202f", " ").strip()
+                times = times.replace("\u202f", " ").strip()  # Clean time formatting
+                day_hours.append((day['day'][:3], times))  # Store short day name and hours
 
-                # Format: "Mon: 10 AM - 9 PM"
-                formatted_hours.append(f"{day['day'][:3]}: {times}")
+        # Step 2: Group consecutive days with the same hours
+        grouped_hours = []
+        temp_group = [day_hours[0][0]]  # Start with the first day
+        prev_hours = day_hours[0][1]  # Previous time range
 
-        return " | ".join(formatted_hours)
+        for i in range(1, len(day_hours)):
+            current_day, current_hours = day_hours[i]
 
-        # Database connection
+            if current_hours == prev_hours:
+                temp_group.append(current_day)  # Continue grouping
+            else:
+                # Save the previous group before resetting
+                if len(temp_group) > 1:
+                    grouped_hours.append(f"{temp_group[0]}-{temp_group[-1]}: {prev_hours}")
+                else:
+                    grouped_hours.append(f"{temp_group[0]}: {prev_hours}")
+
+                # Start a new group
+                temp_group = [current_day]
+                prev_hours = current_hours
+
+        # Step 3: Add the last remaining group
+        if len(temp_group) > 1:
+            grouped_hours.append(f"{temp_group[0]}-{temp_group[-1]}: {prev_hours}")
+        else:
+            grouped_hours.append(f"{temp_group[0]}: {prev_hours}")
+
+        return " | ".join(grouped_hours)
+
+    #     # Database connection
     def format_accessibility(self, about_list):
         """
-        TODO: Bản - Cần check lại dữ liệu xem hiển thị
+        DONE-TO DO: Bản - Cần check lại dữ liệu xem hiển thị
           thông tin gì ở cột Accessibility thì ok
         :param about_list:
         :return:
@@ -84,6 +132,9 @@ class DatabaseManager:
                     accessibility_texts.append(option["name"])
         # Cập nhật giá trị mới cho accessibility
         return accessibility_texts
+
+
+
 
 
 if __name__ == "__main__":
