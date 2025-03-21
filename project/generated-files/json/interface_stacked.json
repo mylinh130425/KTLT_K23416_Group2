@@ -35,12 +35,40 @@
   ],
   "QLabel": [
     {
+      "name": "label_10",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\CreateAcc_Image.png"
+    },
+    {
       "name": "login_photo_label",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
     },
     {
+      "name": "label_3",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/user.png"
+    },
+    {
+      "name": "label_4",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/unlock-keyhole.png"
+    },
+    {
       "name": "signup_photo_label",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+    },
+    {
+      "name": "label_2",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/user.png"
+    },
+    {
+      "name": "label_5",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/circle-user.png"
+    },
+    {
+      "name": "label_7",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/unlock-keyhole.png"
+    },
+    {
+      "name": "label_8",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/check.png"
     },
     {
       "name": "label_12",
