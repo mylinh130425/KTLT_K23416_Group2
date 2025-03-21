@@ -15,7 +15,16 @@
 #close_window_button{
   border-radius: 12px; //50% of button size
 }
-#profile_button{
+#close_window_button:hover{ //not working
+  background-color: #990000;
+}
+#Login_SignUp QLineEdit{
+  border:1.5px solid #333; border-radius:8px;padding-left:30px
+}
+#welcome_photo{
+//make it flowing from top to bottom - no more outlines
+}
+#profile_button{ //obsolete
   border-radius: 18px; //50% of button size
   background-color: $COLOR_ACCENT_1;
 }

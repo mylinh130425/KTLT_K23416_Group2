@@ -73,31 +73,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "welcome_stackedWidget",
-      "navigation": [
-        {
-          "navigationButtons": [
-            {
-              "to_signup_button": "left_signup_page",
-              "to_login_button": "left_login_page"
-            }
-          ]
-        }
-      ],
-      "transitionAnimation": [
-        {
-          "slide": [
-            {
-              "active": true,
-              "duration": 1000,
-              "direction": "horizontal",
-              "easingCurve": "OutBack"
-            }
-          ]
-        }
-      ]
     }
   ],
   "QtBinding": "PyQt6"

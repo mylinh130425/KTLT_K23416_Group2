@@ -1,4 +1,8 @@
 from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
+
+from project.src.model.UserModel import UserModel
+
 
 class DatabaseManager:
     def __init__(self, uri="mongodb://localhost:27017", db_name="MealMatch"):
@@ -15,6 +19,11 @@ class DatabaseManager:
         """
         self.client = MongoClient(uri)
         self.db = self.client[db_name]
+        self.users = self.db["Users"]
+        # Đảm bảo username và email là duy nhất
+        self.users.create_index("username", unique=True)
+        self.users.create_index("email", unique=True)
+
 
     def get_restaurants(self, offset=0, limit=15):
         """Fetch a batch of restaurants with pagination."""
@@ -92,8 +101,6 @@ class DatabaseManager:
         # Database connection
     def format_accessibility(self, about_list):
         """
-        TODO: Bản - Cần check lại dữ liệu xem hiển thị
-          thông tin gì ở cột Accessibility thì ok
         :param about_list:
         :return:
         """
@@ -107,10 +114,37 @@ class DatabaseManager:
         # Cập nhật giá trị mới cho accessibility
         return accessibility_texts
 
+    def register_user(self, username: str, fullname: str, password: str) -> bool:
+        """Đăng ký người dùng mới"""
+        user = UserModel(username, fullname, password)
+
+        try:
+            self.users.insert_one(user.to_dict())
+            print(f"✅ User {fullname} signed up successfully!")
+            return True
+        except DuplicateKeyError:
+            print(f"⚠️ Error: Username or email existed in the database!")
+            return False
+
+    def login_user(self, username: str, password: str) -> bool:
+        """Xác thực đăng nhập người dùng"""
+        user_data = self.users.find_one({"username": username})
+
+        if user_data:
+            user = UserModel(user_data["username"], user_data["fullName"], user_data["passwordHash"], is_hashed=True)
+            if user.verify_password(password):
+                print("✅ Successfully logged in!")
+                return True
+            else:
+                print("❌ Wrong password!")
+                return False
+        else:
+            print("❌ User Not Found!")
+            return False
+
 
 if __name__ == "__main__":
-    """ phần code để test kết nối db trong file này, 
-       có thể sửa lại code bên dưới để test theo nhu cầu"""
+    """ testing db connection and functionality """
     db_manager = DatabaseManager()
 
     # Set pagination parameters
