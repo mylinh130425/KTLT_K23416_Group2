@@ -1,5 +1,8 @@
 # from project.src.BurgerMenu import BurgerMenu
+from PyQt6.QtWidgets import QMessageBox
+
 from project.src.DatabaseManager import DatabaseManager
+from project.src.model.ProfileModel import ProfileModel
 from project.src.ui_profile_page import Ui_Profile
 from project.src.view.RestaurantScreen import RestaurantScreen
 from project.src.ui_interface_stacked import *
@@ -19,6 +22,8 @@ class Extend_MainWindow(Ui_MainWindow):
         self.processSignalAndSlot()
         self.db_manager = DatabaseManager()
         self.username=None
+        self.fullname =None
+        self.profile = None
         self.stackedWidget.setCurrentWidget(self.Login_SignUp)
         self.login_signup_stackedWidget.setCurrentWidget(self.right_login_page)
 
@@ -39,19 +44,59 @@ class Extend_MainWindow(Ui_MainWindow):
         self.home_button.clicked.connect(self.goHome)
         self.burger_menu_button.clicked.connect(self.goRestaurant)
         self.profile_logout_button.clicked.connect(self.logout)
+        self.profile_save_button.clicked.connect(self.updateProfile)
+        self.profile_delete_button.clicked.connect(self.deleteProfile)
 
 
         # self.burger_menu_button = BurgerMenu()
         # self.burger_menu_button.clicked.connect(self)
         # self.restaurant_button.clicked.connect(self.goRestaurant)
 
+    def deleteProfile(self):
+        """Confirm and delete user profile"""
+        reply = QMessageBox.question(
+            self.body_stackedWidget,
+            "Confirm Deletion",
+            "Are you sure you want to delete your profile? This action cannot be undone.",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+
+        if reply == QMessageBox.StandardButton.Yes:
+            self.stackedWidget.setCurrentWidget(self.Login_SignUp)
+            self.goSignUp()
+            success = self.profile.delete_profile(self.username)
+            if success:
+                QMessageBox.information(self.body_stackedWidget, "Success", "Your profile has been deleted successfully.")
+                self.username=None
+            else:
+                QMessageBox.critical(self.body_stackedWidget, "Error", "Failed to delete your profile. Please try again.")
+
+    def updateProfile(self):
+        old_username= self.username
+        new_username = self.profile_username_lineEdit.text().strip()
+        new_fullname = self.profile_fullname_lineEdit.text().strip()
+        current_password = self.profile_currentpassword_lineEdit.text().strip()
+        new_password = self.profile_newpassword_lineEdit.text().strip()
+        confirm_password = self.profile_confirmpassword_lineEdit.text().strip()
+
+        update_result,message = self.profile.update_profile(old_username, new_username, new_fullname, current_password, new_password, confirm_password)
+
+        if update_result:
+            QtWidgets.QMessageBox.information(self.body_stackedWidget, "Success", "User update successful!")
+            self.profile_currentpassword_lineEdit.clear()
+            self.profile_newpassword_lineEdit.clear()
+            self.profile_confirmpassword_lineEdit.clear()
+
+
     def logout(self):
-        """Xử lý khi người dùng bấm nút đăng xuất"""
         if self.db_manager.logout_user(self.username):
             print("✅ Logout successful! Returning to login screen...")
             # Logic để quay lại màn hình đăng nhập, ví dụ:
             self.stackedWidget.setCurrentWidget(self.Login_SignUp)
             self.goLogin()
+            self.profile = None
+            self.fullname=None
         else:
             print("❌ Logout failed!")
 
@@ -61,6 +106,7 @@ class Extend_MainWindow(Ui_MainWindow):
         `login_signup_stackedWidget`.
         """
         self.login_signup_stackedWidget.setCurrentWidget(self.right_login_page)
+
 
     def goSignUp(self):
         """
@@ -90,16 +136,16 @@ class Extend_MainWindow(Ui_MainWindow):
         self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
-    def setup_profile(self):
-        """
-        Initializes the profile page and adds it to the body stacked widget.
+    # def setup_profile(self):
+    #     self.profile_page = Ui_Profile(self.body_stackedWidget)
+    #     self.body_stackedWidget.addWidget(self.profile_page)  # Thêm trực tiếp
 
-        This method creates an instance of the Ui_Profile and adds it to Ui_Profile
-        `body_stackedWidget`. This allows the profile page to be displayed within
-        the main application window when navigating to the profile section.
-        """
-        self.profile_page = Ui_Profile(self.body_stackedWidget)
-        self.body_stackedWidget.addWidget(self.profile_page)  # Thêm trực tiếp
+    def goProfile(self):
+        self.fullname = self.profile.current_user.fullname
+
+        self.profile_fullname_lineEdit.setText(self.fullname)
+        self.body_stackedWidget.setCurrentWidget(self.profile_page)
+        self.profile_username_lineEdit.setText(self.username)
 
 
     def login(self):
@@ -122,8 +168,11 @@ class Extend_MainWindow(Ui_MainWindow):
             self.header_frame.setStyleSheet("{background-color: #33372C}")
             # self.setup_profile()
             self.stackedWidget.setCurrentWidget(self.Main)
-            self.body_stackedWidget.setCurrentWidget(self.profile_page)
+            self.profile = ProfileModel(self.db_manager, self.username)
+            self.goProfile()
             # self.removeAllWidgetsExcept(self.body_stackedWidget,self.profile_page)
+            self.login_password_lineEdit.clear()
+            self.login_username_lineEdit.clear()
         else:
             QtWidgets.QMessageBox.warning(self.login_signup_stackedWidget, "Error", "Invalid username or password!")
 
@@ -134,23 +183,28 @@ class Extend_MainWindow(Ui_MainWindow):
         # isSignedup= self.signup_handler.signup()
         # if isSignedup:
         self.username = self.signup_username_lineEdit.text().strip()
-        fullname = self.signup_fullname_lineEdit.text().strip()  # Dùng fullname field cho email
+        self.fullname = self.signup_fullname_lineEdit.text().strip()  # Dùng fullname field cho email
         password = self.signup_password_lineEdit.text()
-        confirm_password=self.signup_confrmpass_lineEdit.text()
+        confirm_password=self.signup_confirmpass_lineEdit.text()
 
         db_manager = DatabaseManager()
-        if self.username=="" or fullname=="" or password=="" or confirm_password=="":
+        if self.username=="" or self.fullname=="" or password=="" or confirm_password=="":
             QtWidgets.QMessageBox.warning(self.welcome_stackedWidget, "Error", "All fields are required!")
         elif password==confirm_password:
-            success = db_manager.register_user(self.username, fullname,password)
+            success = db_manager.register_user(self.username, self.fullname,password)
 
             if success:
                 QtWidgets.QMessageBox.information(self.welcome_stackedWidget, "Success", "User registered successfully!")
                 print("setting up profile page")
 
                 # self.setup_profile()
+                self.profile = ProfileModel(self.db_manager, self.username)
                 self.stackedWidget.setCurrentWidget(self.Main)
-                self.body_stackedWidget.setCurrentWidget(self.profile_page)
+                self.goProfile()
+                self.signup_password_lineEdit.clear()
+                self.signup_confirmpass_lineEdit.clear()
+                self.signup_fullname_lineEdit.clear()
+                self.signup_username_lineEdit.clear()
             else:
                 QtWidgets.QMessageBox.warning(self.welcome_stackedWidget, "Error", "Username or email already exists!")
         else:

@@ -556,6 +556,9 @@
                          <property name="styleSheet">
                           <string notr="true"/>
                          </property>
+                         <property name="echoMode">
+                          <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                         </property>
                          <property name="placeholderText">
                           <string>Password</string>
                          </property>
@@ -1053,6 +1056,9 @@
                          <property name="text">
                           <string/>
                          </property>
+                         <property name="echoMode">
+                          <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                         </property>
                          <property name="placeholderText">
                           <string>Password</string>
                          </property>
@@ -1086,7 +1092,7 @@
                           <height>30</height>
                          </size>
                         </property>
-                        <widget class="QLineEdit" name="signup_confrmpass_lineEdit">
+                        <widget class="QLineEdit" name="signup_confirmpass_lineEdit">
                          <property name="geometry">
                           <rect>
                            <x>0</x>
@@ -1118,6 +1124,9 @@
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="echoMode">
+                          <enum>QLineEdit::PasswordEchoOnEdit</enum>
                          </property>
                          <property name="placeholderText">
                           <string>Confirm password</string>
@@ -1755,13 +1764,19 @@
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
+                           <property name="echoMode">
+                            <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                           </property>
                            <property name="placeholderText">
-                            <string>Password</string>
+                            <string>Current Password</string>
                            </property>
                           </widget>
                          </item>
                          <item>
                           <widget class="QLineEdit" name="profile_newpassword_lineEdit">
+                           <property name="echoMode">
+                            <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                           </property>
                            <property name="placeholderText">
                             <string>New Password</string>
                            </property>
@@ -1769,6 +1784,9 @@
                          </item>
                          <item>
                           <widget class="QLineEdit" name="profile_confirmpassword_lineEdit">
+                           <property name="echoMode">
+                            <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                           </property>
                            <property name="placeholderText">
                             <string>Confirm Password</string>
                            </property>
