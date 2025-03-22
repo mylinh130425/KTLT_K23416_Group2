@@ -172,3 +172,6 @@ cython_debug/
 
 data/
 FlowChartChuaVe.docx
+
+#tmp files
+*~
