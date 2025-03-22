@@ -9,6 +9,10 @@
       "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo.png"
     },
     {
+      "name": "profile_logout_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_logout.png"
+    },
+    {
       "name": "pushButton",
       "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     },
@@ -19,23 +23,11 @@
     {
       "name": "pushButton_3",
       "icon": "C:\\Users\\USER\\.designer\\ic_review.png"
-    },
-    {
-      "name": "pushButton_16",
-      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
-    },
-    {
-      "name": "pushButton_17",
-      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
-    },
-    {
-      "name": "pushButton_18",
-      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
     }
   ],
   "QLabel": [
     {
-      "name": "label_10",
+      "name": "welcome_photo",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\CreateAcc_Image.png"
     },
     {
@@ -71,6 +63,18 @@
       "pixmap": "Qss/icons/icons/font_awesome/solid/check.png"
     },
     {
+      "name": "restaurant_photo_label_2",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_panel_icon.png"
+    },
+    {
+      "name": "signup_photo_label_2",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_icon.png"
+    },
+    {
+      "name": "label",
+      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Account-amico 1.png"
+    },
+    {
       "name": "label_12",
       "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
@@ -85,182 +89,6 @@
     {
       "name": "tiktok",
       "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
-    },
-    {
-      "name": "label_267",
-      "pixmap": "C:\\Users\\USER\\.designer\\images\\ic_adjust.png"
-    },
-    {
-      "name": "label_291",
-      "pixmap": "C:\\Users\\USER\\.designer\\images\\ic_seclectick.png"
-    },
-    {
-      "name": "label_428",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_429",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_430",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_431",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_432",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_434",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_435",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_436",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_437",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_438",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_440",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_441",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_442",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_443",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_444",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_446",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_447",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_448",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_449",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_450",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_452",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_453",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_454",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_455",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_456",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_458",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_459",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_460",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_461",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_462",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_464",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_465",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_466",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_467",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_starfull.png"
-    },
-    {
-      "name": "label_468",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_star.png"
-    },
-    {
-      "name": "label_319",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_321",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_322",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_324",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_325",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_326",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
-    },
-    {
-      "name": "label_338",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food.png"
     },
     {
       "name": "lb_anh_7",

@@ -1664,6 +1664,26 @@ PlotWidget {
   border-radius: 18px;
   background-color: #008080; }
 
+#burger_menu_button {
+  color: white; }
+
+#profile_page {
+  background-color: white; }
+
+#profile_page QLineEdit {
+  border: 1.5px solid #333;
+  border-radius: 8px;
+  padding-left: 10px; }
+
+#profile_page #profile_delete_button {
+  border-radius: 12px;
+  background-color: #8E9299;
+  color: #33372C; }
+
+#profile_panel {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px; }
+
 #add_restaurant_page #main_content {
   margin: 0;
   border-radius: 20px;
