@@ -15,19 +15,12 @@ class Extend_MainWindow(Ui_MainWindow):
             MainWindow (QMainWindow): The main window to set up the UI for.
         """
         super().setupUi(MainWindow)
-        # Header Bar
-        # self.header_bar= HeaderBar()
-        # self.header_main = None
-        # Set layout for header_main and add HeaderBar inside it
-        # layout = QVBoxLayout(self.header_main)
-        # layout.setContentsMargins(0, 0, 0, 0)  # Remove margins
-        # layout.setSpacing(0)  # Remove spacing
-        # self.horizontalLayout_13.addWidget(self.header_bar, alignment=Qt.AlignmentFlag.AlignTop)
-
-        # self.header_bar.logoClicked.connect(self.goHome)  # Connect signal to function
 
         self.processSignalAndSlot()
         self.db_manager = DatabaseManager()
+        self.username=None
+        self.stackedWidget.setCurrentWidget(self.Login_SignUp)
+        self.login_signup_stackedWidget.setCurrentWidget(self.right_login_page)
 
 
     def processSignalAndSlot(self):
@@ -45,11 +38,22 @@ class Extend_MainWindow(Ui_MainWindow):
         self.to_signup_button.clicked.connect(self.goSignUp)
         self.home_button.clicked.connect(self.goHome)
         self.burger_menu_button.clicked.connect(self.goRestaurant)
+        self.profile_logout_button.clicked.connect(self.logout)
 
 
         # self.burger_menu_button = BurgerMenu()
         # self.burger_menu_button.clicked.connect(self)
         # self.restaurant_button.clicked.connect(self.goRestaurant)
+
+    def logout(self):
+        """Xử lý khi người dùng bấm nút đăng xuất"""
+        if self.db_manager.logout_user(self.username):
+            print("✅ Logout successful! Returning to login screen...")
+            # Logic để quay lại màn hình đăng nhập, ví dụ:
+            self.stackedWidget.setCurrentWidget(self.Login_SignUp)
+            self.goLogin()
+        else:
+            print("❌ Logout failed!")
 
     def goLogin(self):
         """
@@ -107,19 +111,16 @@ class Extend_MainWindow(Ui_MainWindow):
         current widget of the stacked widget and body stacked widget to display
         the main and profile page, respectively.
         """
-        # self.login_handler = LoginHandler(self)
-        # isLoggedIn = self.login_handler.login()
-        # if isLoggedIn:
-        username = self.login_username_lineEdit.text().strip()
+        self.username = self.login_username_lineEdit.text().strip()
         password = self.login_password_lineEdit.text()
 
-        success = self.db_manager.login_user(username, password)
+        success = self.db_manager.login_user(self.username, password)
 
         if success:
             QtWidgets.QMessageBox.information(self.login_signup_stackedWidget, "Success", "Login successful!")
             print("setting up profile page")
             self.header_frame.setStyleSheet("{background-color: #33372C}")
-            self.setup_profile()
+            # self.setup_profile()
             self.stackedWidget.setCurrentWidget(self.Main)
             self.body_stackedWidget.setCurrentWidget(self.profile_page)
             # self.removeAllWidgetsExcept(self.body_stackedWidget,self.profile_page)
@@ -132,22 +133,22 @@ class Extend_MainWindow(Ui_MainWindow):
         # self.signup_handler = SignupHandler(self)
         # isSignedup= self.signup_handler.signup()
         # if isSignedup:
-        username = self.signup_username_lineEdit.text().strip()
+        self.username = self.signup_username_lineEdit.text().strip()
         fullname = self.signup_fullname_lineEdit.text().strip()  # Dùng fullname field cho email
         password = self.signup_password_lineEdit.text()
         confirm_password=self.signup_confrmpass_lineEdit.text()
 
         db_manager = DatabaseManager()
-        if username=="" or fullname=="" or password=="" or confirm_password=="":
+        if self.username=="" or fullname=="" or password=="" or confirm_password=="":
             QtWidgets.QMessageBox.warning(self.welcome_stackedWidget, "Error", "All fields are required!")
         elif password==confirm_password:
-            success = db_manager.register_user(username, fullname,password)
+            success = db_manager.register_user(self.username, fullname,password)
 
             if success:
                 QtWidgets.QMessageBox.information(self.welcome_stackedWidget, "Success", "User registered successfully!")
                 print("setting up profile page")
 
-                self.setup_profile()
+                # self.setup_profile()
                 self.stackedWidget.setCurrentWidget(self.Main)
                 self.body_stackedWidget.setCurrentWidget(self.profile_page)
             else:

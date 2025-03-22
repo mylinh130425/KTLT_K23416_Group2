@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 
@@ -75,9 +77,7 @@ class DatabaseManager:
 
 
     def format_hours(self, hours_list):
-        """Convert list of opening hours into a readable string.
-         TODO: Bản - Cần chỉnh lại format của giờ hiển thị
-          nên gom lại giờ giống nhau vào 1 nơi"""
+        """Convert list of opening hours into a readable string."""
         if not isinstance(hours_list, list) or not hours_list:
             return "No Data"
 
@@ -138,6 +138,19 @@ class DatabaseManager:
             else:
                 print("❌ Wrong password!")
                 return False
+        else:
+            print("❌ User Not Found!")
+            return False
+
+
+    def logout_user(self, username: str) -> bool:
+        """Xử lý đăng xuất người dùng"""
+        user_data = self.users.find_one({"username": username})
+
+        if user_data:
+            self.users.update_one({"username": username}, {"$set": {"lastLogin":datetime.now()}})
+            print("✅ Successfully logged out!")
+            return True
         else:
             print("❌ User Not Found!")
             return False

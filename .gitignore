@@ -174,4 +174,4 @@ data/
 FlowChartChuaVe.docx
 
 #tmp files
-*~
+**/*~

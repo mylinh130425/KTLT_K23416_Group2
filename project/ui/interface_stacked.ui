@@ -1567,6 +1567,9 @@
                              <bold>true</bold>
                             </font>
                            </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">background:transparent;color:white</string>
                            </property>

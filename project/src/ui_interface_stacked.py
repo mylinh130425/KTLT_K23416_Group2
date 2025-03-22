@@ -549,6 +549,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.profile_logout_button.setFont(font)
+        self.profile_logout_button.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.profile_logout_button.setStyleSheet("background:transparent;color:white")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\generated-files/ui\\../image/profile_logout.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
