@@ -176,4 +176,4 @@ FlowChartChuaVe.docx
 
 #tmp files
 **/*~
-.bak
+*.bak

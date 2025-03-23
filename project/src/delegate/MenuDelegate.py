@@ -1,32 +1,9 @@
-from matplotlib.pyplot import table
 
+from project.src.ImageLoader import ImageLoader
 from project.src.model.MenuModel import MenuModel
-import requests
-from io import BytesIO
 
 from PyQt6.QtWidgets import QTableWidget, QTableWidgetItem
-from PyQt6.QtGui import QPixmap
-from PyQt6.QtCore import Qt, QThread, pyqtSignal
-
-class ImageLoader(QThread): #Thêm vào để đỡ lag khi Scroll xuống
-    """Luồng để tải hình ảnh bất đồng bộ."""
-    image_loaded = pyqtSignal(int, QPixmap)  # Tín hiệu gửi về khi hình ảnh tải xong
-
-    def __init__(self, row, url):
-        super().__init__()
-        self.row = row
-        self.url = url
-
-    def run(self):
-        try:
-            response = requests.get(self.url)
-            pixmap = QPixmap()
-            pixmap.loadFromData(BytesIO(response.content).getvalue())
-            if not pixmap.isNull():
-                pixmap = pixmap.scaled(50, 50, Qt.AspectRatioMode.KeepAspectRatio)
-                self.image_loaded.emit(self.row, pixmap)
-        except Exception as e:
-            print(f"Error loading image for row {self.row}: {e}")
+from PyQt6.QtCore import Qt
 
 
 class MenuDelegate(QTableWidget):

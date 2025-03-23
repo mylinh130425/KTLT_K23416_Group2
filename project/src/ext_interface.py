@@ -330,7 +330,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         if success:
             QtWidgets.QMessageBox.information(self.login_signup_stackedWidget, "Success", "Login successful!")
             print("setting up profile page")
-            self.header_frame.setStyleSheet("{background-color: #33372C}")
+            # self.header_frame.setStyleSheet("{background-color: #33372C}")
             # self.setup_profile()
             self.stackedWidget.setCurrentWidget(self.Main)
             self.profile = ProfileModel(self.db_manager, self.username)
