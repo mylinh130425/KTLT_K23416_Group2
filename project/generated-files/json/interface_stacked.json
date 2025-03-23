@@ -9,8 +9,16 @@
       "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo.png"
     },
     {
+      "name": "search_button",
+      "icon": "Qss/icons/icons/material_design/search.png"
+    },
+    {
+      "name": "search_close_button",
+      "icon": "Qss/icons/icons/feather/window_close.png"
+    },
+    {
       "name": "profile_logout_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_logout.png"
+      "icon": "C:\\Users\\USER\\.designer\\image\\profile_logout.png"
     },
     {
       "name": "pushButton",
@@ -44,7 +52,7 @@
     },
     {
       "name": "signup_photo_label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\Logo_dark.png"
     },
     {
       "name": "label_2",

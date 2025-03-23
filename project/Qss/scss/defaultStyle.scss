@@ -7,11 +7,18 @@
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
 }
-#header_welcome, #body_welcome, #header_frame{
-  background-color: transparent;
-  background: transparent;
-  border: none;
+//#header_welcome, #body_welcome, #header_frame{
+//  background-color: transparent;
+//  background: transparent;
+//  border: none;
+//}
+#search_lineEdit{
+  border-radius:10px;padding-left:50px;
 }
+#search_button{
+  background: transparent;
+}
+
 #close_window_button{
   border-radius: 12px; //50% of button size
 }
@@ -54,7 +61,9 @@
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
 }
-
+#search_lineEdit{
+  border-radius:10px;padding-left:10px
+}
 #add_restaurant_page #main_content {
   // background-color: white;
   // border-radius: 20px;

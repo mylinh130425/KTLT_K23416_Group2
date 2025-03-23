@@ -171,6 +171,7 @@ cython_debug/
 .pypirc
 
 data/
+experiment/
 FlowChartChuaVe.docx
 
 #tmp files

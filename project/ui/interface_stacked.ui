@@ -252,7 +252,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -795,7 +795,7 @@
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>../image/Logo_dark.png</pixmap>
+                     <pixmap>C:/Users/USER/.designer/image/Logo_dark.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1296,6 +1296,9 @@
            </property>
            <item>
             <widget class="QPushButton" name="home_button">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
              <property name="styleSheet">
               <string notr="true">background:transparent;</string>
              </property>
@@ -1319,27 +1322,110 @@
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>40</width>
+               <width>150</width>
                <height>20</height>
               </size>
              </property>
             </spacer>
            </item>
            <item>
-            <widget class="QLineEdit" name="search_lineEdit">
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
+            <widget class="QFrame" name="frame_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true">background-color:white</string>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="placeholderText">
-              <string>🔎 Search restaurant</string>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
+             <widget class="QLineEdit" name="search_lineEdit">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>7</y>
+                <width>485</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color:white; padding:30px; border-radius:10px</string>
+              </property>
+              <property name="placeholderText">
+               <string>Search restaurant</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="search_button">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>6</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background:transparent;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../Qss/icons/_icons.qrc">
+                <normaloff>:/material_design/icons/material_design/search.png</normaloff>:/material_design/icons/material_design/search.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="search_close_button">
+              <property name="geometry">
+               <rect>
+                <x>454</x>
+                <y>6</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background:transparent</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../Qss/icons/_icons.qrc">
+                <normaloff>:/feather/icons/feather/window_close.png</normaloff>:/feather/icons/feather/window_close.png</iconset>
+              </property>
+             </widget>
             </widget>
            </item>
            <item>
@@ -1347,9 +1433,12 @@
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
              <property name="sizeHint" stdset="0">
               <size>
-               <width>40</width>
+               <width>150</width>
                <height>20</height>
               </size>
              </property>
@@ -1587,7 +1676,7 @@
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../image/profile_logout.png</normaloff>../image/profile_logout.png</iconset>
+                             <normaloff>C:/Users/USER/.designer/image/profile_logout.png</normaloff>C:/Users/USER/.designer/image/profile_logout.png</iconset>
                            </property>
                           </widget>
                          </item>
@@ -1985,7 +2074,7 @@
                      <string notr="true">color: rgb(41, 110, 126);</string>
                     </property>
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>8</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -4391,7 +4480,7 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>728</width>
+                                 <width>746</width>
                                  <height>144</height>
                                 </rect>
                                </property>
@@ -6726,7 +6815,6 @@ background-color: rgb(41, 110, 126);</string>
  <resources>
   <include location="../Qss/icons/_icons.qrc"/>
   <include location="../Qss/icons/_icons.qrc"/>
-  <include location="../../Document/Bachelor/UEL/ProgrammingTechniquesKTLT/KTLT-group2/project/Qss/icons/_icons.qrc"/>
  </resources>
  <connections/>
 </ui>
