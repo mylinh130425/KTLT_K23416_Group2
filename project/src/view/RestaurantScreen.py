@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout
 from PyQt6 import QtWidgets
 from project.src.delegate.RestaurantDelegate import RestaurantDelegate
-from project.src.view.MenuScreen import MenuScreen
+from project.src.view.RestaurantMenuScreen import RestaurantMenuScreen
 
 
 class RestaurantScreen(QWidget):
@@ -28,7 +28,7 @@ class RestaurantScreen(QWidget):
         place_id = self.restaurant_table.item(row, 0).text()  # Lấy ID nhà hàng
         # print(place_id)
         print(self.parent.objectName())
-        self.parent.body_stackedWidget.menu_page = MenuScreen(place_id, self.parent)
+        self.parent.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id, self.parent)
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.menu_page)
         #rồi set cái stacked widget bên trong vào đúng trang menu_page

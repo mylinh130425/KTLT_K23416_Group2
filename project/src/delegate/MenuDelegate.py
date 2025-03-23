@@ -1,3 +1,5 @@
+from matplotlib.pyplot import table
+
 from project.src.model.MenuModel import MenuModel
 import requests
 from io import BytesIO
@@ -31,8 +33,9 @@ class MenuDelegate(QTableWidget):
     def __init__(self, place_id):
         super().__init__()
         self.model = MenuModel(place_id)
-        tabel_headers = ["_id"," ","Food", "Rate", "Price", "Description", "Review"]
-        self.setColumnCount(len(tabel_headers))
+        table_headers = ["_id"," ","Food", "Rate", "Price", "Description", "Review"]
+        self.setColumnCount(len(table_headers))
+        self.setHorizontalHeaderLabels(table_headers)
 
         # Kích hoạt chế độ chọn hàng
         self.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)

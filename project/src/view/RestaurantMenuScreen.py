@@ -5,7 +5,7 @@ from project.src.delegate.MenuDelegate import MenuDelegate
 from project.src.model.MenuModel import MenuModel
 
 
-class MenuScreen(QWidget):
+class RestaurantMenuScreen(QWidget):
     def __init__(self, place_id, parent=None):
         super().__init__(parent)
         self.parent = parent
