@@ -21,16 +21,8 @@
       "icon": "C:\\Users\\USER\\.designer\\image\\profile_logout.png"
     },
     {
-      "name": "pushButton",
-      "icon": "C:\\Users\\USER\\.designer\\5349751_information_info_icon.png"
-    },
-    {
       "name": "pushButton_4",
-      "icon": "C:\\Users\\USER\\.designer\\4848456_choose_coffee_menu_menus_print_icon.png"
-    },
-    {
-      "name": "pushButton_3",
-      "icon": "C:\\Users\\USER\\.designer\\ic_review.png"
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_filter24.png"
     }
   ],
   "QLabel": [
@@ -81,10 +73,6 @@
     {
       "name": "label",
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Account-amico 1.png"
-    },
-    {
-      "name": "label_12",
-      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
       "name": "facebook",

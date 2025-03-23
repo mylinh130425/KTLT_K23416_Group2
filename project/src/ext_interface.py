@@ -166,7 +166,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         # self.removeAllWidgetsExcept(self.body_stackedWidget, self.restaurant_page)
 
     def setup_restaurant(self):
-        self.restaurant_page=RestaurantScreen(self.body_stackedWidget)
+        self.restaurant_page=RestaurantScreen(self)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_menuburger(self):
@@ -266,7 +266,6 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         menu_layout.addWidget(self.menu_list)
         self.menu_frame.setLayout(menu_layout)
         self.menu_dock.setWidget(self.menu_frame)
-
         # Position the menu at the right side
         self.menu_dock.move(self.width - self.menu_frame.width(),
                             # self.burger_menu_button.height() +

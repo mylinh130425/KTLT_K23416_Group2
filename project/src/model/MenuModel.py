@@ -1,21 +1,5 @@
 from project.src.DatabaseManager import DatabaseManager
-#
-# class MenuModel:
-#     def __init__(self, place_id):
-#         self.db_manager = DatabaseManager()
-#         self.place_id = place_id
-#         # self.menu = []  # Lưu danh sách món ăn tại local cache
-#         self.offset=0
-#         self.limit=15
-#
-#     def get_menu(self):
-#         """Lấy danh sách món ăn từ database theo place_id."""
-#         menu = self.db_manager.get_menu_by_place_id(self.place_id, self.offset,self.limit)
-#         self.offset+=len(menu)
-#         return menu
-
 from bson.objectid import ObjectId
-from project.ui.DatabaseManager import DatabaseManager
 
 
 class MenuModel:
@@ -51,6 +35,8 @@ class MenuModel:
             if use_pagination:
                 # Lấy dữ liệu theo phân trang
                 menu = self.db_manager.get_menu_by_place_id(place_id_obj, self.offset, self.limit)
+                print(len(menu), " items gotten in MenuModel get_menu")
+
                 if menu:
                     self.menu_cache.extend(menu)  # Lưu vào cache
                     self.offset += len(menu)  # Cập nhật offset
@@ -66,6 +52,8 @@ class MenuModel:
             else:
                 # Lấy toàn bộ dữ liệu
                 menu = self.db_manager.get_menu_by_place_id(place_id_obj, 0, None)
+                print(len(menu), " items gotten in MenuModel get_menu pagination")
+
                 if menu:
                     self.menu_cache = menu  # Lưu toàn bộ vào cache
                     self.offset = len(menu)  # Cập nhật offset
