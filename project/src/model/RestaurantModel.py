@@ -1,15 +1,63 @@
 from project.src.DatabaseManager import DatabaseManager
 
+
 class Restaurant:
-    def __init__(self, name, ):
-        self._id = None
-        self.name = None
-        self.rating = None
-        self.open_hours = None
-        self.category = None
-        self.address = None
-        self.hotline = None
-        self.accessibility = None
+    def __init__(self, _id, name, address, detailed_address, description=None, reviews=None,
+                 rating=None, competitors=None, website=None, phone=None,
+                 featured_image=None, main_category=None, categories=None,
+                 workday_timing=None, is_temporarily_closed=False, is_permanently_closed=False,
+                 closed_on=None, review_keywords=None, link=None, status=None,
+                 price_range=None, reviews_per_rating=None, featured_question=None, reviews_link=None,
+                 coordinates=None,
+                 about=None, images=None, hours=None, most_popular_times=None,
+                 popular_times=None, menu=None, reservations=None, order_online_links=None,
+                 featured_reviews=None, detailed_reviews=None):
+        self._id = _id  # MongoDB unique identifier
+        self.name = name or ""  # Restaurant name
+        self.description = description or ""  # Restaurant description
+        self.reviews = reviews or 0  # Number of reviews
+        self.rating = rating  # Average rating
+        self.competitors = competitors or []  # List of competitors
+        self.website = website or ""  # Restaurant website
+        self.phone = phone or ""  # Phone number
+        self.featured_image = featured_image  # Featured image
+        self.main_category = main_category  # Main category of the restaurant
+        self.categories = categories or []  # List of subcategories
+        self.workday_timing = workday_timing or ""  # Working hours
+        self.is_temporarily_closed = is_temporarily_closed or False  # Is the restaurant temporarily closed?
+        self.is_permanently_closed = is_permanently_closed or False  # Is the restaurant permanently closed?
+        self.closed_on = closed_on or ""  # Closing date (if applicable)
+        self.address = address or ""  # Restaurant address
+        self.review_keywords = review_keywords or ""  # Review keywords
+        self.link = link or ""  # Link to restaurant details page
+        self.status = status or ""  # Operating status
+        self.price_range = price_range or ""  # Price range
+        self.reviews_per_rating = reviews_per_rating or []  # Number of reviews per rating level
+        self.featured_question = featured_question or {}  # Featured question about the restaurant
+        self.reviews_link = reviews_link or ""  # Link to reviews
+        self.coordinates = coordinates or []  # Geographic coordinates (longitude, latitude)
+        self.detailed_address = detailed_address or []  # Detailed address
+        self.about = about or []  # Additional information about the restaurant
+        self.images = images or []  # List of restaurant images
+        self.hours = hours or []  # Opening hours for each day
+        self.most_popular_times = most_popular_times or []  # Peak hours
+        self.popular_times = popular_times or {}  # Popular times
+        self.menu = menu or []  # Menu items
+        self.reservations = reservations or []  # Reservation information
+        self.order_online_links = order_online_links or []  # Online ordering links
+        self.featured_reviews = featured_reviews or []  # Featured reviews
+        self.detailed_reviews = detailed_reviews or []  # List of detailed reviews
+
+    def to_dict(self):
+        """Convert the object into a dictionary for MongoDB storage."""
+        return self.__dict__
+
+    @staticmethod
+    def from_dict(data):
+        """Initialize an object from a dictionary (data from MongoDB)."""
+        return Restaurant(**data)
+
+
 class RestaurantModel:
     def __init__(self):
         self.db_manager = DatabaseManager()
@@ -17,14 +65,14 @@ class RestaurantModel:
         self.limit = 15  # Load 15 records per batch
 
     def get_restaurants(self):
-        """Lấy danh sách nhà hàng theo phân trang."""
+        """Retrieve a paginated list of restaurants."""
         restaurants = self.db_manager.get_restaurants(self.offset, self.limit)
-        self.offset += len(restaurants)  # Cập nhật offset
+        self.offset += len(restaurants)  # Update offset
 
         return restaurants
     """
-        TODO: Xóa bớt dòng chứa nhà hàng đã scroll qua từ lâu (vd khi scroll tới nhà hàng thứ 20 thì nhà hàng 1-5 bị xóa)
-        TODO: Load lại nhà hàng đã xóa trước đó khi scroll ngược về
+        TODO: Remove restaurants that have been scrolled past for a long time (e.g., when scrolling to the 20th restaurant, remove restaurants 1-5)
+        TODO: Reload previously removed restaurants when scrolling back up
     """
 
     def add_restaurant(self, restaurant_data):
@@ -40,4 +88,3 @@ class RestaurantModel:
             return True, "Restaurant added successfully!"
         else:
             return False, "Failed to add restaurant (maybe duplicate or DB error)."
-
