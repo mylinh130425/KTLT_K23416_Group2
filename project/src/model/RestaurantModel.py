@@ -61,20 +61,30 @@ class Restaurant:
 class RestaurantModel:
     def __init__(self):
         self.db_manager = DatabaseManager()
+        self.limit = 15
         self.offset = 0
-        self.limit = 15  # Load 15 records per batch
+        self._has_more = True
 
     def get_restaurants(self):
-        """Retrieve a paginated list of restaurants."""
-        restaurants = self.db_manager.get_restaurants(self.offset, self.limit)
-        self.offset += len(restaurants)  # Update offset
+        restaurants = self.db_manager.get_restaurants(
+            offset=self.offset,
+            limit=self.limit
+        )
+
+        print(f"RestaurantModel: Retrieved {len(restaurants)} restaurants")
+        if len(restaurants) < self.limit:
+            self._has_more = False
+        else:
+            self.offset += self.limit
 
         return restaurants
-    """
-        TODO: Remove restaurants that have been scrolled past for a long time (e.g., when scrolling to the 20th restaurant, remove restaurants 1-5)
-        TODO: Reload previously removed restaurants when scrolling back up
-    """
 
+    def has_more(self):
+        return self._has_more
+
+    def reset_pagination(self):
+        self.offset = 0
+        self._has_more = True
     def add_restaurant(self, restaurant_data):
         # Basic validation
         if not restaurant_data["name"] or not restaurant_data["city"] or not restaurant_data["details_address"]:

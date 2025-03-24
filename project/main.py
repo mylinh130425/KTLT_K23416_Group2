@@ -13,7 +13,7 @@ from src.ext_interface import *
 from Custom_Widgets import *
 from Custom_Widgets.Widgets import *
 from Custom_Widgets.QAppSettings import QAppSettings
-########################################################################
+#######################################################################python -m pip install "pymongo[srv]"#
 
 ########################################################################
 ## MAIN WINDOW CLASS
