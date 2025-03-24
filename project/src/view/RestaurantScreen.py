@@ -27,6 +27,7 @@ class RestaurantScreen(QWidget):
         self.filter_pushButton.setIcon(filter_icon)
         self.filter_pushButton.setIconSize(QtCore.QSize(15, 15))
         self.filter_pushButton.setObjectName("filter_pushButton")
+        self.filter_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131;")
         buttonLayout.addWidget(self.filter_pushButton)
 
         # SpacerItem để đẩy 3 nút Create, Edit, Delete về bên phải
@@ -35,16 +36,19 @@ class RestaurantScreen(QWidget):
         # Nút Create
         self.create_pushButton = QPushButton("Create", parent=self.parent.body_stackedWidget)
         self.create_pushButton.setObjectName("create_pushButton")
+        self.create_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131;")
         buttonLayout.addWidget(self.create_pushButton)
 
         # Nút Edit
         self.edit_pushButton = QPushButton("Edit", parent=self.parent.body_stackedWidget)
         self.edit_pushButton.setObjectName("edit_pushButton")
+        self.edit_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131;")
         buttonLayout.addWidget(self.edit_pushButton)
 
         # Nút Delete
         self.delete_pushButton = QPushButton("Delete", parent=self.parent.body_stackedWidget)
         self.delete_pushButton.setObjectName("delete_pushButton")
+        self.delete_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131;")
         buttonLayout.addWidget(self.delete_pushButton)
 
         # Thêm hàng nút vào layout chính

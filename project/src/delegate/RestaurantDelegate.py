@@ -183,7 +183,7 @@ class RestaurantDelegate(QTableWidget):
         self.horizontalHeader().setStretchLastSection(True)  # Cột cuối sẽ kéo dãn
 
     def style_table(self):
-        """Tạo màu header bảng thành màu cam FF862F."""
+        """Tạo màu header bảng thành màu đen FABC3F."""
         self.setStyleSheet("""
             QHeaderView::section {
                 background-color: #343131;
