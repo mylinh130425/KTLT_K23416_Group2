@@ -1,19 +1,24 @@
 from PyQt6 import QtWidgets
 
 class ModifyRestaurantScreen(QtWidgets.QWidget):
-    def __init__(self, parent=None, isCreating=True):
+    def __init__(self, parent=None, isCreating=True, restaurant_id=None):
         super().__init__()
         self.parent = parent
-        # self.restaurant_model = restaurant_model
+        self.restaurant_data = None
         self.isCreating = isCreating # True "create" or False "edit"
-        self.current_restaurant_id = None  # Only used in edit mode
-        self.setup_ui()
-        self.setup_signals()
+        self.current_restaurant_id = restaurant_id  # Only used in edit mode
+        if not isCreating:
+            self.setup_ui_edit()
+        else:
+            self.setup_ui_create()
+        # self.setup_signals()
 
-    def setup_ui(self):
+    def setup_ui_create(self):
+        pass
+    def setup_ui_edit(self):
         # Initialize all the UI components here
         # === Global QPushButton Style ===
-        button_style = """
+        add_edit_restaurant_style = """
             QPushButton {
                 background-color: #FF914D;       /* Vibrant orange */
                 color: white;
@@ -32,12 +37,35 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 background-color: #CCCCCC;
                 color: #666666;
             }
+            QLineEdit{
+            
+            }
         """
-        # Apply the style to all QPushButtons in this screen
-        self.parent.add_restaurant_page.setStyleSheet(button_style)
+        # Apply the style to all QPushButtons and QLineEdits in this screen
+        self.parent.modify_restaurant_page.setStyleSheet(add_edit_restaurant_style)
+        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(self.current_restaurant_id)
+        print(self.current_restaurant_id)
+        print(f"Restaurant data in modify restaurant screen: {self.restaurant_data}")
+        if not self.restaurant_data:
+            print("Không tìm thấy dữ liệu nhà hàng")
+            return
 
-    def setup_signals(self):
-        self.create_button.clicked.connect(self.handle_submit)
+
+    def setup_Ui(self):
+        self.parent.restaurant_info_avatar.setText(self.restaurant_data["name"])
+        self.parent.category_input.setText(", ".join(self.restaurant_data["category"]))
+
+        address = self.restaurant_data["detailed_address"]
+        address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
+        self.parent.address_input.setText(address_str)
+
+        self.parent.phone_input.setText(self.restaurant_data["phone"])
+        self.parent.website_input.setText(self.restaurant_data["website"])
+        self.parent.about_input.setText("\n".join(self.restaurant_data["about"]))
+
+
+    # def setup_signals(self):
+    #     self.create_button.clicked.connect(self.handle_submit)
 
     # === MODE SELECTORS ===
     def create_mode(self):
@@ -98,7 +126,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         }
         return data
 
-    def get_opening_hours(self):
+    def get_opening_hours_input(self):
         # Collect opening/closing times, handle "Same All Days"
         hours = {}
         for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]:
@@ -109,26 +137,26 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 hours[day] = {"open": open_time, "close": close_time}
         return hours
     #
-    # def get_services(self):
-    #     services = {
-    #         "parking": self.parking_checkbox.isChecked(),
-    #         "reservations": self.reservations_checkbox.isChecked(),
-    #         "delivery": self.delivery_checkbox.isChecked(),
-    #         "service_options": {
-    #             "delivery": self.delivery_option_checkbox.isChecked(),
-    #             "dine_in": self.dinein_checkbox.isChecked(),
-    #             "takeout": self.takeout_checkbox.isChecked(),
-    #             "air_conditioner": self.ac_checkbox.isChecked(),
-    #             "outdoor_seating": self.outdoor_checkbox.isChecked()
-    #         },
-    #         "notes": {
-    #             "parking_note": self.parking_note_lineEdit.text().strip(),
-    #             "reservations_note": self.reservations_note_lineEdit.text().strip(),
-    #             "delivery_note": self.delivery_note_lineEdit.text().strip()
-    #         }
-    #     }
-    #     return services
-    #
+    def get_services_input(self):
+        services = {
+            "parking": self.parking_checkbox.isChecked(),
+            "reservations": self.reservations_checkbox.isChecked(),
+            "delivery": self.delivery_checkbox.isChecked(),
+            "service_options": {
+                "delivery": self.delivery_option_checkbox.isChecked(),
+                "dine_in": self.dinein_checkbox.isChecked(),
+                "takeout": self.takeout_checkbox.isChecked(),
+                "air_conditioner": self.ac_checkbox.isChecked(),
+                "outdoor_seating": self.outdoor_checkbox.isChecked()
+            },
+            "notes": {
+                "parking_note": self.parking_note_lineEdit.text().strip(),
+                "reservations_note": self.reservations_note_lineEdit.text().strip(),
+                "delivery_note": self.delivery_note_lineEdit.text().strip()
+            }
+        }
+        return services
+
     # def get_social_links(self):
     #     return {
     #         "facebook": self.facebook_link,  # e.g., from a button or field

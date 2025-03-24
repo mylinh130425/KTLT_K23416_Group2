@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
 from PyQt6 import QtWidgets, QtGui,QtCore
 
 from project.src.delegate.RestaurantDelegate import RestaurantDelegate
@@ -10,6 +10,7 @@ class RestaurantScreen(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.parent = parent
+        self.current_restaurant_id=None
         self.setupUi()
 
     def setupUi(self):
@@ -65,6 +66,31 @@ class RestaurantScreen(QWidget):
 
         # Set layout cho QWidget
         self.setLayout(layout)
+
+        #add event to track stackedwidget change
+        self.parent.body_stackedWidget.currentChanged.connect(self.onStackedWidgetChanged)
+
+    def onStackedWidgetChanged(self, index):
+        """ Event handler for stacked widget page changes. """
+
+        # Ensure we're switching to the modify restaurant page
+        if self.parent.body_stackedWidget.widget(index) == self.parent.modify_restaurant_page:
+            selected_items = self.parent.restaurant_table.selectedItems()
+
+            if not selected_items:  # No row selected
+                QMessageBox.warning(self, "Selection Error", "Please select a restaurant first!")
+                return
+
+            # Get the selected restaurant's ID (assuming it's in column 0)
+            selected_row = selected_items[0].row()
+            self.current_restaurant_id = self.parent.restaurant_table.item(selected_row, 0).text()
+            restaurant_name = self.parent.restaurant_table.item(selected_row, 2).text()
+            self.parent.restaurant_name_label.setText(restaurant_name)
+            self.parent.restaurant_info_button.clicked.connect(self.goInfo)
+            self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
+            self.parent.restaurant_review_button.clicked.connect(self.goReview)
+
+
     def goAddRestaurant(self):
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.add_restaurant_page)
@@ -72,9 +98,22 @@ class RestaurantScreen(QWidget):
 
 
     def goEditRestaurant(self):
-        modify_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False)
+        selected_items = self.restaurant_table.selectedItems()
+
+        if not selected_items:  # Kiểm tra xem có hàng nào được chọn không
+            QMessageBox.warning(self, "Selection Error", "Please select a restaurant first!")
+            return  # Thoát khỏi hàm nếu không có dòng nào được chọn
+
+        # Lấy ID nhà hàng từ hàng được chọn (giả sử ID nằm ở cột đầu tiên)
+        selected_row = selected_items[0].row()
+        restaurant_id = self.restaurant_table.item(selected_row, 0).text()
+
+        edit_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False, )
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
-        self.parent.body_stackedWidget.setCurrentWidget(self.parent.modify_food_page)
+        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
+
+    def setupRestaurantInfo(self):
+        modify_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False) #parent: Extend_Mainwindow
 
     def deleteRestaurant(self):
         selected_items = self.restaurant_table.selectedItems()
@@ -125,12 +164,7 @@ class RestaurantScreen(QWidget):
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.menu_page)
 
-        #setup buttons on restaurant side bar
-        self.name = self.parent.restaurant_table.item(row, 2).text()
-        self.parent.restaurant_name_label.setText(self.name)
-        self.parent.restaurant_info_button.clicked.connect(self.goInfo)
-        self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
-        self.parent.restaurant_review_button.clicked.connect(self.goReview)
+
 
     def goInfo(self):
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)

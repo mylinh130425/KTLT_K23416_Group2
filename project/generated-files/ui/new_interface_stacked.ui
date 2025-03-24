@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
+    <width>918</width>
     <height>497</height>
    </rect>
   </property>
@@ -313,7 +313,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2055,6 +2055,21 @@
              <widget class="QWidget" name="restaurant_page" />
              <widget class="QWidget" name="inside_restaurant_page">
               <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
                <item>
                 <widget class="QWidget" name="body_modify_restaurant" native="true">
                  <property name="sizePolicy">
@@ -2064,6 +2079,21 @@
                   </sizepolicy>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_24">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>50</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>50</number>
+                  </property>
                   <item>
                    <widget class="QWidget" name="restaurant_sidebar" native="true">
                     <property name="styleSheet">
@@ -2266,7 +2296,7 @@
                      <string notr="true">color: rgb(41, 110, 126);</string>
                     </property>
                     <property name="currentIndex">
-                     <number>8</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2730,7 +2760,7 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QWidget" name="main_content_2" native="true">
+                       <widget class="QWidget" name="modify_restaurant_widget" native="true">
                         <layout class="QVBoxLayout" name="verticalLayout_9">
                          <property name="spacing">
                           <number>0</number>
@@ -2773,7 +2803,7 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>692</width>
+                              <width>751</width>
                               <height>679</height>
                              </rect>
                             </property>
@@ -4991,8 +5021,8 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>692</width>
-                                 <height>160</height>
+                                 <width>734</width>
+                                 <height>144</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">

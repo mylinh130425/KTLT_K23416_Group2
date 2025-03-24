@@ -26,7 +26,7 @@ class DatabaseManager:
         self.restaurants=self.db["Restaurants"]
         # Đảm bảo username và email là duy nhất
         self.users.create_index("username", unique=True)
-        self.users.create_index("email", unique=True)
+        # self.users.create_index("email", unique=True)
 
     def add_restaurant_to_db(self, restaurant_data: dict) -> bool:
         try:
@@ -285,6 +285,35 @@ class DatabaseManager:
             self.client.close()
             print("DatabaseManager: MongoDB connection closed.")
 
+
+    def get_restaurant_byid(self, restaurant_id: str):
+        try:
+            restaurant_data = self.restaurants.find_one({"_id": ObjectId(restaurant_id)})
+            print(type(restaurant_data))
+            if not restaurant_data:
+                return None
+
+            return {
+                "featured_image": restaurant_data.get("featured_image", ""),
+                "name": restaurant_data.get("name", "Unknown"),
+                "category": restaurant_data.get("categories", []),
+                "address": {
+                    "city": restaurant_data.get("detailed_address", {}).get("city", ""),
+                    "state": restaurant_data.get("detailed_address", {}).get("state", ""),
+                    "ward": restaurant_data.get("detailed_address", {}).get("ward", ""),
+                    "street": restaurant_data.get("detailed_address", {}).get("street", "")
+                },
+                "detailed_address": restaurant_data.get("address", ""),
+                "phone": restaurant_data.get("phone", "N/A"),
+                "website": restaurant_data.get("website", "N/A"),
+                "hours": restaurant_data.get("hours", []),
+                "about": restaurant_data.get("about", [])
+            }
+        except Exception as e:
+            print(f"Error fetching restaurant: {e}")
+            return None
+
+
 if __name__ == "__main__":
     """ testing db connection and functionality """
     db_manager = DatabaseManager()
@@ -307,3 +336,11 @@ if __name__ == "__main__":
         print("Menu items:", menu_items)
     else:
         print("No menu items found!")
+
+    # Test get_restaurant_byid
+    restaurant_id = "67acf919194023cfe51522b0"  # Thay bằng _id của nhà hàng
+    restaurant_data = db_manager.get_restaurant_byid(restaurant_id)
+    if restaurant_data:
+        print("Restaurant data:", restaurant_data)
+    else:
+        print("No restaurant data found!")
