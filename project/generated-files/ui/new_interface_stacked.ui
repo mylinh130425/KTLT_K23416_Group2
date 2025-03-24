@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>893</width>
-    <height>497</height>
+    <height>557</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -122,7 +122,7 @@
        <string notr="true">background-color:#FFE5CF</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Login_SignUp">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -1512,8 +1512,11 @@
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
+             <property name="styleSheet">
+              <string notr="true">background: #E8D5B5;</string>
+             </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>3</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -2006,7 +2009,7 @@
                   <item>
                    <widget class="QWidget" name="widget_10" native="true">
                     <property name="styleSheet">
-                     <string notr="true">background-color:#FF862F;border-top-right-radius:20;border-bottom-right-radius:20</string>
+                     <string notr="true">background-color:#343131;border-top-right-radius:20;border-bottom-right-radius:20</string>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_25">
                      <item>
@@ -2045,7 +2048,7 @@
                              </size>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">border-radius:40;border:1px solid black</string>
+                             <string notr="true">border-radius:40;border:1px solid black; color: #FABC3F;</string>
                             </property>
                             <property name="text">
                              <string>TextLabel</string>
@@ -2085,7 +2088,7 @@
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">color:white</string>
+                          <string notr="true">color:#FABC3F</string>
                          </property>
                          <property name="text">
                           <string>Name Restaurant</string>
@@ -2126,7 +2129,7 @@
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background:transparent; color:white</string>
+                          <string notr="true">background:transparent; color:#FABC3F</string>
                          </property>
                          <property name="text">
                           <string>Info</string>
@@ -2147,7 +2150,7 @@
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background:transparent; color:white</string>
+                          <string notr="true">background:transparent; color:#FABC3F</string>
                          </property>
                          <property name="text">
                           <string>Menu</string>
@@ -2168,7 +2171,7 @@
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background:transparent; color:white</string>
+                          <string notr="true">background:transparent; color:#FABC3F</string>
                          </property>
                          <property name="text">
                           <string>Review</string>
@@ -2202,10 +2205,10 @@
                      </sizepolicy>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">color: rgb(41, 110, 126);</string>
+                     <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2249,6 +2252,9 @@
                              <horstretch>0</horstretch>
                              <verstretch>1</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true" />
                            </property>
                           </widget>
                          </item>
@@ -2712,8 +2718,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>404</width>
-                              <height>679</height>
+                              <width>692</width>
+                              <height>682</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -4930,8 +4936,8 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>583</width>
-                                 <height>272</height>
+                                 <width>692</width>
+                                 <height>166</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">

@@ -6,7 +6,7 @@
     },
     {
       "name": "home_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo.png"
+      "icon": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\Logo.png"
     },
     {
       "name": "search_button",
@@ -22,17 +22,17 @@
     },
     {
       "name": "pushButton_4",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_filter24.png"
+      "icon": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\ic_filter24.png"
     }
   ],
   "QLabel": [
     {
       "name": "welcome_photo",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\CreateAcc_Image.png"
+      "pixmap": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\CreateAcc_Image.png"
     },
     {
       "name": "login_photo_label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+      "pixmap": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\Logo_dark.png"
     },
     {
       "name": "label_3",
@@ -64,15 +64,15 @@
     },
     {
       "name": "restaurant_photo_label_2",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_panel_icon.png"
+      "pixmap": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\profile_panel_icon.png"
     },
     {
       "name": "signup_photo_label_2",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_icon.png"
+      "pixmap": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\profile_icon.png"
     },
     {
       "name": "label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Account-amico 1.png"
+      "pixmap": "D:\\project_backup_1\\KTLT_K23416_Group2\\project\\image\\Account-amico 1.png"
     },
     {
       "name": "facebook",
