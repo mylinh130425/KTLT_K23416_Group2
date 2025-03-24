@@ -230,17 +230,18 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         menu_layout.addWidget(self.menu_list)
         self.menu_frame.setLayout(menu_layout)
         self.menu_dock.setWidget(self.menu_frame)
+        # Position the menu at the right side
         self.menu_dock.move(self.width - self.menu_frame.width(), self.header_frame.height())
 
     def goMenu(self):
+        self.all_menu_page = AllMenuItemScreen(parent=self)
+        self.body_stackedWidget.addWidget(self.all_menu_page)
+
         self.menu_dock.setVisible(False)
-        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
-        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
-        print(f"all_menu_page type in goMenu: {type(self.body_stackedWidget.all_menu_page)}")
-        # Position the menu at the right side
-        self.menu_dock.move(self.width - self.menu_frame.width(),
-                            # self.burger_menu_button.height() +
-                            self.header_frame.height())
+        self.body_stackedWidget.setCurrentWidget(self.all_menu_page)
+        # self.setCurrentWidget(self.all_menu_page)
+        # print(f"all_menu_page type in goMenu: {type(self.all_menu_page)}")
+
 
     def resizeEvent(self, event):
         # Position the menu at the right side
@@ -374,11 +375,11 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
         self.restaurant_page = RestaurantScreen(parent=self)
         self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
-        self.all_menu_page = AllMenuItemScreen(parent=self)
+        # self.all_menu_page = AllMenuItemScreen(parent=self) only setup before switching to screen
 
         self.restaurant_stackedWidget.addWidget(self.restaurant_page)
         self.restaurant_stackedWidget.addWidget(self.menu_page)
-        self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
+        # self.body_stackedWidget.addWidget(self.all_menu_page)
 
         print(f"menu_page type after setup: {type(self.menu_page)}")
         print(f"all_menu_page type after setup: {type(self.all_menu_page)}")
