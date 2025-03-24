@@ -228,11 +228,11 @@ class RestaurantDelegate(QTableWidget):
         """Tạo màu header bảng thành màu cam FF862F và đảm bảo highlight toàn bộ hàng."""
         self.setStyleSheet("""
             QHeaderView::section {
-                background-color: #FF862F;
-                color: white;
+                background-color: #343131;
+                color: #FABC3F;
                 font-weight: bold;
                 padding: 8px;
-                border: 1px solid #d67a2c;
+                border: 1px solid #FABC3F;
             }
             QTableWidget::item {
                 padding: 5px;
