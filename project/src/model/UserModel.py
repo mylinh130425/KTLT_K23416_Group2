@@ -27,7 +27,7 @@ class UserModel:
         """Chuyển đổi dữ liệu thành dict để lưu vào MongoDB"""
         return {
             "username": self.username,
-            "email":"",
+            "email":self.username+"@gmail.com",
             "passwordHash": self.password_hash,
             "fullName": self.fullname,
             "avatar":UserModel.AVATAR_URL,
