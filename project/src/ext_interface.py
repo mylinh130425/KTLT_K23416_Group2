@@ -217,16 +217,13 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print(f"all_menu_page type in goMenu: {type(self.body_stackedWidget.all_menu_page)}")
         # Position the menu at the right side
         self.menu_dock.move(self.width - self.menu_frame.width(),
-                            # self.burger_menu_button.height() +
                             self.header_frame.height())
 
     def resizeEvent(self, event):
         # Position the menu at the right side
         self.menu_dock.move(self.width - self.menu_frame.width(),
-                            # self.burger_menu_button.height() +
                             self.header_frame.height())
         new_size: QSize = event.size()  # Lấy kích thước mới
-
         print(f"Window resized to: {new_size.width()}x{new_size.height()}")
         super().resizeEvent(event)
 
@@ -327,15 +324,24 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.menu_dock.setVisible(False)
         self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
 
+        # Kiểm tra place_id
+        if place_id is None:
+            print("Warning: place_id is None in show_menu_for_restaurant")
+        else:
+            print(f"Showing menu for restaurant with place_id: {place_id}")
+
+        # Đảm bảo menu_page là một instance của RestaurantMenuScreen
         if not isinstance(self.body_stackedWidget.menu_page, RestaurantMenuScreen):
             print("Error: menu_page is not an instance of RestaurantMenuScreen")
             print(f"menu_page type: {type(self.body_stackedWidget.menu_page)}")
-            self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
+            self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=place_id, parent=self)
             self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.menu_page)
 
+        # Cập nhật place_id và tải lại dữ liệu
         print(f"Calling update_place_id with place_id: {place_id}")
         self.body_stackedWidget.menu_page.update_place_id(place_id)
         self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.menu_page)
+
         # Thêm log để kiểm tra giao diện
         print(f"menu_page visible: {self.body_stackedWidget.menu_page.isVisible()}")
         print(f"restaurant_stackedWidget current widget: {self.restaurant_stackedWidget.currentWidget()}")
@@ -351,6 +357,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.addWidget(self.inside_restaurant_page)
 
         self.restaurant_page = RestaurantScreen(self)
+        # Khởi tạo RestaurantMenuScreen với place_id ban đầu là None
         self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
         self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
 

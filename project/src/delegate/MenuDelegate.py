@@ -15,6 +15,7 @@ class MenuDelegate(QTableWidget):
     def __init__(self, place_id=None):  # Thêm giá trị mặc định là None
         super().__init__()
         self.place_id = place_id
+        self.parent_screen = None  # Thêm thuộc tính để lưu tham chiếu đến RestaurantMenuScreen
         table_headers = ["_id", "Featured Image", "Item", "Rate", "Price", "Description", "Review"]
         self.setColumnCount(len(table_headers))
         self.setHorizontalHeaderLabels(table_headers)
@@ -44,6 +45,17 @@ class MenuDelegate(QTableWidget):
 
         # Style the table
         self.style_table()
+
+    def setParentScreen(self, parent_screen):
+        """Lưu tham chiếu đến RestaurantMenuScreen để xử lý sự kiện."""
+        self.parent_screen = parent_screen
+
+    def mouseDoubleClickEvent(self, event):
+        """Xử lý sự kiện double-click trên bảng."""
+        if self.parent_screen:
+            row = self.currentRow()
+            self.parent_screen.on_slotDelegate_double_click(row)
+        super().mouseDoubleClickEvent(event)
 
     def load_more_menu(self, menu_items):
         if not menu_items:
@@ -191,8 +203,8 @@ class MenuDelegate(QTableWidget):
         rating_label = QLabel(f"{rating:.1f}")
         rating_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Hàng sao (sử dụng biểu tượng: ⭐, 🌓, ☆)
-        star_row = QLabel("⭐" * full_stars + "🌓" * half_star + "☆" * empty_stars)
+        # Hàng sao
+        star_row = QLabel("★" * full_stars + "⯪" * half_star + "☆" * empty_stars)
         star_row.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         star_layout.addWidget(rating_label)
@@ -203,11 +215,11 @@ class MenuDelegate(QTableWidget):
         return container
 
     def style_table(self):
-        """Tạo màu header bảng thành màu cam FF862F và đảm bảo highlight toàn bộ hàng."""
+        """Tạo màu header bảng với background #343131 và text #FABC3F, đảm bảo highlight toàn bộ hàng."""
         self.setStyleSheet("""
             QHeaderView::section {
-                background-color: #FF862F;
-                color: white;
+                background-color: #343131;
+                color: #FABC3F;
                 font-weight: bold;
                 padding: 8px;
                 border: 1px solid #d67a2c;

@@ -205,22 +205,24 @@ class RestaurantScreen(QWidget):
         print(f"RestaurantScreen: Item clicked at row {item.row()}, column {item.column()}")
 
     def open_menu_screen(self, row, column):
-        """Mở trang menu khi double-click vào nhà hàng."""
         print(f"RestaurantScreen: Double-clicked at row {row}, column {column}")
         place_id_item = self.restaurant_table.item(row, 0)
         if place_id_item is None:
             restaurant_data = self.restaurant_table.model.get_restaurants()[row]
             print(f"RestaurantScreen: No place_id found for row {row}, restaurant_data: {restaurant_data}")
-            return
-
-        place_id = place_id_item.text()
-        if not place_id:
-            print(f"RestaurantScreen: place_id is empty at row {row}")
-            return
+            if "_id" in restaurant_data:
+                place_id = str(restaurant_data["_id"])
+            else:
+                print(f"RestaurantScreen: No _id in restaurant_data: {restaurant_data}")
+                return
+        else:
+            place_id = place_id_item.text()
+            if not place_id:
+                print(f"RestaurantScreen: place_id is empty at row {row}")
+                return
 
         print(f"RestaurantScreen: Selected place_id: {place_id}")
         print(f"Parent objectName: {self.parent.objectName()}")
-        # Gọi show_menu_for_restaurant() thay vì tạo mới RestaurantMenuScreen
         self.parent.show_menu_for_restaurant(place_id)
 
     def open_all_menu_screen(self):

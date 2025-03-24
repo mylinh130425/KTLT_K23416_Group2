@@ -17,7 +17,6 @@ from Custom_Widgets.QAppSettings import QAppSettings
 
 ########################################################################
 ## MAIN WINDOW CLASS
-########################################################################
 class MainWindow(QMainWindow):
 
     def __init__(self, parent=None):
@@ -25,34 +24,22 @@ class MainWindow(QMainWindow):
         self.ui = Extend_MainWindow()
         self.ui.setupUi(self)
 
-        ########################################################################
-        # APPLY JSON STYLESHEET
-        ########################################################################
-        # self = QMainWindow class
-        # self.ui = Ui_MainWindow / user interface class
-        #Use this if you only have one json file named "login_style.json" inside the root directory, "json" directory or "jsonstyles" folder.
-        # loadJsonStyle(self, self.ui) 
-
         # Use this to specify your json file(s) path/name
         loadJsonStyle(self, self.ui, jsonFiles = {
             "json-styles/login_style.json"
             })
+        self.setWindowFlags(Qt.WindowType.CustomizeWindowHint | Qt.WindowType.WindowTitleHint)
+        self.show()
 
-        ########################################################################
-
-        #######################################################################
-        # SHOW WINDOW
-        #######################################################################
-        self.show() 
-
-        ########################################################################
-        # UPDATE APP SETTINGS LOADED FROM JSON STYLESHEET 
-        # ITS IMPORTANT TO RUN THIS AFTER SHOWING THE WINDOW
-        # THIS PROCESS WILL RUN ON A SEPARATE THREAD WHEN GENERATING NEW ICONS
-        # TO PREVENT THE WINDOW FROM BEING UNRESPONSIVE
-        ########################################################################
         # self = QMainWindow class
         QAppSettings.updateAppSettings(self)
+
+    def changeEvent(self, event):
+        """ Prevent the window from maximizing when double-clicking the title bar """
+        if event.type() == event.Type.WindowStateChange:
+            if self.windowState() == Qt.WindowState.WindowMaximized:
+                self.showNormal()  # Restore the window to its normal size
+        super().changeEvent(event)
 
 ########################################################################
 ## EXECUTE APP
@@ -60,7 +47,7 @@ class MainWindow(QMainWindow):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     ########################################################################
-    ## 
+    ##
     ########################################################################
     window = MainWindow()
     window.show()
@@ -68,4 +55,4 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 ########################################################################
 ## END===>
-########################################################################  
+########################################################################

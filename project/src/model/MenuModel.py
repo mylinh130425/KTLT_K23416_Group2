@@ -27,12 +27,19 @@ class MenuModel:
 
         print(f"MenuModel: Querying menu for place_id {self.place_id}")
         try:
+            # Kiểm tra xem place_id có phải là chuỗi hợp lệ để chuyển thành ObjectId không
+            try:
+                object_id = ObjectId(self.place_id)
+            except Exception as e:
+                print(f"MenuModel: Invalid place_id format: {self.place_id}, error: {e}")
+                return []
+
             if use_pagination:
                 menu_items = self.db_manager.get_menu_by_place_id(self.place_id, self._offset, self._limit)
                 self._offset += len(menu_items)
                 if self._total_items == 0:
                     menu_collection = self.db_manager.db["Menu"]
-                    self._total_items = menu_collection.count_documents({"place_id": ObjectId(self.place_id)})
+                    self._total_items = menu_collection.count_documents({"place_id": object_id})
                 self._has_more = self._offset < self._total_items
             else:
                 menu_items = self.db_manager.get_menu_by_place_id(self.place_id, offset=0, limit=None)
