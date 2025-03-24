@@ -4,7 +4,6 @@ from PyQt6.QtGui import QPixmap, QPainter, QPainterPath, QColor
 from PyQt6.QtWidgets import (
     QTableWidget, QTableWidgetItem, QLabel, QHeaderView, QWidget, QHBoxLayout, QVBoxLayout
 )
-
 from project.src.ImageLoader import ImageLoader
 from project.src.model.RestaurantModel import RestaurantModel
 class RestaurantDelegate(QTableWidget):

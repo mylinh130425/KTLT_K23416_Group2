@@ -1,4 +1,4 @@
-from PyQt6.QtGui import QPixmap
+# from PyQt6.QtGui import QPixmap
 from PyQt6 import QtWidgets, QtGui,QtCore
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
@@ -110,9 +110,8 @@ class RestaurantScreen(QWidget):
         """ Navigate to Edit Restaurant screen (must have a selected row). """
         selected_items = self.restaurant_table.selectedItems()
 
-        if not selected_items:
+        if len(selected_items)==0:
             QMessageBox.warning(self, "Selection Error", "Please select a restaurant first!")
-            self.parent.body_stackedWidget.setCurrentWidget(self.parent.restaurant_page)
             return
 
         selected_row = selected_items[0].row()
@@ -120,6 +119,7 @@ class RestaurantScreen(QWidget):
         restaurant_name = self.restaurant_table.item(selected_row, 2).text()
 
         print("Editing restaurant:", restaurant_name)
+        print("parent", self.parent.objectName())
         self.parent.restaurant_name_label.setText(restaurant_name)
         self.parent.restaurant_name_label.setWordWrap(True)
 
