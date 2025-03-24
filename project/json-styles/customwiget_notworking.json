@@ -1,0 +1,56 @@
+{
+   "navigation": [
+    {
+      "name": "stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "Main",
+              "signup_button": "Main"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "login_button": "profile_page",
+              "signup_button": "profile_page"
+            }
+          ]
+        }
+      ]
+    }
+       ,{
+      "name": "restaurant_stackedWidget",
+      "navigation": [
+        {
+          "navigationButtons": [
+            {
+              "restaurant_info_button": "modify_restaurant_page",
+              "restaurant_menu_button": "menu_page",
+              "restaurant_review_button": "review_restaurant_page"
+            }
+          ]
+        }
+      ],
+      "transitionAnimation": [
+        {
+          "slide": [
+            {
+              "active": true,
+              "duration": 1000,
+              "direction": "horizontal",
+              "easingCurve": "OutBack"
+            }
+          ]
+        }
+      ]
+    }
+   ]
+}

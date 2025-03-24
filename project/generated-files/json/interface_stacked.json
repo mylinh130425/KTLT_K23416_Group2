@@ -1,6 +1,10 @@
 {
   "QPushButton": [
     {
+      "name": "close_window_button_2",
+      "icon": "Qss/icons/icons/feather/x-circle.png"
+    },
+    {
       "name": "close_window_button",
       "icon": "Qss/icons/icons/feather/x-circle.png"
     },
@@ -19,6 +23,18 @@
     {
       "name": "profile_logout_button",
       "icon": "C:\\Users\\USER\\.designer\\image\\profile_logout.png"
+    },
+    {
+      "name": "restaurant_info_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_info.png"
+    },
+    {
+      "name": "restaurant_menu_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_menu.png"
+    },
+    {
+      "name": "restaurant_review_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_review.png"
     },
     {
       "name": "pushButton_4",

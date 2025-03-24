@@ -215,6 +215,32 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
         self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
         print(f"all_menu_page type in goMenu: {type(self.body_stackedWidget.all_menu_page)}")
+        # Position the menu at the right side
+        self.menu_dock.move(self.width - self.menu_frame.width(),
+                            # self.burger_menu_button.height() +
+                            self.header_frame.height())
+
+    def resizeEvent(self, event):
+        # Position the menu at the right side
+        self.menu_dock.move(self.width - self.menu_frame.width(),
+                            # self.burger_menu_button.height() +
+                            self.header_frame.height())
+        new_size: QSize = event.size()  # Lấy kích thước mới
+
+        print(f"Window resized to: {new_size.width()}x{new_size.height()}")
+        super().resizeEvent(event)
+
+    def changeEvent(self, event):
+        print("changeEvent")
+        """ Detects when the window state changes (e.g., maximized) """
+        if event.type() == 99:  # QEvent.WindowStateChange
+            if self.windowState() == Qt.WindowState.WindowMaximized:
+                print("Window maximized!")
+                self.resizeEvent(event)  # Manually trigger resizeEvent
+            elif self.windowState() == Qt.WindowState.WindowNoState:
+                print("Window restored!")
+                self.resizeEvent(event)  # Manually trigger resizeEvent
+        super().changeEvent(event)
 
     def handle_menu_click(self, item, menu_items):
         for name, function in menu_items:

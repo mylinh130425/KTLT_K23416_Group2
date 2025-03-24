@@ -10,6 +10,14 @@ class DatabaseManager:
     def __init__(self, uri="mongodb://localhost:27017", db_name="MealMatch"):
         """
         Initialize a DatabaseManager object.
+
+        :param uri: The MongoDB URI for establishing the connection.
+                    Defaults to "mongodb://localhost:27017".
+        :param db_name: The name of the MongoDB database to connect to.
+                        Defaults to "MealMatch".
+
+        :type uri: str
+        :type db_name: str
         """
         try:
             self.client = MongoClient(uri)
@@ -24,6 +32,22 @@ class DatabaseManager:
         except Exception as e:
             print(f"DatabaseManager: Failed to connect to MongoDB: {e}")
             self.db = None
+        self.client = MongoClient(uri)
+        self.db = self.client[db_name]
+        self.users = self.db["Users"]
+        self.restaurants=self.db["Restaurants"]
+        # Đảm bảo username và email là duy nhất
+        self.users.create_index("username", unique=True)
+        # self.users.create_index("email", unique=True)
+
+    def add_restaurant_to_db(self, restaurant_data: dict) -> bool:
+        try:
+            self.restaurants.insert_one(restaurant_data)
+            print(f"✅ Restaurant {restaurant_data['name']} added to DB!")
+            return True
+        except Exception as e:
+            print(f"❌ Error adding restaurant: {e}")
+            return False
 
     def get_restaurants(self, offset=0, limit=15):
         if self.db is None:
@@ -40,7 +64,7 @@ class DatabaseManager:
                 if hours_data == "N/A" and "hours" in data:
                     hours_data = self.format_hours(data.get("hours", []))
                 about_data = data.get("about", [])
-                accessibility_texts = self.format_accessibility(about_data)
+                accessibility_texts = self.format_accessibility(about_data) if isinstance(about_data, list) else []
                 restaurant = {
                     "_id": str(data.get("_id", "")),  # Chuyển ObjectId thành chuỗi
                     "featured_image": data.get("featured_image"),
@@ -241,3 +265,63 @@ class DatabaseManager:
         if self.client:
             self.client.close()
             print("DatabaseManager: MongoDB connection closed.")
+
+
+    def get_restaurant_byid(self, restaurant_id: str):
+        try:
+            restaurant_data = self.restaurants.find_one({"_id": ObjectId(restaurant_id)})
+            print(type(restaurant_data))
+            if not restaurant_data:
+                return None
+
+            return {
+                "featured_image": restaurant_data.get("featured_image", ""),
+                "name": restaurant_data.get("name", "Unknown"),
+                "category": restaurant_data.get("categories", []),
+                "address": {
+                    "city": restaurant_data.get("detailed_address", {}).get("city", ""),
+                    "state": restaurant_data.get("detailed_address", {}).get("state", ""),
+                    "ward": restaurant_data.get("detailed_address", {}).get("ward", ""),
+                    "street": restaurant_data.get("detailed_address", {}).get("street", "")
+                },
+                "detailed_address": restaurant_data.get("address", ""),
+                "phone": restaurant_data.get("phone", "N/A"),
+                "website": restaurant_data.get("website", "N/A"),
+                "hours": restaurant_data.get("hours", []),
+                "about": restaurant_data.get("about", [])
+            }
+        except Exception as e:
+            print(f"Error fetching restaurant: {e}")
+            return None
+
+
+if __name__ == "__main__":
+    """ testing db connection and functionality """
+    db_manager = DatabaseManager()
+
+    # Set pagination parameters
+    offset = 0  # Track loaded data position
+    limit = 8  # Load 8 restaurants per batch
+
+    # Fetch restaurants and print the first one to test
+    restaurants = db_manager.get_restaurants(offset, limit)
+
+    if restaurants:
+        print(restaurants[0])  # Print first restaurant for debugging
+    else:
+        print("No restaurants found!")
+    # Test get_menu_by_place_id
+    place_id = "67acf97c194023cfe5152311"  # Thay bằng _id của nhà hàng
+    menu_items = db_manager.get_menu_by_place_id(place_id, offset=0, limit=15)
+    if menu_items:
+        print("Menu items:", menu_items)
+    else:
+        print("No menu items found!")
+
+    # Test get_restaurant_byid
+    restaurant_id = "67acf919194023cfe51522b0"  # Thay bằng _id của nhà hàng
+    restaurant_data = db_manager.get_restaurant_byid(restaurant_id)
+    if restaurant_data:
+        print("Restaurant data:", restaurant_data)
+    else:
+        print("No restaurant data found!")

@@ -29,8 +29,12 @@
 #close_window_button:hover{ //not working
   background-color: #990000;
 }
-#Login_SignUp QLineEdit{
-  border:1.5px solid #333; border-radius:8px;padding-left:30px
+//#Login_SignUp
+QLineEdit{
+  border:1.5px solid #333; border-radius:8px;
+}
+#login_signup_stackedWidget QLineEdit{
+    padding-left:30px
 }
 #welcome_photo{
 //make it flowing from top to bottom - no more outlines
@@ -47,9 +51,7 @@
 #profile_page{
   background-color: white;
 }
-#profile_page QLineEdit{
-  border:1.5px solid #333; border-radius:8px;padding-left:10px
-}
+
 #profile_page #profile_delete_button{
   border-radius: 12px;
   background-color: #8E9299;
@@ -337,9 +339,7 @@
   border-radius: 5px;
 }
 
-#modify_restaurant_page QLineEdit {
-  border: 1px solid black;
-}
+
 
 #modify_restaurant_page QFrame {
   background-color: white;

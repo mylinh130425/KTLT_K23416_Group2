@@ -74,6 +74,8 @@
         }
       ]
     }
+
   ],
+
   "QtBinding": "PyQt6"
 }
