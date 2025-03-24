@@ -313,7 +313,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2080,19 +2080,19 @@
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_24">
                   <property name="spacing">
-                   <number>0</number>
+                   <number>15</number>
                   </property>
                   <property name="leftMargin">
                    <number>0</number>
                   </property>
                   <property name="topMargin">
-                   <number>50</number>
+                   <number>30</number>
                   </property>
                   <property name="rightMargin">
                    <number>0</number>
                   </property>
                   <property name="bottomMargin">
-                   <number>50</number>
+                   <number>30</number>
                   </property>
                   <item>
                    <widget class="QWidget" name="restaurant_sidebar" native="true">
@@ -2100,6 +2100,12 @@
                      <string notr="true">background-color:#FF862F;border-top-right-radius:20;border-bottom-right-radius:20</string>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_25">
+                     <property name="sizeConstraint">
+                      <enum>QLayout::SetMinimumSize</enum>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
                      <item>
                       <layout class="QVBoxLayout" name="verticalLayout_26">
                        <item>
@@ -2112,6 +2118,9 @@
                            <spacer name="horizontalSpacer_7">
                             <property name="orientation">
                              <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                             <enum>QSizePolicy::Minimum</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -2150,6 +2159,9 @@
                            <spacer name="horizontalSpacer_8">
                             <property name="orientation">
                              <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                             <enum>QSizePolicy::Minimum</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -2296,7 +2308,7 @@
                      <string notr="true">color: rgb(41, 110, 126);</string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2361,6 +2373,9 @@
                             <string notr="true" />
                            </property>
                            <layout class="QHBoxLayout" name="horizontalLayout_9">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
                             <item>
                              <widget class="QWidget" name="left_form" native="true">
                               <property name="sizePolicy">
@@ -2415,6 +2430,12 @@
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="form_res_name">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
                                  <property name="inputMask">
                                   <string />
                                  </property>
@@ -5021,8 +5042,8 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>734</width>
-                                 <height>144</height>
+                                 <width>583</width>
+                                 <height>272</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">
