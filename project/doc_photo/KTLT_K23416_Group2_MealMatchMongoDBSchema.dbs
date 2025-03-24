@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MongoDb" database="MongoDb" id="MongoDb-2c0" >
+	<schema name="MealMatch" >
+		<table name="Menu" virtual="y" >
+			<column name="_id" type="objectId" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="place_id" type="objectId" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="restaurant_name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="menu" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="product_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="pricing" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="price" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="note" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="required" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="includesVAT" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="category" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="currency" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="feature_img" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="rating" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="item_review" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="item_review_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="reviewer_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="rating" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+						<column name="taste" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+						<column name="portion" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+						<column name="hygiene" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+						<column name="mean" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+					</column>
+					<column name="review_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+			</column>
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Relationship" virtual="y" to_schema="MealMatch" to_table="Restaurants" >
+				<fk_column name="place_id" pk="_id" />
+			</fk>
+		</table>
+		<table name="Restaurants" virtual="y" >
+			<column name="_id" type="objectId" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="place_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="is_spending_on_ads" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="reviews" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+			<column name="rating" type="object" length="800" decimal="0" jt="4999544" mandatory="y" />
+			<column name="competitors" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="reviews" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="rating" type="object" length="800" decimal="0" jt="4999544" mandatory="y" />
+				<column name="main_category" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="website" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="phone" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="can_claim" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="owner" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="featured_image" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="main_category" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="categories" type="array[string]" length="800" decimal="0" jt="2003" mandatory="y" />
+			<column name="workday_timing" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="is_temporarily_closed" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="is_permanently_closed" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="closed_on" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="address" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="review_keywords" type="array[object]" length="800" decimal="0" jt="4999545" >
+				<column name="keyword" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="count" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+			</column>
+			<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="status" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="price_range" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="reviews_per_rating" type="array[int]" length="800" decimal="0" jt="2003" mandatory="y" />
+			<column name="featured_question" type="object" length="800" decimal="0" jt="4999544" >
+				<column name="question" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="answer" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="question_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="question_ago" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="asked_by" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+					<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="answer_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="answer_ago" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="answered_by" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+					<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+			</column>
+			<column name="reviews_link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="coordinates" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="latitude" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+				<column name="longitude" type="double" length="800" decimal="0" jt="8" mandatory="y" />
+			</column>
+			<column name="plus_code" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="detailed_address" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="ward" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="street" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="city" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="postal_code" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="state" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="country_code" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="time_zone" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="cid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="data_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="about" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="options" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="enabled" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+			</column>
+			<column name="images" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="about" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="hours" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="day" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="times" type="array[string]" length="800" decimal="0" jt="2003" mandatory="y" />
+			</column>
+			<column name="most_popular_times" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="average_popularity" type="object" length="800" decimal="0" jt="4999544" mandatory="y" />
+				<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="popular_times" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="Monday" type="array[object]" length="800" decimal="0" jt="4999545" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Tuesday" type="array[object]" length="800" decimal="0" jt="4999545" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Wednesday" type="array[object]" length="800" decimal="0" jt="4999545" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Thursday" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Friday" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Saturday" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+				<column name="Sunday" type="array[object]" length="800" decimal="0" jt="4999545" >
+					<column name="hour_of_day" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="time_label" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+					<column name="popularity_percentage" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					<column name="popularity_description" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				</column>
+			</column>
+			<column name="menu" type="object" length="800" decimal="0" jt="4999544" >
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="source" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="reservations" type="array[object]" length="800" decimal="0" jt="4999545" >
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="source" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="order_online_links" type="array[object]" length="800" decimal="0" jt="4999545" >
+				<column name="link" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="source" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="featured_reviews" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="review_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="rating" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="reviewer_profile" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="published_at" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="published_at_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_ago" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_likes_count" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="total_number_of_reviews_by_reviewer" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="total_number_of_photos_by_reviewer" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="is_local_guide" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_translated_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_translated_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_photos" type="array[string]" length="800" decimal="0" jt="2003" mandatory="y" />
+			</column>
+			<column name="detailed_reviews" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="review_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="reviewer_profile" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="rating" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="review_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="published_at" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="published_at_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_ago" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_date" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_likes_count" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="total_number_of_reviews_by_reviewer" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="total_number_of_photos_by_reviewer" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+				<column name="is_local_guide" type="Boolean" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="review_translated_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="response_from_owner_translated_text" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="query" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="Users" virtual="y" >
+			<column name="_id" type="objectId" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="username" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="email" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="passwordHash" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="fullName" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="avatar" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="role" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="createdAt" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+			<column name="lastLogin" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+			<column name="statistics" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+				<column name="history_view" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+					<column name="restaurant" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+						<column name="restaurant_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+						<column name="viewedAt" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+						<column name="duration" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					</column>
+					<column name="menu_item" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+						<column name="menu_item_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+						<column name="viewedAt" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+						<column name="duration" type="int" length="800" decimal="0" jt="4" mandatory="y" />
+					</column>
+				</column>
+				<column name="past_review" type="object" length="800" decimal="0" jt="4999544" mandatory="y" >
+					<column name="restaurant" type="array[object]" length="800" decimal="0" jt="4999545" >
+						<column name="review_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+						<column name="reviewedAt" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+					</column>
+					<column name="menu_item" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+						<column name="review_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+						<column name="reviewedAt" type="date" length="800" decimal="0" jt="91" mandatory="y" />
+					</column>
+					<column name="review" type="array" length="800" decimal="0" jt="2003" />
+				</column>
+			</column>
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<index name="username_1" unique="UNIQUE_KEY" >
+				<column name="username" />
+			</index>
+			<index name="email_1" unique="UNIQUE_KEY" >
+				<column name="email" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Main Diagram" id="Diagram-5d4" show_relation="name" >
+		<comment><![CDATA[KTLT_K23416_Group2_MealMatchMongoDBSchema]]></comment>
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Friday" color="BED3F4" x="1440" y="1248" />
+		<entity schema="MealMatch" name="Menu" color="C7F4BE" x="2944" y="848" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Monday" color="BED3F4" x="544" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" color="BED3F4" x="1088" y="80" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Saturday" color="BED3F4" x="1664" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Sunday" color="BED3F4" x="1888" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Thursday" color="BED3F4" x="1216" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Tuesday" color="BED3F4" x="768" y="1248" />
+		<entity schema="MealMatch" name="Users" color="F4DDBE" x="3056" y="144" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Wednesday" color="BED3F4" x="992" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="about" color="BED3F4" x="672" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question.answered_by" color="BED3F4" x="2240" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question.asked_by" color="BED3F4" x="2112" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="competitors" color="BED3F4" x="48" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="coordinates" color="BED3F4" x="352" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="detailed_address" color="BED3F4" x="496" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="detailed_reviews" color="BED3F4" x="1728" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question" color="BED3F4" x="2032" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_reviews" color="BED3F4" x="1424" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view" color="F4DDBE" x="2992" y="528" />
+		<entity schema="MealMatch" name="Restaurants" column="hours" color="BED3F4" x="928" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="images" color="BED3F4" x="800" y="880" />
+		<entity schema="MealMatch" name="Menu" column="menu.item_review" color="C7F4BE" x="3008" y="1232" />
+		<entity schema="MealMatch" name="Menu" column="menu" color="C7F4BE" x="2944" y="1008" />
+		<entity schema="MealMatch" name="Restaurants" column="menu" color="BED3F4" x="2208" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view.menu_item" color="F4DDBE" x="3008" y="672" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review.menu_item" color="F4DDBE" x="3360" y="672" />
+		<entity schema="MealMatch" name="Restaurants" column="most_popular_times" color="BED3F4" x="1056" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="about.options" color="BED3F4" x="384" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="order_online_links" color="BED3F4" x="2480" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="owner" color="BED3F4" x="224" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review" color="F4DDBE" x="3152" y="528" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times" color="BED3F4" x="1264" y="880" />
+		<entity schema="MealMatch" name="Menu" column="menu.pricing" color="C7F4BE" x="2848" y="1232" />
+		<entity schema="MealMatch" name="Menu" column="menu.item_review.rating" color="C7F4BE" x="2944" y="1392" />
+		<entity schema="MealMatch" name="Restaurants" column="reservations" color="BED3F4" x="2336" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view.restaurant" color="F4DDBE" x="2848" y="672" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review.restaurant" color="F4DDBE" x="3200" y="672" />
+		<entity schema="MealMatch" name="Restaurants" column="review_keywords" color="BED3F4" x="2656" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics" color="F4DDBE" x="3072" y="400" />
+		<group name="Collection &#039;Menu&#039;" color="EEF7EC" >
+			<entity schema="MealMatch" name="Menu" column="menu.pricing" />
+			<entity schema="MealMatch" name="Menu" column="menu" />
+			<entity schema="MealMatch" name="Menu" column="menu.item_review.rating" />
+			<entity schema="MealMatch" name="Menu" column="menu.item_review" />
+			<entity schema="MealMatch" name="Menu" />
+		</group>
+		<group name="Collection &#039;Users&#039;" color="F7F2EC" >
+			<entity schema="MealMatch" name="Users" column="statistics.history_view.restaurant" />
+			<entity schema="MealMatch" name="Users" column="statistics.history_view" />
+			<entity schema="MealMatch" name="Users" column="statistics" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review.menu_item" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review" />
+			<entity schema="MealMatch" name="Users" column="statistics.history_view.menu_item" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review.restaurant" />
+			<entity schema="MealMatch" name="Users" />
+		</group>
+		<group name="Collection &#039;Restaurants&#039;" color="ECF0F7" >
+			<entity schema="MealMatch" name="Restaurants" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question.answered_by" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question.asked_by" />
+			<entity schema="MealMatch" name="Restaurants" column="coordinates" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Friday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times" />
+			<entity schema="MealMatch" name="Restaurants" column="images" />
+			<entity schema="MealMatch" name="Restaurants" column="most_popular_times" />
+			<entity schema="MealMatch" name="Restaurants" column="order_online_links" />
+			<entity schema="MealMatch" name="Restaurants" column="reservations" />
+			<entity schema="MealMatch" name="Restaurants" column="review_keywords" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Sunday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Tuesday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Wednesday" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_reviews" />
+			<entity schema="MealMatch" name="Restaurants" column="menu" />
+			<entity schema="MealMatch" name="Restaurants" column="competitors" />
+			<entity schema="MealMatch" name="Restaurants" column="hours" />
+			<entity schema="MealMatch" name="Restaurants" column="about.options" />
+			<entity schema="MealMatch" name="Restaurants" column="about" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Saturday" />
+			<entity schema="MealMatch" name="Restaurants" column="detailed_reviews" />
+			<entity schema="MealMatch" name="Restaurants" column="detailed_address" />
+			<entity schema="MealMatch" name="Restaurants" column="owner" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Thursday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Monday" />
+		</group>
+	</layout>
+	<layout name="~Diagram with Sample Tools" id="Diagram-184a" show_column_type="y" show_relation="columns" >
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Friday" color="BED3F4" x="1696" y="1248" />
+		<entity schema="MealMatch" name="Menu" color="C7F4BE" x="3520" y="1504" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Monday" color="BED3F4" x="672" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" color="BED3F4" x="1328" y="80" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Saturday" color="BED3F4" x="1952" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Sunday" color="BED3F4" x="2208" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Thursday" color="BED3F4" x="1440" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Tuesday" color="BED3F4" x="928" y="1248" />
+		<entity schema="MealMatch" name="Users" color="F4DDBE" x="3648" y="80" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times.Wednesday" color="BED3F4" x="1184" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="about" color="BED3F4" x="784" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question.answered_by" color="BED3F4" x="2624" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question.asked_by" color="BED3F4" x="2464" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="competitors" color="BED3F4" x="48" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="coordinates" color="BED3F4" x="400" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="detailed_address" color="BED3F4" x="592" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="detailed_reviews" color="BED3F4" x="2160" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_question" color="BED3F4" x="2480" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="featured_reviews" color="BED3F4" x="1808" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view" color="F4DDBE" x="3536" y="464" />
+		<entity schema="MealMatch" name="Restaurants" column="hours" color="BED3F4" x="1168" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="images" color="BED3F4" x="1008" y="880" />
+		<entity schema="MealMatch" name="Menu" column="menu.item_review" color="C7F4BE" x="3648" y="1904" />
+		<entity schema="MealMatch" name="Menu" column="menu" color="C7F4BE" x="3520" y="1664" />
+		<entity schema="MealMatch" name="Restaurants" column="menu" color="BED3F4" x="2704" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view.menu_item" color="F4DDBE" x="3632" y="608" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review.menu_item" color="F4DDBE" x="4016" y="608" />
+		<entity schema="MealMatch" name="Restaurants" column="most_popular_times" color="BED3F4" x="1360" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="about.options" color="BED3F4" x="496" y="1248" />
+		<entity schema="MealMatch" name="Restaurants" column="order_online_links" color="BED3F4" x="3024" y="880" />
+		<entity schema="MealMatch" name="Restaurants" column="owner" color="BED3F4" x="240" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review" color="F4DDBE" x="3760" y="464" />
+		<entity schema="MealMatch" name="Restaurants" column="popular_times" color="BED3F4" x="1584" y="880" />
+		<entity schema="MealMatch" name="Menu" column="menu.pricing" color="C7F4BE" x="3440" y="1904" />
+		<entity schema="MealMatch" name="Menu" column="menu.item_review.rating" color="C7F4BE" x="3536" y="2064" />
+		<entity schema="MealMatch" name="Restaurants" column="reservations" color="BED3F4" x="2864" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics.history_view.restaurant" color="F4DDBE" x="3440" y="608" />
+		<entity schema="MealMatch" name="Users" column="statistics.past_review.restaurant" color="F4DDBE" x="3824" y="608" />
+		<entity schema="MealMatch" name="Restaurants" column="review_keywords" color="BED3F4" x="3184" y="880" />
+		<entity schema="MealMatch" name="Users" column="statistics" color="F4DDBE" x="3664" y="336" />
+		<group name="pricing" color="EEF7EC" >
+			<entity schema="MealMatch" name="Menu" column="menu.pricing" />
+			<entity schema="MealMatch" name="Menu" column="menu" />
+			<entity schema="MealMatch" name="Menu" column="menu.item_review.rating" />
+			<entity schema="MealMatch" name="Menu" column="menu.item_review" />
+			<entity schema="MealMatch" name="Menu" />
+		</group>
+		<group name="Users" color="F7F2EC" >
+			<entity schema="MealMatch" name="Users" />
+			<entity schema="MealMatch" name="Users" column="statistics.history_view.restaurant" />
+			<entity schema="MealMatch" name="Users" column="statistics.history_view" />
+			<entity schema="MealMatch" name="Users" column="statistics" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review.menu_item" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review" />
+			<entity schema="MealMatch" name="Users" column="statistics.history_view.menu_item" />
+			<entity schema="MealMatch" name="Users" column="statistics.past_review.restaurant" />
+		</group>
+		<group name="Restaurants" color="ECF0F7" >
+			<entity schema="MealMatch" name="Restaurants" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question.answered_by" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_question.asked_by" />
+			<entity schema="MealMatch" name="Restaurants" column="coordinates" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Friday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times" />
+			<entity schema="MealMatch" name="Restaurants" column="images" />
+			<entity schema="MealMatch" name="Restaurants" column="most_popular_times" />
+			<entity schema="MealMatch" name="Restaurants" column="order_online_links" />
+			<entity schema="MealMatch" name="Restaurants" column="reservations" />
+			<entity schema="MealMatch" name="Restaurants" column="review_keywords" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Sunday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Tuesday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Wednesday" />
+			<entity schema="MealMatch" name="Restaurants" column="featured_reviews" />
+			<entity schema="MealMatch" name="Restaurants" column="menu" />
+			<entity schema="MealMatch" name="Restaurants" column="competitors" />
+			<entity schema="MealMatch" name="Restaurants" column="hours" />
+			<entity schema="MealMatch" name="Restaurants" column="about.options" />
+			<entity schema="MealMatch" name="Restaurants" column="about" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Saturday" />
+			<entity schema="MealMatch" name="Restaurants" column="detailed_reviews" />
+			<entity schema="MealMatch" name="Restaurants" column="detailed_address" />
+			<entity schema="MealMatch" name="Restaurants" column="owner" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Thursday" />
+			<entity schema="MealMatch" name="Restaurants" column="popular_times.Monday" />
+		</group>
+		<script name="Query Editor" id="Editor-1e3e" language="SQL" >
+			<string><![CDATA[MealMatch.Restaurants.find()
+
+//OR
+
+USE MealMatch;
+db.Restaurants.find()
+
+//OR
+
+USE MealMatch;
+db.getCollection('Restaurants').find()]]></string>
+		</script>
+		<browser id="Browse-43a" name="Relational Data Editor" confirm_updates="y" >
+			<browse_table schema="MealMatch" entity="Restaurants" fk_out="n" x="20" y="20" width="270" height="-60" record_view="y" >
+				<browse_table schema="MealMatch" entity="Menu" fk="Relationship" fk_out="y" x="310" y="20" width="500" height="350" record_view="y" />
+			</browse_table>
+		</browser>
+		<query id="Query-1214" name="Query Builder" >
+			<query_table schema="MealMatch" name="Restaurants" alias="Restaurants" x="48" y="48" >
+				<column name="_id" />
+				<column name="place_id" />
+				<column name="name" />
+				<column name="description" />
+				<column name="is_spending_on_ads" />
+				<column name="reviews" />
+				<column name="rating" />
+				<column name="competitors" />
+				<column name="website" />
+				<column name="phone" />
+				<column name="can_claim" />
+				<column name="owner" />
+				<column name="featured_image" />
+				<column name="main_category" />
+				<column name="categories" />
+				<column name="workday_timing" />
+				<column name="is_temporarily_closed" />
+				<column name="is_permanently_closed" />
+				<column name="closed_on" />
+				<column name="address" />
+				<column name="review_keywords" />
+				<column name="link" />
+				<column name="status" />
+				<column name="price_range" />
+				<column name="reviews_per_rating" />
+				<column name="featured_question" />
+				<column name="reviews_link" />
+				<column name="coordinates" />
+				<column name="plus_code" />
+				<column name="detailed_address" />
+				<column name="time_zone" />
+				<column name="cid" />
+				<column name="data_id" />
+				<column name="about" />
+				<column name="images" />
+				<column name="hours" />
+				<column name="most_popular_times" />
+				<column name="popular_times" />
+				<column name="menu" />
+				<column name="reservations" />
+				<column name="order_online_links" />
+				<column name="featured_reviews" />
+				<column name="detailed_reviews" />
+				<column name="query" />
+				<query_table schema="MealMatch" name="Menu" alias="Menu" x="320" y="48" fk="Relationship" type="Inner Join" >
+					<column name="_id" />
+					<column name="place_id" />
+					<column name="restaurant_name" />
+					<column name="menu" />
+				</query_table>
+			</query_table>
+		</query>
+	</layout>
+</project>
