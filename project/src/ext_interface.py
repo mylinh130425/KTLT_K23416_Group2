@@ -2,10 +2,8 @@
 from PyQt6.QtWidgets import QMessageBox, QFrame, QVBoxLayout, QPushButton, QDockWidget, QMainWindow, QListWidgetItem, \
     QListWidget
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QColor
 from project.src.DatabaseManager import DatabaseManager
 from project.src.model.ProfileModel import ProfileModel
-from project.src.ui_profile_page import Ui_Profile
 from project.src.view.RestaurantScreen import RestaurantScreen
 from project.src.ui_interface_stacked import *
 
@@ -54,9 +52,6 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.centralwidget.installEventFilter(self)
 
 
-        # self.burger_menu_button = BurgerMenu()
-        # self.burger_menu_button.clicked.connect(self)
-        # self.restaurant_button.clicked.connect(self.goRestaurant)
 
     def eventFilter(self, obj, event):
         """ Detect clicks outside the menu_dock and close it """
@@ -270,6 +265,28 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.menu_dock.move(self.width - self.menu_frame.width(),
                             # self.burger_menu_button.height() +
                             self.header_frame.height())
+
+    def resizeEvent(self, event):
+        # Position the menu at the right side
+        self.menu_dock.move(self.width - self.menu_frame.width(),
+                            # self.burger_menu_button.height() +
+                            self.header_frame.height())
+        new_size: QSize = event.size()  # Lấy kích thước mới
+
+        print(f"Window resized to: {new_size.width()}x{new_size.height()}")
+        super().resizeEvent(event)
+
+    def changeEvent(self, event):
+        print("changeEvent")
+        """ Detects when the window state changes (e.g., maximized) """
+        if event.type() == 99:  # QEvent.WindowStateChange
+            if self.windowState() == Qt.WindowState.WindowMaximized:
+                print("Window maximized!")
+                self.resizeEvent(event)  # Manually trigger resizeEvent
+            elif self.windowState() == Qt.WindowState.WindowNoState:
+                print("Window restored!")
+                self.resizeEvent(event)  # Manually trigger resizeEvent
+        super().changeEvent(event)
 
     def handle_menu_click(self, item, menu_items):
         """Handles menu item clicks."""
