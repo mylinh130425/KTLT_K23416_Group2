@@ -23,6 +23,7 @@ class DatabaseManager:
         self.client = MongoClient(uri)
         self.db = self.client[db_name]
         self.users = self.db["Users"]
+        self.restaurants=self.db["Restaurants"]
         # Đảm bảo username và email là duy nhất
         self.users.create_index("username", unique=True)
         self.users.create_index("email", unique=True)
@@ -38,23 +39,26 @@ class DatabaseManager:
 
     def get_restaurants(self, offset=0, limit=15):
         """Fetch a batch of restaurants with pagination."""
-        collection = self.db["Restaurants"]
-        restaurant_data = collection.find({}).skip(offset).limit(limit)
+        restaurant_data = self.restaurants.find({}).skip(offset).limit(limit)
         restaurants = []
 
         for data in restaurant_data:
             # Extract open hours safely
             hours_data = data.get("hours", [])
-            open_hours = self.format_hours(hours_data)
+            # open_hours = self.format_hours(hours_data)
             about_data = data.get("about",[])
-            accessibility_texts = self.format_accessibility(about_data)
+            open_hours = self.format_hours(hours_data) if isinstance(hours_data, list) else "No Data"
+
+            # accessibility_texts = self.format_accessibility(about_data)
+            accessibility_texts = self.format_accessibility(about_data) if isinstance(about_data, list) else []
+
             restaurant = {
                 "_id":data.get("_id",""),
                 "featured_image": data.get("featured_image"),
                 "name": data.get("name", ""),
                 "rating": data.get("rating", 0),
                 "open_hours": open_hours,
-                "category": "\n".join(data.get("categories", "")),
+                "category": "\n".join(data.get("categories", [])),
                 "address": data.get("address", ""),
                 "hotline": data.get("phone", ""),
                 "accessibility": "\n".join(accessibility_texts),
@@ -136,8 +140,9 @@ class DatabaseManager:
 
             for menu_data in menu_documents:
                 menu_items = menu_data.get("menu", [])
+                restaurant_name = menu_data.get("restaurant_name", "Unknown Restaurant")
                 for item in menu_items:
-                    item["restaurant_name"] = menu_data.get("restaurant_name", "Unknown Restaurant")
+                    item["restaurant_name"] = restaurant_name
                 all_menus.extend(menu_items)
 
             if not all_menus:
