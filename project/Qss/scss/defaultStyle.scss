@@ -3,15 +3,26 @@
 // FILE AUTO-GENERATED. PUT YOUR DEFAULT STYLES HERE.
 // THESE STYLES WILL OVERIDE THE THEME STYLES
 //====================================================//
+
+
+//Background Window: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #E8D5B5, stop:0.5 #D8C5A5, stop:1 #C8B595)
+//Background TableWidget:
+//#e6e6e6 --> grayer
+//#ececec --> more yellow
+//Black (Header Table - background): #343131
+//Yellow (Header Table - font): #FABC3F
+
 #centralwidget{
   border-radius: 20px;
   //background-color: $COLOR_ACCENT_1;
 }
-#header_welcome, #body_welcome, #header_frame{
-  background-color: transparent;
-  background: transparent;
-  border: none;
+#search_lineEdit{
+  border-radius:10px;padding-left:50px;
 }
+#search_button{
+  background: transparent;
+}
+
 #close_window_button{
   border-radius: 12px; //50% of button size
 }
@@ -29,14 +40,28 @@
   background-color: $COLOR_ACCENT_1;
 }
 
-//#add_restaurant_page {
-//  background-color: $COLOR_ACCENT_1;
-//
-//  QFrame {
-//      background-color: $COLOR_ACCENT_1;
-//  }
-//}
 
+#burger_menu_button{
+  color:white;
+}
+#profile_page{
+  background-color: white;
+}
+#profile_page QLineEdit{
+  border:1.5px solid #333; border-radius:8px;padding-left:10px
+}
+#profile_page #profile_delete_button{
+  border-radius: 12px;
+  background-color: #8E9299;
+  color:#33372C;
+}
+#profile_panel{
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+#search_lineEdit{
+  border-radius:10px;padding-left:10px
+}
 #add_restaurant_page #main_content {
   // background-color: white;
   // border-radius: 20px;
@@ -105,14 +130,6 @@
    border: 1px solid black;
   background-color: $COLOR_ACCENT_1;
 }
-
-//#add_restaurant_page {
-//  background-color: $COLOR_ACCENT_1;
-//
-//  QFrame {
-//      background-color: $COLOR_ACCENT_1;
-//  }
-//}
 
 #add_restaurant_page #main_content {
   // background-color: white;
@@ -368,7 +385,7 @@
 }
 
 #review_food_page QProgressBar::chunk {
-  background-color: #FFA55A; /* Màu của phần tiến trình */
+  background-color: #FFA55A;
 }
 
 #review_food_page QProgressBar {
@@ -401,7 +418,7 @@
   margin: 0px 0px 0px 0px;
 }
 
-#review_food_page #reviews_scrollArea QScrollBar::handle:vertical {
+#review_food_page #reviews_scrollArea  QScrollBar::handle:vertical {
   border: 0;
   background: gray;
   width: 10px;

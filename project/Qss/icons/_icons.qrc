@@ -316,8 +316,23 @@
     <file>icons/feather/zoom-in.png</file>
     <file>icons/feather/zoom-out.png</file>
   </qresource>
-  <qresource prefix="font_awesome">
+  <qresource prefix="MealMatch">
+    <file>Icons/MealMatch/Account-amico 1.png</file>
+    <file>Icons/MealMatch/CreateAcc_Image.png</file>
+    <file>Icons/MealMatch/ic_adjust.png</file>
+    <file>Icons/MealMatch/ic_filter24.png</file>
+    <file>Icons/MealMatch/ic_food.png</file>
+    <file>Icons/MealMatch/ic_food64.png</file>
+    <file>Icons/MealMatch/ic_selectall48.png</file>
+    <file>Icons/MealMatch/ic_star.png</file>
+    <file>Icons/MealMatch/ic_starfull.png</file>
+    <file>Icons/MealMatch/Logo.png</file>
+    <file>Icons/MealMatch/Logo_dark.png</file>
+    <file>Icons/MealMatch/profile_icon.png</file>
+    <file>Icons/MealMatch/profile_logout.png</file>
+    <file>Icons/MealMatch/profile_panel_icon.png</file>
   </qresource>
+  <qresource prefix="font_awesome"/>
   <qresource prefix="material_design">
     <file>icons/material_design/10k.png</file>
     <file>icons/material_design/10mp.png</file>

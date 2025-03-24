@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* MAIN QSS STYLESHEET------------------------------------------ */
 /*
 
@@ -1644,10 +1643,12 @@ PlotWidget {
 #centralwidget {
   border-radius: 20px; }
 
-#header_welcome, #body_welcome, #header_frame {
-  background-color: transparent;
-  background: transparent;
-  border: none; }
+#search_lineEdit {
+  border-radius: 10px;
+  padding-left: 50px; }
+
+#search_button {
+  background: transparent; }
 
 #close_window_button {
   border-radius: 12px; }
@@ -1663,6 +1664,30 @@ PlotWidget {
 #profile_button {
   border-radius: 18px;
   background-color: #008080; }
+
+#burger_menu_button {
+  color: white; }
+
+#profile_page {
+  background-color: white; }
+
+#profile_page QLineEdit {
+  border: 1.5px solid #333;
+  border-radius: 8px;
+  padding-left: 10px; }
+
+#profile_page #profile_delete_button {
+  border-radius: 12px;
+  background-color: #8E9299;
+  color: #33372C; }
+
+#profile_panel {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px; }
+
+#search_lineEdit {
+  border-radius: 10px;
+  padding-left: 10px; }
 
 #add_restaurant_page #main_content {
   margin: 0;
@@ -1911,8 +1936,7 @@ PlotWidget {
   margin-right: 0; }
 
 #review_food_page QProgressBar::chunk {
-  background-color: #FFA55A;
-  /* Màu của phần tiến trình */ }
+  background-color: #FFA55A; }
 
 #review_food_page QProgressBar {
   height: 10px;
