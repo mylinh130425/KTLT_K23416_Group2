@@ -1,10 +1,6 @@
 {
   "QPushButton": [
     {
-      "name": "close_window_button_2",
-      "icon": "Qss/icons/icons/feather/x-circle.png"
-    },
-    {
       "name": "close_window_button",
       "icon": "Qss/icons/icons/feather/x-circle.png"
     },
