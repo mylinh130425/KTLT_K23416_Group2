@@ -1,5 +1,7 @@
 import sys
 
+from PyQt6.QtGui import QPixmap
+
 from src.ext_interface import *
 
 from Custom_Widgets.Widgets import *
@@ -19,6 +21,9 @@ class MainWindow(QMainWindow):
         self.show() 
 
         QAppSettings.updateAppSettings(self)
+
+
+
 
     def changeEvent(self, event):
         """ Prevent the window from maximizing when double-clicking the title bar """

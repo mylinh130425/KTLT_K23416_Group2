@@ -1,8 +1,9 @@
-# from project.src.BurgerMenu import BurgerMenu
+from pathlib import Path
+
+from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QMessageBox, QFrame, QVBoxLayout, QPushButton, QDockWidget, QMainWindow, QListWidgetItem, \
     QListWidget, QWidget
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QColor
 from project.src.DatabaseManager import DatabaseManager
 from project.src.model.ProfileModel import ProfileModel
 from project.src.view.AllMenuItemScreen import AllMenuItemScreen
@@ -34,6 +35,25 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print("Processing signals and slots")
         self.processSignalAndSlot()
         print("Finished setupUi")
+        # Đường dẫn tuyệt đối đến ảnh
+
+        absolute_path_welcome = Path("../project/image/CreateAcc_Image.png").resolve()
+        absolute_path_profile = Path("../project/image/Account-amico 1.png").resolve()
+        # Kiểm tra và load ảnh vào QLabel
+        if absolute_path_welcome.exists():
+            pixmap_welcome = QPixmap(str(absolute_path_welcome)).scaled(
+                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            )
+            self.welcome_photo.setPixmap(pixmap_welcome)
+        else:
+            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_welcome}")
+        if absolute_path_profile.exists():
+            pixmap_profile = QPixmap(str(absolute_path_profile)).scaled(
+                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            )
+            self.label.setPixmap(pixmap_profile)
+        else:
+            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
 
 
     def processSignalAndSlot(self):
