@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
-    <height>557</height>
+    <width>902</width>
+    <height>577</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -2005,6 +2005,9 @@
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_24">
                   <item>
                    <widget class="QWidget" name="widget_10" native="true">
@@ -2208,7 +2211,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>10</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -3563,6 +3566,18 @@
                               <verstretch>0</verstretch>
                              </sizepolicy>
                             </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>MS Shell Dlg 2</family>
@@ -3576,9 +3591,7 @@
                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 243, 228);
-border-color: rgb(255, 134, 47);</string>
+                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                             </property>
                             <property name="text">
                              <string>Add</string>
@@ -3599,6 +3612,18 @@ border-color: rgb(255, 134, 47);</string>
                               <verstretch>0</verstretch>
                              </sizepolicy>
                             </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>MS Shell Dlg 2</family>
@@ -3612,9 +3637,7 @@ border-color: rgb(255, 134, 47);</string>
                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">color: rgb(0, 0, 0);
-border-color: rgb(255, 165, 90);
-background-color: rgb(255, 243, 228);</string>
+                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                             </property>
                             <property name="text">
                              <string>Edit</string>
@@ -3635,6 +3658,18 @@ background-color: rgb(255, 243, 228);</string>
                               <verstretch>0</verstretch>
                              </sizepolicy>
                             </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>70</width>
+                              <height>25</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>MS Shell Dlg 2</family>
@@ -3648,9 +3683,7 @@ background-color: rgb(255, 243, 228);</string>
                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">color: rgb(0, 0, 0);
-border-color: rgb(255, 165, 90);
-background-color: rgb(255, 243, 228);</string>
+                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                             </property>
                             <property name="text">
                              <string>Delete</string>
@@ -3994,8 +4027,8 @@ background-color: rgb(255, 243, 228);</string>
                        </rect>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(41, 110, 126);</string>
+                       <string notr="true">color: #FABC3F;
+background-color: #343131;</string>
                       </property>
                       <property name="text">
                        <string>Add</string>
@@ -4011,7 +4044,7 @@ background-color: rgb(41, 110, 126);</string>
                        </rect>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(41, 110, 126);</string>
+                       <string notr="true">background-color: #343131;</string>
                       </property>
                       <property name="text">
                        <string>TextLabel</string>
@@ -4219,7 +4252,7 @@ background-color: rgb(41, 110, 126);</string>
                        </rect>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(41, 110, 126);</string>
+                       <string notr="true">background-color: #343131;</string>
                       </property>
                       <property name="text">
                        <string>TextLabel</string>
@@ -4235,8 +4268,7 @@ background-color: rgb(41, 110, 126);</string>
                        </rect>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(41, 110, 126);</string>
+                       <string notr="true">background-color: #343131; color: #FABC3F</string>
                       </property>
                       <property name="text">
                        <string>Save</string>
@@ -4252,7 +4284,7 @@ background-color: rgb(41, 110, 126);</string>
                        </rect>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       <string notr="true">background-color: #343131; color: #FABC3F</string>
                       </property>
                       <property name="text">
                        <string>Delete</string>
@@ -4774,6 +4806,9 @@ background-color: rgb(41, 110, 126);</string>
                          <item>
                           <widget class="QWidget" name="food_review_bot" native="true">
                            <layout class="QVBoxLayout" name="verticalLayout_21">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
                             <property name="leftMargin">
                              <number>0</number>
                             </property>
@@ -4782,9 +4817,15 @@ background-color: rgb(41, 110, 126);</string>
                             </property>
                             <item>
                              <widget class="QWidget" name="column_name" native="true">
+                              <property name="styleSheet">
+                               <string notr="true">background: #343131</string>
+                              </property>
                               <layout class="QHBoxLayout" name="horizontalLayout_20">
                                <property name="spacing">
                                 <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>9</number>
                                </property>
                                <item>
                                 <widget class="QLabel" name="label_17">
@@ -4793,6 +4834,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <horstretch>3</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
                                  </property>
                                  <property name="text">
                                   <string>User Name</string>
@@ -4810,6 +4854,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
                                  </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
+                                 </property>
                                  <property name="text">
                                   <string>Rate</string>
                                  </property>
@@ -4822,9 +4869,12 @@ background-color: rgb(41, 110, 126);</string>
                                 <widget class="QLabel" name="label_19">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                   <horstretch>4</horstretch>
+                                   <horstretch>3</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
                                  </property>
                                  <property name="text">
                                   <string>Details</string>
@@ -4842,6 +4892,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
                                  </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
+                                 </property>
                                  <property name="text">
                                   <string>Date</string>
                                  </property>
@@ -4857,6 +4910,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <horstretch>2</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
                                  </property>
                                  <property name="text">
                                   <string>Hygiene</string>
@@ -4874,6 +4930,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
                                  </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
+                                 </property>
                                  <property name="text">
                                   <string>Taste</string>
                                  </property>
@@ -4889,6 +4948,9 @@ background-color: rgb(41, 110, 126);</string>
                                    <horstretch>2</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F</string>
                                  </property>
                                  <property name="text">
                                   <string>Portion</string>
@@ -4936,8 +4998,8 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>692</width>
-                                 <height>166</height>
+                                 <width>701</width>
+                                 <height>177</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -4963,6 +5025,9 @@ background-color: rgb(41, 110, 126);</string>
                                     <width>0</width>
                                     <height>0</height>
                                    </size>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background: #e6e6e6</string>
                                   </property>
                                   <property name="frameShape">
                                    <enum>QFrame::StyledPanel</enum>
