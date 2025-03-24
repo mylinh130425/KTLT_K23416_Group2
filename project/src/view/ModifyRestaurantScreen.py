@@ -1,4 +1,8 @@
 from PyQt6 import QtWidgets
+from PyQt6.QtCore import QUrl
+from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget
+from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest
 
 class ModifyRestaurantScreen(QtWidgets.QWidget):
     def __init__(self, parent=None, isCreating=True, restaurant_id=None):
@@ -7,11 +11,33 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.restaurant_data = None
         self.isCreating = isCreating # True "create" or False "edit"
         self.current_restaurant_id = restaurant_id  # Only used in edit mode
+        # Tạo NetworkAccessManager ngay khi khởi tạo
+        self.image_manager = QNetworkAccessManager()
+        self.image_manager.finished.connect(self.set_image)
+
         if not isCreating:
             self.setup_ui_edit()
         else:
             self.setup_ui_create()
         self.processSignalsSlots()
+
+    def update_restaurant_photo(self, image_url):
+        """Gửi request để tải ảnh từ URL."""
+        request = QNetworkRequest(QUrl(image_url))
+        self.image_manager.get(request)
+        print(request)
+
+    def set_image(self, reply):
+        """Cập nhật QLabel với ảnh từ URL."""
+        data = reply.readAll()
+        pixmap = QPixmap()
+        pixmap.loadFromData(data)
+
+        if not pixmap.isNull():  # Kiểm tra xem ảnh có hợp lệ không
+            self.restaurant_photo_label.setPixmap(pixmap)
+            self.restaurant_photo_label.setFixedSize(pixmap.size())
+        else:
+            self.restaurant_photo_label.setText("Failed to load image")
 
     def setup_ui_create(self):
         pass
@@ -49,19 +75,30 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         if not self.restaurant_data:
             print("Không tìm thấy dữ liệu nhà hàng")
             return
+        # self.setup_Ui()
 
 
     def setup_Ui(self):
-        self.parent.restaurant_info_avatar.setText(self.restaurant_data["name"])
-        self.parent.category_input.setText(", ".join(self.restaurant_data["category"]))
+        # self.parent.restaurant_info_avatar.setText(self.restaurant_data["name"])
+        self.parent.restaurant_photo_label.setScaledContents(True)
+        # Tạo NetworkAccessManager để tải ảnh
+        self.image_manager = QNetworkAccessManager()
+        self.image_manager.finished.connect(self.set_image)
+        # Gọi hàm cập nhật ảnh với URL mong muốn
+        self.update_restaurant_photo(self.restaurant_data["featured_image"])
+        self.parent.form_res_name.setText(self.restaurant_data["name"])
+
+        self.parent.form_category.setText(", ".join(self.restaurant_data["category"]))
 
         address = self.restaurant_data["detailed_address"]
-        address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
-        self.parent.address_input.setText(address_str)
+        # address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
+        self.parent.form_country.setText("Viet Nam")
+        self.parent.form_city.setText(self.restaurant_data["address"]["city"])
 
-        self.parent.phone_input.setText(self.restaurant_data["phone"])
+        self.parent.form_area.setText(self.restaurant_data["address"]["state"])
         self.parent.website_input.setText(self.restaurant_data["website"])
         self.parent.about_input.setText("\n".join(self.restaurant_data["about"]))
+
 
 
     def processSignalsSlots(self):
@@ -112,7 +149,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
     # === DATA GATHERING FROM USER INPUT ===
 
-    def get_restaurant_data(self):
+    def get_restaurant_data_input(self):
         data = {
             "name": self.name_lineEdit.text().strip(),
             "category": self.category_comboBox.currentText(),

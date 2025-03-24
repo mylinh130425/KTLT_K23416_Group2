@@ -2500,7 +2500,7 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QLineEdit" name="form_catagory">
+                                <widget class="QLineEdit" name="form_category">
                                  <property name="text">
                                   <string/>
                                  </property>

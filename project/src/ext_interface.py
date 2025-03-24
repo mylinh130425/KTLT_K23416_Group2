@@ -5,7 +5,6 @@ from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QColor
 from project.src.DatabaseManager import DatabaseManager
 from project.src.model.ProfileModel import ProfileModel
-from project.src.ui_profile_page import Ui_Profile
 from project.src.view.AllMenuItemScreen import AllMenuItemScreen
 from project.src.view.RestaurantMenuScreen import RestaurantMenuScreen
 from project.src.view.RestaurantScreen import RestaurantScreen
@@ -22,8 +21,9 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.fullname = None
         self.profile = None
 
-        print("Setting up pages")
-        self.setup_pages()
+        # print("Setting up pages")
+        #only needed when pages load too slowly
+        # self.setup_pages()
 
         print("Setting current widget to Login_SignUp")
         self.stackedWidget.setCurrentWidget(self.Login_SignUp)
