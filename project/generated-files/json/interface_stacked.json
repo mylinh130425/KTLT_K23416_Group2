@@ -25,6 +25,18 @@
       "icon": "C:\\Users\\USER\\.designer\\image\\profile_logout.png"
     },
     {
+      "name": "restaurant_info_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_info.png"
+    },
+    {
+      "name": "restaurant_menu_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_menu.png"
+    },
+    {
+      "name": "restaurant_review_button",
+      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_review.png"
+    },
+    {
       "name": "pushButton_4",
       "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_filter24.png"
     }

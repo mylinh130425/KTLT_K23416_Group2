@@ -11,7 +11,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
             self.setup_ui_edit()
         else:
             self.setup_ui_create()
-        # self.setup_signals()
+        self.processSignalsSlots()
 
     def setup_ui_create(self):
         pass
@@ -64,8 +64,11 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.about_input.setText("\n".join(self.restaurant_data["about"]))
 
 
-    # def setup_signals(self):
-    #     self.create_button.clicked.connect(self.handle_submit)
+    def processSignalsSlots(self):
+
+        self.parent.restaurant_info_button.clicked.connect(self.goInfo)
+        self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
+        self.parent.restaurant_review_button.clicked.connect(self.goReview)
 
     # === MODE SELECTORS ===
     def create_mode(self):
@@ -163,3 +166,10 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
     #         "instagram": self.instagram_link,
     #         "tiktok": self.tiktok_link
     #     }
+
+    def goInfo(self):
+        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
+    def goMenu(self):
+        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.menu_page)
+    def goReview(self):
+        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.review_restaurant_page)
