@@ -16,6 +16,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         super().setupUi(MainWindow)
         self.width = MainWindow.width()
         self.height = MainWindow.height()
+        self.setFixedSize(self.width,self.height)
         self.db_manager = DatabaseManager()
         self.username = None
         self.fullname = None
@@ -33,6 +34,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print("Processing signals and slots")
         self.processSignalAndSlot()
         print("Finished setupUi")
+
 
     def processSignalAndSlot(self):
         self.login_button.clicked.connect(self.login)

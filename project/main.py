@@ -3,6 +3,10 @@
 ########################################################################
 import os
 import sys
+
+from PyQt6.QtGui import QResizeEvent
+from PyQt6.QtWidgets import QLayout
+
 ########################################################################
 # IMPORT GUI FILE
 from src.ext_interface import *
@@ -38,6 +42,11 @@ class MainWindow(QMainWindow):
             "json-styles/login_style.json"
             })
 
+        #code for preventing resize
+        # self.setWindowFlags(Qt.WindowType.CustomizeWindowHint | Qt.WindowType.WindowTitleHint)
+
+
+
         ########################################################################
 
         #######################################################################
@@ -54,6 +63,14 @@ class MainWindow(QMainWindow):
         # self = QMainWindow class
         QAppSettings.updateAppSettings(self)
 
+#code for preventing resize
+    # def changeEvent(self, event):
+    #     """ Prevent the window from maximizing when double-clicking the title bar """
+    #     if event.type() == event.Type.WindowStateChange:
+    #         if self.windowState() == Qt.WindowState.WindowMaximized:
+    #             self.showNormal()  # Restore the window to its normal size
+    #     super().changeEvent(event)
+
 ########################################################################
 ## EXECUTE APP
 ########################################################################
@@ -63,6 +80,7 @@ if __name__ == "__main__":
     ## 
     ########################################################################
     window = MainWindow()
+    # window.layout().setSizeConstraint(QLayout.setFixedSize)
     window.show()
     sys.excepthook = lambda exctype, value, traceback: print(exctype, value)
     sys.exit(app.exec_())
