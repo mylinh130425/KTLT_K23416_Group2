@@ -1,82 +1,90 @@
 from datetime import datetime
-
 from bson import ObjectId
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 
+# Giả sử UserModel đã được định nghĩa
 from project.src.model.UserModel import UserModel
-
 
 class DatabaseManager:
     def __init__(self, uri="mongodb://localhost:27017", db_name="MealMatch"):
         """
         Initialize a DatabaseManager object.
-
-        :param uri: The MongoDB URI for establishing the connection.
-                    Defaults to "mongodb://localhost:27017".
-        :param db_name: The name of the MongoDB database to connect to.
-                        Defaults to "MealMatch".
-
-        :type uri: str
-        :type db_name: str
         """
-        self.client = MongoClient(uri)
-        self.db = self.client[db_name]
-        self.users = self.db["Users"]
-        # Đảm bảo username và email là duy nhất
-        self.users.create_index("username", unique=True)
-        self.users.create_index("email", unique=True)
-
+        try:
+            self.client = MongoClient(uri)
+            self.db = self.client[db_name]
+            self.users = self.db["Users"]
+            self.users.create_index("username", unique=True)
+            self.users.create_index("email", unique=True)
+            # Thêm log để kiểm tra cơ sở dữ liệu và collection
+            print(f"DatabaseManager: Available databases: {self.client.list_database_names()}")
+            print(f"DatabaseManager: Available collections in {db_name}: {self.db.list_collection_names()}")
+            print("DatabaseManager: Connected to MongoDB successfully.")
+        except Exception as e:
+            print(f"DatabaseManager: Failed to connect to MongoDB: {e}")
+            self.db = None
 
     def get_restaurants(self, offset=0, limit=15):
-        """Fetch a batch of restaurants with pagination."""
-        collection = self.db["Restaurants"]
-        restaurant_data = collection.find({}).skip(offset).limit(limit)
-        restaurants = []
+        if self.db is None:
+            print("DatabaseManager: Cannot fetch restaurants - MongoDB connection failed.")
+            return []
 
-        for data in restaurant_data:
-            # Extract open hours safely
-            hours_data = data.get("hours", [])
-            open_hours = self.format_hours(hours_data)
-            about_data = data.get("about",[])
-            accessibility_texts = self.format_accessibility(about_data)
-            restaurant = {
-                "_id":data.get("_id",""),
-                "featured_image": data.get("featured_image"),
-                "name": data.get("name", ""),
-                "rating": data.get("rating", 0),
-                "open_hours": open_hours,
-                "category": "\n".join(data.get("categories", "")),
-                "address": data.get("address", ""),
-                "hotline": data.get("phone", ""),
-                "accessibility": "\n".join(accessibility_texts),
-            }
-            restaurants.append(restaurant)
+        try:
+            collection = self.db["Restaurants"]
+            restaurant_data = collection.find({}).skip(offset).limit(limit)
+            restaurants = []
 
-        return restaurants
+            for data in restaurant_data:
+                hours_data = data.get("workday_timing", "N/A")
+                if hours_data == "N/A" and "hours" in data:
+                    hours_data = self.format_hours(data.get("hours", []))
+                about_data = data.get("about", [])
+                accessibility_texts = self.format_accessibility(about_data)
+                restaurant = {
+                    "_id": str(data.get("_id", "")),  # Chuyển ObjectId thành chuỗi
+                    "featured_image": data.get("featured_image"),
+                    "name": data.get("name", ""),
+                    "rating": data.get("rating", 0),
+                    "open_hours": hours_data,
+                    "category": "\n".join(data.get("categories", [])),
+                    "address": data.get("address", ""),
+                    "hotline": data.get("phone", ""),
+                    "accessibility": "\n".join(accessibility_texts),
+                }
+                restaurants.append(restaurant)
 
+            print(f"DatabaseManager: Retrieved {len(restaurants)} restaurants")
+            return restaurants
+        except Exception as e:
+            print(f"DatabaseManager: Error in get_restaurants: {e}")
+            return []
 
     def get_menu_by_place_id(self, place_id, offset=0, limit=15):
-        """
-        Trả về danh sách món ăn của nhà hàng dựa trên place_id với các trường cụ thể.
-        Args:
-            place_id: ObjectId của nhà hàng (trong Restaurant Collection).
-            offset: Vị trí bắt đầu của phân trang.
-            limit: Số lượng món ăn tối đa (None để lấy tất cả).
-        Returns:
-            list: Danh sách món ăn.
-        """
-        print(f"DB received place_id:{place_id}")
+        print(f"DB received place_id: {place_id}")
         if self.db is None:
             print("DatabaseManager: Cannot fetch menu - MongoDB connection failed.")
             return []
 
         try:
             menu_collection = self.db["Menu"]
-            menu_data = menu_collection.find_one({"place_id": ObjectId(place_id)})
+            print(f"Type of place_id: {type(place_id)}")
+            print(f"Total documents in Menu collection: {menu_collection.count_documents({})}")
+
+            # Chuyển place_id từ chuỗi sang ObjectId
+            place_id_obj = ObjectId(place_id)
+            print(f"Converted place_id to ObjectId: {place_id_obj}")
+
+            # Tìm tài liệu có place_id khớp với _id của nhà hàng
+            menu_data = menu_collection.find_one({"place_id": place_id_obj})
+            print(f"Raw menu data: {menu_data}")
 
             if not menu_data:
-                print(f"DatabaseManager: No menu found for place_id {ObjectId(place_id)}.")
+                print(f"DatabaseManager: No menu found for place_id {place_id}.")
+                all_menus = menu_collection.find({"place_id": place_id_obj})
+                print(f"Debug: All documents with place_id {place_id}: {list(all_menus)}")
+                all_place_ids = menu_collection.distinct("place_id")
+                print(f"All place_ids in Menu collection: {all_place_ids}")
                 return []
 
             menu_items = menu_data.get("menu", [])
@@ -84,7 +92,6 @@ class DatabaseManager:
                 print(f"DatabaseManager: No menu items found for place_id {place_id}.")
                 return []
 
-            # Áp dụng phân trang trên mảng menu_items
             if limit is not None:
                 menu_items = menu_items[offset:offset + limit]
             else:
@@ -95,28 +102,20 @@ class DatabaseManager:
                 menu_entry = {
                     "_id": item.get("product_id", "N/A"),
                     "Item": item.get("name", "N/A"),
-                    "featured_image": item.get("feature_img", ""),  # Sửa thành feature_img (theo dữ liệu JSON)
+                    "featured_image": item.get("feature_img", ""),
                     "Rate": item.get("rating", 0.0),
-                    "Price": item.get("pricing", [{}])[0].get("price", 0),  # Chỉ lấy giá đầu tiên
+                    "Price": item.get("pricing", [{}])[0].get("price", 0),
                     "Description": item.get("description", "N/A"),
                     "Review": [review.get("review_text", "") for review in item.get("item_review", [])]
                 }
                 menu_list.append(menu_entry)
-            print(len(menu_list)," items returned from db")
+            print(f"{len(menu_list)} items returned from db")
             return menu_list
         except Exception as e:
             print(f"DatabaseManager: Error in get_menu_by_place_id: {e}")
             return []
 
-    def get_all_menus(self, offset=0, limit=15): #Phần thêm mới
-        """
-        Lấy toàn bộ menu từ tất cả nhà hàng.
-        Args:
-            offset: Vị trí bắt đầu.
-            limit: Số lượng món ăn tối đa (None để lấy tất cả).
-        Returns:
-            list: Danh sách tất cả món ăn.
-        """
+    def get_all_menus(self, offset=0, limit=15):
         if self.db is None:
             print("DatabaseManager: Cannot fetch menus - MongoDB connection failed.")
             return []
@@ -136,7 +135,6 @@ class DatabaseManager:
                 print("DatabaseManager: No menu items found from all restaurants.")
                 return []
 
-            # Áp dụng phân trang
             if limit is not None:
                 all_menus = all_menus[offset:offset + limit]
             else:
@@ -161,47 +159,35 @@ class DatabaseManager:
             print(f"DatabaseManager: Error in get_all_menus: {e}")
             return []
 
-    """version 2"""
-
     def format_hours(self, hours_list):
-        """Convert list of opening hours into a readable string,
-           grouping consecutive days with the same hours together."""
         if not isinstance(hours_list, list) or not hours_list:
             return "No Data"
 
-        # Step 1: Extract (day, hours) tuples
         day_hours = []
         for day in hours_list:
             if "day" in day and "times" in day:
                 times = day["times"]
                 if isinstance(times, list) and times:
-                    times = times[0]  # Take the first element if it's a list
+                    times = times[0]
+                times = times.replace("\u202f", " ").strip()
+                day_hours.append((day['day'][:3], times))
 
-                times = times.replace("\u202f", " ").strip()  # Clean time formatting
-                day_hours.append((day['day'][:3], times))  # Store short day name and hours
-
-        # Step 2: Group consecutive days with the same hours
         grouped_hours = []
-        temp_group = [day_hours[0][0]]  # Start with the first day
-        prev_hours = day_hours[0][1]  # Previous time range
+        temp_group = [day_hours[0][0]]
+        prev_hours = day_hours[0][1]
 
         for i in range(1, len(day_hours)):
             current_day, current_hours = day_hours[i]
-
             if current_hours == prev_hours:
-                temp_group.append(current_day)  # Continue grouping
+                temp_group.append(current_day)
             else:
-                # Save the previous group before resetting
                 if len(temp_group) > 1:
                     grouped_hours.append(f"{temp_group[0]}-{temp_group[-1]}: {prev_hours}")
                 else:
                     grouped_hours.append(f"{temp_group[0]}: {prev_hours}")
-
-                # Start a new group
                 temp_group = [current_day]
                 prev_hours = current_hours
 
-        # Step 3: Add the last remaining group
         if len(temp_group) > 1:
             grouped_hours.append(f"{temp_group[0]}-{temp_group[-1]}: {prev_hours}")
         else:
@@ -209,88 +195,49 @@ class DatabaseManager:
 
         return " | ".join(grouped_hours)
 
-        # Database connection
     def format_accessibility(self, about_list):
-        """
-        :param about_list:
-        :return:
-        """
         accessibility_texts = []
-        # if "about" in restaurant:
         for about_item in about_list:
-            # if "options" in about_item:
-            if about_item["id"] == "payments" or about_item["id"]=="parking":
+            if about_item["id"] in ["payments", "parking"]:
                 for option in about_item["options"]:
                     accessibility_texts.append(option["name"])
-        # Cập nhật giá trị mới cho accessibility
         return accessibility_texts
 
     def register_user(self, username: str, fullname: str, password: str) -> bool:
-        """Đăng ký người dùng mới"""
         user = UserModel(username, fullname, password)
-
         try:
             self.users.insert_one(user.to_dict())
-            print(f"✅ User {fullname} signed up successfully!")
+            print(f"User {fullname} signed up successfully!")
             return True
         except DuplicateKeyError:
-            print(f"⚠️ Error: Username or email existed in the database!")
+            print("Error: Username or email existed in the database!")
             return False
 
     def login_user(self, username: str, password: str) -> bool:
-        """Xác thực đăng nhập người dùng"""
         user_data = self.users.find_one({"username": username})
-
         if user_data:
             user = UserModel(user_data["username"], user_data["fullName"], user_data["passwordHash"], is_hashed=True)
             if user.verify_password(password):
-                print("✅ Successfully logged in!")
+                print("Successfully logged in!")
                 return True
             else:
-                print("❌ Wrong password!")
+                print("Wrong password!")
                 return False
         else:
-            print("❌ User Not Found!")
+            print("User Not Found!")
             return False
-
 
     def logout_user(self, username: str) -> bool:
-        """Xử lý đăng xuất người dùng"""
         user_data = self.users.find_one({"username": username})
-
         if user_data:
-            self.users.update_one({"username": username}, {"$set": {"lastLogin":datetime.now()}})
-            print("✅ Successfully logged out!")
+            self.users.update_one({"username": username}, {"$set": {"lastLogin": datetime.now()}})
+            print("Successfully logged out!")
             return True
         else:
-            print("❌ User Not Found!")
+            print("User Not Found!")
             return False
 
-    def close_connection(self): #Phần thêm mới
-        """Đóng kết nối MongoDB."""
+    def close_connection(self):
         if self.client:
             self.client.close()
             print("DatabaseManager: MongoDB connection closed.")
-
-if __name__ == "__main__":
-    """ testing db connection and functionality """
-    db_manager = DatabaseManager()
-
-    # Set pagination parameters
-    offset = 0  # Track loaded data position
-    limit = 8  # Load 8 restaurants per batch
-
-    # Fetch restaurants and print the first one to test
-    restaurants = db_manager.get_restaurants(offset, limit)
-
-    if restaurants:
-        print(restaurants[0])  # Print first restaurant for debugging
-    else:
-        print("No restaurants found!")
-    # Test get_menu_by_place_id
-    place_id = "67acf97c194023cfe5152311"  # Thay bằng _id của nhà hàng
-    menu_items = db_manager.get_menu_by_place_id(place_id, offset=0, limit=15)
-    if menu_items:
-        print("Menu items:", menu_items)
-    else:
-        print("No menu items found!")
