@@ -6,12 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>918</width>
-    <height>497</height>
+    <width>1100</width>
+    <height>525</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>525</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1100</width>
+    <height>525</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">background:transparent</string>
@@ -60,7 +81,7 @@
           <cursorShape>BusyCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:rgba(240,255,255,10%);</string>
+          <string notr="true">background-color:rgba(240,255,255,100%);</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_11">
           <property name="spacing">
@@ -90,41 +111,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="close_window_button_2">
-            <property name="minimumSize">
-             <size>
-              <width>24</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>24</width>
-              <height>24</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="../Qss/icons/_icons.qrc">
-              <normaloff>:/feather/icons/feather/x-circle.png</normaloff>:/feather/icons/feather/x-circle.png</iconset>
-            </property>
-            <property name="shortcut">
-             <string>Ctrl+S</string>
-            </property>
-           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="restoreBtn">
@@ -164,7 +150,7 @@
             </property>
             <property name="icon">
              <iconset resource="../Qss/icons/_icons.qrc">
-              <normaloff>:/feather/icons/feather/x-circle.png</normaloff>:/feather/icons/feather/x-circle.png</iconset>
+              <normaloff>:/feather/icons/feather/x.png</normaloff>:/feather/icons/feather/x.png</iconset>
             </property>
             <property name="shortcut">
              <string>Ctrl+S</string>
@@ -1574,7 +1560,7 @@
               <enum>Qt::LeftToRight</enum>
              </property>
              <property name="currentIndex">
-              <number>3</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -2035,6 +2021,18 @@
                   </item>
                   <item>
                    <widget class="QLabel" name="label">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>500</width>
+                      <height>500</height>
+                     </size>
+                    </property>
                     <property name="text">
                      <string/>
                     </property>
@@ -2867,8 +2865,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>742</width>
-                              <height>679</height>
+                              <width>431</width>
+                              <height>717</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -5085,8 +5083,8 @@ background-color: rgb(41, 110, 126);</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>583</width>
-                                 <height>272</height>
+                                 <width>588</width>
+                                 <height>291</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">

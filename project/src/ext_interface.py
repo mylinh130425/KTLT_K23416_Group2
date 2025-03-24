@@ -1,4 +1,6 @@
 # from project.src.BurgerMenu import BurgerMenu
+from pathlib import Path
+
 from PyQt6.QtWidgets import QMessageBox, QFrame, QVBoxLayout, QPushButton, QDockWidget, QMainWindow, QListWidgetItem, \
     QListWidget, QWidget
 from PyQt6.QtCore import Qt, QSize
@@ -33,6 +35,38 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print("Processing signals and slots")
         self.processSignalAndSlot()
         print("Finished setupUi")
+
+        # Đường dẫn tương đối đến ảnh
+        relative_path_welcome = "../project/image/CreateAcc_Image.png"
+
+        # Chuyển sang đường dẫn tuyệt đối
+        absolute_path_welcome = Path(relative_path_welcome).resolve()
+
+        # Đặt ảnh vào QLabel với đường dẫn tuyệt đối
+        self.welcome_photo.setStyleSheet(
+            f"QLabel {{ border-image: url({absolute_path_welcome.as_posix()}) 0 0 0 0 stretch stretch; }}"
+        )
+
+        """Load được nhưng đường dẫn tuyệt đối"""
+        # self.welcome_photo.setStyleSheet(
+        #     "QLabel { border-image: url(D:/Studying_Coding/s205_KTLT/R/KTLT_K23416_Group2/project/image/CreateAcc_Image.png) 0 0 0 0 stretch stretch; }")
+
+        # Đường dẫn tương đối đến ảnh
+        relative_path_profile = "../project/image/Account-amico 1.png"
+
+        # Chuyển sang đường dẫn tuyệt đối
+        absolute_path_profile = Path(relative_path_profile).resolve()
+
+        # Đặt ảnh vào QLabel với đường dẫn tuyệt đối
+        self.label.setStyleSheet(
+            f"QLabel {{ border-image: url({absolute_path_profile.as_posix()}) 0 0 0 0 round round; }}"
+        )
+        print(absolute_path_profile.as_posix())
+
+        # self.label.setPixmap(QtGui.QPixmap("D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\generated-files/ui\\../image/Account-amico 1.png"))
+
+
+
 
     def processSignalAndSlot(self):
         self.login_button.clicked.connect(self.login)
