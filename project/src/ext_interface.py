@@ -146,7 +146,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
 
     def setup_restaurant(self):
-        self.restaurant_page = RestaurantScreen(self)
+        self.restaurant_page = RestaurantScreen(parent=self)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_menuburger(self):
@@ -230,17 +230,18 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         menu_layout.addWidget(self.menu_list)
         self.menu_frame.setLayout(menu_layout)
         self.menu_dock.setWidget(self.menu_frame)
+        # Position the menu at the right side
         self.menu_dock.move(self.width - self.menu_frame.width(), self.header_frame.height())
 
     def goMenu(self):
+        self.all_menu_page = AllMenuItemScreen(parent=self)
+        self.body_stackedWidget.addWidget(self.all_menu_page)
+
         self.menu_dock.setVisible(False)
-        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
-        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
-        print(f"all_menu_page type in goMenu: {type(self.body_stackedWidget.all_menu_page)}")
-        # Position the menu at the right side
-        self.menu_dock.move(self.width - self.menu_frame.width(),
-                            # self.burger_menu_button.height() +
-                            self.header_frame.height())
+        self.body_stackedWidget.setCurrentWidget(self.all_menu_page)
+        # self.setCurrentWidget(self.all_menu_page)
+        # print(f"all_menu_page type in goMenu: {type(self.all_menu_page)}")
+
 
     def resizeEvent(self, event):
         # Position the menu at the right side
@@ -349,17 +350,17 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.menu_dock.setVisible(False)
         self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
 
-        if not isinstance(self.body_stackedWidget.menu_page, RestaurantMenuScreen):
-            print("Error: menu_page is not an instance of RestaurantMenuScreen")
-            print(f"menu_page type: {type(self.body_stackedWidget.menu_page)}")
-            self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
-            self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.menu_page)
+        # if not isinstance(self.menu_page, RestaurantMenuScreen):
+        print("Error: menu_page is not an instance of RestaurantMenuScreen")
+        print(f"menu_page type: {type(self.menu_page)}")
+        self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
+        self.restaurant_stackedWidget.addWidget(self.menu_page)
 
         print(f"Calling update_place_id with place_id: {place_id}")
-        self.body_stackedWidget.menu_page.update_place_id(place_id)
-        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.menu_page)
+        self.menu_page.update_place_id(place_id)
+        self.restaurant_stackedWidget.setCurrentWidget(self.menu_page)
         # Thêm log để kiểm tra giao diện
-        print(f"menu_page visible: {self.body_stackedWidget.menu_page.isVisible()}")
+        print(f"menu_page visible: {self.menu_page.isVisible()}")
         print(f"restaurant_stackedWidget current widget: {self.restaurant_stackedWidget.currentWidget()}")
 
     def setup_pages(self):
@@ -372,13 +373,13 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
         self.body_stackedWidget.addWidget(self.inside_restaurant_page)
 
-        self.restaurant_page = RestaurantScreen(self)
-        self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
-        self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
+        self.restaurant_page = RestaurantScreen(parent=self)
+        self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
+        # self.all_menu_page = AllMenuItemScreen(parent=self) only setup before switching to screen
 
         self.restaurant_stackedWidget.addWidget(self.restaurant_page)
-        self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.menu_page)
-        self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
+        self.restaurant_stackedWidget.addWidget(self.menu_page)
+        # self.body_stackedWidget.addWidget(self.all_menu_page)
 
-        print(f"menu_page type after setup: {type(self.body_stackedWidget.menu_page)}")
-        print(f"all_menu_page type after setup: {type(self.body_stackedWidget.all_menu_page)}")
+        print(f"menu_page type after setup: {type(self.menu_page)}")
+        print(f"all_menu_page type after setup: {type(self.all_menu_page)}")
