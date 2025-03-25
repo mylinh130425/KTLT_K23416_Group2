@@ -33,7 +33,7 @@
       "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_review.png"
     },
     {
-      "name": "menupage_filtter_button",
+      "name": "menupage_filter_button",
       "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_filter24.png"
     }
   ],
@@ -99,6 +99,42 @@
       "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
     },
     {
+      "name": "lb_anh_12",
+      "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
+    },
+    {
+      "name": "label_360",
+      "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
+    },
+    {
+      "name": "food_photo_label_5",
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
+    },
+    {
+      "name": "food_image_2",
+      "pixmap": "Qss/icons/icons/material_design/fastfood.png"
+    },
+    {
+      "name": "big_star_6",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_7",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_8",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_9",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
+      "name": "big_star_10",
+      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+    },
+    {
       "name": "lb_anh_7",
       "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
     },
@@ -107,7 +143,7 @@
       "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
     },
     {
-      "name": "label_343",
+      "name": "food_photo_label",
       "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
@@ -147,176 +183,28 @@
       "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
     },
     {
-      "name": "label_24",
-      "pixmap": "Qss/icons/icons/feather/filter.png"
+      "name": "food_photo_label_4",
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
-      "name": "review_avatar_1",
-      "pixmap": "Qss/icons/icons/material_design/person.png"
+      "name": "lb_anh_11",
+      "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
     },
     {
-      "name": "rate_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+      "name": "label_359",
+      "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
     },
     {
-      "name": "rate_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+      "name": "food_photo_label_3",
+      "pixmap": "C:\\Users\\USER\\.designer\\image\\ic_food64.png"
     },
     {
-      "name": "rate_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+      "name": "label_353",
+      "pixmap": "C:\\Users\\USER\\.designer\\134224_add_plus_new_icon.png"
     },
     {
-      "name": "rate_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_1_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_2_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_3_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_4_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_5_1",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "review_avatar_2",
-      "pixmap": "Qss/icons/icons/material_design/person.png"
-    },
-    {
-      "name": "rate_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "rate_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "hygiene_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "taste_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_1_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_2_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_3_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_4_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
-    },
-    {
-      "name": "portion_star_5_2",
-      "pixmap": "Qss/icons/icons/font_awesome/solid/star.png"
+      "name": "lb_anh_10",
+      "pixmap": "C:\\Users\\USER\\.designer\\ic_food.png"
     }
   ]
 }

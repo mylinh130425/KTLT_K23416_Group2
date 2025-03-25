@@ -240,4 +240,5 @@ class RestaurantScreen(QWidget):
         place_id = self.tableWidget.item(row, 0).text()  # Lấy place_id từ cột "_id"
         print(f"RestaurantScreen: Double-clicked on place_id: {place_id}")
         if self.parent:
+            print("double clicked restaurant on restaurant screen ", self.parent.objectName())
             self.parent.show_menu_for_restaurant(place_id)

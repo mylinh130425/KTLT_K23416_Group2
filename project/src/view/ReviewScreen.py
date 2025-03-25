@@ -1,7 +1,6 @@
-import requests
 from PyQt6 import QtCore, QtWidgets
-from PyQt6.QtCore import Qt, QByteArray, QRectF
-from PyQt6.QtGui import QIcon, QPixmap, QPainter, QPainterPath
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout
 from project.src.delegate.MenuDelegate import MenuDelegate
 from project.src.model.MenuModel import MenuModel
@@ -28,96 +27,9 @@ class RestaurantMenuScreen(QWidget):
             self.updateUi()
 
     def updateUi(self):
-        # Debug: Check if the parent and restaurant_photo_label exist
-        print(f"Parent exists: {self.parent is not None}")
-        print(f"Restaurant photo label exists: {hasattr(self.parent, 'restaurant_photo_label')}")
-        if hasattr(self.parent, 'restaurant_photo_label'):
-            print(f"Restaurant photo label visible: {self.parent.restaurant_photo_label.isVisible()}")
-            print(f"Restaurant photo label size before: {self.parent.restaurant_photo_label.size()}")
-
-        # Set the restaurant name
         self.parent.restaurant_name_label.setText(self.restaurant_data["name"])
         self.parent.restaurant_name_label.setWordWrap(True)
-
-        # Load and set the restaurant's featured image into self.parent.restaurant_photo_label
-        featured_image_url = self.restaurant_data.get("featured_image")  # Adjust the key based on your database schema
-        print(f"Featured image URL: {featured_image_url}")  # Debug: Check the image URL
-
-        if featured_image_url:
-            if featured_image_url.startswith("http"):  # Check if it's a URL
-                try:
-                    response = requests.get(featured_image_url)
-                    if response.status_code == 200:
-                        image_data = QByteArray(response.content)
-                        pixmap = QPixmap()
-                        pixmap.loadFromData(image_data)
-                        print(f"Image loaded from URL: {not pixmap.isNull()}")  # Debug: Check if the image loaded
-                    else:
-                        print(f"Failed to download image from URL: {featured_image_url}")
-                        pixmap = QPixmap()  # Create an empty pixmap if download fails
-                except Exception as e:
-                    print(f"Error loading image from URL: {e}")
-                    pixmap = QPixmap()  # Create an empty pixmap if an error occurs
-            else:  # Assume it's a local file path
-                pixmap = QPixmap(featured_image_url)
-                print(f"Image loaded from local path: {not pixmap.isNull()}")  # Debug: Check if the image loaded
-
-            if not pixmap.isNull():
-                # Define the desired size for the circular image (e.g., 100x100 pixels)
-                size = 80  # Adjust this to match the desired size of the circular image
-                print(f"Original pixmap size: {pixmap.size()}")  # Debug: Check the original size
-
-                # Scale the image to fill the circular area using KeepAspectRatioByExpanding
-                scaled_pixmap = pixmap.scaled(size, size, Qt.AspectRatioMode.KeepAspectRatioByExpanding,
-                                              Qt.TransformationMode.SmoothTransformation)
-                print(f"Scaled pixmap size: {scaled_pixmap.size()}")  # Debug: Check the scaled size
-
-                # Crop the scaled pixmap to exactly match the desired size (center the crop)
-                width = scaled_pixmap.width()
-                height = scaled_pixmap.height()
-                x = (width - size) // 2
-                y = (height - size) // 2
-                cropped_pixmap = scaled_pixmap.copy(x, y, size, size)
-                print(f"Cropped pixmap size: {cropped_pixmap.size()}")  # Debug: Check the cropped size
-
-                # Create a circular pixmap using QPainterPath for clipping
-                circular_pixmap = QPixmap(size, size)
-                circular_pixmap.fill(Qt.GlobalColor.transparent)  # Transparent background
-                painter = QPainter(circular_pixmap)
-                painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-
-                # Create a circular path for clipping
-                path = QPainterPath()
-                path.addEllipse(QRectF(0, 0, size, size))
-                painter.setClipPath(path)
-
-                # Draw the cropped pixmap
-                painter.drawPixmap(0, 0, cropped_pixmap)
-                painter.end()
-
-                # Debug: Save the circular pixmap to a file to verify the result
-                circular_pixmap.save("debug_circular_image.png", "PNG")
-                print("Saved circular pixmap to 'debug_circular_image.png' for debugging")
-
-                # Clear any existing stylesheet to avoid interference
-                self.parent.restaurant_photo_label.setStyleSheet("")
-
-                # Set the circular pixmap to the QLabel
-                self.parent.restaurant_photo_label.setPixmap(circular_pixmap)
-                self.parent.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-                self.parent.restaurant_photo_label.setFixedSize(size, size)  # Ensure the QLabel is the correct size
-                self.parent.restaurant_photo_label.setVisible(True)  # Ensure the QLabel is visible
-                self.parent.restaurant_photo_label.repaint()  # Force a repaint
-                print(
-                    f"QLabel size after setting pixmap: {self.parent.restaurant_photo_label.size()}")  # Debug: Check QLabel size
-            else:
-                print(f"Failed to load image from path/URL: {featured_image_url}")
-                self.parent.restaurant_photo_label.setText("No image available")
-        else:
-            print("No featured image found in restaurant data")
-            self.parent.restaurant_photo_label.setText("No image available")
-
-        # Replace menupage_tableWidget designed in QtDesigner with MenuDelegate
+        #replace menupage_tableWidget designed in QtDesigner with MenuDelegate
         self.parent.menu_verticalLayout.removeWidget(self.parent.menupage_tableWidget)
         self.parent.menupage_tableWidget = MenuDelegate(self.place_id)
         self.parent.menupage_tableWidget.setObjectName("menupage_tableWidget")
@@ -136,6 +48,9 @@ class RestaurantMenuScreen(QWidget):
         self.parent.menupage_create_button.clicked.connect(self.create_menu)
         self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
         self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
+        # self.parent.restaurant_info_button.clicked.connect(self.goInfo)
+        # self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
+        # self.parent.restaurant_review_button.clicked.connect(self.goReview)
 
     def filter_menu(self):
         pass
