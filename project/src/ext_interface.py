@@ -327,7 +327,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         # if not isinstance(self.menu_page, RestaurantMenuScreen):
         print("Error: menu_page is not an instance of RestaurantMenuScreen")
         print(f"menu_page type: {type(self.menu_page)}")
-        self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
+        self.menu_page = RestaurantMenuScreen(place_id=place_id, parent=self)
         self.restaurant_stackedWidget.addWidget(self.menu_page)
 
         print(f"Calling update_place_id with place_id: {place_id}")

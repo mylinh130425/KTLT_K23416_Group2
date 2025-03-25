@@ -9,13 +9,51 @@ class RestaurantMenuScreen(QWidget):
     IMAGE_SIZE = 80
     ROW_HEIGHT = 130
 
-    def __init__(self, place_id, parent=None):
+    def __init__(self, place_id=None, parent=None):
         super().__init__(parent)
         self.place_id = place_id
         self.parent = parent
         self.menu_model = MenuModel(place_id)
+
+        #get restaurant data for name and featured image
+        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(place_id)
+        print(self.restaurant_data)
         print(f"RestaurantMenuScreen: Place ID used: {self.place_id}")
-        self.setupUi()
+        if self.place_id is None:
+            self.setupUi()
+        else:
+            self.updateUi()
+
+    def updateUi(self):
+        self.parent.restaurant_name_label.setText(self.restaurant_data["name"])
+        self.parent.restaurant_name_label.setWordWrap(True)
+        #replace menupage_tableWidget designed in QtDesigner with MenuDelegate
+        self.parent.menu_verticalLayout.removeWidget(self.parent.menupage_tableWidget)
+        self.parent.menupage_tableWidget = MenuDelegate(self.place_id)
+        self.parent.menupage_tableWidget.setObjectName("menupage_tableWidget")
+        self.tableWidget = self.parent.menupage_tableWidget
+        self.tableWidget.setObjectName("menu")
+        self.parent.menu_verticalLayout.addWidget(self.tableWidget)
+
+        self.tableWidget.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableWidget.verticalScrollBar().valueChanged.connect(self.on_scroll)
+
+        self.tableWidget.itemClicked.connect(self.on_slotDelegate_byrow)
+        self.load_menu_data()
+        #signals and slots
+        self.parent.menupage_filter_button.clicked.connect(self.filter_menu)
+        self.parent.menupage_create_button.clicked.connect(self.create_menu)
+        self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
+        self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
+
+    def filter_menu(self):
+        pass
+    def create_menu(self):
+        pass
+    def edit_menu(self):
+        pass
+    def delete_menu(self):
+        pass
 
     def setupUi(self):
         self.main_layout = QVBoxLayout(self)
@@ -71,8 +109,9 @@ class RestaurantMenuScreen(QWidget):
         self.load_menu_data()
 
     def load_menu_data(self):
+        print("loading menu for restaurant", self.place_id)
         try:
-            if not self.place_id:
+            if self.place_id is None:
                 print("load_menu_data: place_id is None, cannot load menu")
                 self.tableWidget.clearContents()
                 self.tableWidget.setRowCount(1)
