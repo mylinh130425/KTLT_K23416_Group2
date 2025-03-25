@@ -205,8 +205,8 @@ class MenuDelegate(QTableWidget):
         rating_label = QLabel(f"{rating:.1f}")
         rating_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Hàng sao (sử dụng biểu tượng: ⭐, 🌓, ☆)
-        star_row = QLabel("⭐" * full_stars + "🌓" * half_star + "☆" * empty_stars)
+        # Hàng sao
+        star_row = QLabel("★" * full_stars + "⯪" * half_star + "☆" * empty_stars)
         star_row.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         star_layout.addWidget(rating_label)

@@ -43,10 +43,10 @@ class DatabaseManager:
     def add_restaurant_to_db(self, restaurant_data: dict) -> bool:
         try:
             self.restaurants.insert_one(restaurant_data)
-            print(f"✅ Restaurant {restaurant_data['name']} added to DB!")
+            print(f"Restaurant {restaurant_data['name']} added to DB!")
             return True
         except Exception as e:
-            print(f"❌ Error adding restaurant: {e}")
+            print(f"Error adding restaurant: {e}")
             return False
 
     def get_restaurants(self, offset=0, limit=15):
