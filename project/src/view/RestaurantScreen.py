@@ -140,21 +140,10 @@ class RestaurantScreen(QWidget):
 
     def goAddRestaurant(self):
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
-        add_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=True)
+        self.modifyRestaurantScreen = ModifyRestaurantScreen(self.parent, isCreating=True)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.add_restaurant_page)
 
 
-    # def goEditRestaurant(self):
-        # selected_items = self.restaurant_table.selectedItems()
-
-
-        # Lấy ID nhà hàng từ hàng được chọn (giả sử ID nằm ở cột đầu tiên)
-        # selected_row = selected_items[0].row()
-        # restaurant_id = self.restaurant_table.item(selected_row, 0).text()
-        # print(type(self.parent.restaurant_photo_label ))
-        # edit_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False, restaurant_id=restaurant_id)
-        # self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
-        # self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
 
     def setupRestaurantInfo(self):
         modify_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False) #parent: Extend_Mainwindow
@@ -207,6 +196,9 @@ class RestaurantScreen(QWidget):
     def open_menu_screen(self, row, column):
         """Mở trang menu khi double-click vào nhà hàng."""
         # print(f"RestaurantScreen: Double-clicked at row {row}, column {column}")
+        # self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
+        # self.parent.restaurant_stackedWidget.setCurrentWidget((self.parent.add_restaurant_page))
+        # Set current widget to inside_restaurant_paged
         place_id_item = self.restaurant_table.item(row, 0)
         if place_id_item is None:
             restaurant_data = self.restaurant_table.model.get_restaurants()[row]
