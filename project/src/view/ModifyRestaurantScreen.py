@@ -1,12 +1,17 @@
 from PyQt6 import QtWidgets
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget, QFileDialog, QCheckBox, QLineEdit
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest
+
+from project.src.model.RestaurantModel import Restaurant
+from project.src.view.ClickableLabel import ClickableLabel
+
 
 class ModifyRestaurantScreen(QtWidgets.QWidget):
     def __init__(self, parent=None, isCreating=True, restaurant_id=None):
         super().__init__()
+        print("setting up Modify Restaurant Screen")
         self.parent = parent
         self.restaurant_data = None
         self.isCreating = isCreating # True "create" or False "edit"
@@ -20,12 +25,98 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         else:
             self.setup_ui_create()
         self.processSignalsSlots()
+        self.parent.restaurant_form_photo_label = ClickableLabel()
+        self.parent.restaurant_form_photo_label.setText("Restaurant")
+        self.parent.restaurant_form_photo_label.setStyleSheet("border: 1px solid gray; padding: 5px;")
+        self.parent.restaurant_form_photo_label.setFixedSize(200, 200)  # Adjust size as needed
+
+        self.restaurant_new_image_path = ""  # Variable to store the image path
+
+        # Connect click signal to function
+        self.parent.restaurant_form_photo_label.clicked.connect(self.open_file_dialog)
+
+
+        # Weekday order to ensure proper chronological updates
+        self.weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+        # Dictionaries to hold references to widgets
+        self.checkboxes = {}
+        self.opening_hours = {}
+        self.closing_hours = {}
+
+        # Collect existing widgets
+        self.collect_widgets()
+
+        # Update fields based on checkbox selection
+        self.update_weekday_fields()
+
+        # Connect checkboxes to update function
+        for checkbox in self.checkboxes.values():
+            checkbox.stateChanged.connect(self.update_weekday_fields)
+
+        self.parent.create_restaurant_button.clicked.connect(self.add_restaurant)
+
+    def collect_widgets(self):
+        """Find all existing QLineEdit and QCheckBox widgets dynamically."""
+        for day in self.weekdays:
+            # Find QCheckBox
+            checkbox = self.parent.findChild(QCheckBox, f"{day}_checkBox")
+            if checkbox:
+                self.checkboxes[day] = checkbox
+
+            # Find QLineEdit fields
+            lineedit_1 = self.parent.findChild(QLineEdit, f"{day}_1")
+            lineedit_2 = self.parent.findChild(QLineEdit, f"{day}_2")
+
+            if lineedit_1:
+                self.opening_hours[day] = lineedit_1
+            if lineedit_2:
+                self.closing_hours[day] = lineedit_2
+
+    def update_weekday_fields(self):
+        """Update all checked weekdays' QLineEdit fields based on the first non-empty value found."""
+        first_value_1 = None
+        first_value_2 = None
+
+        # Find the first non-empty _1 and _2 values
+        for day in self.weekdays:
+            if self.checkboxes.get(day, None) and self.checkboxes[day].isChecked():
+                if first_value_1 is None and day in self.opening_hours:
+                    first_value_1 = self.opening_hours[day].text()
+                if first_value_2 is None and day in self.closing_hours:
+                    first_value_2 = self.closing_hours[day].text()
+
+        # Apply found values to all checked checkboxes' QLineEdit fields
+        for day in self.weekdays:
+            if self.checkboxes.get(day, None) and self.checkboxes[day].isChecked():
+                if first_value_1 is not None and day in self.opening_hours:
+                    self.opening_hours[day].setText(first_value_1)
+                if first_value_2 is not None and day in self.closing_hours:
+                    self.closing_hours[day].setText(first_value_2)
+
+    def open_file_dialog(self):
+        file_dialog = QFileDialog()
+        file_path, _ = file_dialog.getOpenFileName(
+            None, "Select an Image", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)"
+        )
+
+        if file_path:  # If a file is selected
+            self.restaurant_new_image_path = file_path  # Save the path
+            self.restaurant_form_photo_label.setPixmap(QPixmap(file_path).scaled(
+                self.restaurant_form_photo_label.width(),
+                self.restaurant_form_photo_label.height()
+            ))  # Load image to QLabel instantly
+        print(self.restaurant_new_image_path)
 
     def update_restaurant_photo(self, image_url):
         """Gửi request để tải ảnh từ URL."""
         request = QNetworkRequest(QUrl(image_url))
         self.image_manager.get(request)
+
         print(request)
+
+
+
 
     def set_image(self, reply):
         """Cập nhật QLabel với ảnh từ URL."""
@@ -99,6 +190,30 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.website_input.setText(self.restaurant_data["website"])
         self.parent.about_input.setText("\n".join(self.restaurant_data["about"]))
 
+
+    def add_restaurant(self):
+        print("clicked create res button")
+        self.form_res_name = self.parent.form_res_name
+        self.form_category = self.parent.form_category
+        self.form_country = self.parent.form_country
+        self.form_city  = self.parent.form_city
+
+        self.form_area = self.parent.form_country
+        self.form_address = self.parent.form_address
+        self.form_phone = self.parent.form_phone
+        self.form_mail=self.parent.form_mail
+        self.form_website = self.parent.form_website
+
+        if self.parent.all_days_checkBox.isChecked():
+            self.update_weekday_fields()
+        self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category,
+                                         detailed_address={'ward':self.form_area, 'country':self.form_country, 'city':self.form_city},
+                                         phone=self.form_phone, mail=self.mail, website=self.form_website)
+        try:
+            self.parent.db_manager.add_restaurant_to_db(self.new_restaurant.to_dict())
+            self.parent.db_manager.close_connection()
+        except Exception as e:
+            print(f"Cannot add restaurant due to {e}")
 
 
     def processSignalsSlots(self):
