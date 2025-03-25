@@ -243,28 +243,6 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         # print(f"all_menu_page type in goMenu: {type(self.all_menu_page)}")
 
 
-    def resizeEvent(self, event):
-        # Position the menu at the right side
-        self.menu_dock.move(self.width - self.menu_frame.width(),
-                            # self.burger_menu_button.height() +
-                            self.header_frame.height())
-        new_size: QSize = event.size()  # Lấy kích thước mới
-
-        print(f"Window resized to: {new_size.width()}x{new_size.height()}")
-        super().resizeEvent(event)
-
-    def changeEvent(self, event):
-        print("changeEvent")
-        """ Detects when the window state changes (e.g., maximized) """
-        if event.type() == 99:  # QEvent.WindowStateChange
-            if self.windowState() == Qt.WindowState.WindowMaximized:
-                print("Window maximized!")
-                self.resizeEvent(event)  # Manually trigger resizeEvent
-            elif self.windowState() == Qt.WindowState.WindowNoState:
-                print("Window restored!")
-                self.resizeEvent(event)  # Manually trigger resizeEvent
-        super().changeEvent(event)
-
     def handle_menu_click(self, item, menu_items):
         for name, function in menu_items:
             if item.text() == name:
@@ -281,11 +259,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         button_y = self.burger_menu_button.mapToGlobal(self.burger_menu_button.rect().bottomLeft()).y()
         self.menu_dock.setGeometry(button_x, button_y, 150, 200)
 
-    def resizeEvent(self, event):
-        self.burger_menu_button.move(self.centralwidget.width() - 50, 5)
-        if self.menu_dock.isVisible():
-            self.update_menu_position()
-        super().resizeEvent(event)
+
 
     def goProfile(self):
         self.menu_dock.setVisible(False)
@@ -353,7 +327,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         # if not isinstance(self.menu_page, RestaurantMenuScreen):
         print("Error: menu_page is not an instance of RestaurantMenuScreen")
         print(f"menu_page type: {type(self.menu_page)}")
-        self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
+        self.menu_page = RestaurantMenuScreen(place_id=place_id, parent=self)
         self.restaurant_stackedWidget.addWidget(self.menu_page)
 
         print(f"Calling update_place_id with place_id: {place_id}")

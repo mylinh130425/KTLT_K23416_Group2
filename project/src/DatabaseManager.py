@@ -126,6 +126,7 @@ class DatabaseManager:
                 menu_entry = {
                     "_id": item.get("product_id", "N/A"),
                     "Item": item.get("name", "N/A"),
+                    "category": item.get("category", "N/A"),
                     "featured_image": item.get("feature_img", ""),
                     "Rate": item.get("rating", 0.0),
                     "Price": item.get("pricing", [{}])[0].get("price", 0),
@@ -134,6 +135,7 @@ class DatabaseManager:
                 }
                 menu_list.append(menu_entry)
             print(f"{len(menu_list)} items returned from db")
+            print(menu_list[0])
             return menu_list
         except Exception as e:
             print(f"DatabaseManager: Error in get_menu_by_place_id: {e}")
@@ -172,6 +174,7 @@ class DatabaseManager:
                     "featured_image": item.get("feature_img", ""),
                     "Rate": item.get("rating", 0.0),
                     "Price": item.get("pricing", [{}])[0].get("price", 0),
+                    "category": item.get("category", "N/A"),
                     "Description": item.get("description", "N/A"),
                     "Review": [review.get("review_text", "") for review in item.get("item_review", [])],
                     "restaurant_name": item.get("restaurant_name", "Unknown Restaurant")
