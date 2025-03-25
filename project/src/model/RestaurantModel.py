@@ -47,6 +47,11 @@ class Restaurant:
         self.order_online_links = order_online_links or []  # Online ordering links
         self.featured_reviews = featured_reviews or []  # Featured reviews
         self.detailed_reviews = detailed_reviews or []  # List of detailed reviews
+    def __init__(self, place_id=None):
+        self.db_manager = DatabaseManager()
+        restaurant_data = self.db_manager.get_restaurant_by_place_id(place_id)
+        for key, value in restaurant_data.items():
+            setattr(self, key, value)
 
     def to_dict(self):
         """Convert the object into a dictionary for MongoDB storage."""
