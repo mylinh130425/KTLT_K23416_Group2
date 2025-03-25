@@ -40,11 +40,15 @@ class RestaurantMenuScreen(QWidget):
 
         self.tableWidget.itemClicked.connect(self.on_slotDelegate_byrow)
         self.load_menu_data()
+
         #signals and slots
         self.parent.menupage_filter_button.clicked.connect(self.filter_menu)
         self.parent.menupage_create_button.clicked.connect(self.create_menu)
         self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
         self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
+        self.parent.restaurant_info_button.clicked.connect(self.goInfo)
+        self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
+        self.parent.restaurant_review_button.clicked.connect(self.goReview)
 
     def filter_menu(self):
         pass
@@ -54,6 +58,10 @@ class RestaurantMenuScreen(QWidget):
         pass
     def delete_menu(self):
         pass
+
+    def goInfo(self):
+        self.parent.restaurantinfo_delete_button.clicked.connect(self.delete_restaurant)
+        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
 
     def setupUi(self):
         self.main_layout = QVBoxLayout(self)

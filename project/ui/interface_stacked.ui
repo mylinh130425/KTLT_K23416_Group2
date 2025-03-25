@@ -2348,7 +2348,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2846,6 +2846,9 @@
                              <verstretch>1</verstretch>
                             </sizepolicy>
                            </property>
+                           <property name="styleSheet">
+                            <string notr="true">background-color:#343131;border-top-right-radius:20;border-top-left-radius:20</string>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -2864,9 +2867,12 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>404</width>
-                              <height>679</height>
+                              <width>924</width>
+                              <height>654</height>
                              </rect>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(255, 243, 228);</string>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
                              <property name="spacing">
@@ -2960,6 +2966,9 @@
                                        <number>4</number>
                                       </property>
                                       <property name="topMargin">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="bottomMargin">
                                        <number>0</number>
                                       </property>
                                       <item>
@@ -3178,6 +3187,28 @@
                                       <string notr="true"/>
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_14">
+                                      <property name="topMargin">
+                                       <number>0</number>
+                                      </property>
+                                      <property name="bottomMargin">
+                                       <number>0</number>
+                                      </property>
+                                      <item>
+                                       <spacer name="verticalSpacer_10">
+                                        <property name="orientation">
+                                         <enum>Qt::Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                         <enum>QSizePolicy::Minimum</enum>
+                                        </property>
+                                        <property name="sizeHint" stdset="0">
+                                         <size>
+                                          <width>20</width>
+                                          <height>5</height>
+                                         </size>
+                                        </property>
+                                       </spacer>
+                                      </item>
                                       <item>
                                        <widget class="QLabel" name="label_16">
                                         <property name="text">
@@ -3307,6 +3338,9 @@
                                 <item>
                                  <widget class="QWidget" name="additional_info" native="true">
                                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
                                    <item>
                                     <widget class="QWidget" name="left_additional_info" native="true">
                                      <property name="sizePolicy">
@@ -3322,6 +3356,9 @@
                                       </size>
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_15">
+                                      <property name="bottomMargin">
+                                       <number>0</number>
+                                      </property>
                                       <item>
                                        <widget class="QLabel" name="social_label">
                                         <property name="text">
@@ -3443,26 +3480,51 @@
                                       <item>
                                        <widget class="QWidget" name="del_save_widget" native="true">
                                         <layout class="QHBoxLayout" name="horizontalLayout_17">
-                                         <property name="spacing">
-                                          <number>70</number>
-                                         </property>
-                                         <property name="leftMargin">
-                                          <number>0</number>
-                                         </property>
-                                         <property name="rightMargin">
-                                          <number>0</number>
-                                         </property>
                                          <item>
-                                          <widget class="QPushButton" name="delete_res_pushButton">
+                                          <widget class="QPushButton" name="restaurantinfo_delete_button">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>120</width>
+                                             <height>16777215</height>
+                                            </size>
+                                           </property>
+                                           <property name="styleSheet">
+                                            <string notr="true">color: #FABC3F;background-color: #343131;</string>
+                                           </property>
                                            <property name="text">
                                             <string>Delete Restaurant</string>
                                            </property>
                                           </widget>
                                          </item>
                                          <item>
-                                          <widget class="QPushButton" name="save_pushButton">
+                                          <widget class="QPushButton" name="restaurantinfo_reset_button">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>120</width>
+                                             <height>16777215</height>
+                                            </size>
+                                           </property>
+                                           <property name="styleSheet">
+                                            <string notr="true">color: #FABC3F;background-color: #343131;</string>
+                                           </property>
                                            <property name="text">
-                                            <string>Save</string>
+                                            <string>Reset Form</string>
+                                           </property>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QPushButton" name="restaurantinfo_update_button">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>120</width>
+                                             <height>16777215</height>
+                                            </size>
+                                           </property>
+                                           <property name="styleSheet">
+                                            <string notr="true">color: #FABC3F;background-color: #343131;</string>
+                                           </property>
+                                           <property name="text">
+                                            <string>Update Restaurant</string>
                                            </property>
                                           </widget>
                                          </item>
@@ -3731,7 +3793,7 @@
                              </font>
                             </property>
                             <property name="toolTip">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add a new menu item&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
                              <string notr="true">color: #FABC3F;background-color: #343131;</string>
@@ -3777,7 +3839,7 @@
                              </font>
                             </property>
                             <property name="toolTip">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a menu item to edit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
                              <string notr="true">color: #FABC3F;background-color: #343131;</string>
@@ -3823,7 +3885,7 @@
                              </font>
                             </property>
                             <property name="toolTip">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Select a menu item to delete&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                             <property name="styleSheet">
                              <string notr="true">color: #FABC3F;background-color: #343131;</string>
@@ -3868,8 +3930,7 @@
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">
-background-color: rgb(255, 243, 228);</string>
+                           <string notr="true">background-color: rgb(255, 243, 228);</string>
                           </property>
                           <attribute name="horizontalHeaderDefaultSectionSize">
                            <number>150</number>
