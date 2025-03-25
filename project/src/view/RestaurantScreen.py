@@ -1,5 +1,8 @@
 # from PyQt6.QtGui import QPixmap
+from pathlib import Path
+
 from PyQt6 import QtWidgets, QtGui,QtCore
+from PyQt6.QtGui import QIcon
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
 from project.src.delegate.RestaurantDelegate import RestaurantDelegate
@@ -25,12 +28,25 @@ class RestaurantScreen(QWidget):
 
         # Nút Filter (Góc trái)
         self.filter_pushButton = QPushButton(parent=self.parent.body_stackedWidget)
-        self.filter_pushButton.setText("Filter")
-        filter_icon = QtGui.QIcon(":/images/ic_adjust.png")
-        self.filter_pushButton.setIcon(filter_icon)
-        self.filter_pushButton.setIconSize(QtCore.QSize(15, 15))
         self.filter_pushButton.setObjectName("filter_pushButton")
+        #self.filter_pushButton.setText("Filter")
+        # Show image filter icon
+        absolute_path_respage_filter = Path("../project/image/icon_filter_343131.png").resolve()
+        if absolute_path_respage_filter.exists():
+            icon_filter = QIcon(str(absolute_path_respage_filter))  # Dùng QIcon thay vì QPixmap
+            self.filter_pushButton.setIcon(icon_filter)
+            self.filter_pushButton.setIconSize(
+                self.filter_pushButton.size())  # Đảm bảo icon hiển thị đúng kích thước button
+        else:
+            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_respage_filter}")
+        #filter_icon = QtGui.QIcon(":/images/ic_adjust.png")
+
+        self.filter_pushButton.setIconSize(QtCore.QSize(15, 15))
         buttonLayout.addWidget(self.filter_pushButton)
+
+
+
+
 
         # SpacerItem để đẩy các nút về bên phải
         buttonLayout.addStretch()

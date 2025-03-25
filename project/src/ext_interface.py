@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6.QtWidgets import QMessageBox, QFrame, QVBoxLayout, QPushButton, QDockWidget, QMainWindow, QListWidgetItem, \
     QListWidget, QWidget
 from PyQt6.QtCore import Qt, QSize
@@ -35,25 +35,47 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print("Processing signals and slots")
         self.processSignalAndSlot()
         print("Finished setupUi")
-        # Đường dẫn tuyệt đối đến ảnh
 
+        # Đường dẫn tuyệt đối đến ảnh
         absolute_path_welcome = Path("../project/image/CreateAcc_Image.png").resolve()
         absolute_path_profile = Path("../project/image/Account-amico 1.png").resolve()
-        # Kiểm tra và load ảnh vào QLabel
+        absolute_path_logo = Path("../project/image/Logo.png").resolve()
+        absolute_path_menupage_filter = Path("../project/image/icon_filter_343131.png").resolve()
+
+        print( absolute_path_welcome)
+        print( absolute_path_profile)
+        print( absolute_path_logo)
+        print( absolute_path_menupage_filter)
+
+        ## Kiểm tra và load ảnh vào QLabel
         if absolute_path_welcome.exists():
-            pixmap_welcome = QPixmap(str(absolute_path_welcome)).scaled(
-                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-            )
+            pixmap_welcome = QPixmap(str(absolute_path_welcome))
             self.welcome_photo.setPixmap(pixmap_welcome)
         else:
             print(f"Lỗi: Không tìm thấy ảnh {absolute_path_welcome}")
+
         if absolute_path_profile.exists():
-            pixmap_profile = QPixmap(str(absolute_path_profile)).scaled(
-                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-            )
+            pixmap_profile = QPixmap(str(absolute_path_profile))
             self.label.setPixmap(pixmap_profile)
         else:
             print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
+
+        if absolute_path_logo.exists():
+            icon_logo = QIcon(str(absolute_path_logo))  # Dùng QIcon thay vì QPixmap
+            self.home_button.setIcon(icon_logo)
+            self.home_button.setIconSize(self.home_button.size())  # Đảm bảo icon hiển thị đúng kích thước button
+        else:
+            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_logo}")
+
+        if absolute_path_menupage_filter.exists():
+            icon_filter = QIcon(str(absolute_path_menupage_filter))  # Dùng QIcon thay vì QPixmap
+            self.menupage_filter_button.setIcon(icon_filter)
+            self.menupage_filter_button.setIconSize(self.menupage_filter_button.size())  # Đảm bảo icon hiển thị đúng kích thước button
+        else:
+            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_menupage_filter}")
+
+
+
 
 
     def processSignalAndSlot(self):
@@ -146,7 +168,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
 
     def setup_restaurant(self):
-        self.restaurant_page = RestaurantScreen(self)
+        self.restaurant_page = RestaurantScreen(parent = self)
         self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_menuburger(self):
@@ -372,7 +394,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
         self.body_stackedWidget.addWidget(self.inside_restaurant_page)
 
-        self.restaurant_page = RestaurantScreen(self)
+        self.restaurant_page = RestaurantScreen(parent = self)
         self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
         self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
 

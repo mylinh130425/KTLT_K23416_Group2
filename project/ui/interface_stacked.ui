@@ -72,7 +72,7 @@
           <cursorShape>BusyCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:rgba(240,255,255,30%);</string>
+          <string notr="true">background-color:rgba(240,255,255,100%);</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_11">
           <property name="spacing">
@@ -130,8 +130,8 @@
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../Qss/icons/_icons.qrc">
-              <normaloff>:/feather/icons/feather/x-circle.png</normaloff>:/feather/icons/feather/x-circle.png</iconset>
+             <iconset>
+              <normaloff>../image/icon_close.png</normaloff>../image/icon_close.png</iconset>
             </property>
             <property name="shortcut">
              <string>Ctrl+S</string>
@@ -150,7 +150,7 @@
        <string notr="true">background-color:#FFE5CF</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Login_SignUp">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -258,9 +258,6 @@
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap>../image/CreateAcc_Image.png</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -697,6 +694,9 @@
                         </property>
                         <property name="text">
                          <string>LOG IN</string>
+                        </property>
+                        <property name="shortcut">
+                         <string>Return</string>
                         </property>
                        </widget>
                       </item>
@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>3</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -2020,9 +2020,6 @@
                     <property name="text">
                      <string/>
                     </property>
-                    <property name="pixmap">
-                     <pixmap>../image/Account-amico 1.png</pixmap>
-                    </property>
                     <property name="scaledContents">
                      <bool>true</bool>
                     </property>
@@ -2333,7 +2330,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2849,8 +2846,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>404</width>
-                              <height>679</height>
+                              <width>886</width>
+                              <height>789</height>
                              </rect>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -3642,7 +3639,10 @@
                            <enum>QLayout::SetFixedSize</enum>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="pushButton_4">
+                           <widget class="QPushButton" name="menupage_filter_button">
+                            <property name="autoFillBackground">
+                             <bool>false</bool>
+                            </property>
                             <property name="styleSheet">
                              <string notr="true"/>
                             </property>
@@ -3651,7 +3651,7 @@
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../image/ic_filter24.png</normaloff>../image/ic_filter24.png</iconset>
+                              <normaloff>../image/icon_filter_343131.png</normaloff>../image/icon_filter_343131.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -5126,8 +5126,8 @@ background-color: #343131;</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>583</width>
-                                 <height>272</height>
+                                 <width>605</width>
+                                 <height>331</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">

@@ -1,3 +1,4 @@
+
 from PyQt6.QtWidgets import QTableWidget, QTableWidgetItem, QLabel, QWidget, QVBoxLayout, QHBoxLayout, QHeaderView
 from PyQt6.QtCore import Qt, QRectF
 from PyQt6.QtGui import QPixmap, QPainter, QPainterPath
@@ -15,8 +16,13 @@ class MenuDelegate(QTableWidget):
     def __init__(self, place_id=None):  # Thêm giá trị mặc định là None
         super().__init__()
         self.place_id = place_id
-        table_headers = ["_id", "Featured Image", "Item", "Rate", "Price", "Description", "Review"]
-        self.setColumnCount(len(table_headers))
+        if place_id is None:
+            table_headers = ["_id", "", "Item", "Rate", "Price", "Restaurant","Category","Description", "Review"]
+        else:
+            table_headers = ["_id", "", "Item", "Rate", "Price", "Description", "Review"]
+
+        self.num_columns=len(table_headers)
+        self.setColumnCount(self.num_columns)
         self.setHorizontalHeaderLabels(table_headers)
 
         # Selection: entire row, single selection
@@ -31,13 +37,16 @@ class MenuDelegate(QTableWidget):
         self.thread_pool.setMaxThreadCount(self.MAX_CONCURRENT_THREADS)
 
         # Set column widths
-        self.setColumnWidth(0, 100)  # _id (ẩn)
+        self.setColumnWidth(0, 0)  # _id (ẩn)
         self.setColumnWidth(1, 150)  # Featured Image
         self.setColumnWidth(2, 150)  # Item
         self.setColumnWidth(3, 150)   # Rate (tăng độ rộng để hiển thị sao)
         self.setColumnWidth(4, 100)  # Price
-        self.setColumnWidth(5, 300)  # Description (tăng độ rộng để hiển thị đầy đủ)
-        self.setColumnWidth(6, 200)  # Review
+        self.setColumnWidth(self.num_columns-2, 300)  # Description (tăng độ rộng để hiển thị đầy đủ)
+        self.setColumnWidth(self.num_columns-1, 200)  # Review
+        if place_id is None:
+            self.setColumnWidth(5, 150)  # Restaurant
+            self.setColumnWidth(6, 80)  # Category
 
         # Ẩn cột _id
         self.setColumnHidden(0, True)
@@ -78,11 +87,17 @@ class MenuDelegate(QTableWidget):
             # Cột Description
             description_item = QTableWidgetItem(menu_item.get("Description", "N/A"))
             description_item.setTextAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
-            self.setItem(row, 5, description_item)
+            self.setItem(row, self.num_columns-2, description_item)
             # Cột Review
             review_item = QTableWidgetItem("\n".join(menu_item.get("Review", [])))
             review_item.setTextAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
-            self.setItem(row, 6, review_item)
+            self.setItem(row, self.num_columns-1, review_item)
+
+            if self.place_id is None:
+                # Cót Restaurant
+                self.setItem(row, 5, QTableWidgetItem(menu_item.get("restaurant_name", "N/A")))
+                # Cót Category
+                self.setItem(row, 6, QTableWidgetItem(menu_item.get("category", "N/A")))
             # Tăng độ cao hàng
             self.setRowHeight(row, self.ROW_HEIGHT)
 
@@ -191,8 +206,8 @@ class MenuDelegate(QTableWidget):
         rating_label = QLabel(f"{rating:.1f}")
         rating_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Hàng sao (sử dụng biểu tượng: ⭐, 🌓, ☆)
-        star_row = QLabel("⭐" * full_stars + "🌓" * half_star + "☆" * empty_stars)
+        # Hàng sao
+        star_row = QLabel("★" * full_stars + "⯪" * half_star + "☆" * empty_stars)
         star_row.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         star_layout.addWidget(rating_label)
@@ -203,11 +218,11 @@ class MenuDelegate(QTableWidget):
         return container
 
     def style_table(self):
-        """Tạo màu header bảng thành màu cam FF862F và đảm bảo highlight toàn bộ hàng."""
+        """Tạo màu header bảng thành màu đen 343131 và đảm bảo highlight toàn bộ hàng."""
         self.setStyleSheet("""
             QHeaderView::section {
-                background-color: #FF862F;
-                color: white;
+                background-color: #343131;
+                color: #FABC3F;
                 font-weight: bold;
                 padding: 8px;
                 border: 1px solid #d67a2c;
