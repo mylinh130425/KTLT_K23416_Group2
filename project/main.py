@@ -22,8 +22,14 @@ class MainWindow(QMainWindow):
 
         QAppSettings.updateAppSettings(self)
 
+        self.ui.restaurant_menu_button.clicked.connect(self.show_menu_page)
+        self.ui.restaurant_review_button.clicked.connect(self.show_review_page)
 
+    def show_menu_page(self):
+        self.ui.restaurant_stackedWidget.setCurrentWidget(self.ui.menu_page)
 
+    def show_review_page(self):
+        self.ui.restaurant_stackedWidget.setCurrentWidget(self.ui.review_restaurant_page)
 
     def changeEvent(self, event):
         """ Prevent the window from maximizing when double-clicking the title bar """
