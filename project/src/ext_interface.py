@@ -17,15 +17,14 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         super().setupUi(MainWindow)
         self.width = MainWindow.width()
         self.height = MainWindow.height()
-        self.setFixedSize(self.width,self.height)
+        self.setFixedSize(self.width, self.height)
         self.db_manager = DatabaseManager()
         self.username = None
         self.fullname = None
         self.profile = None
 
-        # print("Setting up pages")
-        #only needed when pages load too slowly
-        # self.setup_pages()
+        print("Setting up pages")
+        self.setup_pages()
 
         print("Setting current widget to Login_SignUp")
         self.stackedWidget.setCurrentWidget(self.Login_SignUp)
@@ -35,8 +34,8 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         print("Processing signals and slots")
         self.processSignalAndSlot()
         print("Finished setupUi")
-        # Đường dẫn tuyệt đối đến ảnh
 
+        # Đường dẫn tuyệt đối đến ảnh
         absolute_path_welcome = Path("../project/image/CreateAcc_Image.png").resolve()
         absolute_path_profile = Path("../project/image/Account-amico 1.png").resolve()
         # Kiểm tra và load ảnh vào QLabel
@@ -54,7 +53,6 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
             self.label.setPixmap(pixmap_profile)
         else:
             print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
-
 
     def processSignalAndSlot(self):
         self.login_button.clicked.connect(self.login)
@@ -142,12 +140,16 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
     def goRestaurant(self):
         self.menu_dock.setVisible(False)
-        self.setup_restaurant()
-        self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
+        if not hasattr(self.body_stackedWidget, "restaurant_page") or self.body_stackedWidget.restaurant_page is None:
+            self.setup_restaurant()
+        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
+        self.restaurant_stackedWidget.setCurrentWidget(self.restaurant_page)
+        self.restaurant_page.setVisible(True)
+        print(f"restaurant_page visibility after setting: {self.restaurant_page.isVisible()}")
 
     def setup_restaurant(self):
         self.restaurant_page = RestaurantScreen(parent=self)
-        self.body_stackedWidget.addWidget(self.restaurant_page)
+        self.restaurant_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_menuburger(self):
         self.menu_dock = QDockWidget(self.centralwidget)
@@ -234,14 +236,18 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.menu_dock.move(self.width - self.menu_frame.width(), self.header_frame.height())
 
     def goMenu(self):
-        self.all_menu_page = AllMenuItemScreen(parent=self)
-        self.body_stackedWidget.addWidget(self.all_menu_page)
-
         self.menu_dock.setVisible(False)
-        self.body_stackedWidget.setCurrentWidget(self.all_menu_page)
-        # self.setCurrentWidget(self.all_menu_page)
-        # print(f"all_menu_page type in goMenu: {type(self.all_menu_page)}")
-
+        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
+        if not hasattr(self.body_stackedWidget, "all_menu_page") or self.body_stackedWidget.all_menu_page is None:
+            self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
+            self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
+        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
+        self.body_stackedWidget.all_menu_page.setVisible(True)
+        self.body_stackedWidget.all_menu_page.tableWidget.setVisible(True)
+        self.body_stackedWidget.all_menu_page.update()
+        self.body_stackedWidget.all_menu_page.repaint()
+        print(f"all_menu_page visibility after setting: {self.body_stackedWidget.all_menu_page.isVisible()}")
+        print(f"all_menu_page tableWidget visibility: {self.body_stackedWidget.all_menu_page.tableWidget.isVisible()}")
 
     def handle_menu_click(self, item, menu_items):
         for name, function in menu_items:
@@ -258,8 +264,6 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         button_x = self.burger_menu_button.mapToGlobal(self.burger_menu_button.rect().topLeft()).x()
         button_y = self.burger_menu_button.mapToGlobal(self.burger_menu_button.rect().bottomLeft()).y()
         self.menu_dock.setGeometry(button_x, button_y, 150, 200)
-
-
 
     def goProfile(self):
         self.menu_dock.setVisible(False)
@@ -321,39 +325,91 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
                 widget.deleteLater()
 
     def show_menu_for_restaurant(self, place_id):
+        print(f"Extend_MainWindow: Showing menu for place_id: {place_id}")
+        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
+
+        # Xóa menu_page cũ nếu tồn tại
+        if hasattr(self.body_stackedWidget, 'menu_page') and self.body_stackedWidget.menu_page is not None:
+            print("Removing existing menu_page")
+            self.restaurant_stackedWidget.removeWidget(self.body_stackedWidget.menu_page)
+            self.body_stackedWidget.menu_page.deleteLater()
+            delattr(self.body_stackedWidget, 'menu_page')
+
+        # Tạo menu_page mới
+        self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id, self)
+        self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.menu_page)
+
+        # Đặt menu_page làm widget hiện tại
+        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.menu_page)
+        self.body_stackedWidget.menu_page.setVisible(True)
+        self.restaurant_stackedWidget.setVisible(True)
+        self.body_stackedWidget.setVisible(True)
+
+        # Đảm bảo tableWidget hiển thị
+        self.body_stackedWidget.menu_page.tableWidget.setVisible(True)
+
+        # Gọi update và repaint để đảm bảo giao diện được vẽ lại
+        self.body_stackedWidget.menu_page.update()
+        self.body_stackedWidget.menu_page.repaint()
+        self.body_stackedWidget.menu_page.tableWidget.update()
+        self.body_stackedWidget.menu_page.tableWidget.repaint()
+
+        # Log trạng thái
+        print(f"menu_page visibility after setting: {self.body_stackedWidget.menu_page.isVisible()}")
+        print(f"tableWidget visibility after setting: {self.body_stackedWidget.menu_page.tableWidget.isVisible()}")
+        print(f"restaurant_stackedWidget visible: {self.restaurant_stackedWidget.isVisible()}")
+        print(f"body_stackedWidget visible: {self.body_stackedWidget.isVisible()}")
+
+    def show_all_menu_items(self):
+        """Hiển thị tất cả menu items"""
+        print("Extend_MainWindow: show_all_menu_items called")
         self.menu_dock.setVisible(False)
         self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
 
-        # if not isinstance(self.menu_page, RestaurantMenuScreen):
-        print("Error: menu_page is not an instance of RestaurantMenuScreen")
-        print(f"menu_page type: {type(self.menu_page)}")
-        self.menu_page = RestaurantMenuScreen(place_id=place_id, parent=self)
-        self.restaurant_stackedWidget.addWidget(self.menu_page)
+        # Kiểm tra nếu all_menu_page chưa được tạo
+        if not hasattr(self.body_stackedWidget, "all_menu_page") or self.body_stackedWidget.all_menu_page is None:
+            print("all_menu_page chưa tồn tại. Đang tạo mới...")
+            self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
+            self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
+        else:
+            print("all_menu_page đã tồn tại. Tải lại dữ liệu...")
+            self.body_stackedWidget.all_menu_page.load_menu_data()
 
-        print(f"Calling update_place_id with place_id: {place_id}")
-        self.menu_page.update_place_id(place_id)
-        self.restaurant_stackedWidget.setCurrentWidget(self.menu_page)
-        # Thêm log để kiểm tra giao diện
-        print(f"menu_page visible: {self.menu_page.isVisible()}")
-        print(f"restaurant_stackedWidget current widget: {self.restaurant_stackedWidget.currentWidget()}")
+        # Đặt all_menu_page làm widget hiện tại
+        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
+
+        # Đảm bảo all_menu_page hiển thị
+        self.body_stackedWidget.all_menu_page.setVisible(True)
+        self.body_stackedWidget.all_menu_page.tableWidget.setVisible(True)
+
+        # Gọi update và repaint để đảm bảo giao diện được vẽ lại
+        self.body_stackedWidget.all_menu_page.update()
+        self.body_stackedWidget.all_menu_page.repaint()
+        self.body_stackedWidget.all_menu_page.tableWidget.update()
+        self.body_stackedWidget.all_menu_page.tableWidget.repaint()
+
+        # Log trạng thái
+        print(f"all_menu_page visibility after setting: {self.body_stackedWidget.all_menu_page.isVisible()}")
+        print(f"tableWidget visibility after setting: {self.body_stackedWidget.all_menu_page.tableWidget.isVisible()}")
 
     def setup_pages(self):
+        # Tạo inside_restaurant_page
         self.inside_restaurant_page = QWidget()
         self.inside_restaurant_page_layout = QVBoxLayout(self.inside_restaurant_page)
         self.inside_restaurant_page_layout.setContentsMargins(0, 0, 0, 0)
 
+        # Tạo restaurant_stackedWidget
         self.restaurant_stackedWidget = QtWidgets.QStackedWidget()
         self.inside_restaurant_page_layout.addWidget(self.restaurant_stackedWidget)
 
+        # Thêm inside_restaurant_page vào body_stackedWidget
         self.body_stackedWidget.addWidget(self.inside_restaurant_page)
 
+        # Khởi tạo restaurant_page
         self.restaurant_page = RestaurantScreen(parent=self)
-        self.menu_page = RestaurantMenuScreen(place_id=None, parent=self)
-        # self.all_menu_page = AllMenuItemScreen(parent=self) only setup before switching to screen
-
         self.restaurant_stackedWidget.addWidget(self.restaurant_page)
-        self.restaurant_stackedWidget.addWidget(self.menu_page)
-        # self.body_stackedWidget.addWidget(self.all_menu_page)
 
-        print(f"menu_page type after setup: {type(self.menu_page)}")
-        print(f"all_menu_page type after setup: {type(self.all_menu_page)}")
+        # Không khởi tạo menu_page và all_menu_page tại đây
+        # Chúng sẽ được tạo khi cần trong show_menu_for_restaurant và show_all_menu_items
+
+        print("setup_pages completed")

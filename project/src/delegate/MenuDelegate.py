@@ -240,9 +240,57 @@ class MenuDelegate(QTableWidget):
                 background-color: #ADD8E6;  /* Highlight cùng màu với hàng */
             }
         """)
-        # Các cột khác sẽ tự động giãn theo nội dung
-        self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Interactive)
-        self.horizontalHeader().setStretchLastSection(True)  # Cột cuối sẽ kéo dãn
+        # Cho phép các cột tự động điều chỉnh kích thước
+        self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        # Không kéo dài cột cuối cùng, để các cột chia đều không gian
+        self.horizontalHeader().setStretchLastSection(False)
+
+    def load_more_menu(self, menu_items):
+        if not menu_items:
+            print("MenuDelegate: No menu items to load.")
+            self.clearContents()
+            self.setRowCount(1)
+            item = QTableWidgetItem("No menu items available.")
+            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.setItem(0, 0, item)
+            return
+
+        print(f"MenuDelegate: Loading {len(menu_items)} menu items")
+        for menu_item in menu_items:
+            row = self.rowCount()
+            self.insertRow(row)
+            # Cột _id (ẩn đi)
+            self.setItem(row, 0, QTableWidgetItem(str(menu_item.get("_id", "N/A"))))
+            # Cột Featured Image (tải ảnh bất đồng bộ)
+            self.setCellWidget(row, 1, self.create_image_widget(row, menu_item.get("featured_image", "")))
+            # Cột Item
+            item = QTableWidgetItem(menu_item.get("Item", "N/A"))
+            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.setItem(row, 2, item)
+            # Cột Rate (hiển thị số sao + biểu tượng sao)
+            self.setCellWidget(row, 3, self.create_star_widget(menu_item.get("Rate", 0)))
+            # Cột Price (định dạng với dấu phân cách hàng nghìn)
+            price = menu_item.get("Price", 0)
+            formatted_price = "{:,}".format(int(price))  # Định dạng giá: 79000 -> 79,000
+            price_item = QTableWidgetItem(formatted_price)
+            price_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.setItem(row, 4, price_item)
+            # Cột Description
+            description_item = QTableWidgetItem(menu_item.get("Description", "N/A"))
+            description_item.setTextAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+            self.setItem(row, self.num_columns - 2, description_item)
+            # Cột Review
+            review_item = QTableWidgetItem("\n".join(menu_item.get("Review", [])))
+            review_item.setTextAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+            self.setItem(row, self.num_columns - 1, review_item)
+
+            if self.place_id is None:
+                # Cột Restaurant
+                self.setItem(row, 5, QTableWidgetItem(menu_item.get("restaurant_name", "N/A")))
+                # Cột Category
+                self.setItem(row, 6, QTableWidgetItem(menu_item.get("category", "N/A")))
+            # Tăng độ cao hàng
+            self.setRowHeight(row, self.ROW_HEIGHT)
 
     def closeEvent(self, event):
         """Xử lý khi đóng widget để tránh crash."""
