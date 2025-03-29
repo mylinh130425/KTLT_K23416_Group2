@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>918</width>
-    <height>577</height>
+    <width>1112</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
-     <width>921</width>
+     <y>-30</y>
+     <width>1111</width>
      <height>581</height>
     </rect>
    </property>
@@ -29,9 +29,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>88</y>
-      <width>142</width>
-      <height>440</height>
+      <y>60</y>
+      <width>171</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -138,8 +138,14 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
          </property>
          <property name="styleSheet">
           <string notr="true">color:#FABC3F</string>
@@ -279,9 +285,9 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>50</y>
-      <width>781</width>
+      <x>210</x>
+      <y>60</y>
+      <width>861</width>
       <height>481</height>
      </rect>
     </property>
@@ -292,10 +298,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>752</width>
-        <height>440</height>
+        <x>10</x>
+        <y>10</y>
+        <width>841</width>
+        <height>451</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="menu_verticalLayout">
