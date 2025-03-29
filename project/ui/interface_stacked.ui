@@ -2348,7 +2348,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>4</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2870,7 +2870,7 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>924</width>
+                              <width>464</width>
                               <height>654</height>
                              </rect>
                             </property>
@@ -5855,8 +5855,8 @@ background-color: #343131;</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>924</width>
-                                 <height>147</height>
+                                 <width>91</width>
+                                 <height>91</height>
                                 </rect>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_22">
