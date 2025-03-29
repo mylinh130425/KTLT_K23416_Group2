@@ -2,230 +2,225 @@ import requests
 from PyQt6 import QtCore, QtWidgets
 from PyQt6.QtCore import Qt, QByteArray, QRectF
 from PyQt6.QtGui import QIcon, QPixmap, QPainter, QPainterPath
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout
+from PyQt6.QtWidgets import QWidget, QTableWidget, QPushButton, QLabel, QStackedWidget
+from PyQt6.uic import loadUi
 from project.src.delegate.MenuDelegate import MenuDelegate
 from project.src.model.MenuModel import MenuModel
-from project.src.view.ModifyRestaurantScreen import ModifyRestaurantScreen
-
+from project.src.DatabaseManager import DatabaseManager
+from bson import ObjectId
 
 class RestaurantMenuScreen(QWidget):
     IMAGE_SIZE = 80
     ROW_HEIGHT = 130
 
-    def __init__(self, place_id=None, parent=None):
+    def __init__(self, place_id, parent=None):
         super().__init__(parent)
         self.place_id = place_id
         self.parent = parent
         self.menu_model = MenuModel(place_id)
-
-        #get restaurant data for name and featured image
-        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(place_id)
-        print(self.restaurant_data)
+        self.db_manager = DatabaseManager()
         print(f"RestaurantMenuScreen: Place ID used: {self.place_id}")
-        if self.place_id is None:
-            self.setupUi()
+        self.restaurant_name = self.fetch_restaurant_name()
+        self.setupUi()
+
+    def fetch_restaurant_name(self):
+        if not self.place_id:
+            print("fetch_restaurant_name: place_id is None, cannot fetch restaurant name")
+            return "Unknown Restaurant"
+
+        try:
+            place_id_obj = ObjectId(self.place_id)
+            print(f"Converted place_id to ObjectId: {place_id_obj}")
+
+            print(f"Querying Menu collection with place_id: {place_id_obj}")
+            menu_doc = self.db_manager.db["Menu"].find_one({"place_id": place_id_obj})
+            if menu_doc:
+                print(f"Found menu document: {menu_doc}")
+                restaurant_name = menu_doc.get("restaurant_name")
+                if restaurant_name:
+                    print(f"Fetched restaurant name from Menu collection: {restaurant_name}")
+                    return restaurant_name
+                else:
+                    print("No restaurant_name field found in Menu document")
+            else:
+                print(f"No menu document found for place_id: {place_id_obj} in Menu collection")
+
+            print(f"Querying Restaurants collection with place_id: {place_id_obj}")
+            restaurant = self.db_manager.db["Restaurants"].find_one({"place_id": place_id_obj})
+            if restaurant:
+                print(f"Found restaurant document: {restaurant}")
+                name = restaurant.get("name") or restaurant.get("restaurant_name") or "Unknown Restaurant"
+                print(f"Fetched restaurant name from Restaurants collection: {name}")
+                return name
+            else:
+                print(f"No restaurant found for place_id: {place_id_obj} in Restaurants collection")
+
+            menu_items = self.menu_model.get_menu(use_pagination=False)
+            print(f"Menu items for inference: {menu_items}")
+            if menu_items:
+                for item in menu_items:
+                    description = item.get("Description", "")
+                    if "Vincom Thủ Đức" in description:
+                        inferred_name = "Gỏi House Vincom Thủ Đức"
+                        print(f"Inferred restaurant name from menu item description: {inferred_name}")
+                        return inferred_name
+            print("Could not infer restaurant name from menu items")
+            return "Unknown Restaurant"
+        except Exception as e:
+            print(f"Error fetching restaurant name: {e}")
+            return "Unknown Restaurant"
+
+    def setupUi(self):
+        import os
+        ui_file_path = "ui/menu_page.ui"
+        if not os.path.exists(ui_file_path):
+            raise FileNotFoundError(f"UI file not found at: {ui_file_path}")
+        print(f"Loading UI file from: {ui_file_path}")
+
+        try:
+            loadUi(ui_file_path, self)
+            print("UI file loaded successfully")
+        except Exception as e:
+            print(f"Error loading UI file: {e}")
+            raise
+
+        self.menu_page = self.findChild(QWidget, "menu_page") or self
+        self.menu_page.setVisible(True)
+        print(f"menu_page visibility after setting: {self.menu_page.isVisible()}")
+
+        # Restaurant Name Label
+        self.restaurant_name_label = self.findChild(QLabel, "restaurant_name_label")
+        if self.restaurant_name_label is None:
+            raise ValueError("restaurant_name_label not found in the UI file.")
+        self.restaurant_name_label.setText(self.restaurant_name)
+        self.restaurant_name_label.setWordWrap(True)
+        self.restaurant_name_label.setStyleSheet(
+            "color: #FABC3F; font-size: 20px; font-weight: bold; background-color: #343131;")
+        self.restaurant_name_label.setMinimumSize(200, 30)
+        self.restaurant_name_label.setMaximumSize(16777215, 50)
+        self.restaurant_name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.restaurant_name_label.setVisible(True)
+        print(f"restaurant_name_label text: '{self.restaurant_name_label.text()}'")
+        print(f"restaurant_name_label visible: {self.restaurant_name_label.isVisible()}")
+
+        # Restaurant Photo Label (Circular Image)
+        self.restaurant_photo_label = self.findChild(QLabel, "restaurant_photo_label")
+        if self.restaurant_photo_label is None:
+            print("restaurant_photo_label not found in UI file!")
         else:
-            self.updateUi()
-
-    def updateUi(self):
-        # Debug: Check if the parent and restaurant_photo_label exist
-        print(f"Parent exists: {self.parent is not None}")
-        print(f"Restaurant photo label exists: {hasattr(self.parent, 'restaurant_photo_label')}")
-        if hasattr(self.parent, 'restaurant_photo_label'):
-            print(f"Restaurant photo label visible: {self.parent.restaurant_photo_label.isVisible()}")
-            print(f"Restaurant photo label size before: {self.parent.restaurant_photo_label.size()}")
-
-        # Set the restaurant name
-        self.parent.restaurant_name_label.setText(self.restaurant_data["name"])
-        self.parent.restaurant_name_label.setWordWrap(True)
-
-        # Load and set the restaurant's featured image into self.parent.restaurant_photo_label
-        featured_image_url = self.restaurant_data.get("featured_image")  # Adjust the key based on your database schema
-        print(f"Featured image URL: {featured_image_url}")  # Debug: Check the image URL
-
-        if featured_image_url:
-            if featured_image_url.startswith("http"):  # Check if it's a URL
+            featured_image_url = self.db_manager.get_restaurant_byid(self.place_id).get("featured_image")
+            print(f"Image URL: {featured_image_url}")
+            if featured_image_url and featured_image_url.startswith("http"):
                 try:
                     response = requests.get(featured_image_url)
                     if response.status_code == 200:
-                        image_data = QByteArray(response.content)
                         pixmap = QPixmap()
-                        pixmap.loadFromData(image_data)
-                        print(f"Image loaded from URL: {not pixmap.isNull()}")  # Debug: Check if the image loaded
+                        pixmap.loadFromData(QByteArray(response.content))
+                        if not pixmap.isNull():
+                            # Define size for circular image
+                            size = 90  # Adjust as needed
+
+                            # Scale image, keeping aspect ratio, expanding to fill
+                            scaled_pixmap = pixmap.scaled(
+                                size, size,
+                                Qt.AspectRatioMode.KeepAspectRatioByExpanding,
+                                Qt.TransformationMode.SmoothTransformation
+                            )
+                            print(f"Scaled pixmap size: {scaled_pixmap.size()}")
+
+                            # Crop to square (center the crop)
+                            width = scaled_pixmap.width()
+                            height = scaled_pixmap.height()
+                            x = (width - size) // 2
+                            y = (height - size) // 2
+                            cropped_pixmap = scaled_pixmap.copy(x, y, size, size)
+
+                            # Create circular pixmap
+                            circular_pixmap = QPixmap(size, size)
+                            circular_pixmap.fill(Qt.GlobalColor.transparent)
+                            painter = QPainter(circular_pixmap)
+                            painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+                            path = QPainterPath()
+                            path.addEllipse(QRectF(0, 0, size, size))
+                            painter.setClipPath(path)
+                            painter.drawPixmap(0, 0, cropped_pixmap)
+                            painter.end()
+
+                            # Debug: Save to verify
+                            circular_pixmap.save("debug_circular_image.png", "PNG")
+                            print("Saved circular image to 'debug_circular_image.png'")
+
+                            # Set to label
+                            self.restaurant_photo_label.setPixmap(circular_pixmap)
+                            self.restaurant_photo_label.setFixedSize(size, size)
+                            self.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                            self.restaurant_photo_label.setStyleSheet("border: none; background: transparent;")
+                            self.restaurant_photo_label.setVisible(True)
+                            print(f"Photo label size: {self.restaurant_photo_label.size()}")
+                        else:
+                            print("Failed to load image data")
+                            self.restaurant_photo_label.setText("No image")
                     else:
-                        print(f"Failed to download image from URL: {featured_image_url}")
-                        pixmap = QPixmap()  # Create an empty pixmap if download fails
+                        print(f"Image request failed: {response.status_code}")
+                        self.restaurant_photo_label.setText("No image")
                 except Exception as e:
-                    print(f"Error loading image from URL: {e}")
-                    pixmap = QPixmap()  # Create an empty pixmap if an error occurs
-            else:  # Assume it's a local file path
-                pixmap = QPixmap(featured_image_url)
-                print(f"Image loaded from local path: {not pixmap.isNull()}")  # Debug: Check if the image loaded
-
-            if not pixmap.isNull():
-                # Define the desired size for the circular image (e.g., 100x100 pixels)
-                size = 80  # Adjust this to match the desired size of the circular image
-                print(f"Original pixmap size: {pixmap.size()}")  # Debug: Check the original size
-
-                # Scale the image to fill the circular area using KeepAspectRatioByExpanding
-                scaled_pixmap = pixmap.scaled(size, size, Qt.AspectRatioMode.KeepAspectRatioByExpanding,
-                                              Qt.TransformationMode.SmoothTransformation)
-                print(f"Scaled pixmap size: {scaled_pixmap.size()}")  # Debug: Check the scaled size
-
-                # Crop the scaled pixmap to exactly match the desired size (center the crop)
-                width = scaled_pixmap.width()
-                height = scaled_pixmap.height()
-                x = (width - size) // 2
-                y = (height - size) // 2
-                cropped_pixmap = scaled_pixmap.copy(x, y, size, size)
-                print(f"Cropped pixmap size: {cropped_pixmap.size()}")  # Debug: Check the cropped size
-
-                # Create a circular pixmap using QPainterPath for clipping
-                circular_pixmap = QPixmap(size, size)
-                circular_pixmap.fill(Qt.GlobalColor.transparent)  # Transparent background
-                painter = QPainter(circular_pixmap)
-                painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-
-                # Create a circular path for clipping
-                path = QPainterPath()
-                path.addEllipse(QRectF(0, 0, size, size))
-                painter.setClipPath(path)
-
-                # Draw the cropped pixmap
-                painter.drawPixmap(0, 0, cropped_pixmap)
-                painter.end()
-
-                # Debug: Save the circular pixmap to a file to verify the result
-                circular_pixmap.save("debug_circular_image.png", "PNG")
-                print("Saved circular pixmap to 'debug_circular_image.png' for debugging")
-
-                # Clear any existing stylesheet to avoid interference
-                self.parent.restaurant_photo_label.setStyleSheet("")
-
-                # Set the circular pixmap to the QLabel
-                self.parent.restaurant_photo_label.setPixmap(circular_pixmap)
-                self.parent.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-                self.parent.restaurant_photo_label.setFixedSize(size, size)  # Ensure the QLabel is the correct size
-                self.parent.restaurant_photo_label.setVisible(True)  # Ensure the QLabel is visible
-                self.parent.restaurant_photo_label.repaint()  # Force a repaint
-                print(
-                    f"QLabel size after setting pixmap: {self.parent.restaurant_photo_label.size()}")  # Debug: Check QLabel size
+                    print(f"Image load error: {e}")
+                    self.restaurant_photo_label.setText("No image")
             else:
-                print(f"Failed to load image from path/URL: {featured_image_url}")
-                self.parent.restaurant_photo_label.setText("No image available")
-        else:
-            print("No featured image found in restaurant data")
-            self.parent.restaurant_photo_label.setText("No image available")
+                print("No valid image URL found")
+                self.restaurant_photo_label.setText("No image")
+            self.restaurant_photo_label.repaint()
 
-        # Replace menupage_tableWidget designed in QtDesigner with MenuDelegate
-        self.parent.menu_verticalLayout.removeWidget(self.parent.menupage_tableWidget)
-        self.parent.menupage_tableWidget = MenuDelegate(self.place_id)
-        self.parent.menupage_tableWidget.setObjectName("menupage_tableWidget")
-        self.tableWidget = self.parent.menupage_tableWidget
-        self.tableWidget.setObjectName("menu")
-        self.parent.menu_verticalLayout.addWidget(self.tableWidget)
-
-        self.tableWidget.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
-        self.tableWidget.verticalScrollBar().valueChanged.connect(self.on_scroll)
-
-        self.tableWidget.itemClicked.connect(self.on_slotDelegate_byrow)
-        self.load_menu_data()
-
-        #signals and slots
-        self.parent.menupage_filter_button.clicked.connect(self.filter_menu)
-        self.parent.menupage_create_button.clicked.connect(self.create_menu)
-        self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
-        self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
-
-    def filter_menu(self):
-        pass
-    def create_menu(self):
-        pass
-    def edit_menu(self):
-        pass
-    def delete_menu(self):
-        pass
-
-    def goInfo(self):
-        ModifyRestaurantScreen(parent=self.parent, isCreating=False, restaurant_id=self.place_id)
-        self.parent.restaurantinfo_delete_button.clicked.connect(self.delete_restaurant)
-        self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
-
-    def setupUi(self):
-        self.main_layout = QVBoxLayout(self)
-        self.main_layout.setContentsMargins(10, 10, 10, 10)
-
-        button_layout = QHBoxLayout()
-        button_layout.setContentsMargins(10, 10, 10, 10)
-        button_layout.setSpacing(10)
-
-        self.filter_pushButton = QPushButton()
-        self.filter_pushButton.setText("Filter")
-        filter_icon = QIcon(":/images/ic_adjust.png")
-        self.filter_pushButton.setIcon(filter_icon)
-        self.filter_pushButton.setIconSize(QtCore.QSize(15, 15))
-        self.filter_pushButton.setObjectName("filter_pushButton")
-        button_layout.addWidget(self.filter_pushButton)
-
-        button_layout.addStretch()
-
-        self.create_pushButton = QPushButton("Create")
-        self.create_pushButton.setObjectName("create_pushButton")
-        button_layout.addWidget(self.create_pushButton)
-
-        self.edit_pushButton = QPushButton("Edit")
-        self.edit_pushButton.setObjectName("edit_pushButton")
-        button_layout.addWidget(self.edit_pushButton)
-
-        self.delete_pushButton = QPushButton("Delete")
-        self.delete_pushButton.setObjectName("delete_pushButton")
-        button_layout.addWidget(self.delete_pushButton)
-
-        self.main_layout.addLayout(button_layout)
+        # Table Widget Setup
+        table_widget_placeholder = self.findChild(QTableWidget, "tableWidget")
+        if table_widget_placeholder is None:
+            raise ValueError("tableWidget not found in the UI file.")
+        placeholder_layout = table_widget_placeholder.parent().layout()
+        placeholder_index = placeholder_layout.indexOf(table_widget_placeholder)
+        placeholder_layout.removeWidget(table_widget_placeholder)
+        table_widget_placeholder.deleteLater()
 
         self.tableWidget = MenuDelegate(self.place_id)
-        self.tableWidget.setObjectName("tableWidget")
-        self.main_layout.addWidget(self.tableWidget)
-
-        self.tableWidget.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
-        self.tableWidget.verticalScrollBar().valueChanged.connect(self.on_scroll)
-
-        self.tableWidget.itemClicked.connect(self.on_slotDelegate_byrow)
+        placeholder_layout.insertWidget(placeholder_index, self.tableWidget)
+        self.tableWidget.setVisible(True)
+        placeholder_layout.parentWidget().setVisible(True)
+        print(f"tableWidget visible after setup: {self.tableWidget.isVisible()}")
 
         self.load_menu_data()
+        print("setupUi completed")
 
     def update_place_id(self, place_id):
-        """Cập nhật place_id và tải lại dữ liệu menu."""
         print(f"RestaurantMenuScreen: Updating place_id to {place_id}")
         self.place_id = place_id
-        self.menu_model.set_place_id(place_id)  # Cập nhật place_id và reset offset
+        self.menu_model.set_place_id(place_id)
         self.tableWidget.place_id = place_id
         self.tableWidget.clearContents()
         self.tableWidget.setRowCount(0)
+        self.restaurant_name = self.fetch_restaurant_name()
+        self.restaurant_name_label.setText(self.restaurant_name)
         self.load_menu_data()
 
     def load_menu_data(self):
-        print("loading menu for restaurant", self.place_id)
         try:
-            if self.place_id is None:
+            if not self.place_id:
                 print("load_menu_data: place_id is None, cannot load menu")
                 self.tableWidget.clearContents()
                 self.tableWidget.setRowCount(1)
-                item = QtWidgets.QTableWidgetItem("No place_id provided.")
+                item = QtWidgets.QTableWidgetItem("No place_id provided. Please provide a valid place_id.")
                 item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.tableWidget.setItem(0, 0, item)
                 return
 
             print(f"Loading menu for place_id: {self.place_id}")
-            menu_items = self.menu_model.get_menu(use_pagination=True)
+            self.tableWidget.clearContents()
+            self.tableWidget.setRowCount(0)
+            menu_items = self.menu_model.get_menu(use_pagination=False)  # Lấy toàn bộ dữ liệu
 
-            print(f"Loaded menu items (initial load): {len(menu_items)} items")
+            print(f"Loaded menu items: {len(menu_items)} items")
             print(f"Menu items: {menu_items}")
 
             if not menu_items:
                 print("No menu items to display.")
-                print(f"MenuModel has_more: {self.menu_model.has_more()}")
-                print(f"MenuModel offset: {self.menu_model.offset()}")
                 self.tableWidget.clearContents()
                 self.tableWidget.setRowCount(1)
                 item = QtWidgets.QTableWidgetItem("No menu items available for this restaurant.")
@@ -236,29 +231,15 @@ class RestaurantMenuScreen(QWidget):
             self.tableWidget.load_more_menu(menu_items)
             self.tableWidget.update()
             self.tableWidget.repaint()
-            print(f"Total rows in table after initial load: {self.tableWidget.rowCount()}")
+            print(f"Total rows in table after load: {self.tableWidget.rowCount()}")
             print(f"Table widget visible: {self.tableWidget.isVisible()}")
+            print(f"menu_page visible: {self.menu_page.isVisible()}")
         except AttributeError as e:
             print(f"Error in load_menu_data: {e}")
-
-    def on_scroll(self):
-        scroll_bar = self.tableWidget.verticalScrollBar()
-        if scroll_bar.value() >= scroll_bar.maximum() - 10:
-            print("Reached near end of scroll, loading more menu items...")
-            if not self.place_id:
-                print("on_scroll: place_id is None, cannot load more menu items")
-                return
-
-            menu_items = self.menu_model.get_menu(use_pagination=True)
-
-            print(f"Loaded additional menu items: {len(menu_items)} items")
-            print(f"Additional menu items: {menu_items}")
-
-            if menu_items:
-                self.tableWidget.load_more_menu(menu_items)
-                print(f"Total rows in table after loading more: {self.tableWidget.rowCount()}")
-            else:
-                print("No more menu items to load.")
+            raise
+        except Exception as e:
+            print(f"Unexpected error in load_menu_data: {e}")
+            raise
 
     def on_slotDelegate_byrow(self, item):
         row = item.row()
@@ -267,5 +248,9 @@ class RestaurantMenuScreen(QWidget):
         print(f"Selected menu item: product_id={product_id}, name={item_name}")
 
     def closeEvent(self, event):
+        print("Closing RestaurantMenuScreen")
         self.menu_model.close_connection()
+        if self.tableWidget:
+            self.tableWidget.close()
         event.accept()
+        print("RestaurantMenuScreen closed")
