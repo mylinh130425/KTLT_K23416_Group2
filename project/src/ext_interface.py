@@ -23,8 +23,8 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.fullname = None
         self.profile = None
 
-        print("Setting up pages")
-        self.setup_pages()
+        # print("Setting up pages")
+        # self.setup_pages()
 
         print("Setting current widget to Login_SignUp")
         self.stackedWidget.setCurrentWidget(self.Login_SignUp)
@@ -140,16 +140,20 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
     def goRestaurant(self):
         self.menu_dock.setVisible(False)
-        if not hasattr(self.body_stackedWidget, "restaurant_page") or self.body_stackedWidget.restaurant_page is None:
-            self.setup_restaurant()
-        self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
-        self.restaurant_stackedWidget.setCurrentWidget(self.restaurant_page)
+        # if not hasattr(self.body_stackedWidget, "restaurant_page") or self.body_stackedWidget.restaurant_page is None:
+        #     self.setup_restaurant()
+        self.setup_restaurant()
+
+        self.body_stackedWidget.setCurrentWidget(self.restaurant_page)
+        # self.restaurant_stackedWidget.setCurrentWidget(self.restaurant_page)
         self.restaurant_page.setVisible(True)
         print(f"restaurant_page visibility after setting: {self.restaurant_page.isVisible()}")
 
     def setup_restaurant(self):
         self.restaurant_page = RestaurantScreen(parent=self)
-        self.restaurant_stackedWidget.addWidget(self.restaurant_page)
+        self.restaurant_page_layout = QVBoxLayout(self.restaurant_page)
+        self.restaurant_page_layout.setContentsMargins(0, 0, 0, 0)
+        self.body_stackedWidget.addWidget(self.restaurant_page)
 
     def setup_menuburger(self):
         self.menu_dock = QDockWidget(self.centralwidget)
