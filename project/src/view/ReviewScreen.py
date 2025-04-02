@@ -18,7 +18,7 @@ class RestaurantMenuScreen(QWidget):
         self.menu_model = MenuModel(place_id)
 
         #get restaurant data for name and featured image
-        self.restaurant_data = self.parent.db_manager.get_review(place_id)
+        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(place_id)
         print(self.restaurant_data)
         print(f"RestaurantMenuScreen: Place ID used: {self.place_id}")
         if self.place_id is None:
