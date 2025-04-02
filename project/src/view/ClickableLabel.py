@@ -8,7 +8,7 @@ class ClickableLabel(QLabel):
 
     def __init__(self, parent=None, file_path=None):
         super().__init__(parent)
-        self.file_path=file_path
+        self.__file_path=file_path
 
     def mousePressEvent(self, event):
         self.clicked.emit()  # Emit signal when clicked
@@ -26,6 +26,10 @@ class ClickableLabel(QLabel):
             ))  # Load image to QLabel instantly
         print(self.file_path)
         return self.file_path
+
+    @property
+    def file_path(self):
+        return self.__file_path
 
 if __name__ == "__main__":
     import sys

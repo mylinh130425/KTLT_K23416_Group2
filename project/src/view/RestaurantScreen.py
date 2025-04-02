@@ -26,25 +26,29 @@ class RestaurantScreen(QWidget):
         # Nút Filter (Góc trái)
         self.filter_pushButton = QPushButton(parent=self.parent.body_stackedWidget)
         self.filter_pushButton.setText("Filter")
-        filter_icon = QtGui.QIcon(":/images/ic_adjust.png")
+        filter_icon = QtGui.QIcon(":/MealMatch/Icons/MealMatch/ic_filter24.png")
         self.filter_pushButton.setIcon(filter_icon)
         self.filter_pushButton.setIconSize(QtCore.QSize(15, 15))
         self.filter_pushButton.setObjectName("filter_pushButton")
+        self.filter_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
         buttonLayout.addWidget(self.filter_pushButton)
 
         # SpacerItem để đẩy các nút về bên phải
         buttonLayout.addStretch()
 
-
+        buttonLayout.setSpacing(10)
         # Nút Create
         self.create_pushButton = QPushButton("Create", parent=self.parent.body_stackedWidget)
         self.create_pushButton.setObjectName("create_pushButton")
         buttonLayout.addWidget(self.create_pushButton)
+        self.create_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
+
         self.create_pushButton.clicked.connect(self.goAddRestaurant)
 
         # Nút Edit
         self.edit_pushButton = QPushButton("Edit", parent=self.parent.body_stackedWidget)
         self.edit_pushButton.setObjectName("edit_pushButton")
+        self.edit_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
         buttonLayout.addWidget(self.edit_pushButton)
         self.edit_pushButton.clicked.connect(self.goEditRestaurant)
 
@@ -52,6 +56,8 @@ class RestaurantScreen(QWidget):
         self.delete_pushButton = QPushButton("Delete", parent=self.parent.body_stackedWidget)
         self.delete_pushButton.setObjectName("delete_pushButton")
         buttonLayout.addWidget(self.delete_pushButton)
+        self.delete_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
+
         self.delete_pushButton.clicked.connect(self.deleteRestaurant)
 
         # Thêm hàng nút vào layout chính
@@ -119,13 +125,17 @@ class RestaurantScreen(QWidget):
         restaurant_name = self.restaurant_table.item(selected_row, 2).text()
 
         print("Editing restaurant:", restaurant_name)
-        print("parent", self.parent.objectName())
-        self.parent.restaurant_name_label.setText(restaurant_name)
-        self.parent.restaurant_name_label.setWordWrap(True)
+        print("parent", self.parent.inside_restaurant_page)
+        # self.parent.restaurant_name_label.setText(restaurant_name)
+        # self.parent.restaurant_name_label.setWordWrap(True)
 
-        ModifyRestaurantScreen(self.parent, isCreating=False, restaurant_id=self.current_restaurant_id)
+
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
+        #create a new variable in MainWindow to store ModifyRestaurantScreen object
+        # for manipulating the modify_restaurant_page
+        self.parent.modify_restaurant= ModifyRestaurantScreen(self.parent, isCreating=False, restaurant_id=self.current_restaurant_id)
+
 
     def goInfoRestaurant(self, row):
         """ Navigate to restaurant info screen on double click. """
@@ -195,10 +205,6 @@ class RestaurantScreen(QWidget):
 
     def open_menu_screen(self, row, column):
         """Mở trang menu khi double-click vào nhà hàng."""
-        # print(f"RestaurantScreen: Double-clicked at row {row}, column {column}")
-        # self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
-        # self.parent.restaurant_stackedWidget.setCurrentWidget((self.parent.add_restaurant_page))
-        # Set current widget to inside_restaurant_paged
         place_id_item = self.restaurant_table.item(row, 0)
         if place_id_item is None:
             restaurant_data = self.restaurant_table.model.get_restaurants()[row]
@@ -227,10 +233,3 @@ class RestaurantScreen(QWidget):
         self.parent.body_stackedWidget.setCurrentWidget(self.parent.inside_restaurant_page)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.body_stackedWidget.all_menu_page)
 
-    def on_double_click(self, item):
-        row = item.row()
-        place_id = self.tableWidget.item(row, 0).text()  # Lấy place_id từ cột "_id"
-        print(f"RestaurantScreen: Double-clicked on place_id: {place_id}")
-        if self.parent:
-            print("double clicked restaurant on restaurant screen ", self.parent.objectName())
-            self.parent.show_menu_for_restaurant(place_id)

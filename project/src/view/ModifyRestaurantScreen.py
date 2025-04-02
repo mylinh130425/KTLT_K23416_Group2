@@ -25,16 +25,13 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         else:
             self.setup_ui_create()
         self.processSignalsSlots()
+
         self.parent.restaurant_form_photo_label = ClickableLabel()
         self.parent.restaurant_form_photo_label.setText("Restaurant")
         self.parent.restaurant_form_photo_label.setStyleSheet("border: 1px solid gray; padding: 5px;")
         self.parent.restaurant_form_photo_label.setFixedSize(200, 200)  # Adjust size as needed
 
-        self.restaurant_new_image_path = ""  # Variable to store the image path
-
-        # Connect click signal to function
-        self.parent.restaurant_form_photo_label.clicked.connect(self.open_file_dialog)
-
+        self.restaurant_new_image_path = self.parent.restaurant_form_photo_label.file_path  # Variable to store the image path
 
         # Weekday order to ensure proper chronological updates
         self.weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
@@ -94,19 +91,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 if first_value_2 is not None and day in self.closing_hours:
                     self.closing_hours[day].setText(first_value_2)
 
-    def open_file_dialog(self):
-        file_dialog = QFileDialog()
-        file_path, _ = file_dialog.getOpenFileName(
-            None, "Select an Image", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)"
-        )
 
-        if file_path:  # If a file is selected
-            self.restaurant_new_image_path = file_path  # Save the path
-            self.restaurant_form_photo_label.setPixmap(QPixmap(file_path).scaled(
-                self.restaurant_form_photo_label.width(),
-                self.restaurant_form_photo_label.height()
-            ))  # Load image to QLabel instantly
-        print(self.restaurant_new_image_path)
 
     def update_restaurant_photo(self, image_url):
         """Gửi request để tải ảnh từ URL."""
@@ -161,15 +146,13 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         # Apply the style to all QPushButtons and QLineEdits in this screen
         self.parent.modify_restaurant_page.setStyleSheet(add_edit_restaurant_style)
         self.restaurant_data = self.parent.db_manager.get_restaurant_byid(self.current_restaurant_id)
+        self.parent.restaurant_name_label.setText(self.restaurant_data["name"])
+        self.parent.restaurant_name_label.setWordWrap(True)
         print(self.current_restaurant_id)
-        print(f"Restaurant data in modify restaurant screen: {self.restaurant_data}")
+        # print(f"Restaurant data in modify restaurant screen: {self.restaurant_data}")
         if not self.restaurant_data:
             print("Không tìm thấy dữ liệu nhà hàng")
             return
-        # self.setup_Ui()
-
-
-    def setup_Ui(self):
         # self.parent.restaurant_info_avatar.setText(self.restaurant_data["name"])
         self.parent.restaurant_photo_label.setScaledContents(True)
         # Tạo NetworkAccessManager để tải ảnh
@@ -177,18 +160,58 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.image_manager.finished.connect(self.set_image)
         # Gọi hàm cập nhật ảnh với URL mong muốn
         self.update_restaurant_photo(self.restaurant_data["featured_image"])
-        self.parent.form_res_name.setText(self.restaurant_data["name"])
+        self.parent.modifyrestaurant_name_lineEdit.setText(self.restaurant_data["name"])
 
-        self.parent.form_category.setText(", ".join(self.restaurant_data["category"]))
+        self.parent.modifyrestaurant_category_lineEdit.setText(", ".join(self.restaurant_data["category"]))
 
         address = self.restaurant_data["detailed_address"]
         # address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
-        self.parent.form_country.setText("Viet Nam")
-        self.parent.form_city.setText(self.restaurant_data["address"]["city"])
+        self.parent.modifyrestaurant_country_lineEdit.setText("Viet Nam")
+        self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["address"]["city"])
+        self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["address"]["state"])
+        self.parent.modifyrestaurant_website_lineEdit.setText(self.restaurant_data["website"])
+        self.parent.modifyrestaurant_phone_lineEdit.setText(self.restaurant_data["phone"])
+        for info in self.restaurant_data["about"]:
+            if info["id"] == "service_options":
+                for option in info["options"]:
+                    if option["name"].lower() == "delivery":
+                        self.parent.modifyrestaurant_delivery_checkBox.setChecked(option["enabled"])
+                    elif option["name"].lower() == "dine-in":
+                        self.parent.modifyrestaurant_dinein_checkBox.setChecked(option["enabled"])
+                    elif option["name"].lower() == "takeaway":
+                        self.parent.modifyrestaurant_takeaway_checkBox.setChecked(option["enabled"])
+            elif info["id"] == "payments":
+                self.parent.modifyrestaurant_payments_checkBox.setChecked(option["enabled"])
+                for option in info["options"]:
+                    payment_note = "; ".join([option["name"] for option in info["options"]])
+                    print(payment_note)
+                    self.parent.modifyrestaurant_payments_lineEdit.setText(payment_note)
+            elif info["id"]=="parking" and len(info["options"])>0:
+                self.parent.modifyrestaurant_parking_checkBox.setChecked(True)
+                parking_note = "; ".join([option["name"] for option in info["options"]])
+                print(parking_note)
+                self.parent.modifyrestaurant_parking_lineEdit.setText(parking_note)
+            elif info["id"]=="planning":
+                for option in info["options"]:
+                    if option["name"] == "Accepts reservations" or len(self.restaurant_data["reservations"])>0:
+                        self.parent.modifyrestaurant_reservations_checkBox.setChecked(True)
+                        reservations_note= [ "; ".join(reservation.values()) for reservation in self.restaurant_data["reservations"] ]
+                        self.parent.modifyrestaurant_reservations_lineEdit.setText("; ".join(self.restaurant_data["reservations"]))
+        isSameHours=True
+        time = ""
+        hours=[]
+        for day in self.restaurant_data["hours"]:
+            for times in day["times"]:
+                opening = "; ".join(times)
+                if time=="":
+                    time = opening
+                else:
+                    if time!= opening:
+                        isSameHours=False
+                hours.append(opening)
+        #TODO: finish filling in the UI opening hours, preferably using the same for loops
 
-        self.parent.form_area.setText(self.restaurant_data["address"]["state"])
-        self.parent.website_input.setText(self.restaurant_data["website"])
-        self.parent.about_input.setText("\n".join(self.restaurant_data["about"]))
+
 
 
     def add_restaurant(self):
@@ -312,12 +335,6 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         }
         return services
 
-    # def get_social_links(self):
-    #     return {
-    #         "facebook": self.facebook_link,  # e.g., from a button or field
-    #         "instagram": self.instagram_link,
-    #         "tiktok": self.tiktok_link
-    #     }
 
     def goInfo(self):
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)

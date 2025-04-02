@@ -1652,6 +1652,13 @@ QLineEdit {
   border: 1.5px solid #333;
   border-radius: 8px; }
 
+QPushButton {
+  border-radius: 12px; }
+
+QPushButton:hover {
+  background-color: #ddffdd;
+  color: #1a3b69; }
+
 #login_signup_stackedWidget QLineEdit {
   padding-left: 30px; }
 
