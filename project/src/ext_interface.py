@@ -244,8 +244,8 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.setCurrentWidget(self.inside_restaurant_page)
         if not hasattr(self.body_stackedWidget, "all_menu_page") or self.body_stackedWidget.all_menu_page is None:
             self.body_stackedWidget.all_menu_page = AllMenuItemScreen(parent=self)
-            self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
-        self.restaurant_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
+            self.body_stackedWidget.addWidget(self.body_stackedWidget.all_menu_page)
+        self.body_stackedWidget.setCurrentWidget(self.body_stackedWidget.all_menu_page)
         self.body_stackedWidget.all_menu_page.setVisible(True)
         self.body_stackedWidget.all_menu_page.tableWidget.setVisible(True)
         self.body_stackedWidget.all_menu_page.update()

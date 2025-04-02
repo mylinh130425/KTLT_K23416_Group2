@@ -153,8 +153,6 @@ class RestaurantScreen(QWidget):
         self.modifyRestaurantScreen = ModifyRestaurantScreen(self.parent, isCreating=True)
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.add_restaurant_page)
 
-
-
     def setupRestaurantInfo(self):
         modify_restaurant_screen = ModifyRestaurantScreen(self.parent, isCreating=False) #parent: Extend_Mainwindow
 

@@ -91,17 +91,12 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 if first_value_2 is not None and day in self.closing_hours:
                     self.closing_hours[day].setText(first_value_2)
 
-
-
     def update_restaurant_photo(self, image_url):
         """Gửi request để tải ảnh từ URL."""
         request = QNetworkRequest(QUrl(image_url))
         self.image_manager.get(request)
 
         print(request)
-
-
-
 
     def set_image(self, reply):
         """Cập nhật QLabel với ảnh từ URL."""
@@ -210,9 +205,6 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                         isSameHours=False
                 hours.append(opening)
         #TODO: finish filling in the UI opening hours, preferably using the same for loops
-
-
-
 
     def add_restaurant(self):
         print("clicked create res button")
@@ -334,7 +326,6 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
             }
         }
         return services
-
 
     def goInfo(self):
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.modify_restaurant_page)
