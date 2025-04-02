@@ -340,7 +340,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
             delattr(self.body_stackedWidget, 'menu_page')
 
         # Tạo menu_page mới
-        self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id, self)
+        self.body_stackedWidget.menu_page = RestaurantMenuScreen(place_id=place_id, parent=self)
         self.restaurant_stackedWidget.addWidget(self.body_stackedWidget.menu_page)
 
         # Đặt menu_page làm widget hiện tại

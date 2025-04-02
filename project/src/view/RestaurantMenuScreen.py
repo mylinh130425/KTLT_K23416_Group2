@@ -105,6 +105,8 @@ class RestaurantMenuScreen(QWidget):
 
         # Restaurant Photo Label (Circular Image)
         self.restaurant_photo_label = self.findChild(QLabel, "restaurant_photo_label")
+        self.parent.restaurant_photo_label = self.parent.findChild(QLabel, "restaurant_photo_label")
+
         if self.restaurant_photo_label is None:
             print("restaurant_photo_label not found in UI file!")
         else:
@@ -156,20 +158,32 @@ class RestaurantMenuScreen(QWidget):
                             self.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
                             self.restaurant_photo_label.setStyleSheet("border: none; background: transparent;")
                             self.restaurant_photo_label.setVisible(True)
-                            print(f"Photo label size: {self.restaurant_photo_label.size()}")
+
+                            #Set parent photo - Nên set photo trong sidebar của MainWindow của interface_stacked thay vì
+                            # tạo sidebar riêng vì sidebar này là dùng chung cho các page khác nữa
+                            self.parent.restaurant_photo_label.setPixmap(circular_pixmap)
+                            self.parent.restaurant_photo_label.setFixedSize(size, size)
+                            self.parent.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                            self.parent.restaurant_photo_label.setStyleSheet("border: none; background: transparent;")
+                            self.parent.restaurant_photo_label.setVisible(True)
+                            print(f"Photo label size: {self.parent.restaurant_photo_label.size()}")
                         else:
                             print("Failed to load image data")
                             self.restaurant_photo_label.setText("No image")
+                            self.parent.restaurant_photo_label.setText("No image")
                     else:
                         print(f"Image request failed: {response.status_code}")
                         self.restaurant_photo_label.setText("No image")
+                        self.parent.restaurant_photo_label.setText("No image")
                 except Exception as e:
                     print(f"Image load error: {e}")
                     self.restaurant_photo_label.setText("No image")
+                    self.parent.restaurant_photo_label.setText("No image")
             else:
                 print("No valid image URL found")
                 self.restaurant_photo_label.setText("No image")
             self.restaurant_photo_label.repaint()
+            self.parent.restaurant_photo_label.repaint()
 
         # Table Widget Setup
         table_widget_placeholder = self.findChild(QTableWidget, "tableWidget")
