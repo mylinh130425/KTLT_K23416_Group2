@@ -9,6 +9,7 @@ class ClickableLabel(QLabel):
     def __init__(self, parent=None, file_path=None):
         super().__init__(parent)
         self.__file_path=file_path
+        self.setScaledContents(True)
 
     def mousePressEvent(self, event):
         self.clicked.emit()  # Emit signal when clicked
@@ -17,15 +18,15 @@ class ClickableLabel(QLabel):
         file_path, _ = file_dialog.getOpenFileName(
             None, "Select an Image", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)"
         )
+        print(file_path)
 
         if file_path:  # If a file is selected
-            self.file_path = file_path  # Save the path
+            self.__file_path = file_path  # Save the path
             self.setPixmap(QPixmap(file_path).scaled(
                 self.width(),
                 self.height()
             ))  # Load image to QLabel instantly
-        print(self.file_path)
-        return self.file_path
+        print(self.__file_path)
 
     @property
     def file_path(self):
