@@ -203,6 +203,7 @@ class RestaurantScreen(QWidget):
 
     def open_menu_screen(self, row, column):
         """Mở trang menu khi double-click vào nhà hàng."""
+        # print(f"RestaurantScreen: Double-clicked at row {row}, column {column}")
         place_id_item = self.restaurant_table.item(row, 0)
         if place_id_item is None:
             restaurant_data = self.restaurant_table.model.get_restaurants()[row]

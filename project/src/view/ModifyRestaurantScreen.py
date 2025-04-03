@@ -98,6 +98,9 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
         print(request)
 
+
+
+
     def set_image(self, reply):
         """Cập nhật QLabel với ảnh từ URL."""
         data = reply.readAll()
