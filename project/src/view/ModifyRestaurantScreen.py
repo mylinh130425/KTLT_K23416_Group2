@@ -8,6 +8,7 @@ from project.src.model.RestaurantModel import Restaurant
 #from project.src.view.ClickableLabel import ClickableLabel
 
 
+
 class ModifyRestaurantScreen(QtWidgets.QWidget):
     def __init__(self, parent=None, isCreating=True, restaurant_id=None):
         super().__init__()

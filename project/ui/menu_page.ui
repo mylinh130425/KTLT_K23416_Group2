@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>918</width>
-    <height>577</height>
+    <width>1112</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,271 +17,20 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
-     <width>921</width>
+     <y>-30</y>
+     <width>1111</width>
      <height>581</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background: #E8D5B5;</string>
    </property>
-   <widget class="QWidget" name="restaurant_sidebar" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>88</y>
-      <width>142</width>
-      <height>440</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#343131;border-top-right-radius:20;border-bottom-right-radius:20</string>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_25">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetMinimumSize</enum>
-     </property>
-     <property name="leftMargin">
-      <number>0</number>
-     </property>
-     <item>
-      <spacer name="verticalSpacer_6">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_26">
-       <property name="leftMargin">
-        <number>9</number>
-       </property>
-       <item>
-        <widget class="QWidget" name="widget_11" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <spacer name="horizontalSpacer_7">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Minimum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>6</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QLabel" name="restaurant_photo_label">
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>80</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>80</width>
-              <height>80</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-radius:40;border:1px solid black; color: #FABC3F;</string>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_8">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Minimum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>7</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="restaurant_name_label">
-         <property name="minimumSize">
-          <size>
-           <width>120</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color:#FABC3F</string>
-         </property>
-         <property name="text">
-          <string>Name Restaurant</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>78</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_27">
-       <property name="leftMargin">
-        <number>30</number>
-       </property>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QPushButton" name="restaurant_info_button">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background:transparent; color:#FABC3F;text-align:left</string>
-         </property>
-         <property name="text">
-          <string>Info</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../image/sidebar_info.png</normaloff>../image/sidebar_info.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QPushButton" name="restaurant_menu_button">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background:transparent; color:#FABC3F;text-align:left</string>
-         </property>
-         <property name="text">
-          <string> Menu</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../image/sidebar_menu.png</normaloff>../image/sidebar_menu.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QPushButton" name="restaurant_review_button">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background:transparent; color:#FABC3F;text-align:left</string>
-         </property>
-         <property name="text">
-          <string>Review</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../image/sidebar_review.png</normaloff>../image/sidebar_review.png</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <spacer name="verticalSpacer_5">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>77</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>50</y>
-      <width>781</width>
+      <x>-10</x>
+      <y>20</y>
+      <width>981</width>
       <height>481</height>
      </rect>
     </property>
@@ -292,10 +41,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>752</width>
-        <height>440</height>
+        <x>10</x>
+        <y>10</y>
+        <width>911</width>
+        <height>451</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="menu_verticalLayout">
