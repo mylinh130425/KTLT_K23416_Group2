@@ -1,4 +1,4 @@
-from PyQt6 import QtWidgets
+from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtCore import QUrl, QRectF
 from PyQt6.QtGui import QPixmap, QPainter, QPainterPath
 from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget, QFileDialog
@@ -20,74 +20,188 @@ class ProfileScreen(QtWidgets.QWidget):
         # Lưu trữ đường dẫn hình ảnh đã upload
         self.uploaded_image_path = None
         
+        # Chuẩn bị các ảnh mặc định sẵn sàng
+        self.default_profile_pixmap = self.load_and_round_image("../../image/profile_panel_icon.png", 90)
+        self.default_sidebar_pixmap = self.load_and_round_image("../../image/profile_panel_icon.png", 60)
+        
         # Thiết lập UI
         self.setup_ui()
         self.process_signals_slots()
 
+    def load_and_round_image(self, image_path, size):
+        """Load ảnh từ đường dẫn và tạo phiên bản tròn với kích thước xác định"""
+        pixmap = QPixmap(image_path)
+        if not pixmap.isNull():
+            return self.get_rounded_pixmap(pixmap, size)
+        return None
+
     def setup_ui(self):
-        print("Setting up profile UI")
-        # Thay thế hoàn toàn QLabel bằng ClickableLabel (giống cách của ModifyRestaurantScreen)
-        
-        # Thay thế profile_photo_label chính
+        # MAIN PROFILE PHOTO - Ảnh lớn ở giữa trên cùng
         if hasattr(self.parent, 'profile_photo_label'):
-            # Lưu thông tin về vị trí và kích thước của label cũ
+            # Xóa widget cũ
             original_photo = self.parent.profile_photo_label
             photo_parent = original_photo.parent()
             photo_layout = photo_parent.layout()
-            photo_position = photo_layout.indexOf(original_photo)
-            photo_size = original_photo.size()
-            photo_style = original_photo.styleSheet()
             
-            # Xóa label cũ
-            photo_layout.removeWidget(original_photo)
+            # Nếu có layout, gỡ bỏ widget cũ
+            if photo_layout:
+                photo_layout.removeWidget(original_photo)
+            
+            original_photo.hide()
             original_photo.deleteLater()
             
-            # Tạo ClickableLabel mới
-            self.parent.profile_photo_label = ClickableLabel(photo_parent)
-            self.parent.profile_photo_label.setText("Click to upload")
-            self.parent.profile_photo_label.setFixedSize(photo_size)
-            self.parent.profile_photo_label.setStyleSheet("border-radius: 45px; border: 1.5px solid #333; cursor: pointer;")
-            self.parent.profile_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            # Tạo widget mới với kích thước cố định và style giống trong ảnh 2
+            new_photo_label = ClickableLabel(photo_parent)
+            new_photo_label.setMinimumSize(QtCore.QSize(90, 90))
+            new_photo_label.setMaximumSize(QtCore.QSize(90, 90))
+            new_photo_label.setStyleSheet("border-radius: 45px; border: 1.5px solid #333;")
+            new_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            new_photo_label.setCursor(Qt.CursorShape.PointingHandCursor)
+            new_photo_label.setScaledContents(True)
             
-            # Thêm vào layout
-            photo_layout.addWidget(self.parent.profile_photo_label, 0, Qt.AlignmentFlag.AlignHCenter)
+            # Thiết lập ảnh mặc định ngay lập tức
+            if self.default_profile_pixmap:
+                new_photo_label.setPixmap(self.default_profile_pixmap)
+            else:
+                new_photo_label.setText("Click to upload")
             
-            # Kết nối tín hiệu click để upload ảnh
-            self.parent.profile_photo_label.clicked.connect(self.upload_profile_image)
-            print(f"Main photo label replaced with ClickableLabel: {self.parent.profile_photo_label}")
-        
-        # Thay thế profilesidebar_photo_label
-        if hasattr(self.parent, 'profilesidebar_photo_label'):
-            # Lưu thông tin về vị trí và kích thước của label cũ
-            original_sidebar = self.parent.profilesidebar_photo_label
-            sidebar_parent = original_sidebar.parent()
-            sidebar_layout = sidebar_parent.layout()
-            sidebar_position = sidebar_layout.indexOf(original_sidebar)
-            sidebar_size = original_sidebar.size()
-            
-            # Xóa label cũ
-            sidebar_layout.removeWidget(original_sidebar)
-            original_sidebar.deleteLater()
-            
-            # Tạo ClickableLabel mới
-            self.parent.profilesidebar_photo_label = ClickableLabel(sidebar_parent)
-            self.parent.profilesidebar_photo_label.setText("Click")
-            self.parent.profilesidebar_photo_label.setFixedSize(sidebar_size)
-            self.parent.profilesidebar_photo_label.setStyleSheet("border-radius: 30px; border: 1.5px solid white; cursor: pointer;")
-            self.parent.profilesidebar_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-            
-            try:
-                # Thêm vào layout - sử dụng addWidget thay vì insertWidget để tương thích với tất cả loại layout
-                sidebar_layout.addWidget(self.parent.profilesidebar_photo_label)
+            # Thêm vào đúng vị trí trong layout với alignment là AlignHCenter
+            # Đây là trick quan trọng để đặt ảnh ở giữa như trong mẫu
+            if photo_layout:
+                # Xóa widget trong index 0 của layout (nếu có)
+                if photo_layout.count() > 0:
+                    item = photo_layout.itemAt(0)
+                    if item and item.widget():
+                        item.widget().setParent(None)
                 
-                # Kết nối tín hiệu click để upload ảnh
-                self.parent.profilesidebar_photo_label.clicked.connect(self.upload_profile_image)
-                print(f"Sidebar photo label replaced with ClickableLabel: {self.parent.profilesidebar_photo_label}")
-            except Exception as e:
-                print(f"Error adding widget to layout: {e}")
+                # Thêm widget mới vào vị trí đầu tiên với alignment là AlignHCenter
+                photo_layout.insertWidget(0, new_photo_label, 0, Qt.AlignmentFlag.AlignHCenter)
+            
+            # Lưu tham chiếu
+            self.parent.profile_photo_label = new_photo_label
+            
+            # Kết nối sự kiện click
+            self.parent.profile_photo_label.clicked.connect(self.upload_profile_image)
         
-        # Load ảnh profile mặc định (đã làm tròn)
-        self.load_default_images()
+        # SIDEBAR PROFILE PHOTO - Ảnh nhỏ ở sidebar bên trái
+        if hasattr(self.parent, 'profilesidebar_photo_label'):
+            # Dựa trên cấu trúc UI, profilesidebar_photo_label nằm trong:
+            # profile_panel > verticalLayout_44 > verticalLayout_45 > horizontalLayout_23
+            
+            # Lấy widget gốc 
+            original_sidebar = self.parent.profilesidebar_photo_label
+            profile_panel = None
+            
+            # Tìm profile_panel - cha của tất cả các widget trong sidebar
+            if hasattr(self.parent, 'profile_panel'):
+                profile_panel = self.parent.profile_panel
+            
+            if profile_panel:
+                # Tìm các layout cần thiết
+                verticalLayout_44 = None
+                verticalLayout_45 = None
+                horizontalLayout_23 = None
+                
+                # Lấy verticalLayout_44 (layout chính của profile_panel)
+                if profile_panel.layout():
+                    verticalLayout_44 = profile_panel.layout()
+                    
+                    # Tìm verticalLayout_45 trong verticalLayout_44
+                    for i in range(verticalLayout_44.count()):
+                        item = verticalLayout_44.itemAt(i)
+                        if item.layout() and item.layout().objectName() == "verticalLayout_45":
+                            verticalLayout_45 = item.layout()
+                            break
+                    
+                    # Tìm horizontalLayout_23 trong verticalLayout_45
+                    if verticalLayout_45:
+                        for i in range(verticalLayout_45.count()):
+                            item = verticalLayout_45.itemAt(i)
+                            if item.layout() and item.layout().objectName() == "horizontalLayout_23":
+                                horizontalLayout_23 = item.layout()
+                                break
+                
+                # Xóa sidebar_photo_label khỏi horizontalLayout_23
+                if horizontalLayout_23:
+                    for i in range(horizontalLayout_23.count()):
+                        item = horizontalLayout_23.itemAt(i)
+                        if item.widget() == original_sidebar:
+                            horizontalLayout_23.removeWidget(original_sidebar)
+                            break
+                
+                # Xóa cũ
+                original_sidebar.hide()
+                original_sidebar.deleteLater()
+                
+                # Tạo ClickableLabel mới
+                new_sidebar_label = ClickableLabel(profile_panel)
+                new_sidebar_label.setMinimumSize(QtCore.QSize(60, 60))
+                new_sidebar_label.setMaximumSize(QtCore.QSize(60, 60))
+                new_sidebar_label.setStyleSheet("border-radius: 30px; border: 1.5px solid white;")
+                new_sidebar_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                new_sidebar_label.setCursor(Qt.CursorShape.PointingHandCursor)
+                new_sidebar_label.setScaledContents(True)
+                
+                # Thiết lập ảnh mặc định ngay lập tức
+                if self.default_sidebar_pixmap:
+                    new_sidebar_label.setPixmap(self.default_sidebar_pixmap)
+                else:
+                    new_sidebar_label.setText("Click to upload")
+                
+                # Thêm vào horizontalLayout_23
+                if horizontalLayout_23:
+                    horizontalLayout_23.addWidget(new_sidebar_label)
+                    
+                    # Kiểm tra và đảm bảo horizontalLayout_23 ở vị trí đầu tiên của verticalLayout_45
+                    if verticalLayout_45:
+                        # Xóa horizontalLayout_23 khỏi vị trí hiện tại (nếu có)
+                        for i in range(verticalLayout_45.count()):
+                            item = verticalLayout_45.itemAt(i)
+                            if item.layout() == horizontalLayout_23:
+                                verticalLayout_45.removeItem(item)
+                                break
+                        
+                        # Thêm lại horizontalLayout_23 vào vị trí đầu tiên
+                        verticalLayout_45.insertLayout(0, horizontalLayout_23)
+                else:
+                    # Nếu không tìm thấy layout, tạo mới và thêm vào
+                    horizontalLayout_23 = QtWidgets.QHBoxLayout()
+                    horizontalLayout_23.setObjectName("horizontalLayout_23")
+                    horizontalLayout_23.addWidget(new_sidebar_label)
+                    
+                    if verticalLayout_45:
+                        verticalLayout_45.insertLayout(0, horizontalLayout_23)
+                    elif verticalLayout_44:
+                        verticalLayout_44.insertLayout(0, horizontalLayout_23)
+            else:
+                # Xử lý trường hợp không tìm thấy profile_panel
+                original_sidebar.hide()
+                original_sidebar.deleteLater()
+                
+                # Tạo widget mới với vị trí tuyệt đối
+                sidebar_parent = original_sidebar.parent()
+                new_sidebar_label = ClickableLabel(sidebar_parent)
+                new_sidebar_label.setMinimumSize(QtCore.QSize(60, 60))
+                new_sidebar_label.setMaximumSize(QtCore.QSize(60, 60))
+                new_sidebar_label.setStyleSheet("border-radius: 30px; border: 1.5px solid white;")
+                new_sidebar_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                new_sidebar_label.setCursor(Qt.CursorShape.PointingHandCursor)
+                new_sidebar_label.setScaledContents(True)
+                new_sidebar_label.setGeometry(QtCore.QRect(20, 20, 60, 60))
+                
+                # Thiết lập ảnh mặc định ngay lập tức
+                if self.default_sidebar_pixmap:
+                    new_sidebar_label.setPixmap(self.default_sidebar_pixmap)
+                else:
+                    new_sidebar_label.setText("Click to upload")
+                
+                new_sidebar_label.show()
+            
+            # Lưu tham chiếu
+            self.parent.profilesidebar_photo_label = new_sidebar_label
+            
+            # Kết nối sự kiện click
+            self.parent.profilesidebar_photo_label.clicked.connect(self.upload_profile_image)
 
     def process_signals_slots(self):
         # Kết nối các tín hiệu và slots
@@ -97,45 +211,44 @@ class ProfileScreen(QtWidgets.QWidget):
     def upload_profile_image(self):
         """Xử lý sự kiện click để upload ảnh mới"""
         print("Upload profile image clicked")
-        
-        # Tìm ra đối tượng nào được click (main photo hoặc sidebar photo)
-        sender = self.sender()
-        print(f"Sender: {sender}")
-        
-        if isinstance(sender, ClickableLabel):
-            print(f"Detected ClickableLabel click: {sender}")
-            # Mở dialog để chọn file bằng phương thức có sẵn trong ClickableLabel
-            sender.open_file_dialog()
-            file_path = sender.file_path
-            print(f"Selected file path: {file_path}")
+        # Sử dụng QFileDialog thay vì ClickableLabel.open_file_dialog để đảm bảo độ tin cậy
+        file_path, _ = QFileDialog.getOpenFileName(
+            self.parent,
+            "Open Image",
+            "",
+            "Image Files (*.png *.jpg *.jpeg *.bmp *.gif)"
+        )
             
-            if file_path and file_path.strip():
-                self.uploaded_image_path = file_path
+        if file_path:
+            self.uploaded_image_path = file_path
+            print(f"Selected image: {file_path}")
+            
+            # Load và hiển thị ảnh dưới dạng tròn
+            pixmap = QPixmap(file_path)
+            if not pixmap.isNull():
+                # Tạo phiên bản tròn cho cả hai ảnh
+                rounded_pixmap_small = self.get_rounded_pixmap(pixmap, 60)  # Nhỏ cho sidebar
+                rounded_pixmap_large = self.get_rounded_pixmap(pixmap, 90)  # Lớn cho ảnh chính
                 
-                # Load và hiển thị ảnh dưới dạng tròn
-                pixmap = QPixmap(file_path)
-                if not pixmap.isNull():
-                    print(f"Loading pixmap from {file_path}, size: {pixmap.width()}x{pixmap.height()}")
-                    # Tạo phiên bản tròn cho cả hai ảnh
-                    rounded_pixmap_small = self.get_rounded_pixmap(pixmap, 60)  # Nhỏ cho sidebar
-                    rounded_pixmap_large = self.get_rounded_pixmap(pixmap, 90)  # Lớn cho ảnh chính
-                    
-                    # Cập nhật cả hai ảnh
+                # Cập nhật cả hai ảnh
+                if hasattr(self.parent, 'profile_photo_label'):
                     self.parent.profile_photo_label.setPixmap(rounded_pixmap_large)
                     self.parent.profile_photo_label.setScaledContents(True)
+                    # Clear any text that might be showing
                     self.parent.profile_photo_label.setText("")
-                    
+                    print("Updated main profile photo")
+                
+                if hasattr(self.parent, 'profilesidebar_photo_label'):
                     self.parent.profilesidebar_photo_label.setPixmap(rounded_pixmap_small)
                     self.parent.profilesidebar_photo_label.setScaledContents(True)
+                    # Clear any text that might be showing
                     self.parent.profilesidebar_photo_label.setText("")
-                    
-                    print(f"Image uploaded successfully: {file_path}")
-                else:
-                    print(f"Failed to load pixmap from {file_path}")
+                    print("Updated sidebar profile photo")
+                
+                print(f"Image uploaded successfully: {file_path}")
+                # Sẽ lưu ảnh này vào DB khi lưu profile
             else:
-                print("No file path or file path is empty")
-        else:
-            print(f"Unknown sender type: {type(sender)}")
+                print(f"Failed to load image from {file_path}")
 
     def get_rounded_pixmap(self, pixmap, size):
         """Chuyển đổi QPixmap thành hình tròn hoàn hảo, không bị cắt méo."""
@@ -170,29 +283,32 @@ class ProfileScreen(QtWidgets.QWidget):
     def load_default_images(self):
         """Load ảnh mặc định cho profile và chuyển thành hình tròn"""
         print("Loading default profile images")
-        # Load ảnh profile chính
-        default_profile_path = "project/image/profile_icon.png"
-        profile_pixmap = QPixmap(default_profile_path)
-        if not profile_pixmap.isNull():
-            print(f"Loading default profile image from {default_profile_path}")
-            rounded_profile = self.get_rounded_pixmap(profile_pixmap, 90)
-            self.parent.profile_photo_label.setPixmap(rounded_profile)
-            self.parent.profile_photo_label.setScaledContents(True)
-            self.parent.profile_photo_label.setText("")
-        else:
-            print(f"Failed to load default profile image from {default_profile_path}")
         
-        # Load ảnh sidebar
-        default_sidebar_path = "project/image/profile_panel_icon.png"
-        sidebar_pixmap = QPixmap(default_sidebar_path)
-        if not sidebar_pixmap.isNull():
-            print(f"Loading default sidebar image from {default_sidebar_path}")
-            rounded_sidebar = self.get_rounded_pixmap(sidebar_pixmap, 60)
-            self.parent.profilesidebar_photo_label.setPixmap(rounded_sidebar)
-            self.parent.profilesidebar_photo_label.setScaledContents(True)
-            self.parent.profilesidebar_photo_label.setText("")
-        else:
-            print(f"Failed to load default sidebar image from {default_sidebar_path}")
+        # Sử dụng ảnh đã được chuẩn bị hoặc tải lại nếu cần
+        if not self.default_profile_pixmap:
+            self.default_profile_pixmap = self.load_and_round_image("../../image/profile_panel_icon.png", 90)
+            
+        if not self.default_sidebar_pixmap:
+            self.default_sidebar_pixmap = self.load_and_round_image("../../image/profile_panel_icon.png", 60)
+        
+        # Áp dụng ảnh cho các widget
+        if hasattr(self.parent, 'profile_photo_label'):
+            if self.default_profile_pixmap:
+                print("Applying default profile image")
+                self.parent.profile_photo_label.setPixmap(self.default_profile_pixmap)
+                self.parent.profile_photo_label.setScaledContents(True)
+                self.parent.profile_photo_label.setText("")  # Clear any text
+            else:
+                self.parent.profile_photo_label.setText("Click to upload")
+                
+        if hasattr(self.parent, 'profilesidebar_photo_label'):
+            if self.default_sidebar_pixmap:
+                print("Applying default sidebar image")
+                self.parent.profilesidebar_photo_label.setPixmap(self.default_sidebar_pixmap)
+                self.parent.profilesidebar_photo_label.setScaledContents(True)
+                self.parent.profilesidebar_photo_label.setText("")  # Clear any text
+            else:
+                self.parent.profilesidebar_photo_label.setText("Click to upload")
 
     def save_profile(self):
         """Lưu thông tin profile, bao gồm cả ảnh mới nếu có"""
@@ -226,12 +342,33 @@ class ProfileScreen(QtWidgets.QWidget):
                 # Đặt ảnh cho các label
                 self.parent.profile_photo_label.setPixmap(rounded_pixmap_large)
                 self.parent.profile_photo_label.setScaledContents(True)
-                self.parent.profile_photo_label.setText("")
+                self.parent.profile_photo_label.setText("")  # Clear any text
                 
                 self.parent.profilesidebar_photo_label.setPixmap(rounded_pixmap_small)
                 self.parent.profilesidebar_photo_label.setScaledContents(True)
-                self.parent.profilesidebar_photo_label.setText("")
+                self.parent.profilesidebar_photo_label.setText("")  # Clear any text
             else:
                 print("profile_photo_label or profilesidebar_photo_label not found in parent widget")
         else:
-            print("Failed to load image from network reply") 
+            # Nếu không tải được, sử dụng ảnh mặc định đã được chuẩn bị
+            if hasattr(self.parent, 'profile_photo_label'):
+                if self.default_profile_pixmap:
+                    self.parent.profile_photo_label.setPixmap(self.default_profile_pixmap)
+                    self.parent.profile_photo_label.setScaledContents(True)
+                    self.parent.profile_photo_label.setText("")
+                else:
+                    self.parent.profile_photo_label.setText("Click to upload")
+                    
+            if hasattr(self.parent, 'profilesidebar_photo_label'):
+                if self.default_sidebar_pixmap:
+                    self.parent.profilesidebar_photo_label.setPixmap(self.default_sidebar_pixmap)
+                    self.parent.profilesidebar_photo_label.setScaledContents(True)
+                    self.parent.profilesidebar_photo_label.setText("")
+                else:
+                    self.parent.profilesidebar_photo_label.setText("Click to upload")
+
+    def update_profile_photo(self, image_url):
+        """Gửi request để tải ảnh từ URL."""
+        request = QNetworkRequest(QUrl(image_url))
+        self.image_manager.get(request)
+        print(f"Sending request to load profile image from: {image_url}") 

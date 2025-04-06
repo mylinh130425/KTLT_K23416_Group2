@@ -102,19 +102,21 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         new_password = self.profile_newpassword_lineEdit.text().strip()
         confirm_password = self.profile_confirmpassword_lineEdit.text().strip()
 
-        update_result, message = self.profile.update_profile(old_username, new_username, new_fullname, current_password, new_password, confirm_password)
-
         # Lưu ảnh mới nếu có
         if hasattr(self, 'profile_screen') and self.profile_screen.uploaded_image_path:
             # Trong ứng dụng thực tế, đây là nơi bạn có thể lưu thông tin ảnh vào DB
             print(f"Cập nhật ảnh profile: {self.profile_screen.uploaded_image_path}")
             # TODO: Thêm code lưu ảnh vào DB
 
+        update_result, message = self.profile.update_profile(old_username, new_username, new_fullname, current_password, new_password, confirm_password)
+
         if update_result:
             QtWidgets.QMessageBox.information(self.body_stackedWidget, "Success", "User update successful!")
             self.profile_currentpassword_lineEdit.clear()
             self.profile_newpassword_lineEdit.clear()
             self.profile_confirmpassword_lineEdit.clear()
+        else:
+            QtWidgets.QMessageBox.warning(self.body_stackedWidget, "Error", message)
 
     def logout(self):
         self.menu_dock.setVisible(False)
@@ -283,12 +285,22 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.body_stackedWidget.setCurrentWidget(self.profile_page)
         self.profile_username_lineEdit.setText(self.username)
         
+        # Clear password fields when navigating to profile page
+        self.profile_currentpassword_lineEdit.clear()
+        self.profile_newpassword_lineEdit.clear()
+        self.profile_confirmpassword_lineEdit.clear()
+        
         # Khởi tạo ProfileScreen nếu chưa tồn tại
         if not hasattr(self, 'profile_screen'):
             self.profile_screen = ProfileScreen(parent=self)
         
         # Load lại hình ảnh profile nếu cần
         self.profile_screen.load_default_images()
+        
+        # Nếu trong tương lai có ảnh đã lưu trong DB cho user này
+        # image_url = self.profile.current_user.profile_image_url
+        # if image_url:
+        #     self.profile_screen.update_profile_photo(image_url)
 
     def login(self):
         self.username = self.login_username_lineEdit.text().strip()

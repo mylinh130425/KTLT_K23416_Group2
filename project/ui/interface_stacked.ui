@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>3</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1614,6 +1614,12 @@
                           <layout class="QHBoxLayout" name="horizontalLayout_23">
                            <item>
                             <widget class="QLabel" name="profilesidebar_photo_label">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>60</width>
@@ -1763,6 +1769,12 @@
                      </property>
                      <item alignment="Qt::AlignHCenter">
                       <widget class="QLabel" name="profile_photo_label">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
                          <width>90</width>
@@ -3017,7 +3029,7 @@
                                            <property name="maximumSize">
                                             <size>
                                              <width>80</width>
-                                             <height>60</height>
+                                             <height>80</height>
                                             </size>
                                            </property>
                                            <property name="text">
@@ -4410,8 +4422,8 @@ background-color: #343131;</string>
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>91</width>
-                               <height>91</height>
+                               <width>924</width>
+                               <height>129</height>
                               </rect>
                              </property>
                              <layout class="QVBoxLayout" name="verticalLayout_51">
