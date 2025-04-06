@@ -5,7 +5,8 @@ from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget, QFileDialog, QCheckBox
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest
 
 from project.src.model.RestaurantModel import Restaurant
-from project.src.view.ClickableLabel import ClickableLabel
+#from project.src.view.ClickableLabel import ClickableLabel
+
 
 
 class ModifyRestaurantScreen(QtWidgets.QWidget):
