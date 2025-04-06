@@ -6,7 +6,7 @@
     },
     {
       "name": "home_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo.png"
+      "icon": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\Logo.png"
     },
     {
       "name": "search_button",
@@ -22,29 +22,29 @@
     },
     {
       "name": "restaurant_info_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_info.png"
+      "icon": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\sidebar_info.png"
     },
     {
       "name": "restaurant_menu_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_menu.png"
+      "icon": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\sidebar_menu.png"
     },
     {
       "name": "restaurant_review_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\sidebar_review.png"
+      "icon": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\sidebar_review.png"
     },
     {
       "name": "menupage_filter_button",
-      "icon": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\ic_filter24.png"
+      "icon": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\ic_filter24.png"
     }
   ],
   "QLabel": [
     {
       "name": "welcome_photo",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\CreateAcc_Image.png"
+      "pixmap": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\CreateAcc_Image.png"
     },
     {
       "name": "login_photo_label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Logo_dark.png"
+      "pixmap": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\Logo_dark.png"
     },
     {
       "name": "label_3",
@@ -76,27 +76,15 @@
     },
     {
       "name": "profilesidebar_photo_label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_panel_icon.png"
+      "pixmap": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\profile_panel_icon.png"
     },
     {
       "name": "profile_photo_label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_icon.png"
+      "pixmap": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\profile_icon.png"
     },
     {
       "name": "label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Account-amico 1.png"
-    },
-    {
-      "name": "facebook",
-      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\facebook.png"
-    },
-    {
-      "name": "insta",
-      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\insta.png"
-    },
-    {
-      "name": "tiktok",
-      "pixmap": "C:\\Users\\USER\\.designer\\Qss\\icons\\Icons\\restaurant_logo\\tiktok.png"
+      "pixmap": "D:\\project_backup_5\\KTLT_K23416_Group2\\project\\image\\Account-amico 1.png"
     },
     {
       "name": "lb_anh_12",

@@ -9,6 +9,7 @@ from project.src.model.ProfileModel import ProfileModel
 from project.src.view.AllMenuItemScreen import AllMenuItemScreen
 from project.src.view.RestaurantMenuScreen import RestaurantMenuScreen
 from project.src.view.RestaurantScreen import RestaurantScreen
+from project.src.view.ProfileScreen import ProfileScreen
 from project.src.ui_interface_stacked import *
 
 class Extend_MainWindow(QMainWindow, Ui_MainWindow):
@@ -102,6 +103,12 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         confirm_password = self.profile_confirmpassword_lineEdit.text().strip()
 
         update_result, message = self.profile.update_profile(old_username, new_username, new_fullname, current_password, new_password, confirm_password)
+
+        # Lưu ảnh mới nếu có
+        if hasattr(self, 'profile_screen') and self.profile_screen.uploaded_image_path:
+            # Trong ứng dụng thực tế, đây là nơi bạn có thể lưu thông tin ảnh vào DB
+            print(f"Cập nhật ảnh profile: {self.profile_screen.uploaded_image_path}")
+            # TODO: Thêm code lưu ảnh vào DB
 
         if update_result:
             QtWidgets.QMessageBox.information(self.body_stackedWidget, "Success", "User update successful!")
@@ -275,6 +282,13 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.profile_fullname_lineEdit.setText(self.fullname)
         self.body_stackedWidget.setCurrentWidget(self.profile_page)
         self.profile_username_lineEdit.setText(self.username)
+        
+        # Khởi tạo ProfileScreen nếu chưa tồn tại
+        if not hasattr(self, 'profile_screen'):
+            self.profile_screen = ProfileScreen(parent=self)
+        
+        # Load lại hình ảnh profile nếu cần
+        self.profile_screen.load_default_images()
 
     def login(self):
         self.username = self.login_username_lineEdit.text().strip()
@@ -287,6 +301,11 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
             print("setting up profile page")
             self.stackedWidget.setCurrentWidget(self.Main)
             self.profile = ProfileModel(self.db_manager, self.username)
+            
+            # Khởi tạo ProfileScreen sau khi đăng nhập
+            if not hasattr(self, 'profile_screen'):
+                self.profile_screen = ProfileScreen(parent=self)
+                
             self.goProfile()
             self.login_password_lineEdit.clear()
             self.login_username_lineEdit.clear()
@@ -309,6 +328,11 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
                 QtWidgets.QMessageBox.information(self.welcome_stackedWidget, "Success", "User registered successfully!")
                 print("setting up profile page")
                 self.profile = ProfileModel(self.db_manager, self.username)
+                
+                # Khởi tạo ProfileScreen sau khi đăng ký
+                if not hasattr(self, 'profile_screen'):
+                    self.profile_screen = ProfileScreen(parent=self)
+                    
                 self.stackedWidget.setCurrentWidget(self.Main)
                 self.goProfile()
                 self.signup_password_lineEdit.clear()

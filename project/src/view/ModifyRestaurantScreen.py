@@ -1,8 +1,9 @@
 from PyQt6 import QtWidgets
-from PyQt6.QtCore import QUrl
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtCore import QUrl, QRectF
+from PyQt6.QtGui import QPixmap, QPainter, QPainterPath
 from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget, QFileDialog, QCheckBox, QLineEdit
 from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest
+from PyQt6.QtCore import Qt
 
 from project.src.model.RestaurantModel import Restaurant
 from project.src.view.ClickableLabel import ClickableLabel
@@ -19,6 +20,9 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         # Tạo NetworkAccessManager ngay khi khởi tạo
         self.image_manager = QNetworkAccessManager()
         self.image_manager.finished.connect(self.set_image)
+        
+        # Store uploaded image path
+        self.uploaded_image_path = None
 
         if not isCreating:
             self.setup_ui_edit()
@@ -30,6 +34,58 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.restaurant_form_photo_label.setText("Restaurant")
         self.parent.restaurant_form_photo_label.setStyleSheet("border: 1px solid gray; padding: 5px;")
         self.parent.restaurant_form_photo_label.setFixedSize(200, 200)  # Adjust size as needed
+
+        # Replace restaurant_info_avatar with ClickableLabel
+        if hasattr(self.parent, 'restaurant_info_avatar'):
+            # Store reference to the original label's parent and position
+            original_avatar = self.parent.restaurant_info_avatar
+            avatar_parent = original_avatar.parent()
+            avatar_layout = avatar_parent.layout()
+            avatar_position = avatar_layout.indexOf(original_avatar)
+            avatar_size = original_avatar.size()
+            
+            # Remove the original label
+            avatar_layout.removeWidget(original_avatar)
+            original_avatar.deleteLater()
+            
+            # Create new ClickableLabel
+            self.parent.restaurant_info_avatar = ClickableLabel(avatar_parent)
+            self.parent.restaurant_info_avatar.setText("Click to upload")
+            self.parent.restaurant_info_avatar.setFixedSize(avatar_size)
+            self.parent.restaurant_info_avatar.setStyleSheet("background-color: transparent; border: none;")
+            self.parent.restaurant_info_avatar.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            
+            # Add to layout at same position - use addWidget which works with all layouts
+            avatar_layout.addWidget(self.parent.restaurant_info_avatar)
+            
+            # Connect click signal to upload function
+            self.parent.restaurant_info_avatar.clicked.connect(self.upload_avatar_image)
+        
+        # Also make the main restaurant photo label clickable
+        if hasattr(self.parent, 'restaurant_photo_label'):
+            # Store reference to the original label's parent and position
+            original_photo = self.parent.restaurant_photo_label
+            photo_parent = original_photo.parent()
+            photo_layout = photo_parent.layout()
+            photo_position = photo_layout.indexOf(original_photo)
+            photo_size = original_photo.size()
+            
+            # Remove the original label
+            photo_layout.removeWidget(original_photo)
+            original_photo.deleteLater()
+            
+            # Create new ClickableLabel
+            self.parent.restaurant_photo_label = ClickableLabel(photo_parent)
+            self.parent.restaurant_photo_label.setText("Click to upload")
+            self.parent.restaurant_photo_label.setFixedSize(photo_size)
+            self.parent.restaurant_photo_label.setStyleSheet("background-color: transparent; border: none;")
+            self.parent.restaurant_photo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            
+            # Add to layout at same position - use addWidget which works with all layouts
+            photo_layout.addWidget(self.parent.restaurant_photo_label)
+            
+            # Connect click signal to upload function
+            self.parent.restaurant_photo_label.clicked.connect(self.upload_photo_image)
 
         self.restaurant_new_image_path = self.parent.restaurant_form_photo_label.file_path  # Variable to store the image path
 
@@ -105,10 +161,67 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         pixmap.loadFromData(data)
 
         if not pixmap.isNull():  # Kiểm tra xem ảnh có hợp lệ không
-            self.restaurant_photo_label.setPixmap(pixmap)
-            self.restaurant_photo_label.setFixedSize(pixmap.size())
+            # Đảm bảo restaurant_photo_label đã được khởi tạo đúng
+            if hasattr(self.parent, 'restaurant_photo_label'):
+                # Create rounded version of the images - use different sizes
+                rounded_pixmap_small = self.get_rounded_pixmap(pixmap, 75)  # Smaller for avatar
+                rounded_pixmap_large = self.get_rounded_pixmap(pixmap, 200)  # Larger for main photo
+                
+                # Set the rounded images to the labels
+                self.parent.restaurant_photo_label.setPixmap(rounded_pixmap_large)
+                self.parent.restaurant_photo_label.setScaledContents(True)
+                self.parent.restaurant_photo_label.setStyleSheet("background-color: transparent; border: none;")
+
+                self.parent.restaurant_info_avatar.setPixmap(rounded_pixmap_small)
+                self.parent.restaurant_info_avatar.setScaledContents(True)
+                self.parent.restaurant_info_avatar.setStyleSheet("background-color: transparent; border: none;")
+                
+                # If these are ClickableLabel objects, make sure we don't overwrite their click behavior
+                if isinstance(self.parent.restaurant_photo_label, ClickableLabel):
+                    self.parent.restaurant_photo_label.setText("")  # Clear any text
+                
+                if isinstance(self.parent.restaurant_info_avatar, ClickableLabel):
+                    self.parent.restaurant_info_avatar.setText("")  # Clear any text
+            else:
+                print("restaurant_photo_label not found in parent widget")
         else:
-            self.restaurant_photo_label.setText("Failed to load image")
+            if hasattr(self.parent, 'restaurant_photo_label'):
+                if isinstance(self.parent.restaurant_photo_label, ClickableLabel):
+                    self.parent.restaurant_photo_label.setText("Click to upload image")
+                else:
+                    self.parent.restaurant_photo_label.setText("Failed to load image")
+            else:
+                print("restaurant_photo_label not found in parent widget")
+    
+    def get_rounded_pixmap(self, pixmap, size):
+        """Chuyển đổi QPixmap thành hình tròn hoàn hảo, không bị cắt méo."""
+        # Scale image, keeping aspect ratio, expanding to fill
+        scaled_pixmap = pixmap.scaled(
+            size, size,
+            Qt.AspectRatioMode.KeepAspectRatioByExpanding,
+            Qt.TransformationMode.SmoothTransformation
+        )
+        
+        # Crop to square (center the crop)
+        width = scaled_pixmap.width()
+        height = scaled_pixmap.height()
+        x = (width - size) // 2
+        y = (height - size) // 2
+        cropped_pixmap = scaled_pixmap.copy(x, y, size, size)
+        
+        # Create circular pixmap
+        rounded_pixmap = QPixmap(size, size)
+        rounded_pixmap.fill(Qt.GlobalColor.transparent)
+        
+        painter = QPainter(rounded_pixmap)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        path = QPainterPath()
+        path.addEllipse(QRectF(0, 0, size, size))
+        painter.setClipPath(path)
+        painter.drawPixmap(0, 0, cropped_pixmap)
+        painter.end()
+        
+        return rounded_pixmap
 
     def setup_ui_create(self):
         pass
@@ -186,12 +299,12 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 parking_note = "; ".join([option["name"] for option in info["options"]])
                 print(parking_note)
                 self.parent.modifyrestaurant_parking_lineEdit.setText(parking_note)
-            elif info["id"]=="planning":
-                for option in info["options"]:
-                    if option["name"] == "Accepts reservations" or len(self.restaurant_data["reservations"])>0:
-                        self.parent.modifyrestaurant_reservations_checkBox.setChecked(True)
-                        reservations_note= [ "; ".join(reservation.values()) for reservation in self.restaurant_data["reservations"] ]
-                        self.parent.modifyrestaurant_reservations_lineEdit.setText("; ".join(self.restaurant_data["reservations"]))
+            # elif info["id"]=="planning":
+            #     for option in info["options"]:
+            #         if len(self.restaurant_data["reservations"])>0:
+            #             self.parent.modifyrestaurant_reservations_checkBox.setChecked(True)
+            #             reservations_note= [ "; ".join(reservation.values()) for reservation in self.restaurant_data["reservations"] ]
+            #             self.parent.modifyrestaurant_reservations_lineEdit.setText("; ".join(self.restaurant_data["reservations"]))
         isSameHours=True
         time = ""
         hours=[]
@@ -232,10 +345,13 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
 
     def processSignalsSlots(self):
-
         self.parent.restaurant_info_button.clicked.connect(self.goInfo)
         self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
         self.parent.restaurant_review_button.clicked.connect(self.goReview)
+        
+        # Connect save button if it exists
+        if hasattr(self.parent, 'modifyrestaurant_save_button'):
+            self.parent.modifyrestaurant_save_button.clicked.connect(self.save_restaurant_changes)
 
     # === MODE SELECTORS ===
     def create_mode(self):
@@ -266,6 +382,18 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
     # === SUBMIT HANDLER ===
     def handle_submit(self):
         restaurant_data = self.get_restaurant_data()
+        
+        # Add the uploaded image path to the restaurant data if available
+        if self.uploaded_image_path:
+            # For a real application, you would typically:
+            # 1. Copy the image to a server or upload it
+            # 2. Get a URL or path to the uploaded file
+            # 3. Store that URL in the database
+            
+            # For this example, we'll just store the local path
+            restaurant_data["featured_image"] = self.uploaded_image_path
+            print(f"Updating restaurant with new image: {self.uploaded_image_path}")
+        
         if self.mode == "create":
             success, message = self.restaurant_model.add_restaurant(restaurant_data)
         else:
@@ -310,7 +438,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
     def get_services_input(self):
         services = {
             "parking": self.parking_checkbox.isChecked(),
-            "reservations": self.reservations_checkbox.isChecked(),
+            # "reservations": self.reservations_checkbox.isChecked(),
             "delivery": self.delivery_checkbox.isChecked(),
             "service_options": {
                 "delivery": self.delivery_option_checkbox.isChecked(),
@@ -333,3 +461,103 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.menu_page)
     def goReview(self):
         self.parent.restaurant_stackedWidget.setCurrentWidget(self.parent.review_restaurant_page)
+
+    def upload_avatar_image(self):
+        """Handle click event on avatar to upload a new image"""
+        self.parent.restaurant_info_avatar.open_file_dialog()
+        
+        # Get the file path after selection
+        file_path = self.parent.restaurant_info_avatar.file_path
+        if file_path:
+            self.uploaded_image_path = file_path
+            
+            # Load and display the image as circular
+            pixmap = QPixmap(file_path)
+            if not pixmap.isNull():
+                # Create rounded version for both avatar and main image
+                rounded_pixmap_small = self.get_rounded_pixmap(pixmap, 75)  # Smaller for avatar
+                rounded_pixmap_large = self.get_rounded_pixmap(pixmap, 200)  # Larger for main photo
+                
+                # Update avatar
+                self.parent.restaurant_info_avatar.setPixmap(rounded_pixmap_small)
+                self.parent.restaurant_info_avatar.setScaledContents(True)
+                
+                # Update main photo too if it exists
+                if hasattr(self.parent, 'restaurant_photo_label'):
+                    self.parent.restaurant_photo_label.setPixmap(rounded_pixmap_large)
+                    self.parent.restaurant_photo_label.setScaledContents(True)
+                
+                print(f"Image uploaded successfully: {file_path}")
+                
+                # TODO: Add code to save this image to database when saving restaurant
+
+    def upload_photo_image(self):
+        """Handle click event on main photo to upload a new image"""
+        self.parent.restaurant_photo_label.open_file_dialog()
+        
+        # Get the file path after selection
+        file_path = self.parent.restaurant_photo_label.file_path
+        if file_path:
+            self.uploaded_image_path = file_path
+            
+            # Load and display the image as circular
+            pixmap = QPixmap(file_path)
+            if not pixmap.isNull():
+                # Create rounded version for both avatar and main image
+                rounded_pixmap_small = self.get_rounded_pixmap(pixmap, 75)  # Smaller for avatar
+                rounded_pixmap_large = self.get_rounded_pixmap(pixmap, 200)  # Larger for main photo
+                
+                # Update main photo
+                self.parent.restaurant_photo_label.setPixmap(rounded_pixmap_large)
+                self.parent.restaurant_photo_label.setScaledContents(True)
+                
+                # Update avatar too
+                if hasattr(self.parent, 'restaurant_info_avatar'):
+                    self.parent.restaurant_info_avatar.setPixmap(rounded_pixmap_small)
+                    self.parent.restaurant_info_avatar.setScaledContents(True)
+                
+                print(f"Image uploaded successfully: {file_path}")
+
+    def save_restaurant_changes(self):
+        """Save changes to the restaurant, including the new image if uploaded"""
+        if not self.current_restaurant_id:
+            print("No restaurant ID to update")
+            return
+            
+        # Collect data from the form
+        updated_data = {}
+        updated_data["name"] = self.parent.modifyrestaurant_name_lineEdit.text().strip()
+        updated_data["category"] = [cat.strip() for cat in self.parent.modifyrestaurant_category_lineEdit.text().split(",")]
+        
+        # Address data
+        updated_data["address"] = {
+            "city": self.parent.modifyrestaurant_city_lineEdit.text().strip(),
+            "state": self.parent.modifyrestaurant_area_lineEdit.text().strip(),
+            "country": self.parent.modifyrestaurant_country_lineEdit.text().strip()
+        }
+        
+        # Contact info
+        updated_data["phone"] = self.parent.modifyrestaurant_phone_lineEdit.text().strip()
+        updated_data["website"] = self.parent.modifyrestaurant_website_lineEdit.text().strip()
+        
+        # Add the uploaded image if available
+        if self.uploaded_image_path:
+            # In a real application, you would:
+            # 1. Upload the image to a server
+            # 2. Get the URL of the uploaded image
+            # 3. Store the URL in the database
+            
+            # For this example, we'll just store the local path
+            updated_data["featured_image"] = self.uploaded_image_path
+            print(f"Updating restaurant with new image: {self.uploaded_image_path}")
+        
+        try:
+            # Update the restaurant in the database
+            success = self.parent.db_manager.update_restaurant(self.current_restaurant_id, updated_data)
+            if success:
+                print("Restaurant updated successfully")
+                # Optionally show a success message or navigate to another screen
+            else:
+                print("Failed to update restaurant")
+        except Exception as e:
+            print(f"Error updating restaurant: {e}")
