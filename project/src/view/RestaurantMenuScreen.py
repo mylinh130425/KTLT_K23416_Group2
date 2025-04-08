@@ -89,9 +89,13 @@ class RestaurantMenuScreen(QWidget):
         print(f"menu_page visibility after setting: {self.menu_page.isVisible()}")
 
         # Restaurant Name Label
-        self.restaurant_name_label = self.findChild(QLabel, "restaurant_name_label")
-        if self.restaurant_name_label is None:
-            raise ValueError("restaurant_name_label not found in the UI file.")
+        # self.restaurant_name_label = self.parent.findChild(QLabel, "restaurant_name_label")
+        self.restaurant_name_label = self.parent.restaurant_name_label
+        try:
+            if self.restaurant_name_label is None:
+                raise ValueError("restaurant_name_label not found in the UI file.")
+        except Exception as e:
+            print(e)
         self.restaurant_name_label.setText(self.restaurant_name)
         self.restaurant_name_label.setWordWrap(True)
         self.restaurant_name_label.setStyleSheet(
