@@ -2,7 +2,7 @@ from project.src.DatabaseManager import DatabaseManager
 
 
 class Restaurant:
-    def __init__(self, name, address, detailed_address, place_id=None, description=None, reviews=None,
+    def __init__(self, name, address, city, detailed_address=None, place_id=None, description=None, reviews=None,
                  rating=None, competitors=None, website=None, phone=None,
                  featured_image=None, main_category=None, categories=None,
                  workday_timing=None, is_temporarily_closed=False, is_permanently_closed=False,
@@ -13,12 +13,11 @@ class Restaurant:
                  popular_times=None, menu=None, reservations=None, order_online_links=None,
                  featured_reviews=None, detailed_reviews=None):
         self.db_manager = DatabaseManager()
-
         if place_id is not None:
             restaurant_data = self.db_manager.get_restaurant_by_place_id(place_id)
             for key, value in restaurant_data.items():
                 setattr(self, key, value)
-        self.name = name  # Restaurant name
+        self.name = name  # Restaurant name *
         self.description = description or ""  # Restaurant description
         self.reviews = reviews or 0  # Number of reviews
         self.rating = rating  # Average rating
@@ -32,7 +31,7 @@ class Restaurant:
         self.is_temporarily_closed = is_temporarily_closed or False  # Is the restaurant temporarily closed?
         self.is_permanently_closed = is_permanently_closed or False  # Is the restaurant permanently closed?
         self.closed_on = closed_on or ""  # Closing date (if applicable)
-        self.address = address or ""  # Restaurant address
+        self.address = address  # Restaurant address *
         self.review_keywords = review_keywords or ""  # Review keywords
         self.link = link or ""  # Link to restaurant details page
         self.status = status or ""  # Operating status
@@ -42,9 +41,10 @@ class Restaurant:
         self.featured_question = featured_question or {}  # Featured question about the restaurant
         self.reviews_link = reviews_link or ""  # Link to reviews
         self.coordinates = coordinates or []  # Geographic coordinates (longitude, latitude)
-        self.detailed_address = detailed_address or {"street": "", "city": "", "state": "",
+        self.detailed_address = detailed_address or {"street": "", "state": "",
                                                      "postal_code": None, "country": "Vietnam","ward":"",
                                                      "country_code":"VN"}  # Detailed address
+        self.detailed_address["city"]= city #city*
         self.about = about or []  # Additional information about the restaurant
         self.images = images or []  # List of restaurant images
         self.hours = hours or []  # Opening hours for each day
@@ -59,27 +59,25 @@ class Restaurant:
 
     def to_dict(self):
         """Convert the object into a dictionary for MongoDB storage."""
-        return self.__dict__
+        json_data = self.__dict__.copy()
+        del json_data["db_manager"]
+        return json_data
 
     @staticmethod
     def from_dict(data):
         """Initialize an object from a dictionary (data from MongoDB)."""
         return Restaurant(**data)
 
-    def add_restaurant(self, restaurant_data=None):
+    def add_restaurant(self):
         # Basic validation
-        if not len(self.name.strip())>0 or not len(self.city.strip())>0 or not len(self.details_address)>0:
-            if not restaurant_data["name"] or not restaurant_data["city"] or not restaurant_data["details_address"]:
-                print("⚠️ Required fields missing!")
-                return False, "Restaurant name, city, and address are required."
-            else:
-                success = self.db_manager.add_restaurant_to_db(restaurant_data)
+        if len(self.name.strip())==0 or len(self.detailed_address["city"].strip())==0 or  len(self.address.strip())==0:
+            print("⚠️ Required fields missing!")
+            return False, "Restaurant name, city, and address are required."
         else:
-            success = self.db_manager.add_restaurant_to_db(self.to_dict())
-        if success:
+            restaurant_data = self.to_dict()
+            print("adding restaurant with the following data", restaurant_data)
+            self.db_manager.add_restaurant_to_db(restaurant_data)
             return True, "Restaurant added successfully!"
-        else:
-            return False, "Failed to add restaurant (maybe duplicate or DB error)."
         self.db_manager.close_connection()
 class RestaurantModel:
     def __init__(self):

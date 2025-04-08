@@ -45,11 +45,14 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         if pixmap_welcome.isNull():
             print(f"Lỗi: Không tải được ảnh từ {absolute_path_welcome}")
         else:
-            pixmap_welcome = pixmap_welcome.scaled(550, 571, Qt.AspectRatioMode.KeepAspectRatio,
+            w = 550
+            h = 621
+            print(w,h)
+            pixmap_welcome = pixmap_welcome.scaled(w,h, Qt.AspectRatioMode.KeepAspectRatio,
                                                    Qt.TransformationMode.SmoothTransformation)
             new_welcome_photo.setPixmap(pixmap_welcome)
-            new_welcome_photo.setMinimumSize(QSize(550, 571))
-            new_welcome_photo.setMaximumSize(QSize(550, 571))
+            new_welcome_photo.setMinimumSize(QSize(w, h))
+            new_welcome_photo.setMaximumSize(QSize(w, h))
             new_welcome_photo.setScaledContents(True)
             new_welcome_photo.setVisible(True)
             new_welcome_photo.show()
@@ -70,7 +73,7 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
                                                        Qt.TransformationMode.SmoothTransformation)
             new_profile_photo.setPixmap(pixmap_profile)
 
-            new_profile_photo.setGeometry(591,11,500,500)
+            new_profile_photo.setGeometry(591,36,500,500)
             new_profile_photo.setScaledContents(True)
             new_profile_photo.setVisible(True)
             new_profile_photo.show()
