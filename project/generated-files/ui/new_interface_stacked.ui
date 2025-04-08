@@ -280,7 +280,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -823,7 +823,7 @@
                      <string />
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="../Qss/icons/_icons.qrc">:/MealMatch/Icons/MealMatch/Logo_dark.png</pixmap>
+                     <pixmap>C:/Users/USER/.designer/image/Logo_dark.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1614,6 +1614,12 @@
                           <layout class="QHBoxLayout" name="horizontalLayout_23">
                            <item>
                             <widget class="QLabel" name="profilesidebar_photo_label">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>60</width>
@@ -1763,6 +1769,12 @@
                      </property>
                      <item alignment="Qt::AlignHCenter">
                       <widget class="QLabel" name="profile_photo_label">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
                          <width>90</width>
@@ -2095,6 +2107,12 @@
                   </property>
                   <item>
                    <widget class="QWidget" name="restaurant_sidebar" native="true">
+                    <property name="maximumSize">
+                     <size>
+                      <width>135</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">background-color:#343131;border-top-right-radius:20;border-bottom-right-radius:20</string>
                     </property>
@@ -2365,7 +2383,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2464,7 +2482,7 @@
                                  </property>
                                  <layout class="QGridLayout" name="gridLayout_3">
                                   <item row="0" column="0">
-                                   <widget class="QLabel" name="restaurant_form_photo_label">
+                                   <widget class="QLabel" name="avatar">
                                     <property name="sizePolicy">
                                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                       <horstretch>0</horstretch>
@@ -2887,8 +2905,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>924</width>
-                              <height>654</height>
+                              <width>360</width>
+                              <height>598</height>
                              </rect>
                             </property>
                             <property name="styleSheet">
@@ -3010,8 +3028,14 @@
                                            </property>
                                            <property name="minimumSize">
                                             <size>
-                                             <width>60</width>
-                                             <height>60</height>
+                                             <width>80</width>
+                                             <height>80</height>
+                                            </size>
+                                           </property>
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>80</width>
+                                             <height>80</height>
                                             </size>
                                            </property>
                                            <property name="text">
@@ -3380,82 +3404,6 @@
                                        <number>0</number>
                                       </property>
                                       <item>
-                                       <widget class="QLabel" name="social_label">
-                                        <property name="text">
-                                         <string>Social Media</string>
-                                        </property>
-                                       </widget>
-                                      </item>
-                                      <item>
-                                       <widget class="QWidget" name="button_widget" native="true">
-                                        <property name="sizePolicy">
-                                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                                          <horstretch>0</horstretch>
-                                          <verstretch>0</verstretch>
-                                         </sizepolicy>
-                                        </property>
-                                        <layout class="QHBoxLayout" name="horizontalLayout_16">
-                                         <item>
-                                          <widget class="QLabel" name="facebook">
-                                           <property name="maximumSize">
-                                            <size>
-                                             <width>30</width>
-                                             <height>30</height>
-                                            </size>
-                                           </property>
-                                           <property name="text">
-                                            <string />
-                                           </property>
-                                           <property name="pixmap">
-                                            <pixmap>C:/Users/USER/.designer/Qss/icons/Icons/restaurant_logo/facebook.png</pixmap>
-                                           </property>
-                                           <property name="scaledContents">
-                                            <bool>true</bool>
-                                           </property>
-                                          </widget>
-                                         </item>
-                                         <item>
-                                          <widget class="QLabel" name="insta">
-                                           <property name="maximumSize">
-                                            <size>
-                                             <width>30</width>
-                                             <height>30</height>
-                                            </size>
-                                           </property>
-                                           <property name="text">
-                                            <string />
-                                           </property>
-                                           <property name="pixmap">
-                                            <pixmap>C:/Users/USER/.designer/Qss/icons/Icons/restaurant_logo/insta.png</pixmap>
-                                           </property>
-                                           <property name="scaledContents">
-                                            <bool>true</bool>
-                                           </property>
-                                          </widget>
-                                         </item>
-                                         <item>
-                                          <widget class="QLabel" name="tiktok">
-                                           <property name="maximumSize">
-                                            <size>
-                                             <width>30</width>
-                                             <height>30</height>
-                                            </size>
-                                           </property>
-                                           <property name="text">
-                                            <string />
-                                           </property>
-                                           <property name="pixmap">
-                                            <pixmap>C:/Users/USER/.designer/Qss/icons/Icons/restaurant_logo/tiktok.png</pixmap>
-                                           </property>
-                                           <property name="scaledContents">
-                                            <bool>true</bool>
-                                           </property>
-                                          </widget>
-                                         </item>
-                                        </layout>
-                                       </widget>
-                                      </item>
-                                      <item>
                                        <widget class="QCheckBox" name="modifyrestaurant_parking_checkBox">
                                         <property name="text">
                                          <string>Parking</string>
@@ -3536,23 +3484,7 @@
                                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                                            </property>
                                            <property name="text">
-                                            <string>Delete Restaurant</string>
-                                           </property>
-                                          </widget>
-                                         </item>
-                                         <item>
-                                          <widget class="QPushButton" name="restaurantinfo_reset_button">
-                                           <property name="maximumSize">
-                                            <size>
-                                             <width>150</width>
-                                             <height>16777215</height>
-                                            </size>
-                                           </property>
-                                           <property name="styleSheet">
-                                            <string notr="true">color: #FABC3F;background-color: #343131;</string>
-                                           </property>
-                                           <property name="text">
-                                            <string>Reset Form</string>
+                                            <string>Delete</string>
                                            </property>
                                           </widget>
                                          </item>
@@ -3571,7 +3503,7 @@
                                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                                            </property>
                                            <property name="text">
-                                            <string>Update Restaurant</string>
+                                            <string>Update</string>
                                            </property>
                                           </widget>
                                          </item>
@@ -4496,8 +4428,8 @@ background-color: #343131;</string>
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>924</width>
-                               <height>129</height>
+                               <width>91</width>
+                               <height>91</height>
                               </rect>
                              </property>
                              <layout class="QVBoxLayout" name="verticalLayout_51">
