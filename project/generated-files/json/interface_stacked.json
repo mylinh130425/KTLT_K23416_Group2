@@ -83,8 +83,8 @@
       "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\profile_icon.png"
     },
     {
-      "name": "label",
-      "pixmap": "D:\\Document\\Bachelor\\UEL\\ProgrammingTechniquesKTLT\\KTLT-group2\\project\\image\\Account-amico 1.png"
+      "name": "profile_right_label",
+      "pixmap": "Qss/icons/Icons/MealMatch/Account-amico 1.png"
     },
     {
       "name": "lb_anh_12",
