@@ -150,7 +150,7 @@
        <string notr="true">background-color:#FFE5CF</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Login_SignUp">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -280,7 +280,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -823,7 +823,7 @@
                      <string />
                     </property>
                     <property name="pixmap">
-                     <pixmap>C:/Users/USER/.designer/image/Logo_dark.png</pixmap>
+                     <pixmap resource="../Qss/icons/_icons.qrc">:/MealMatch/Icons/MealMatch/Logo_dark.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>

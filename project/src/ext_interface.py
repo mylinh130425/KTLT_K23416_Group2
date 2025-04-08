@@ -57,7 +57,9 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
 
 
         # Tạo QLabel mới để hiển thị ảnh welcome_photo
-        self.profile_right_label = QLabel(self.profile_right_label.parent())
+        # tmp = self.profile_right_label
+        # self.profile_right_label.parent().layout()
+        new_profile_photo = QLabel(self.profile_right_label.parent())
         absolute_path_profile = Path("../project/image/Account-amico 1.png").resolve()
         pixmap_profile = QPixmap(str(absolute_path_profile))
 
@@ -66,58 +68,22 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         else:
             pixmap_profile = pixmap_profile.scaled(500, 500, Qt.AspectRatioMode.KeepAspectRatio,
                                                        Qt.TransformationMode.SmoothTransformation)
-            self.profile_right_label.setPixmap(pixmap_profile)
-            # new_profile_photo.setMinimumSize(QSize(500, 500))
-            # new_profile_photo.setMaximumSize(QSize(500, 500))
-            # new_profile_photo.setScaledContents(True)
+            new_profile_photo.setPixmap(pixmap_profile)
 
-            self.profile_right_label.setGeometry(591,11,500,500)
-            self.profile_right_label.setScaledContents(True)
-            # new_profile_photo.setVisible(True)
-            # new_profile_photo.show()
+            new_profile_photo.setGeometry(591,11,500,500)
+            new_profile_photo.setScaledContents(True)
+            new_profile_photo.setVisible(True)
+            new_profile_photo.show()
             # new_profile_photo.raise_() #no change
-            self.profile_right_label.setVisible(True)
-            self.profile_right_label.show()
+            # self.profile_right_label.setVisible(True)
+            # self.profile_right_label.show()
+            # self.profile_right_label.parent().layout().addWidget(new_profile_photo)
 
         # Cập nhật giao diện
         self.Login_SignUp.update()
         self.stackedWidget.update()
         self.update()
         print("Đã cập nhật giao diện")
-
-        # # Tạo đường dẫn tương đối và chuyển thành tuyệt đối
-        # base_dir = path.abspath(path.curdir)  # Thư mục hiện tại theo đường dẫn tuyệt đối
-        # print(base_dir)
-        # absolute_path_welcome = path.abspath(path.join(base_dir, "./image/CreateAcc_Image.png"))
-        # absolute_path_profile = path.abspath(path.join(base_dir, "./image/Account-amico 1.png"))
-        # new_welcome_photo = QLabel("welcome_photo")
-        # # Kiểm tra và load ảnh vào QLabel
-        # if path.exists(absolute_path_welcome):
-        #     absolute_path_welcome = absolute_path_welcome.replace("\\", "/")
-        #     print(absolute_path_welcome)
-        #     pixmap_welcome = QPixmap(absolute_path_welcome).scaled(
-        #         550, 571, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-        #     )
-        #     new_welcome_photo.setScaledContents(True)
-        #
-        #     new_welcome_photo.setGeometry(0,0,550,571)
-        #     new_welcome_photo.setPixmap(pixmap_welcome)
-        #     # new_welcome_photo.repaint()
-        #     self.welcome_photo=new_welcome_photo
-        #
-        # else:
-        #     print(f"Lỗi: Không tìm thấy ảnh {absolute_path_welcome}")
-        #
-        # if path.exists(absolute_path_profile):
-        #     pixmap_profile = QPixmap(absolute_path_profile).scaled(
-        #         300, 300
-        #         # 300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-        #     )
-        #     self.label.setPixmap(pixmap_profile)
-        #     self.label.show()
-        #
-        # else:
-        #     print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
 
     def processSignalAndSlot(self):
         self.login_button.clicked.connect(self.login)
@@ -137,6 +103,12 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
                 if not self.menu_dock.geometry().contains(event.globalPosition().toPoint()):
                     self.menu_dock.setVisible(False)
                     return True
+        elif event.type() == event.Type.KeyPress:
+            if self.stackedWidget.currentIndex() == 0 and (event.key() == Qt.Key.Key_Enter or event.key() == Qt.Key.Key_Return):
+                if self.login_signup_stackedWidget.currentIndex() == 0:
+                    self.login()
+                else:
+                    self.signup()
         return super().eventFilter(obj, event)
 
     def deleteProfile(self):
