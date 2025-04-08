@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>3</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1564,7 +1564,7 @@
                 <number>0</number>
                </property>
                <item>
-                <widget class="QWidget" name="widget_9" native="true">
+                <widget class="QWidget" name="profile_widget" native="true">
                  <property name="styleSheet">
                   <string notr="true">background-color:white</string>
                  </property>
@@ -2016,7 +2016,7 @@
                    </widget>
                   </item>
                   <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                   <widget class="QLabel" name="label">
+                   <widget class="QLabel" name="profile_right_label">
                     <property name="minimumSize">
                      <size>
                       <width>500</width>
@@ -2033,7 +2033,7 @@
                      <string />
                     </property>
                     <property name="pixmap">
-                     <pixmap>../image/Account-amico 1.png</pixmap>
+                     <pixmap resource="../Qss/icons/_icons.qrc">:/MealMatch/Icons/MealMatch/Account-amico 1.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>

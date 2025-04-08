@@ -6,8 +6,7 @@ from PyQt6.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt6.QtCore import Qt
 
 from project.src.model.RestaurantModel import Restaurant
-#from project.src.view.ClickableLabel import ClickableLabel
-
+from project.src.view.ClickableLabel import ClickableLabel
 
 
 class ModifyRestaurantScreen(QtWidgets.QWidget):
@@ -325,25 +324,28 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
     def add_restaurant(self):
         print("clicked create res button")
-        self.form_res_name = self.parent.form_res_name
-        self.form_category = self.parent.form_category
-        self.form_country = self.parent.form_country
-        self.form_city  = self.parent.form_city
+        self.form_res_name = self.parent.form_res_name.text()
+        self.form_category = self.parent.form_category.text()
+        self.form_country = self.parent.form_country.text()
+        self.form_city  = self.parent.form_city.text()
 
-        self.form_area = self.parent.form_country
-        self.form_address = self.parent.form_address
-        self.form_phone = self.parent.form_phone
-        self.form_mail=self.parent.form_mail
-        self.form_website = self.parent.form_website
+        self.form_area = self.parent.form_country.text()
+        self.form_address = self.parent.form_address.text()
+        self.form_phone = self.parent.form_phone.text()
+        self.form_mail=self.parent.form_mail.text()
+        self.form_website = self.parent.form_website.text()
 
         if self.parent.all_days_checkBox.isChecked():
             self.update_weekday_fields()
         self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category,
                                          detailed_address={'ward':self.form_area, 'country':self.form_country, 'city':self.form_city},
-                                         phone=self.form_phone, mail=self.mail, website=self.form_website)
+                                         address=self.form_address,
+                                         phone=self.form_phone, email=self.form_mail, website=self.form_website)
+        print(self.new_restaurant)
         try:
-            self.parent.db_manager.add_restaurant_to_db(self.new_restaurant.to_dict())
-            self.parent.db_manager.close_connection()
+            # self.parent.db_manager.add_restaurant_to_db(self.new_restaurant.to_dict())
+            self.new_restaurant.add_restaurant()
+            # self.parent.db_manager.close_connection()
         except Exception as e:
             print(f"Cannot add restaurant due to {e}")
 

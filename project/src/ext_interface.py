@@ -1,8 +1,9 @@
+import os.path
 from pathlib import Path
 
 from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QMessageBox, QFrame, QVBoxLayout, QPushButton, QDockWidget, QMainWindow, QListWidgetItem, \
-    QListWidget, QWidget
+    QListWidget, QWidget, QLabel
 from PyQt6.QtCore import Qt, QSize
 from project.src.DatabaseManager import DatabaseManager
 from project.src.model.ProfileModel import ProfileModel
@@ -36,24 +37,87 @@ class Extend_MainWindow(QMainWindow, Ui_MainWindow):
         self.processSignalAndSlot()
         print("Finished setupUi")
 
-        # Đường dẫn tuyệt đối đến ảnh
+        # Tạo QLabel mới để hiển thị ảnh welcome_photo
+        new_welcome_photo = QLabel(self.Login_SignUp)  # Đặt parent là Login_SignUp
         absolute_path_welcome = Path("../project/image/CreateAcc_Image.png").resolve()
+        pixmap_welcome = QPixmap(str(absolute_path_welcome))
+
+        if pixmap_welcome.isNull():
+            print(f"Lỗi: Không tải được ảnh từ {absolute_path_welcome}")
+        else:
+            pixmap_welcome = pixmap_welcome.scaled(550, 571, Qt.AspectRatioMode.KeepAspectRatio,
+                                                   Qt.TransformationMode.SmoothTransformation)
+            new_welcome_photo.setPixmap(pixmap_welcome)
+            new_welcome_photo.setMinimumSize(QSize(550, 571))
+            new_welcome_photo.setMaximumSize(QSize(550, 571))
+            new_welcome_photo.setScaledContents(True)
+            new_welcome_photo.setVisible(True)
+            new_welcome_photo.show()
+            new_welcome_photo.raise_()
+
+
+        # Tạo QLabel mới để hiển thị ảnh welcome_photo
+        self.profile_right_label = QLabel(self.profile_right_label.parent())
         absolute_path_profile = Path("../project/image/Account-amico 1.png").resolve()
-        # Kiểm tra và load ảnh vào QLabel
-        if absolute_path_welcome.exists():
-            pixmap_welcome = QPixmap(str(absolute_path_welcome)).scaled(
-                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-            )
-            self.welcome_photo.setPixmap(pixmap_welcome)
+        pixmap_profile = QPixmap(str(absolute_path_profile))
+
+        if pixmap_profile.isNull():
+            print(f"Lỗi: Không tải được ảnh từ {absolute_path_profile}")
         else:
-            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_welcome}")
-        if absolute_path_profile.exists():
-            pixmap_profile = QPixmap(str(absolute_path_profile)).scaled(
-                300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
-            )
-            self.label.setPixmap(pixmap_profile)
-        else:
-            print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
+            pixmap_profile = pixmap_profile.scaled(500, 500, Qt.AspectRatioMode.KeepAspectRatio,
+                                                       Qt.TransformationMode.SmoothTransformation)
+            self.profile_right_label.setPixmap(pixmap_profile)
+            # new_profile_photo.setMinimumSize(QSize(500, 500))
+            # new_profile_photo.setMaximumSize(QSize(500, 500))
+            # new_profile_photo.setScaledContents(True)
+
+            self.profile_right_label.setGeometry(591,11,500,500)
+            self.profile_right_label.setScaledContents(True)
+            # new_profile_photo.setVisible(True)
+            # new_profile_photo.show()
+            # new_profile_photo.raise_() #no change
+            self.profile_right_label.setVisible(True)
+            self.profile_right_label.show()
+
+        # Cập nhật giao diện
+        self.Login_SignUp.update()
+        self.stackedWidget.update()
+        self.update()
+        print("Đã cập nhật giao diện")
+
+        # # Tạo đường dẫn tương đối và chuyển thành tuyệt đối
+        # base_dir = path.abspath(path.curdir)  # Thư mục hiện tại theo đường dẫn tuyệt đối
+        # print(base_dir)
+        # absolute_path_welcome = path.abspath(path.join(base_dir, "./image/CreateAcc_Image.png"))
+        # absolute_path_profile = path.abspath(path.join(base_dir, "./image/Account-amico 1.png"))
+        # new_welcome_photo = QLabel("welcome_photo")
+        # # Kiểm tra và load ảnh vào QLabel
+        # if path.exists(absolute_path_welcome):
+        #     absolute_path_welcome = absolute_path_welcome.replace("\\", "/")
+        #     print(absolute_path_welcome)
+        #     pixmap_welcome = QPixmap(absolute_path_welcome).scaled(
+        #         550, 571, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+        #     )
+        #     new_welcome_photo.setScaledContents(True)
+        #
+        #     new_welcome_photo.setGeometry(0,0,550,571)
+        #     new_welcome_photo.setPixmap(pixmap_welcome)
+        #     # new_welcome_photo.repaint()
+        #     self.welcome_photo=new_welcome_photo
+        #
+        # else:
+        #     print(f"Lỗi: Không tìm thấy ảnh {absolute_path_welcome}")
+        #
+        # if path.exists(absolute_path_profile):
+        #     pixmap_profile = QPixmap(absolute_path_profile).scaled(
+        #         300, 300
+        #         # 300, 300, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+        #     )
+        #     self.label.setPixmap(pixmap_profile)
+        #     self.label.show()
+        #
+        # else:
+        #     print(f"Lỗi: Không tìm thấy ảnh {absolute_path_profile}")
 
     def processSignalAndSlot(self):
         self.login_button.clicked.connect(self.login)
