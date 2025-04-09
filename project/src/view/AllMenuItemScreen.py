@@ -31,17 +31,17 @@ class AllMenuItemScreen(QWidget):
 
         button_layout.addStretch()
 
-        self.create_pushButton = QPushButton("Create")
-        self.create_pushButton.setObjectName("create_pushButton")
-        button_layout.addWidget(self.create_pushButton)
-
-        self.edit_pushButton = QPushButton("Edit")
-        self.edit_pushButton.setObjectName("edit_pushButton")
-        button_layout.addWidget(self.edit_pushButton)
-
-        self.delete_pushButton = QPushButton("Delete")
-        self.delete_pushButton.setObjectName("delete_pushButton")
-        button_layout.addWidget(self.delete_pushButton)
+        # self.create_pushButton = QPushButton("Create")
+        # self.create_pushButton.setObjectName("create_pushButton")
+        # button_layout.addWidget(self.create_pushButton)
+        #
+        # self.edit_pushButton = QPushButton("Edit")
+        # self.edit_pushButton.setObjectName("edit_pushButton")
+        # button_layout.addWidget(self.edit_pushButton)
+        #
+        # self.delete_pushButton = QPushButton("Delete")
+        # self.delete_pushButton.setObjectName("delete_pushButton")
+        # button_layout.addWidget(self.delete_pushButton)
 
         layout.addLayout(button_layout)
 

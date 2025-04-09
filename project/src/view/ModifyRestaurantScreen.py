@@ -497,14 +497,14 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         if self.parent.all_days_checkBox.isChecked():
             self.update_weekday_fields()
         self.get_timings()
-
-        self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category, city=self.form_city,
+        try:
+            self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category, city=self.form_city,
                                          detailed_address={'ward':self.form_area, 'country':self.form_country},
                                          featured_image = self.restaurant_image_path,
                                          address=self.form_address,hours=self.hours,
                                          phone=self.form_phone, email=self.form_mail, website=self.form_website)
-        print(self.new_restaurant.to_dict())
-        try:
+            print(self.new_restaurant.to_dict())
+
             # self.parent.db_manager.add_restaurant_to_db(self.new_restaurant.to_dict())
             success, message = self.new_restaurant.add_restaurant()
             if success:
