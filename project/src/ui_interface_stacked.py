@@ -652,8 +652,9 @@ class Ui_MainWindow(object):
         self.profile_fullname_lineEdit.setObjectName("profile_fullname_lineEdit")
         self.verticalLayout_42.addWidget(self.profile_fullname_lineEdit)
         self.profile_username_lineEdit = QtWidgets.QLineEdit(parent=self.frame_5)
+        self.profile_username_lineEdit.setEnabled(False)
         self.profile_username_lineEdit.setMinimumSize(QtCore.QSize(250, 25))
-        self.profile_username_lineEdit.setStyleSheet("")
+        self.profile_username_lineEdit.setStyleSheet("background-color: rgb(235, 235, 235)")
         self.profile_username_lineEdit.setObjectName("profile_username_lineEdit")
         self.verticalLayout_42.addWidget(self.profile_username_lineEdit)
         self.profile_currentpassword_lineEdit = QtWidgets.QLineEdit(parent=self.frame_5)
@@ -2677,8 +2678,8 @@ class Ui_MainWindow(object):
         self.stackedWidget.setCurrentIndex(1)
         self.welcome_stackedWidget.setCurrentIndex(0)
         self.login_signup_stackedWidget.setCurrentIndex(0)
-        self.body_stackedWidget.setCurrentIndex(3)
-        self.restaurant_stackedWidget.setCurrentIndex(0)
+        self.body_stackedWidget.setCurrentIndex(0)
+        self.restaurant_stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
