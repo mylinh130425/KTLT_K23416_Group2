@@ -394,60 +394,76 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
         self.restaurant_new_image_path = self.parent.restaurant_form_photo_label.file_path  # Variable to store the image path
 
-        self.parent.modifyrestaurant_name_lineEdit.setText(self.restaurant_data["name"])
+        try:
+            self.parent.modifyrestaurant_name_lineEdit.setText(self.restaurant_data["name"])
 
-        self.parent.modifyrestaurant_category_lineEdit.setText(", ".join(self.restaurant_data["category"]))
+            self.parent.modifyrestaurant_category_lineEdit.setText(", ".join(self.restaurant_data["categories"]))
 
-        address = self.restaurant_data["detailed_address"]
-        # address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
-        self.parent.modifyrestaurant_country_lineEdit.setText("Viet Nam")
-        self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["address"]["city"])
-        self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["address"]["state"])
-        self.parent.modifyrestaurant_detailedaddress_lineEdit.setText(self.restaurant_data["detailed_address"])
-        self.parent.modifyrestaurant_website_lineEdit.setText(self.restaurant_data["website"])
-        self.parent.modifyrestaurant_phone_lineEdit.setText(self.restaurant_data["phone"])
-        for info in self.restaurant_data["about"]:
-            if info["id"] == "service_options":
-                for option in info["options"]:
-                    if option["name"].lower() == "delivery":
-                        self.parent.modifyrestaurant_delivery_checkBox.setChecked(option["enabled"])
-                    elif option["name"].lower() == "dine-in":
-                        self.parent.modifyrestaurant_dinein_checkBox.setChecked(option["enabled"])
-                    elif option["name"].lower() == "takeaway":
-                        self.parent.modifyrestaurant_takeaway_checkBox.setChecked(option["enabled"])
-            elif info["id"] == "payments":
-                self.parent.modifyrestaurant_payments_checkBox.setChecked(option["enabled"])
-                for option in info["options"]:
-                    payment_note = "; ".join([option["name"] for option in info["options"]])
-                    print(payment_note)
-                    self.parent.modifyrestaurant_payments_lineEdit.setText(payment_note)
-            elif info["id"]=="parking" and len(info["options"])>0:
-                self.parent.modifyrestaurant_parking_checkBox.setChecked(True)
-                parking_note = "; ".join([option["name"] for option in info["options"]])
-                print(parking_note)
-                self.parent.modifyrestaurant_parking_lineEdit.setText(parking_note)
-            # elif info["id"]=="planning":
-            #     for option in info["options"]:
-            #         if len(self.restaurant_data["reservations"])>0:
-            #             self.parent.modifyrestaurant_reservations_checkBox.setChecked(True)
-            #             reservations_note= [ "; ".join(reservation.values()) for reservation in self.restaurant_data["reservations"] ]
-            #             self.parent.modifyrestaurant_reservations_lineEdit.setText("; ".join(self.restaurant_data["reservations"]))
-        isSameHours=True
-        time = ""
-        hours=[]
-        for day in self.restaurant_data["hours"]:
-            for times in day["times"]:
-                opening = "; ".join(times)
-                if time=="":
-                    time = opening
-                else:
-                    if time!= opening:
-                        isSameHours=False
-                hours.append(opening)
-        #TODO: finish filling in the UI opening hours, preferably using the same for loops
-
+            address = self.restaurant_data["detailed_address"]
+            # address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
+            self.parent.modifyrestaurant_country_lineEdit.setText("Viet Nam")
+            self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["detailed_address"]["city"])
+            self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["detailed_address"]["state"])
+            self.parent.modifyrestaurant_detailedaddress_lineEdit.setText(self.restaurant_data["address"])
+            self.parent.modifyrestaurant_website_lineEdit.setText(self.restaurant_data["website"])
+            self.parent.modifyrestaurant_phone_lineEdit.setText(self.restaurant_data["phone"])
+            for info in self.restaurant_data["about"]:
+                if info["id"] == "service_options":
+                    for option in info["options"]:
+                        if option["name"].lower() == "delivery":
+                            self.parent.modifyrestaurant_delivery_checkBox.setChecked(option["enabled"])
+                        elif option["name"].lower() == "dine-in":
+                            self.parent.modifyrestaurant_dinein_checkBox.setChecked(option["enabled"])
+                        elif option["name"].lower() == "takeaway":
+                            self.parent.modifyrestaurant_takeaway_checkBox.setChecked(option["enabled"])
+                elif info["id"] == "payments":
+                    self.parent.modifyrestaurant_payments_checkBox.setChecked(option["enabled"])
+                    for option in info["options"]:
+                        payment_note = "; ".join([option["name"] for option in info["options"]])
+                        print(payment_note)
+                        self.parent.modifyrestaurant_payments_lineEdit.setText(payment_note)
+                elif info["id"]=="parking" and len(info["options"])>0:
+                    self.parent.modifyrestaurant_parking_checkBox.setChecked(True)
+                    parking_note = "; ".join([option["name"] for option in info["options"]])
+                    print(parking_note)
+                    self.parent.modifyrestaurant_parking_lineEdit.setText(parking_note)
+                # elif info["id"]=="planning":
+                #     for option in info["options"]:
+                #         if len(self.restaurant_data["reservations"])>0:
+                #             self.parent.modifyrestaurant_reservations_checkBox.setChecked(True)
+                #             reservations_note= [ "; ".join(reservation.values()) for reservation in self.restaurant_data["reservations"] ]
+                #             self.parent.modifyrestaurant_reservations_lineEdit.setText("; ".join(self.restaurant_data["reservations"]))
+            isSameHours=True
+            time = ""
+            hours=[]
+            for day in self.restaurant_data["hours"]:
+                for times in day["times"]:
+                    opening = "; ".join(times)
+                    if time=="":
+                        time = opening
+                    else:
+                        if time!= opening:
+                            isSameHours=False
+                    hours.append(opening)
+            #TODO: finish filling in the UI opening hours, preferably using the same for loops
+        except Exception as e:
+            print(f"error: {e}")
         self.parent.restaurantinfo_update_button.clicked.connect(self.update_restaurant)
+        self.parent.restaurantinfo_delete_button.clicked.connect(self.delete_restaurant)
 
+    def delete_restaurant(self):
+        print("clicked delete res button")
+        confirmation = QMessageBox.warning(self.parent.modify_restaurant_widget, f"Delete Restaurant {self.restaurant_data['name']}", "Are you sure you want to delete this restaurant?")
+        if confirmation:
+            try:
+                res=self.parent.db_manager.delete_restaurant_by_id(self.restaurant_data['_id'])
+                if res:
+                    QMessageBox.information(self.parent.modify_restaurant_widget, "Success", "Restaurant deleted successfully")
+                    self.parent.goRestaurant()
+                else:
+                    QMessageBox.critical(self.parent.modify_restaurant_widget, "Unknown Error", "Failed to delete restaurant")
+            except Exception as e:
+                QMessageBox.critical(self.parent.modify_restaurant_widget, "Error", f"Failed to delete restaurant: {e}")
     def update_restaurant(self):
         print("clicked update res button")
         self.form_res_name = self.parent.modifyrestaurant_name_lineEdit.text()
@@ -474,11 +490,10 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                                          featured_image = self.restaurant_image_path,
                                          address=self.form_address,hours=self.hours,
                                          phone=self.form_phone, email=self.form_mail, website=self.form_website)
-        print(self.new_restaurant.to_dict())
         try:
             self.current_restaurant.compare_and_update(self.new_restaurant)
-            print(self.current_restaurant.to_dict())
-            self.current_restaurant.update_restaurant()
+            print("Updated restaurant with the following data", self.current_restaurant.to_dict())
+            self.current_restaurant.update_restaurant_by_id()
         except  Exception as e:
             QMessageBox.critical(self.parent.body_stackedWidget, "Error", f"Failed to update restaurant due to {e}")
 
@@ -497,14 +512,14 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         if self.parent.all_days_checkBox.isChecked():
             self.update_weekday_fields()
         self.get_timings()
-
-        self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category, city=self.form_city,
+        try:
+            self.new_restaurant = Restaurant(name=self.form_res_name,main_category=self.form_category, city=self.form_city,
                                          detailed_address={'ward':self.form_area, 'country':self.form_country},
                                          featured_image = self.restaurant_image_path,
                                          address=self.form_address,hours=self.hours,
                                          phone=self.form_phone, email=self.form_mail, website=self.form_website)
-        print(self.new_restaurant.to_dict())
-        try:
+            print(self.new_restaurant.to_dict())
+
             # self.parent.db_manager.add_restaurant_to_db(self.new_restaurant.to_dict())
             success, message = self.new_restaurant.add_restaurant()
             if success:
@@ -524,9 +539,9 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
         self.parent.restaurant_review_button.clicked.connect(self.goReview)
         
-        # Connect save button if it exists
-        if hasattr(self.parent, 'modifyrestaurant_save_button'):
-            self.parent.modifyrestaurant_save_button.clicked.connect(self.save_restaurant_changes)
+        # # Connect save button if it exists
+        # if hasattr(self.parent, 'modifyrestaurant_save_button'):
+        #     self.parent.modifyrestaurant_save_button.clicked.connect(self.save_restaurant_changes)
 
     # === MODE SELECTORS ===
     def create_mode(self):
@@ -572,7 +587,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         if self.mode == "create":
             success, message = self.restaurant_model.add_restaurant(restaurant_data)
         else:
-            success, message = self.restaurant_model.update_restaurant(self.current_restaurant_id, restaurant_data)
+            success, message = self.restaurant_model.update_restaurant_by_id(self.current_restaurant_id, restaurant_data)
 
         if success:
             self.show_message("Success", message)
@@ -683,46 +698,46 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 
                 print(f"Image uploaded successfully: {file_path}")
 
-    def save_restaurant_changes(self):
-        """Save changes to the restaurant, including the new image if uploaded"""
-        if not self.current_restaurant_id:
-            print("No restaurant ID to update")
-            return
-            
-        # Collect data from the form
-        updated_data = {}
-        updated_data["name"] = self.parent.modifyrestaurant_name_lineEdit.text().strip()
-        updated_data["category"] = [cat.strip() for cat in self.parent.modifyrestaurant_category_lineEdit.text().split(",")]
-        
-        # Address data
-        updated_data["address"] = {
-            "city": self.parent.modifyrestaurant_city_lineEdit.text().strip(),
-            "state": self.parent.modifyrestaurant_area_lineEdit.text().strip(),
-            "country": self.parent.modifyrestaurant_country_lineEdit.text().strip()
-        }
-        
-        # Contact info
-        updated_data["phone"] = self.parent.modifyrestaurant_phone_lineEdit.text().strip()
-        updated_data["website"] = self.parent.modifyrestaurant_website_lineEdit.text().strip()
-        
-        # Add the uploaded image if available
-        if self.restaurant_image_path:
-            # In a real application, you would:
-            # 1. Upload the image to a server
-            # 2. Get the URL of the uploaded image
-            # 3. Store the URL in the database
-            
-            # For this example, we'll just store the local path
-            updated_data["featured_image"] = self.restaurant_image_path
-            print(f"Updating restaurant with new image: {self.restaurant_image_path}")
-        
-        try:
-            # Update the restaurant in the database
-            success = self.parent.db_manager.update_restaurant(self.current_restaurant_id, updated_data)
-            if success:
-                print("Restaurant updated successfully")
-                # Optionally show a success message or navigate to another screen
-            else:
-                print("Failed to update restaurant")
-        except Exception as e:
-            print(f"Error updating restaurant: {e}")
+    # def save_restaurant_changes(self):
+    #     """Save changes to the restaurant, including the new image if uploaded"""
+    #     if not self.current_restaurant_id:
+    #         print("No restaurant ID to update")
+    #         return
+    #
+    #     # Collect data from the form
+    #     updated_data = {}
+    #     updated_data["name"] = self.parent.modifyrestaurant_name_lineEdit.text().strip()
+    #     updated_data["category"] = [cat.strip() for cat in self.parent.modifyrestaurant_category_lineEdit.text().split(",")]
+    #
+    #     # Address data
+    #     updated_data["address"] = {
+    #         "city": self.parent.modifyrestaurant_city_lineEdit.text().strip(),
+    #         "state": self.parent.modifyrestaurant_area_lineEdit.text().strip(),
+    #         "country": self.parent.modifyrestaurant_country_lineEdit.text().strip()
+    #     }
+    #
+    #     # Contact info
+    #     updated_data["phone"] = self.parent.modifyrestaurant_phone_lineEdit.text().strip()
+    #     updated_data["website"] = self.parent.modifyrestaurant_website_lineEdit.text().strip()
+    #
+    #     # Add the uploaded image if available
+    #     if self.restaurant_image_path:
+    #         # In a real application, you would:
+    #         # 1. Upload the image to a server
+    #         # 2. Get the URL of the uploaded image
+    #         # 3. Store the URL in the database
+    #
+    #         # For this example, we'll just store the local path
+    #         updated_data["featured_image"] = self.restaurant_image_path
+    #         print(f"Updating restaurant with new image: {self.restaurant_image_path}")
+    #
+    #     try:
+    #         # Update the restaurant in the database
+    #         success = self.parent.db_manager.update_restaurant(self.current_restaurant_id, updated_data)
+    #         if success:
+    #             print("Restaurant updated successfully")
+    #             # Optionally show a success message or navigate to another screen
+    #         else:
+    #             print("Failed to update restaurant")
+    #     except Exception as e:
+    #         print(f"Error updating restaurant: {e}")

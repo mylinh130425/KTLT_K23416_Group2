@@ -297,10 +297,10 @@ class RestaurantDelegate(QTableWidget):
         self.image_cache.clear()
         super().closeEvent(event)
 
-    def delete_restaurant_by_id(self, place_id):
+    def delete_restaurant_by_id(self, _id):
         """
         Xóa nhà hàng theo place_id.
         Giả lập logic xóa, bạn có thể thay bằng logic thực tế với MongoDB.
         """
-        # Giả lập xóa thành công
+        self.model.delete_restaurant_by_id(_id)
         return True

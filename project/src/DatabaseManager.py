@@ -284,29 +284,14 @@ class DatabaseManager:
             print("DatabaseManager: MongoDB connection closed.")
 
 
-    def get_restaurant_byid(self, restaurant_id: str):
+    def get_restaurant_by_id(self, restaurant_id: str):
         try:
             restaurant_data = self.restaurants.find_one({"_id": ObjectId(restaurant_id)})
             print(type(restaurant_data))
             if not restaurant_data:
                 return None
 
-            return {
-                "featured_image": restaurant_data.get("featured_image", ""),
-                "name": restaurant_data.get("name", "Unknown"),
-                "category": restaurant_data.get("categories", []),
-                "address": {
-                    "city": restaurant_data.get("detailed_address", {}).get("city", ""),
-                    "state": restaurant_data.get("detailed_address", {}).get("state", ""),
-                    "ward": restaurant_data.get("detailed_address", {}).get("ward", ""),
-                    "street": restaurant_data.get("detailed_address", {}).get("street", "")
-                },
-                "detailed_address": restaurant_data.get("address", ""),
-                "phone": restaurant_data.get("phone", "N/A"),
-                "website": restaurant_data.get("website", "N/A"),
-                "hours": restaurant_data.get("hours", []),
-                "about": restaurant_data.get("about", [])
-            }
+            return restaurant_data
         except Exception as e:
             print(f"Error fetching restaurant: {e}")
             return None
@@ -347,12 +332,14 @@ class DatabaseManager:
         # self.close_connection()
 
 
-
-
-
-
-def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
+    def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
         pass
+
+    def delete_restaurant_by_id(self, _id):
+        success = self.restaurants.delete_one({"_id": ObjectId(_id)})
+
+        print("result of delete restaurant by id", success)
+        return success
 
 
 if __name__ == "__main__":
@@ -380,7 +367,7 @@ if __name__ == "__main__":
 
     # Test get_restaurant_byid
     restaurant_id = "67acf919194023cfe51522b0"  # Thay bằng _id của nhà hàng
-    restaurant_data = db_manager.get_restaurant_byid(restaurant_id)
+    restaurant_data = db_manager.get_restaurant_by_id(restaurant_id)
     if restaurant_data:
         print("Restaurant data:", restaurant_data)
     else:

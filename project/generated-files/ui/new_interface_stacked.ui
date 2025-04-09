@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>3</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -3593,6 +3593,9 @@
                                              <height>16777215</height>
                                             </size>
                                            </property>
+                                           <property name="cursor">
+                                            <cursorShape>PointingHandCursor</cursorShape>
+                                           </property>
                                            <property name="styleSheet">
                                             <string notr="true">color: #FABC3F;background-color: #343131;</string>
                                            </property>
@@ -3608,6 +3611,9 @@
                                              <width>150</width>
                                              <height>16777215</height>
                                             </size>
+                                           </property>
+                                           <property name="cursor">
+                                            <cursorShape>PointingHandCursor</cursorShape>
                                            </property>
                                            <property name="toolTip">
                                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to start updating form&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

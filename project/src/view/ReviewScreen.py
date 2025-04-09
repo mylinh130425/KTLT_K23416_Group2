@@ -18,7 +18,7 @@ class RestaurantMenuScreen(QWidget):
         self.menu_model = MenuModel(place_id)
 
         #get restaurant data for name and featured image
-        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(place_id)
+        self.restaurant_data = self.parent.db_manager.get_restaurant_by_id(place_id)
         print(self.restaurant_data)
         print(f"RestaurantMenuScreen: Place ID used: {self.place_id}")
         if self.place_id is None:
@@ -45,20 +45,20 @@ class RestaurantMenuScreen(QWidget):
 
         #signals and slots
         self.parent.menupage_filter_button.clicked.connect(self.filter_menu)
-        self.parent.menupage_create_button.clicked.connect(self.create_menu)
-        self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
-        self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
+        self.parent.menupage_create_button.clicked.connect(self.create_menu_item)
+        self.parent.menupage_edit_button.clicked.connect(self.edit_menu_item)
+        self.parent.menupage_delete_button.clicked.connect(self.delete_menu_item)
         # self.parent.restaurant_info_button.clicked.connect(self.goInfo)
         # self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
         # self.parent.restaurant_review_button.clicked.connect(self.goReview)
 
     def filter_menu(self):
         pass
-    def create_menu(self):
+    def create_menu_item(self):
         pass
-    def edit_menu(self):
+    def edit_menu_item(self):
         pass
-    def delete_menu(self):
+    def delete_menu_item(self):
         pass
 
     def goInfo(self):

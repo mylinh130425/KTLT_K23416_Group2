@@ -112,7 +112,7 @@ class RestaurantMenuScreen(QWidget):
         if self.restaurant_photo_label is None:
             print("restaurant_photo_label not found in UI file!")
         else:
-            featured_image_url = self.db_manager.get_restaurant_byid(self.place_id).get("featured_image")
+            featured_image_url = self.db_manager.get_restaurant_by_id(self.place_id).get("featured_image")
             print(f"Image URL: {featured_image_url}")
             if featured_image_url and featured_image_url.startswith("http"):
                 try:

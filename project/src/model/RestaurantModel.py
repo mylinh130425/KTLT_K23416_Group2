@@ -16,9 +16,11 @@ class Restaurant:
                  featured_reviews=None, detailed_reviews=None):
         self.db_manager = DatabaseManager()
         if _id is not None:
-            restaurant_data = self.db_manager.get_restaurant_byid(_id)
+            restaurant_data = self.db_manager.get_restaurant_by_id(_id)
+            # print("restaurant data directly from db", restaurant_data)
             for key, value in restaurant_data.items():
                 setattr(self, key, value)
+            # self._id = _id
         else:
             if name is None or city is None or address is None or len(name)==0 or len(city)==0 or len(address)==0:
                 raise ValueError("Required fields - name, city, address - are invalid")
@@ -84,7 +86,7 @@ class Restaurant:
             self.db_manager.add_restaurant_to_db(restaurant_data)
             return True, "Restaurant added successfully!"
         self.db_manager.close_connection()
-    def update_restaurant(self):
+    def update_restaurant_by_id(self):
         if self._id is None or len(self.name.strip())==0 or len(self.detailed_address["city"].strip())==0 or  len(self.address.strip())==0:
             print("⚠️ Required fields missing!")
             return False, "_id, Restaurant name, city, and address are required."
@@ -136,6 +138,7 @@ class Restaurant:
         Compare and update fields of this Restaurant instance with the new_restaurant data.
         """
         self.update_fields(new_restaurant.to_dict(), self.to_dict())
+
 class RestaurantModel:
     def __init__(self):
         self.db_manager = DatabaseManager()
@@ -178,3 +181,7 @@ class RestaurantModel:
         else:
             return False, "Failed to add restaurant (maybe duplicate or DB error)."
         self.db_manager.close_connection()
+
+    def delete_restaurant_by_id(self,_id):
+        return self.db_manager.delete_restaurant_by_id(_id)
+
