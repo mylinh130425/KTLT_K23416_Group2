@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1100</width>
-    <height>600</height>
+    <height>650</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1100</width>
-    <height>600</height>
+    <height>650</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1100</width>
-    <height>600</height>
+    <height>650</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -150,7 +150,7 @@
        <string notr="true">background-color:#FFE5CF</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Login_SignUp">
        <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -280,7 +280,7 @@
               <number>0</number>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="right_login_page">
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>3</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -2423,10 +2423,16 @@
                          <item>
                           <widget class="QWidget" name="top_bar" native="true">
                            <property name="sizePolicy">
-                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                              <horstretch>0</horstretch>
                              <verstretch>1</verstretch>
                             </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>50</height>
+                            </size>
                            </property>
                            <property name="styleSheet">
                             <string notr="true">background-color:#343131;border-top-right-radius:20;border-top-left-radius:20</string>
@@ -2482,7 +2488,7 @@
                                  </property>
                                  <layout class="QGridLayout" name="gridLayout_3">
                                   <item row="0" column="0">
-                                   <widget class="QLabel" name="avatar">
+                                   <widget class="QLabel" name="form_photo">
                                     <property name="sizePolicy">
                                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                       <horstretch>0</horstretch>
@@ -2687,8 +2693,14 @@
                                    <height>16777215</height>
                                   </size>
                                  </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="layoutDirection">
                                   <enum>Qt::LeftToRight</enum>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: #FABC3F;background-color: #343131;</string>
                                  </property>
                                  <property name="text">
                                   <string>Create</string>
@@ -2744,11 +2756,14 @@
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="5" column="1">
+                                 <item row="5" column="2">
                                   <widget class="QLineEdit" name="wednesday_2"/>
                                  </item>
-                                 <item row="7" column="0">
-                                  <widget class="QLineEdit" name="thursday_1"/>
+                                 <item row="9" column="2">
+                                  <widget class="QLineEdit" name="friday_2"/>
+                                 </item>
+                                 <item row="11" column="0">
+                                  <widget class="QLineEdit" name="saturday_1"/>
                                  </item>
                                  <item row="12" column="0">
                                   <widget class="QCheckBox" name="sunday_checkBox">
@@ -2757,11 +2772,11 @@
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="9" column="1">
-                                  <widget class="QLineEdit" name="friday_2"/>
+                                 <item row="7" column="0">
+                                  <widget class="QLineEdit" name="thursday_1"/>
                                  </item>
-                                 <item row="11" column="0">
-                                  <widget class="QLineEdit" name="saturday_1"/>
+                                 <item row="1" column="0">
+                                  <widget class="QLineEdit" name="monday_1"/>
                                  </item>
                                  <item row="4" column="0">
                                   <widget class="QCheckBox" name="wednesday_checkBox">
@@ -2780,17 +2795,17 @@
                                  <item row="3" column="0">
                                   <widget class="QLineEdit" name="tuesday_1"/>
                                  </item>
-                                 <item row="1" column="0">
-                                  <widget class="QLineEdit" name="monday_1"/>
+                                 <item row="1" column="2">
+                                  <widget class="QLineEdit" name="monday_2"/>
                                  </item>
-                                 <item row="11" column="1">
+                                 <item row="11" column="2">
                                   <widget class="QLineEdit" name="saturday_2"/>
                                  </item>
-                                 <item row="3" column="1">
+                                 <item row="3" column="2">
                                   <widget class="QLineEdit" name="tuesday_2"/>
                                  </item>
-                                 <item row="1" column="1">
-                                  <widget class="QLineEdit" name="monday_2"/>
+                                 <item row="5" column="0">
+                                  <widget class="QLineEdit" name="wednesday_1"/>
                                  </item>
                                  <item row="6" column="0">
                                   <widget class="QCheckBox" name="thursday_checkBox">
@@ -2799,8 +2814,8 @@
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="5" column="0">
-                                  <widget class="QLineEdit" name="wednesday_1"/>
+                                 <item row="7" column="2">
+                                  <widget class="QLineEdit" name="thursday_2"/>
                                  </item>
                                  <item row="10" column="0">
                                   <widget class="QCheckBox" name="saturday_checkBox">
@@ -2809,8 +2824,11 @@
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="7" column="1">
-                                  <widget class="QLineEdit" name="thursday_2"/>
+                                 <item row="13" column="2">
+                                  <widget class="QLineEdit" name="sunday_2"/>
+                                 </item>
+                                 <item row="13" column="0">
+                                  <widget class="QLineEdit" name="sunday_1"/>
                                  </item>
                                  <item row="9" column="0">
                                   <widget class="QLineEdit" name="friday_1"/>
@@ -2822,11 +2840,103 @@
                                    </property>
                                   </widget>
                                  </item>
-                                 <item row="13" column="0">
-                                  <widget class="QLineEdit" name="sunday_1"/>
+                                 <item row="1" column="1">
+                                  <widget class="QLabel" name="label">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="3" column="1">
+                                  <widget class="QLabel" name="label_15">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="7" column="1">
+                                  <widget class="QLabel" name="label_19">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="5" column="1">
+                                  <widget class="QLabel" name="label_18">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="9" column="1">
+                                  <widget class="QLabel" name="label_21">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item row="11" column="1">
+                                  <widget class="QLabel" name="label_20">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
                                  </item>
                                  <item row="13" column="1">
-                                  <widget class="QLineEdit" name="sunday_2"/>
+                                  <widget class="QLabel" name="label_14">
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>15</pointsize>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="text">
+                                    <string>-</string>
+                                   </property>
+                                  </widget>
                                  </item>
                                 </layout>
                                </item>
@@ -2905,7 +3015,7 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>360</width>
+                              <width>931</width>
                               <height>598</height>
                              </rect>
                             </property>
@@ -4428,8 +4538,8 @@ background-color: #343131;</string>
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>91</width>
-                               <height>91</height>
+                               <width>924</width>
+                               <height>129</height>
                               </rect>
                              </property>
                              <layout class="QVBoxLayout" name="verticalLayout_51">

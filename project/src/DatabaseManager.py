@@ -7,6 +7,12 @@ from pymongo.errors import DuplicateKeyError
 from project.src.model.UserModel import UserModel
 
 class DatabaseManager:
+    _instance = None  # Class attribute to hold the singleton instance
+    def __new__(cls, *args, **kwargs):
+        # Ensure that only one instance is created
+        if not cls._instance:
+            cls._instance = super(DatabaseManager, cls).__new__(cls)
+        return cls._instance
     def __init__(self, uri="mongodb://localhost:27017", db_name="MealMatch"):
         """
         Initialize a DatabaseManager object.
@@ -18,27 +24,31 @@ class DatabaseManager:
 
         :type uri: str
         :type db_name: str
+        TODO: all documents should have timestamp fields: created_at, last_updated
+        TODO: maybe save edit history in the future
         """
-        try:
+        if not hasattr(self, '_initialized'):  # Prevent reinitialization
+            self._initialized = True
+            try:
+                self.client = MongoClient(uri)
+                self.db = self.client[db_name]
+                self.users = self.db["Users"]
+                self.users.create_index("username", unique=True)
+                self.users.create_index("email", unique=True)
+                # Thêm log để kiểm tra cơ sở dữ liệu và collection
+                print(f"DatabaseManager: Available databases: {self.client.list_database_names()}")
+                print(f"DatabaseManager: Available collections in {db_name}: {self.db.list_collection_names()}")
+                print("DatabaseManager: Connected to MongoDB successfully.")
+            except Exception as e:
+                print(f"DatabaseManager: Failed to connect to MongoDB: {e}")
+                self.db = None
             self.client = MongoClient(uri)
             self.db = self.client[db_name]
             self.users = self.db["Users"]
+            self.restaurants=self.db["Restaurants"]
+            # Đảm bảo username và email là duy nhất
             self.users.create_index("username", unique=True)
-            self.users.create_index("email", unique=True)
-            # Thêm log để kiểm tra cơ sở dữ liệu và collection
-            print(f"DatabaseManager: Available databases: {self.client.list_database_names()}")
-            print(f"DatabaseManager: Available collections in {db_name}: {self.db.list_collection_names()}")
-            print("DatabaseManager: Connected to MongoDB successfully.")
-        except Exception as e:
-            print(f"DatabaseManager: Failed to connect to MongoDB: {e}")
-            self.db = None
-        self.client = MongoClient(uri)
-        self.db = self.client[db_name]
-        self.users = self.db["Users"]
-        self.restaurants=self.db["Restaurants"]
-        # Đảm bảo username và email là duy nhất
-        self.users.create_index("username", unique=True)
-        # self.users.create_index("email", unique=True)
+            # self.users.create_index("email", unique=True)
 
     def add_restaurant_to_db(self, restaurant_data: dict) -> bool:
         try:
@@ -47,7 +57,7 @@ class DatabaseManager:
             return True
         except Exception as e:
             print(f"Error adding restaurant: {e}")
-            return False
+            raise e
 
     def get_restaurants(self, offset=0, limit=15):
         if self.db is None:
