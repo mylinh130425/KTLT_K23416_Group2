@@ -396,14 +396,14 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
 
         self.parent.modifyrestaurant_name_lineEdit.setText(self.restaurant_data["name"])
 
-        self.parent.modifyrestaurant_category_lineEdit.setText(", ".join(self.restaurant_data["category"]))
+        self.parent.modifyrestaurant_category_lineEdit.setText(", ".join(self.restaurant_data["categories"]))
 
         address = self.restaurant_data["detailed_address"]
         # address_str = f"{address['street']}, {address['ward']}, {address['city']}, {address['state']}"
         self.parent.modifyrestaurant_country_lineEdit.setText("Viet Nam")
-        self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["address"]["city"])
-        self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["address"]["state"])
-        self.parent.modifyrestaurant_detailedaddress_lineEdit.setText(self.restaurant_data["detailed_address"])
+        self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["detailed_address"]["city"])
+        self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["detailed_address"]["state"])
+        self.parent.modifyrestaurant_detailedaddress_lineEdit.setText(self.restaurant_data["address"])
         self.parent.modifyrestaurant_website_lineEdit.setText(self.restaurant_data["website"])
         self.parent.modifyrestaurant_phone_lineEdit.setText(self.restaurant_data["phone"])
         for info in self.restaurant_data["about"]:
@@ -474,11 +474,10 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                                          featured_image = self.restaurant_image_path,
                                          address=self.form_address,hours=self.hours,
                                          phone=self.form_phone, email=self.form_mail, website=self.form_website)
-        print(self.new_restaurant.to_dict())
         try:
             self.current_restaurant.compare_and_update(self.new_restaurant)
-            print(self.current_restaurant.to_dict())
-            self.current_restaurant.update_restaurant()
+            print("Updated restaurant with the following data", self.current_restaurant.to_dict())
+            self.current_restaurant.update_restaurant_by_id()
         except  Exception as e:
             QMessageBox.critical(self.parent.body_stackedWidget, "Error", f"Failed to update restaurant due to {e}")
 
@@ -572,7 +571,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         if self.mode == "create":
             success, message = self.restaurant_model.add_restaurant(restaurant_data)
         else:
-            success, message = self.restaurant_model.update_restaurant(self.current_restaurant_id, restaurant_data)
+            success, message = self.restaurant_model.update_restaurant_by_id(self.current_restaurant_id, restaurant_data)
 
         if success:
             self.show_message("Success", message)
