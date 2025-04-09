@@ -335,8 +335,10 @@ class DatabaseManager:
     def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
         pass
 
-    def delete_restaurant_by_id(self, place_id):
-        success = self.restaurants.delete_one({"place_id": place_id})
+    def delete_restaurant_by_id(self, _id):
+        success = self.restaurants.delete_one({"_id": ObjectId(_id)})
+
+        print("result of delete restaurant by id", success)
         return success
 
 
