@@ -45,20 +45,20 @@ class RestaurantMenuScreen(QWidget):
 
         #signals and slots
         self.parent.menupage_filter_button.clicked.connect(self.filter_menu)
-        self.parent.menupage_create_button.clicked.connect(self.create_menu)
-        self.parent.menupage_edit_button.clicked.connect(self.edit_menu)
-        self.parent.menupage_delete_button.clicked.connect(self.delete_menu)
+        self.parent.menupage_create_button.clicked.connect(self.create_menu_item)
+        self.parent.menupage_edit_button.clicked.connect(self.edit_menu_item)
+        self.parent.menupage_delete_button.clicked.connect(self.delete_menu_item)
         # self.parent.restaurant_info_button.clicked.connect(self.goInfo)
         # self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
         # self.parent.restaurant_review_button.clicked.connect(self.goReview)
 
     def filter_menu(self):
         pass
-    def create_menu(self):
+    def create_menu_item(self):
         pass
-    def edit_menu(self):
+    def edit_menu_item(self):
         pass
-    def delete_menu(self):
+    def delete_menu_item(self):
         pass
 
     def goInfo(self):

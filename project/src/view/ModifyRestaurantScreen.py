@@ -524,9 +524,9 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.restaurant_menu_button.clicked.connect(self.goMenu)
         self.parent.restaurant_review_button.clicked.connect(self.goReview)
         
-        # Connect save button if it exists
-        if hasattr(self.parent, 'modifyrestaurant_save_button'):
-            self.parent.modifyrestaurant_save_button.clicked.connect(self.save_restaurant_changes)
+        # # Connect save button if it exists
+        # if hasattr(self.parent, 'modifyrestaurant_save_button'):
+        #     self.parent.modifyrestaurant_save_button.clicked.connect(self.save_restaurant_changes)
 
     # === MODE SELECTORS ===
     def create_mode(self):
@@ -683,46 +683,46 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                 
                 print(f"Image uploaded successfully: {file_path}")
 
-    def save_restaurant_changes(self):
-        """Save changes to the restaurant, including the new image if uploaded"""
-        if not self.current_restaurant_id:
-            print("No restaurant ID to update")
-            return
-            
-        # Collect data from the form
-        updated_data = {}
-        updated_data["name"] = self.parent.modifyrestaurant_name_lineEdit.text().strip()
-        updated_data["category"] = [cat.strip() for cat in self.parent.modifyrestaurant_category_lineEdit.text().split(",")]
-        
-        # Address data
-        updated_data["address"] = {
-            "city": self.parent.modifyrestaurant_city_lineEdit.text().strip(),
-            "state": self.parent.modifyrestaurant_area_lineEdit.text().strip(),
-            "country": self.parent.modifyrestaurant_country_lineEdit.text().strip()
-        }
-        
-        # Contact info
-        updated_data["phone"] = self.parent.modifyrestaurant_phone_lineEdit.text().strip()
-        updated_data["website"] = self.parent.modifyrestaurant_website_lineEdit.text().strip()
-        
-        # Add the uploaded image if available
-        if self.restaurant_image_path:
-            # In a real application, you would:
-            # 1. Upload the image to a server
-            # 2. Get the URL of the uploaded image
-            # 3. Store the URL in the database
-            
-            # For this example, we'll just store the local path
-            updated_data["featured_image"] = self.restaurant_image_path
-            print(f"Updating restaurant with new image: {self.restaurant_image_path}")
-        
-        try:
-            # Update the restaurant in the database
-            success = self.parent.db_manager.update_restaurant(self.current_restaurant_id, updated_data)
-            if success:
-                print("Restaurant updated successfully")
-                # Optionally show a success message or navigate to another screen
-            else:
-                print("Failed to update restaurant")
-        except Exception as e:
-            print(f"Error updating restaurant: {e}")
+    # def save_restaurant_changes(self):
+    #     """Save changes to the restaurant, including the new image if uploaded"""
+    #     if not self.current_restaurant_id:
+    #         print("No restaurant ID to update")
+    #         return
+    #
+    #     # Collect data from the form
+    #     updated_data = {}
+    #     updated_data["name"] = self.parent.modifyrestaurant_name_lineEdit.text().strip()
+    #     updated_data["category"] = [cat.strip() for cat in self.parent.modifyrestaurant_category_lineEdit.text().split(",")]
+    #
+    #     # Address data
+    #     updated_data["address"] = {
+    #         "city": self.parent.modifyrestaurant_city_lineEdit.text().strip(),
+    #         "state": self.parent.modifyrestaurant_area_lineEdit.text().strip(),
+    #         "country": self.parent.modifyrestaurant_country_lineEdit.text().strip()
+    #     }
+    #
+    #     # Contact info
+    #     updated_data["phone"] = self.parent.modifyrestaurant_phone_lineEdit.text().strip()
+    #     updated_data["website"] = self.parent.modifyrestaurant_website_lineEdit.text().strip()
+    #
+    #     # Add the uploaded image if available
+    #     if self.restaurant_image_path:
+    #         # In a real application, you would:
+    #         # 1. Upload the image to a server
+    #         # 2. Get the URL of the uploaded image
+    #         # 3. Store the URL in the database
+    #
+    #         # For this example, we'll just store the local path
+    #         updated_data["featured_image"] = self.restaurant_image_path
+    #         print(f"Updating restaurant with new image: {self.restaurant_image_path}")
+    #
+    #     try:
+    #         # Update the restaurant in the database
+    #         success = self.parent.db_manager.update_restaurant(self.current_restaurant_id, updated_data)
+    #         if success:
+    #             print("Restaurant updated successfully")
+    #             # Optionally show a success message or navigate to another screen
+    #         else:
+    #             print("Failed to update restaurant")
+    #     except Exception as e:
+    #         print(f"Error updating restaurant: {e}")

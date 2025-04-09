@@ -347,12 +347,12 @@ class DatabaseManager:
         # self.close_connection()
 
 
-
-
-
-
-def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
+    def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
         pass
+
+    def delete_restaurant_by_id(self, place_id):
+        success = self.restaurants.delete_one({"place_id": place_id})
+        return success
 
 
 if __name__ == "__main__":

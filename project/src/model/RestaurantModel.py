@@ -136,6 +136,7 @@ class Restaurant:
         Compare and update fields of this Restaurant instance with the new_restaurant data.
         """
         self.update_fields(new_restaurant.to_dict(), self.to_dict())
+
 class RestaurantModel:
     def __init__(self):
         self.db_manager = DatabaseManager()
@@ -178,3 +179,7 @@ class RestaurantModel:
         else:
             return False, "Failed to add restaurant (maybe duplicate or DB error)."
         self.db_manager.close_connection()
+
+    def delete_restaurant_by_id(self,_id):
+        return self.db_manager.delete_restaurant_by_id(_id)
+
