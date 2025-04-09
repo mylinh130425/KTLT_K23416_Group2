@@ -1,7 +1,7 @@
 from datetime import datetime
 from bson import ObjectId
 from pymongo import MongoClient
-from pymongo.errors import DuplicateKeyError
+from pymongo.errors import DuplicateKeyError, PyMongoError
 import re
 
 # Giả sử UserModel đã được định nghĩa
@@ -342,7 +342,7 @@ class DatabaseManager:
                 ]
             })
             return list(results)
-        except errors.PyMongoError as e:
+        except PyMongoError as e:
             print(f"Lỗi khi tìm kiếm nhà hàng: {e}")
             return []
 
