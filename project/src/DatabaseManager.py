@@ -2,6 +2,7 @@ from datetime import datetime
 from bson import ObjectId
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
+import re
 
 # Giả sử UserModel đã được định nghĩa
 from project.src.model.UserModel import UserModel
@@ -46,6 +47,8 @@ class DatabaseManager:
             self.db = self.client[db_name]
             self.users = self.db["Users"]
             self.restaurants=self.db["Restaurants"]
+            self.menu_collection = self.db["Menu"]
+
             # Đảm bảo username và email là duy nhất
             self.users.create_index("username", unique=True)
             # self.users.create_index("email", unique=True)
@@ -58,6 +61,9 @@ class DatabaseManager:
         except Exception as e:
             print(f"Error adding restaurant: {e}")
             raise e
+    def update_restaurant_to_db(self, _id,restaurant_data: dict) -> bool:
+        self.restaurants.update_one({"_id":_id},{"$set":restaurant_data})
+        print(f"Restaurant {restaurant_data['name']} added to DB!")
 
     def get_restaurants(self, offset=0, limit=15):
         if self.db is None:
@@ -101,23 +107,22 @@ class DatabaseManager:
             return []
 
         try:
-            menu_collection = self.db["Menu"]
             print(f"Type of place_id: {type(place_id)}")
-            print(f"Total documents in Menu collection: {menu_collection.count_documents({})}")
+            print(f"Total documents in Menu collection: {self.menu_collection.count_documents({})}")
 
             # Chuyển place_id từ chuỗi sang ObjectId
             place_id_obj = ObjectId(place_id)
             print(f"Converted place_id to ObjectId: {place_id_obj}")
 
             # Tìm tài liệu có place_id khớp với _id của nhà hàng
-            menu_data = menu_collection.find_one({"place_id": place_id_obj})
+            menu_data = self.menu_collection.find_one({"place_id": place_id_obj})
             print(f"Raw menu data: {menu_data}")
 
             if not menu_data:
                 print(f"DatabaseManager: No menu found for place_id {place_id}.")
-                all_menus = menu_collection.find({"place_id": place_id_obj})
+                all_menus = self.menu_collection.find({"place_id": place_id_obj})
                 print(f"Debug: All documents with place_id {place_id}: {list(all_menus)}")
-                all_place_ids = menu_collection.distinct("place_id")
+                all_place_ids = self.menu_collection.distinct("place_id")
                 print(f"All place_ids in Menu collection: {all_place_ids}")
                 return []
 
@@ -157,9 +162,8 @@ class DatabaseManager:
             return []
 
         try:
-            menu_collection = self.db["Menu"]
             all_menus = []
-            menu_documents = menu_collection.find()
+            menu_documents = self.menu_collection.find()
 
             for menu_data in menu_documents:
                 menu_items = menu_data.get("menu", [])
@@ -307,6 +311,48 @@ class DatabaseManager:
             print(f"Error fetching restaurant: {e}")
             return None
 
+    def get_restaurants_by_keywords(self, keywords: str, offset=0,limit=15):
+        price_pattern=r"([<>]=?|>=|<=|dưới |trên )?(\d+)(k|000| ngàn)?( đồng|\s?VND)?"
+
+        pricing = re.findall(price_pattern,
+                                     keywords, re.IGNORECASE)
+        pricing_keywords = []
+        if pricing:
+            for match in pricing:
+                if match:
+                    print(match)
+                    pricing_keywords.append("".join(match))  # Join the matched groups into a single string
+        exclude = " ".join(pricing_keywords)
+        print(exclude)
+        keyword = "|".join([word for word in keywords.split() if word not in exclude])
+        print(keyword)
+        # keyword = re.sub(r"\s", "|", keywords)
+        self.close_connection()
+
+
+        try:
+            # Tìm kiếm trong collection với điều kiện regex (không phân biệt hoa thường)
+            results = restaurants.find({
+                "$or": [
+                    {"name": {"$regex": keyword, "$options": "i"}},
+                    {"description": {"$regex": keyword, "$options": "i"}},
+                    {"address": {"$regex": keyword, "$options": "i"}},
+                    {"phone": {"$regex": keyword, "$options": "i"}},
+                    # {"price_range": {"$regex": keyword, "$options": "i"}}
+                ]
+            })
+            return list(results)
+        except errors.PyMongoError as e:
+            print(f"Lỗi khi tìm kiếm nhà hàng: {e}")
+            return []
+
+
+
+
+
+def get_menu_items_by_keywords(self,keywords: str, offset=0,limit=15):
+        pass
+
 
 if __name__ == "__main__":
     """ testing db connection and functionality """
@@ -338,3 +384,21 @@ if __name__ == "__main__":
         print("Restaurant data:", restaurant_data)
     else:
         print("No restaurant data found!")
+
+        # Ví dụ sử dụng hàm tìm kiếm
+    # search_keyword = input("Nhập từ khóa để tìm kiếm nhà hàng (ví dụ: 'Gỏi Gì'): ")
+    search_keyword = "cơm tấm dưới 25000, phở trên 15k, 35 ngàn đồng, 100k VND, <14k"
+    results = db_manager.get_restaurants_by_keywords(search_keyword)
+
+    # # Hiển thị kết quả
+    # if results:
+    #     print(f"Kết quả tìm kiếm cho '{search_keyword}':")
+    #     for result in results:
+    #         print(f"- Tên: {result['name']}")
+    #         print(f"  Mô tả: {result.get('description', 'Không có')}")
+    #         print(f"  Địa chỉ: {result.get('address', 'Không có')}")
+    #         print(f"  Điện thoại: {result.get('phone', 'Không có')}")
+    #         print(f"  Giá: {result.get('price_range', 'Không có')}")
+    # else:
+    #     print(f"Không tìm thấy nhà hàng nào với từ khóa '{search_keyword}'.")
+
