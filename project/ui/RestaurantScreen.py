@@ -212,20 +212,20 @@ class RestaurantScreen(QWidget):
 
     def deleteRestaurant(self):
         selected_items = self.restaurant_table.selectedItems()
-
-        if len(selected_items)==0:
+        if not selected_items:
             QtWidgets.QMessageBox.warning(self, "No Selection", "Please select a restaurant to delete.")
             return
 
         selected_row = selected_items[0].row()
-        self.current_restaurant_id = self.restaurant_table.item(selected_row, 0).text()
-        restaurant_name = self.restaurant_table.item(selected_row, 2).text()
+        place_id_item = self.restaurant_table.item(selected_row, 0)
+        restaurant_name_item = self.restaurant_table.item(selected_row, 1)
 
-        print("Deleting ", self.current_restaurant_id, restaurant_name)
-        if not self.current_restaurant_id or not restaurant_name:
+        if not place_id_item or not restaurant_name_item:
             QtWidgets.QMessageBox.warning(self, "Error", "Could not retrieve restaurant data.")
             return
 
+        place_id = place_id_item.text()
+        restaurant_name = restaurant_name_item.text()
 
         # Confirm deletion
         confirm = QtWidgets.QMessageBox.question(
@@ -237,7 +237,7 @@ class RestaurantScreen(QWidget):
 
         if confirm == QtWidgets.QMessageBox.StandardButton.Yes:
             # Delete from database
-            success = self.restaurant_table.delete_restaurant_by_id(self.current_restaurant_id )
+            success = self.restaurant_table.delete_restaurant_by_id(place_id)
             if success:
                 self.restaurant_table.removeRow(selected_row)
                 QtWidgets.QMessageBox.information(self, "Deleted",
