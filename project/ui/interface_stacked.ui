@@ -1544,7 +1544,7 @@
               <string notr="true">background: #E8D5B5;</string>
              </property>
              <property name="currentIndex">
-              <number>3</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="profile_page">
               <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1871,6 +1871,9 @@
                          </item>
                          <item>
                           <widget class="QLineEdit" name="profile_username_lineEdit">
+                           <property name="enabled">
+                            <bool>false</bool>
+                           </property>
                            <property name="minimumSize">
                             <size>
                              <width>250</width>
@@ -1878,7 +1881,7 @@
                             </size>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">background-color: rgb(235, 235, 235)</string>
                            </property>
                            <property name="placeholderText">
                             <string>Email or username</string>
@@ -2383,7 +2386,7 @@
                      <string notr="true">color:  #343131;</string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="add_restaurant_page">
                      <layout class="QVBoxLayout" name="verticalLayout_4">

@@ -79,7 +79,7 @@ class ProfileScreen(QtWidgets.QWidget):
             
             # Lưu tham chiếu
             self.parent.profile_photo_label = new_photo_label
-            
+
             # Kết nối sự kiện click
             self.parent.profile_photo_label.clicked.connect(self.upload_profile_image)
         
