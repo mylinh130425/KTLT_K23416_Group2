@@ -15,6 +15,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         print("setting up Modify Restaurant Screen")
         self.parent = parent
         self.restaurant_data = None
+        self.current_restaurant=None
         self.isCreating = isCreating # True "create" or False "edit"
         self.current_restaurant_id = restaurant_id  # Only used in edit mode
         # Tạo NetworkAccessManager ngay khi khởi tạo
@@ -317,7 +318,9 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         """
         # Apply the style to all QPushButtons and QLineEdits in this screen
         self.parent.modify_restaurant_page.setStyleSheet(add_edit_restaurant_style)
-        self.restaurant_data = self.parent.db_manager.get_restaurant_byid(self.current_restaurant_id)
+        # self.restaurant_data = self.parent.db_manager.get_restaurant_byid(self.current_restaurant_id)
+        self.current_restaurant=Restaurant(_id=self.current_restaurant_id)
+        self.restaurant_data=self.current_restaurant.to_dict()
         self.parent.restaurant_name_label.setText(self.restaurant_data["name"])
         self.parent.restaurant_name_label.setWordWrap(True)
         print(self.current_restaurant_id)
@@ -400,6 +403,7 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
         self.parent.modifyrestaurant_country_lineEdit.setText("Viet Nam")
         self.parent.modifyrestaurant_city_lineEdit.setText(self.restaurant_data["address"]["city"])
         self.parent.modifyrestaurant_area_lineEdit.setText(self.restaurant_data["address"]["state"])
+        self.parent.modifyrestaurant_detailedaddress_lineEdit.setText(self.restaurant_data["detailed_address"])
         self.parent.modifyrestaurant_website_lineEdit.setText(self.restaurant_data["website"])
         self.parent.modifyrestaurant_phone_lineEdit.setText(self.restaurant_data["phone"])
         for info in self.restaurant_data["about"]:
@@ -441,6 +445,42 @@ class ModifyRestaurantScreen(QtWidgets.QWidget):
                         isSameHours=False
                 hours.append(opening)
         #TODO: finish filling in the UI opening hours, preferably using the same for loops
+
+        self.parent.restaurantinfo_update_button.clicked.connect(self.update_restaurant)
+
+    def update_restaurant(self):
+        print("clicked update res button")
+        self.form_res_name = self.parent.modifyrestaurant_name_lineEdit.text()
+        print(self.form_res_name)
+        # self.form_description = self.parent.modifyrestaurant_description_lineEdit.text()
+        self.form_category = self.parent.modifyrestaurant_category_lineEdit.text()
+        print(self.form_category)
+        self.form_country = self.parent.modifyrestaurant_country_lineEdit.text()
+        self.form_city  = self.parent.modifyrestaurant_city_lineEdit.text()
+        print(self.form_city)
+
+        self.form_area = self.parent.modifyrestaurant_area_lineEdit.text()
+        self.form_address = self.parent.modifyrestaurant_detailedaddress_lineEdit.text()
+        self.form_phone = self.parent.modifyrestaurant_phone_lineEdit.text()
+        self.form_mail=self.parent.modifyrestaurant_email_lineEdit.text()
+        self.form_website = self.parent.modifyrestaurant_website_lineEdit.text()
+        if self.parent.all_days_checkBox.isChecked():
+            self.update_weekday_fields()
+        self.get_timings()
+
+        self.new_restaurant = Restaurant(name=self.form_res_name,
+                                         main_category=self.form_category, city=self.form_city,
+                                         detailed_address={'ward':self.form_area, 'country':self.form_country},
+                                         featured_image = self.restaurant_image_path,
+                                         address=self.form_address,hours=self.hours,
+                                         phone=self.form_phone, email=self.form_mail, website=self.form_website)
+        print(self.new_restaurant.to_dict())
+        try:
+            self.current_restaurant.compare_and_update(self.new_restaurant)
+            print(self.current_restaurant.to_dict())
+            self.current_restaurant.update_restaurant()
+        except  Exception as e:
+            QMessageBox.critical(self.parent.body_stackedWidget, "Error", f"Failed to update restaurant due to {e}")
 
     def add_restaurant(self):
         print("clicked create res button")
