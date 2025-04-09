@@ -1,5 +1,3 @@
-from typing_extensions import overload
-
 from project.src.DatabaseManager import DatabaseManager
 
 
@@ -142,7 +140,7 @@ class Restaurant:
 class RestaurantModel:
     def __init__(self):
         self.db_manager = DatabaseManager()
-        self.limit = 15
+        self.limit = 200
         self.offset = 0
         self._has_more = True
 
