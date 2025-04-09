@@ -1,8 +1,9 @@
 # from PyQt6.QtGui import QPixmap
 from PyQt6 import QtWidgets, QtGui,QtCore
-
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox, QDialog, QLineEdit, QLabel, \
+    QDialogButtonBox
 from project.src.delegate.RestaurantDelegate import RestaurantDelegate
+from project.src.filter_restaurant import MongoDBConnection, filter_restaurants
 from project.src.view.ModifyRestaurantScreen import ModifyRestaurantScreen
 from project.src.view.RestaurantMenuScreen import RestaurantMenuScreen
 from project.src.view.AllMenuItemScreen import AllMenuItemScreen
@@ -33,6 +34,9 @@ class RestaurantScreen(QWidget):
         self.filter_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
         buttonLayout.addWidget(self.filter_pushButton)
 
+        # Kết nối sự kiện clicked của nút Filter
+        self.filter_pushButton.clicked.connect(self.filter_restaurants_by_criteria)
+
         # SpacerItem để đẩy các nút về bên phải
         buttonLayout.addStretch()
 
@@ -42,7 +46,6 @@ class RestaurantScreen(QWidget):
         self.create_pushButton.setObjectName("create_pushButton")
         buttonLayout.addWidget(self.create_pushButton)
         self.create_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
-
         self.create_pushButton.clicked.connect(self.goAddRestaurant)
 
         # Nút Edit
@@ -57,7 +60,6 @@ class RestaurantScreen(QWidget):
         self.delete_pushButton.setObjectName("delete_pushButton")
         buttonLayout.addWidget(self.delete_pushButton)
         self.delete_pushButton.setStyleSheet("color: #FABC3F;background-color: #343131; padding-left: 15px;padding-right: 15px;")
-
         self.delete_pushButton.clicked.connect(self.deleteRestaurant)
 
         # Thêm hàng nút vào layout chính
@@ -68,8 +70,6 @@ class RestaurantScreen(QWidget):
         self.restaurant_table.verticalScrollBar().valueChanged.connect(self.on_scroll)
         self.restaurant_table.setEditTriggers(QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers)
         self.restaurant_table.cellDoubleClicked.connect(self.open_menu_screen)
-
-        # Kiểm tra các sự kiện khác có thể gây nhầm lẫn
         self.restaurant_table.itemClicked.connect(self.on_item_clicked)
 
         # Thêm bảng vào layout chính
@@ -111,6 +111,60 @@ class RestaurantScreen(QWidget):
     #     """ Navigate to the Add Restaurant screen. """
     #     print("Navigating to Add Restaurant screen")
     #     ModifyRestaurantScreen(self.parent, isCreating=True)
+
+    def filter_restaurants_by_criteria(self):
+        """Mở dialog để lọc nhà hàng theo rating và tên"""
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Filter Restaurants")
+        layout = QVBoxLayout(dialog)
+
+        # Ô nhập rating tối thiểu
+        rating_input = QLineEdit()
+        rating_input.setPlaceholderText("Enter minimum rating (e.g., 3.5)")
+        layout.addWidget(QLabel("Minimum Rating:"))
+        layout.addWidget(rating_input)
+
+        # Ô nhập tên nhà hàng
+        name_input = QLineEdit()
+        name_input.setPlaceholderText("Enter restaurant name (e.g., Pizza Hut)")
+        layout.addWidget(QLabel("Restaurant Name:"))
+        layout.addWidget(name_input)
+
+        # Nút OK và Cancel
+        button_box = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        button_box.accepted.connect(dialog.accept)
+        button_box.rejected.connect(dialog.reject)
+        layout.addWidget(button_box)
+
+        if dialog.exec():
+            # Lấy giá trị từ các ô nhập
+            min_rating = None
+            try:
+                if rating_input.text():
+                    min_rating = float(rating_input.text())
+                    if min_rating < 0 or min_rating > 5:
+                        QMessageBox.warning(self, "Error", "Rating must be between 0 and 5.")
+                        return
+            except ValueError:
+                QMessageBox.warning(self, "Error", "Please enter a valid number for rating.")
+                return
+
+            name = name_input.text() if name_input.text() else None
+
+            # Gọi filter_restaurants để lấy danh sách nhà hàng đã lọc
+            filtered_restaurants = filter_restaurants(
+                min_rating=min_rating,
+                name=name,
+                limit=10
+            )
+
+            # Cập nhật bảng với kết quả lọc
+            if filtered_restaurants:
+                self.restaurant_table.load_more_restaurants(filtered_restaurants)  # Truyền danh sách đã lọc
+                QMessageBox.information(self, "Success", f"Found {len(filtered_restaurants)} restaurants matching the criteria.")
+            else:
+                self.restaurant_table.load_more_restaurants([])  # Truyền danh sách rỗng để hiển thị thông báo "No restaurants match the filter criteria."
+                QMessageBox.information(self, "Info", "No restaurants found matching the criteria.")
 
     def goEditRestaurant(self):
         """ Navigate to Edit Restaurant screen (must have a selected row). """
@@ -192,9 +246,9 @@ class RestaurantScreen(QWidget):
                 QtWidgets.QMessageBox.warning(self, "Error", "Failed to delete the restaurant.")
 
     def on_scroll(self):
-        """Tải thêm dữ liệu khi cuộn xuống cuối."""
+        """Tải thêm dữ liệu khi cuộn xuống cuối, nhưng không tải nếu đang ở trạng thái lọc."""
         scrollbar = self.restaurant_table.verticalScrollBar()
-        if scrollbar.value() == scrollbar.maximum():
+        if scrollbar.value() == scrollbar.maximum() and not self.restaurant_table.is_filtered:
             self.restaurant_table.load_more_restaurants()
 
     def on_item_clicked(self, item):
@@ -203,7 +257,6 @@ class RestaurantScreen(QWidget):
 
     def open_menu_screen(self, row, column):
         """Mở trang menu khi double-click vào nhà hàng."""
-        # print(f"RestaurantScreen: Double-clicked at row {row}, column {column}")
         place_id_item = self.restaurant_table.item(row, 0)
         if place_id_item is None:
             restaurant_data = self.restaurant_table.model.get_restaurants()[row]

@@ -7,6 +7,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 class MongoDBConnection:
     _instance = None
     _db = None
@@ -44,17 +45,18 @@ class MongoDBConnection:
             self._db = None
             logger.info("Đã đóng kết nối MongoDB")
 
-def filter_restaurants(min_rating, limit=10):
+
+def filter_restaurants(min_rating=None, name=None, limit=10):
     """
-    Tìm kiếm nhà hàng dựa trên rating tối thiểu sử dụng Aggregation Pipeline
-    
+    Tìm kiếm nhà hàng dựa trên rating tối thiểu và tên sử dụng Aggregation Pipeline
+
     Args:
         min_rating (float): Rating tối thiểu của nhà hàng
+        name (str): Tên nhà hàng (hỗ trợ tìm kiếm gần đúng)
         limit (int): Số lượng kết quả tối đa trả về
-        
+
     Returns:
-        list: Danh sách các nhà hàng có rating cao hơn min_rating, 
-             sắp xếp theo rating giảm dần
+        list: Danh sách các nhà hàng thỏa mãn các tiêu chí, sắp xếp theo rating giảm dần
     """
     try:
         db_connection = MongoDBConnection()
@@ -63,48 +65,60 @@ def filter_restaurants(min_rating, limit=10):
             return []
 
         db = db_connection.get_database()
-        
-        # Tạo aggregation pipeline
-        pipeline = [
-            # Stage 1: Lọc theo rating
-            {
-                "$match": {
-                    "rating": {"$gt": float(min_rating)}
-                }
-            },
-            # Stage 2: Sắp xếp kết quả theo rating giảm dần
-            {
-                "$sort": {
-                    "rating": -1
-                }
-            },
-            # Stage 3: Giới hạn số lượng kết quả
-            {
-                "$limit": limit
+
+        # Tạo pipeline cho aggregation
+        pipeline = []
+
+        # Thêm các điều kiện lọc nếu có
+        match_conditions = {}
+        if min_rating is not None:
+            match_conditions["rating"] = {"$gt": float(min_rating)}
+        if name:
+            match_conditions["name"] = {"$regex": name, "$options": "i"}  # Tìm kiếm không phân biệt hoa thường
+
+        if match_conditions:
+            pipeline.append({"$match": match_conditions})
+
+        # Đảm bảo các trường cần thiết được trả về, với giá trị mặc định nếu thiếu
+        pipeline.append({
+            "$project": {
+                "_id": 1,
+                "name": {"$ifNull": ["$name", "N/A"]},
+                "rating": {"$ifNull": ["$rating", 0]},
+                "open_hours": {"$ifNull": ["$workday_timing", "N/A"]},
+                "category": {"$ifNull": ["$category", "N/A"]},
+                "address": {"$ifNull": ["$address", "N/A"]},
+                "hotline": {"$ifNull": ["$hotline", "N/A"]},
+                "accessibility": {"$ifNull": ["$accessibility", "N/A"]},
+                "featured_image": {"$ifNull": ["$featured_image", ""]}
             }
-        ]
-        
+        })
+
+        # Sắp xếp theo rating giảm dần
+        pipeline.append({"$sort": {"rating": -1}})
+
+        # Giới hạn số lượng kết quả
+        pipeline.append({"$limit": limit})
+
         # Thực thi pipeline và trả về kết quả
         results = list(db.Restaurants.aggregate(pipeline))
         return results
-        
+
     except Exception as e:
         logger.error(f"Lỗi khi tìm kiếm nhà hàng: {str(e)}")
         return []
+
 
 if __name__ == "__main__":
     try:
         connection = MongoDBConnection()
         if connection.connect():
-            # Test với rating > 3
-            min_rating = 3
-            restaurants = filter_restaurants(min_rating, limit=5)
-            
-            print(f"\nNhà hàng có rating > {min_rating}:")
+            # Test với rating > 3 và tên chứa "pizza"
+            restaurants = filter_restaurants(min_rating=3, name="pizza")
+            print("\nNhà hàng thỏa mãn các tiêu chí:")
             if restaurants:
                 for restaurant in restaurants:
                     print(f"- {restaurant['name']}: {restaurant['rating']} sao")
-                    
             else:
                 print("Không tìm thấy nhà hàng phù hợp.")
     except Exception as e:

@@ -6,6 +6,8 @@ from PyQt6.QtWidgets import (
 )
 from project.src.ImageLoader import ImageLoader
 from project.src.model.RestaurantModel import RestaurantModel
+
+
 class RestaurantDelegate(QTableWidget):
     IMAGE_SIZE = 80  # Kích thước hình ảnh
     ROW_HEIGHT = 130  # Độ cao của hàng
@@ -31,32 +33,64 @@ class RestaurantDelegate(QTableWidget):
         self.thread_pool = QThreadPool.globalInstance()
         self.thread_pool.setMaxThreadCount(self.MAX_CONCURRENT_THREADS)
 
+        # Trạng thái lọc và danh sách đã lọc
+        self.is_filtered = False  # Theo dõi xem bảng đang hiển thị dữ liệu đã lọc hay không
+        self.filtered_restaurants = []  # Lưu danh sách nhà hàng đã lọc
+
         self.load_more_restaurants()
         self.format_table()
         self.style_table()
 
-    def load_more_restaurants(self):
+    def load_more_restaurants(self, restaurants=None):
+        """
+        Tải và hiển thị danh sách nhà hàng.
+
+        Args:
+            restaurants (list, optional): Danh sách nhà hàng để hiển thị. Nếu None, tải từ cơ sở dữ liệu.
+        """
         # Dừng tất cả các thread ImageLoader cũ trước khi tải thêm
         self.thread_pool.clear()
         self.thread_pool.waitForDone()
         self.image_loaders.clear()
         self.image_widgets.clear()
 
-        restaurants = self.model.get_restaurants()
-        if not restaurants:
-            print("RestaurantDelegate: No restaurants to display.")
-            self.clearContents()
-            self.setRowCount(1)
-            item = QTableWidgetItem("No restaurants available.")
-            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-            self.setItem(0, 0, item)
-            return
+        # Xóa nội dung bảng
+        self.clearContents()
+        self.setRowCount(0)
+
+        if restaurants is not None:
+            # Nếu có danh sách nhà hàng được truyền vào (từ filter)
+            self.is_filtered = True
+            self.filtered_restaurants = restaurants
+            if not restaurants:
+                print("RestaurantDelegate: No filtered restaurants to display.")
+                self.setRowCount(1)
+                item = QTableWidgetItem("No restaurants match the filter criteria.")
+                item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                self.setItem(0, 0, item)
+                return
+        else:
+            # Nếu không có danh sách truyền vào, tải từ cơ sở dữ liệu
+            self.is_filtered = False
+            self.filtered_restaurants = []
+            restaurants = self.model.get_restaurants()
+            if not restaurants:
+                print("RestaurantDelegate: No restaurants to display.")
+                self.clearContents()
+                self.setRowCount(1)
+                item = QTableWidgetItem("No restaurants available.")
+                item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                self.setItem(0, 0, item)
+                return
+            self.model.offset += len(restaurants)  # Cập nhật offset khi tải từ cơ sở dữ liệu
 
         print(f"RestaurantDelegate: Loading {len(restaurants)} restaurants")
-        current_row_count = self.rowCount()
-        self.setRowCount(current_row_count + len(restaurants))
-        for i, restaurant in enumerate(restaurants):
-            row = current_row_count + i
+        # In dữ liệu để kiểm tra
+        for restaurant in restaurants:
+            print(f"Restaurant data: {restaurant}")
+
+        self.setRowCount(len(restaurants))  # Đặt số hàng chính xác
+        for row, restaurant in enumerate(restaurants):
             # Cột _id (ẩn đi)
             item = QTableWidgetItem(str(restaurant["_id"]))
             self.setItem(row, 0, item)
@@ -65,34 +99,40 @@ class RestaurantDelegate(QTableWidget):
             self.setCellWidget(row, 1, self.create_image_widget(row, restaurant.get("featured_image", "")))
 
             # Cột Restaurant (name)
-            self.setItem(row, 2, QTableWidgetItem(restaurant["name"]))
+            self.setItem(row, 2, QTableWidgetItem(restaurant.get("name", "N/A")))
 
             # Cột Rate (hiển thị rating dạng sao)
-            self.setCellWidget(row, 3, self.create_star_widget(restaurant["rating"]))
+            rating = restaurant.get("rating", 0)
+            self.setCellWidget(row, 3, self.create_star_widget(rating))
 
             # Cột Open - Close (open_hours)
-            self.setItem(row, 4, QTableWidgetItem(restaurant["open_hours"]))
+            open_hours = restaurant.get("open_hours", "N/A")  # Thay "------" thành "N/A" để rõ ràng hơn
+            self.setItem(row, 4, QTableWidgetItem(open_hours))
 
             # Cột Category (căn giữa)
-            category_item = QTableWidgetItem(restaurant["category"])
+            category = restaurant.get("category", "N/A")
+            category_item = QTableWidgetItem(category)
             category_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.setItem(row, 5, category_item)
 
             # Cột Address
-            self.setItem(row, 6, QTableWidgetItem(restaurant["address"]))
+            address = restaurant.get("address", "N/A")
+            self.setItem(row, 6, QTableWidgetItem(address))
 
             # Cột Hotline (căn giữa)
-            hotline_item = QTableWidgetItem(restaurant["hotline"] if restaurant["hotline"] else "N/A")
+            hotline = restaurant.get("hotline", "N/A")
+            hotline_item = QTableWidgetItem(hotline)
             hotline_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.setItem(row, 7, hotline_item)
 
             # Cột Accessibility
-            self.setItem(row, 8, QTableWidgetItem(restaurant["accessibility"]))
+            accessibility = restaurant.get("accessibility", "N/A")
+            self.setItem(row, 8, QTableWidgetItem(accessibility))
 
             # Tăng độ cao hàng
             self.setRowHeight(row, self.ROW_HEIGHT)
 
-        self.model.offset += len(restaurants)  # Cập nhật offset
+        # self.model.offset += len(restaurants)  # Cập nhật offset
 
     def create_image_widget(self, row, image_url):
         """Tạo Widget chứa hình ảnh tròn và căn giữa, tải ảnh bất đồng bộ."""
@@ -256,3 +296,11 @@ class RestaurantDelegate(QTableWidget):
         self.image_widgets.clear()
         self.image_cache.clear()
         super().closeEvent(event)
+
+    def delete_restaurant_by_id(self, place_id):
+        """
+        Xóa nhà hàng theo place_id.
+        Giả lập logic xóa, bạn có thể thay bằng logic thực tế với MongoDB.
+        """
+        # Giả lập xóa thành công
+        return True

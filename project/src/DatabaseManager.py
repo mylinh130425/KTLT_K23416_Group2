@@ -312,27 +312,26 @@ class DatabaseManager:
             return None
 
     def get_restaurants_by_keywords(self, keywords: str, offset=0,limit=15):
-        price_pattern=r"([<>]=?|>=|<=|dưới |trên )?(\d+)(k|000| ngàn)?( đồng|\s?VND)?"
-
-        pricing = re.findall(price_pattern,
-                                     keywords, re.IGNORECASE)
-        pricing_keywords = []
-        if pricing:
-            for match in pricing:
-                if match:
-                    print(match)
-                    pricing_keywords.append("".join(match))  # Join the matched groups into a single string
-        exclude = " ".join(pricing_keywords)
-        print(exclude)
-        keyword = "|".join([word for word in keywords.split() if word not in exclude])
-        print(keyword)
-        # keyword = re.sub(r"\s", "|", keywords)
-        self.close_connection()
+        # price_pattern=r"([<>]=?|>=|<=|dưới |trên )?(\d+)(k|000| ngàn)?( đồng|\s?VND)?"
+        #
+        # pricing = re.findall(price_pattern,
+        #                              keywords, re.IGNORECASE)
+        # pricing_keywords = []
+        # if pricing:
+        #     for match in pricing:
+        #         if match:
+        #             print(match)
+        #             pricing_keywords.append("".join(match))  # Join the matched groups into a single string
+        # exclude = " ".join(pricing_keywords)
+        # print(exclude)
+        # keyword = "|".join([word for word in keywords.split() if word not in exclude])
+        # print(keyword)
+        keyword = re.sub(r"\s", "|", keywords)
 
 
         try:
             # Tìm kiếm trong collection với điều kiện regex (không phân biệt hoa thường)
-            results = restaurants.find({
+            results = self.restaurants.find({
                 "$or": [
                     {"name": {"$regex": keyword, "$options": "i"}},
                     {"description": {"$regex": keyword, "$options": "i"}},
@@ -345,6 +344,8 @@ class DatabaseManager:
         except PyMongoError as e:
             print(f"Lỗi khi tìm kiếm nhà hàng: {e}")
             return []
+        # self.close_connection()
+
 
 
 
